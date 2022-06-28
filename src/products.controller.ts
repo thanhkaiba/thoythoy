@@ -3,11 +3,7 @@ import { ProductService } from './products.service';
 
 @Controller('/products')
 export class ProductController {
-
-  constructor(private readonly productService: ProductService) {
-
-  }
- 
+  constructor(private readonly productService: ProductService) {}
 
   @Get('/')
   @Render('products/index')
@@ -29,9 +25,9 @@ export class ProductController {
       return response.redirect('/products');
     }
     const viewData = [];
-    viewData['title'] = product.name + '-Online Store';
-    viewData['subtitle'] = product.name + '-Product Information';
+    viewData['title'] = product.getName() + '-Online Store';
+    viewData['subtitle'] = product.getName() + '-Product Information';
     viewData['product'] = product;
-    return response.render('products/show', {viewData})
+    return response.render('products/show', { viewData });
   }
 }
