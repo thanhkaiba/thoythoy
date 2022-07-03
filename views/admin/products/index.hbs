@@ -1,0 +1,95 @@
+{{#> admin}}
+     {{#*inline "content"}}
+        <div class="card mb-4">
+            <div class="card-header">
+                Create Products
+            </div>
+            <div class="card-body">
+                <form method="post" action="/admin/products/store" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3-row">
+                                <lable class="col-lg-2 col-md-6 col-sm-12 col-form-lable">
+                                    Name:
+                                </lable>
+                                 <div class="col-lg-10 col-md-6 col-sm-12">
+                                    <input name="name" class="form-control" type="text" required/>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <dis class="mb-3-row">
+                                <lable class="col-lg-2 col-md-6 col-sm-12 col-form-lable">
+                                    Price:
+                                </lable>
+                                  <div class="col-lg-10 col-md-6 col-sm-12">
+                                    <input name="price" class="form-control" type="number" required/>
+                                 </div>
+                            </dis>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3-row">
+                                <lable class="col-lg-2 col-md-6 col-sm-12 col-form-label">
+                                    Image:
+                                </lable>
+                                <div class="col-lg-10 col-md-6 col-sm-12">
+                                    <input type="file" class="form-control" name="image"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <lable class="form-lable">Description</lable>
+                        <textarea name="description" class="form-control" required rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                Manager Products
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        {{#each viewData.products}}
+                        <tr>
+                            <td>{{getId}}</td>
+                            <td>{{getName}}</td>
+                            <td>
+                                <a class="btn btn-primary" href="/admin/products/{{getId}}">
+                                    <i class="bi-pencil"></i>
+                                </a>
+                            </td>
+                            <td> 
+                                <form action="/admin/products/{{getId}}" method="post">
+                                    <button class="btn btn-danger">
+                                        <i class="bi-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    {{/inline}}
+{{/admin}}
