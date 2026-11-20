@@ -6,7 +6,10 @@ Game đặt bài so cạnh trên bàn 4×4, 8 ải khó dần, có Boss, cửa h
 
 - Hành trình 8 tầng địa ngục (vuốt dọc), Boss ở tầng 7, sau đó là Vực Vô Tận không đáy.
 - 37 lá bài mở dần theo tầng, 14 từ khóa kỹ năng, bộ ra trận 6 lá / 12 điểm.
-- Xem trước nước đi, bia tiên tri gợi ý, hộp Pandora khi thua, cướp bài khi thắng.
+- Bài trên tay hai bên đều lộ diện; xem trước nước đi kèm cảnh báo số lá bị lật lại; bia tiên tri tính cả đòn đáp trả.
+- Chọn mức cược ×1/×2/×3; thua thì mở hộp Pandora, lá bị bắt làm con tin chuộc lại được bằng cách thắng tầng đó.
+- Đối thủ có lối đánh riêng; tầng sâu biết tính trước một nước.
+- Ghép 3 lá trùng thành lá ★, bảo hiểm gói bài, nhiệm vụ ngày, chuỗi thắng.
 - Cửa hàng (thanh toán giả lập), gói bài, thư viện bài, bán lá thừa.
 - Âm thanh tổng hợp bằng WebAudio, rung, cài đặt, thống kê, lưu tiến trình trên máy.
 
