@@ -2,6 +2,14 @@
 
 Game đặt bài so cạnh trên bàn 4×4, 8 ải khó dần, có Boss, cửa hàng và hộp Pandora.
 
+## Có gì trong game
+
+- Hành trình 8 tầng địa ngục (vuốt dọc), Boss ở tầng 7, sau đó là Vực Vô Tận không đáy.
+- 37 lá bài mở dần theo tầng, 14 từ khóa kỹ năng, bộ ra trận 6 lá / 12 điểm.
+- Xem trước nước đi, bia tiên tri gợi ý, hộp Pandora khi thua, cướp bài khi thắng.
+- Cửa hàng (thanh toán giả lập), gói bài, thư viện bài, bán lá thừa.
+- Âm thanh tổng hợp bằng WebAudio, rung, cài đặt, thống kê, lưu tiến trình trên máy.
+
 ## Cấu trúc
 
 - `web/game.html` — toàn bộ game (HTML/CSS/JS trong một file). Đây là nguồn chính.
