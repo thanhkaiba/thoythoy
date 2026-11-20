@@ -365,6 +365,21 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .quest.done{opacity:.45}
 .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--bad);margin-left:5px;vertical-align:middle;box-shadow:0 0 6px var(--bad)}
 .pity{font-size:13px;color:var(--dim);text-align:center}.pity .bar{height:5px;background:#2e281c;margin-top:4px}.pity .bar i{display:block;height:100%;background:var(--r1)}
+/* ---------- màn đấu gọn cho màn hình thấp: tay bài không chồng, bàn tự giãn ---------- */
+#match{gap:6px;padding-block:8px}
+.mav{width:34px;height:34px}
+.sbar{font-size:18px;gap:6px}
+.sbar .beer{padding:2px 8px;font-size:15px;margin-left:4px}.sbar .beer .ic{width:20px;height:20px}
+.ehand{min-height:0;gap:3px}.ehand button{width:34px}
+.legend{min-height:0;font-size:11px}.legend:empty{display:none}
+.info{min-height:62px;padding:6px 10px;font-size:13.5px;line-height:1.3}
+.info .nm{font-size:17px}
+.hand{gap:4px;padding-top:10px;min-height:0;justify-content:center}
+.hc{width:var(--cw,50px);margin-left:0;flex:none}
+.hc.sel{transform:translateY(-8px) scale(1.24);transform-origin:50% 100%;z-index:5}
+.hc:first-child.sel{transform-origin:0 100%}.hc:last-child.sel{transform-origin:100% 100%}
+.board{width:300px;box-shadow:0 12px 0 #050403,0 0 0 2px #4a3e24,0 22px 26px #000b}
+.board.picking .cell.ok[data-safe]::before{content:"an toàn";position:absolute;inset:58% 0 0 0;display:grid;place-items:center;background:none;font-family:var(--display);font-weight:700;font-size:13px;color:var(--good);text-shadow:0 1px 3px #000;pointer-events:none;z-index:1}
 </style>
 
 <section class="screen" id="home">
@@ -405,10 +420,10 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 
 <section class="screen" id="match" hidden>
   <div class="top"><img class="mav" id="mAv" alt=""><div class="mname"><b id="mName"></b><span id="ehandN"></span></div><span class="sp"></span><span class="who p" id="who"></span><button class="btn ghost sm" id="bQuit">Thoát</button></div>
-  <div class="sbar"><b id="scP">0</b><div class="sbar-t"><i id="sbarP" style="width:50%"></i></div><b id="scE">0</b></div>
+  <div class="sbar"><b id="scP">0</b><div class="sbar-t"><i id="sbarP" style="width:50%"></i></div><b id="scE">0</b><button class="beer" id="bBeer" aria-label="Uống bia tiên tri"></button></div>
   <div class="ehand" id="ehand"></div>
   <div class="stage"><div class="board" id="board"></div></div>
-  <div class="row"><div class="legend sp" id="legend"></div><button class="beer" id="bBeer" aria-label="Uống bia tiên tri"></button></div>
+  <div class="legend" id="legend"></div>
   <div class="info" id="info"></div>
   <div class="hand" id="hand"></div>
 </section>
@@ -609,12 +624,15 @@ function renderAll(){M.S.cells.forEach((c,i)=>renderCell(i,c));renderHand();
  markOk()}
 function updHud(){const p=cnt(M.S,'p'),e=cnt(M.S,'e');$('#scP').textContent=p;$('#scE').textContent=e;$('#sbarP').style.width=(p+e?p/(p+e)*100:50)+'%';$('#ehandN').textContent='Còn '+M.S.hands.e.length+' lá trên tay';
  const w=$('#who');w.className='who '+M.turn;w.textContent=M.turn==='p'?'Lượt của bạn':'Đối thủ đang nghĩ';$('#hand').classList.toggle('wait',M.turn!=='p'||M.busy)}
-function renderHand(){const h=$('#hand'),n=M.S.hands.p.length,W=h.clientWidth||360,cw=Math.min(86,Math.max(62,W/4.3)),ov=n>1?Math.max(0,(n*cw-W)/(n-1)):0;h.style.setProperty('--cw',cw+'px');h.style.setProperty('--ov',ov+'px');h.innerHTML=M.S.hands.p.map((c,i)=>`<button class="hc${M.sel===i?' sel':''}" data-i="${i}" aria-label="${CARDS[c.id].n}">${cardHTML(c)}</button>`).join('')}
+/* Bàn chiếm hết chỗ trống còn lại giữa phần trên và tay bài. */
+function fitBoard(){const st=$('.stage');if(!st||$('#match').hidden)return;$('#board').style.width=Math.max(140,Math.min(st.clientWidth*.9,430,st.clientHeight*.8))+'px'}
+if(window.ResizeObserver)new ResizeObserver(fitBoard).observe($('.stage'));addEventListener('resize',fitBoard);
+function renderHand(){const h=$('#hand'),n=Math.max(1,M.S.hands.p.length),W=h.clientWidth||360,cw=Math.min(74,Math.floor((W-4*(n-1))/n));h.style.setProperty('--cw',cw+'px');h.innerHTML=M.S.hands.p.map((c,i)=>`<button class="hc${M.sel===i?' sel':''}" data-i="${i}" aria-label="${CARDS[c.id].n}">${cardHTML(c)}</button>`).join('')}
 /* Xem trước: mô phỏng nước đi trên bản sao để biết sẽ lật lá nào. */
 function simMove(hi,i){const T=clone(M.S),L=[];place(T,'p',hi,i,L);const U=clone(T);endTurn(U,'p',null);const th=U.hands.e.length?threat(U,'p'):{base:0,worst:0};return{risk:Math.max(0,Math.ceil((th.base-th.worst-1)/2)),flips:[...new Set(L.filter(e=>e.flip).map(e=>e.i))],cmps:L.filter(e=>e.cmp),card:T.cells[i].card,T}}
 function markOk(){const on=M.sel!=null&&M.turn==='p'&&!M.busy;$('#board').classList.toggle('picking',on);
- M.S.cells.forEach((c,i)=>{const el=cellEls[i],ok=on&&isFree(c);el.classList.toggle('ok',ok);delete el.dataset.fc;delete el.dataset.th;
-  if(ok&&M.prev!==i){const p=simMove(M.sel,i);if(p.flips.length)el.dataset.fc=p.flips.length;if(p.risk)el.dataset.th=p.risk}})}
+ M.S.cells.forEach((c,i)=>{const el=cellEls[i],ok=on&&isFree(c);el.classList.toggle('ok',ok);delete el.dataset.fc;delete el.dataset.th;delete el.dataset.safe;
+  if(ok&&M.prev!==i){const p=simMove(M.sel,i);if(p.flips.length)el.dataset.fc=p.flips.length;if(p.risk>=2)el.dataset.th=p.risk;else if(!p.risk&&M.S.hands.e.length)el.dataset.safe=1}})}
 function renderEhand(){$('#ehand').innerHTML='<span class="lbl">Bài địch</span>'+M.S.hands.e.map((c,i)=>`<button data-i="${i}" aria-label="${CARDS[c.id].n}">${cardHTML(c)}</button>`).join('')}
 $('#ehand').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&M)$('#info').innerHTML=infoCard(M.S.hands.e[+b.dataset.i],M.S.el)+'<div class="dim">Lá này đang ở trên tay đối thủ.</div>'});
 function showPreview(i){M.S.cells.forEach((c,j)=>renderCell(j,c));M.prev=i;markOk();const p=simMove(M.sel,i),el=cellEls[i];
@@ -660,7 +678,7 @@ function startMatch(opp,go){const ix=OPPS.indexOf(opp);if(ix<0||ix>SV.stage)retu
  const b=$('#board');b.innerHTML='';cellEls=[];for(let i=0;i<16;i++){const d=document.createElement('div');d.className='cell';d.dataset.i=i;b.append(d);cellEls.push(d)}
  $('#mAv').src=ART[opp.av];$('#mName').textContent=opp.n;
  $('#legend').innerHTML=M.S.el?triHTML()+'<span class="dim">+1</span>':'';
- show('match');renderAll();$('#info').innerHTML=`<span class="nm">${opp.n}</span><div>${M.turn==='p'?'Bạn đi trước nên có thêm lá Tàn Hồn.':'Đối thủ đi trước nên có thêm lá Tàn Hồn.'} ${HINT}</div>`;
+ show('match');renderAll();fitBoard();$('#info').innerHTML=`<span class="nm">${opp.n}</span><div>${M.turn==='p'?'Bạn đi trước nên có thêm lá Tàn Hồn.':'Đối thủ đi trước nên có thêm lá Tàn Hồn.'} ${HINT}</div>`;
  if(opp.boss){const bn=$('#banner');bn.className='lose';bn.textContent='Boss';bn.hidden=false;setTimeout(()=>bn.hidden=true,2200)}
  if(M.turn==='e'){M.busy=true;setTimeout(()=>{if(!M)return;const mv=botMove(M.S,opp);doTurn('e',mv[0],mv[1])},900)}}
 $('#hand').addEventListener('click',e=>{const b=e.target.closest('.hc');if(!b||!M)return;const i=+b.dataset.i;M.sel=M.sel===i?null:i;M.prev=null;M.S.cells.forEach((c,j)=>renderCell(j,c));renderHand();markOk();$('#info').innerHTML=infoCard(M.S.hands.p[i],M.S.el)});
@@ -780,7 +798,7 @@ function showRules(){const st=SV.stage,L=['Hai bên lần lượt đặt 1 lá v
  'Số ở cạnh lá bạn <b>lớn hơn</b> số ở cạnh đối diện của lá địch kề bên thì lá địch bị lật về phe bạn.',
  'Chạm ô một lần để xem trước, chạm lần nữa để đặt. Kín bàn, ai giữ nhiều lá hơn thì thắng.',
  'Người đi trước có thêm lá Tàn Hồn để bù thế bất lợi. Bài trên tay hai bên đều lộ diện.',
- 'Phần xem trước ghi rõ lật được mấy lá và <b>hở</b> mấy lá, tức số lá đối thủ có thể lật lại ngay lượt sau.',
+ 'Khi chọn lá, ô ghi <b>an toàn</b> là ô đối thủ không lật lại được gì, ô ghi <b>hở 2</b> trở lên là ô nguy hiểm. Phần xem trước ghi con số chính xác.',
  '<b>Thắng</b>: lấy vàng cược và chọn cướp bài, thêm vàng hoặc rương. Qua ải lần đầu có thưởng riêng. <b>Thua</b>: mất vàng cược và phải mở 1 trong 3 hộp Pandora, trừ khi có Bùa hộ mệnh. Lá bị bắt làm con tin sẽ được trả khi bạn thắng lại ở tầng đó.'];
  if(st>=1)L.push('<b>Khắc hệ</b>: tấn công lá thuộc hệ bị khắc được +1. Hỏa › Mộc › Thủy › Hỏa.');
  if(st>=2)L.push('<b>Bài kỹ năng</b>: bậc Hiếm trở lên có đúng một kỹ năng. Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4.');
