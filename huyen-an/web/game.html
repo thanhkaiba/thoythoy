@@ -398,6 +398,16 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .pick3 b{display:block;font-family:var(--display);font-size:17px;letter-spacing:.03em;margin-top:4px}
 .pick3 span{display:block;font-size:11.5px;color:var(--dim)}
 .cap{text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin:12px 0 0}
+/* ---------- ô vật phẩm kiểu túi đồ: hình + ×N ---------- */
+.loot{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px}
+.loot>div{position:relative;width:66px;height:78px;border:1px solid #6b5a33;background:radial-gradient(circle at 50% 40%,#2e2618,#0b0906 78%);display:grid;place-items:center;box-shadow:inset 0 0 0 2px #0b0906,inset 0 0 0 3px #3d3423}
+.loot>div>.ic{width:34px;height:34px;color:var(--gold);margin-bottom:10px;filter:drop-shadow(0 0 6px #c9a55a66)}
+.loot>div>b{position:absolute;right:5px;bottom:2px;font-family:var(--display);font-weight:700;font-size:16px;color:#ffe9a8;text-shadow:0 1px 2px #000,0 0 4px #000;font-variant-numeric:lining-nums;z-index:6}
+.loot>div.c{border:0;background:none;box-shadow:none}
+.loot>div.c .card{width:60px}
+.loot>div.neg>.ic,.loot>div.neg>b{color:var(--bad)}
+.loot.sm>div{width:50px;height:60px}.loot.sm>div.c .card{width:48px;filter:saturate(.7) brightness(.85)}
+.pick3 b{font-size:20px;color:#ffe9a8}
 </style>
 
 <section class="screen" id="home">
@@ -723,30 +733,32 @@ function goHome(){M=null;save();closeModal();show('home')}
 async function finish(){const p=cnt(M.S,'p'),e=cnt(M.S,'e'),bet=M.opp.bet*M.mult;qDay();SV.q.play++;if(p>e){SV.q.win++;SV.streak++}else SV.streak=0;const bn=$('#banner');bn.className=p>e?'win':'lose';bn.textContent=p>e?'Khải hoàn':p<e?'Bại trận':'Bất phân';bn.hidden=false;sfx(p>e?'win':'lose');if(p>e)SV.win++;else SV.loss++;await sleep(calm?600:2100);bn.hidden=true;if(!M)return;
  if(p===e){SV.gold+=bet;save();return modal(`<h2>Hòa ${p} – ${e}</h2><p>Bạn nhận lại ${bet} vàng đã mang vào.</p><button class="btn" style="width:100%" onclick="goHome()">Về sảnh</button>`)}
  $('#info').innerHTML='';
- const tile=(i,v,t,neg)=>`<div class="${neg?'neg':''}">${ic(i)}<b>${v}</b><span>${t}</span></div>`,thumb=(id,t,s,cls='')=>`<div class="${cls}">${cardHTML(inst(id,'p',s))}${t}</div>`;
- if(p>e){SV.gold+=M.bet+bet;const rw=[tile('coins','+'+bet,'Thắng cược')],cs=[];
-  if(SV.streak>1){const g=Math.round(bet*Math.min(SV.streak-1,5)*.1);SV.gold+=g;rw.push(tile('flame2','+'+g,'Chuỗi ×'+SV.streak))}
-  if(SV.fwd!==today()){SV.fwd=today();SV.gold+=100;rw.push(tile('gift','+100','Đầu ngày'))}
-  const back=SV.host.filter(h=>h.ix===M.ix);if(back.length){back.forEach(h=>{addCard(h.id,h.s);cs.push(thumb(h.id,'Chuộc về',h.s))});SV.host=SV.host.filter(h=>h.ix!==M.ix)}
-  if(M.opp.gift&&!SV.gifts.includes(M.ix)){SV.gifts.push(M.ix);const g=M.opp.gift;if(g.gold){SV.gold+=g.gold;rw.push(tile('crown','+'+g.gold,'Qua ải'))}if(g.card){addCard(g.card);cs.unshift(thumb(g.card,'Thưởng'))}}
-  if(M.opp.abyss){SV.abyss++;refreshAbyss();rw.push(tile('stairs',SV.abyss,'Độ sâu'))}
-  else if(M.ix===SV.stage&&M.ix<OPPS.length-1){SV.stage++;SV.beer++;rw.push(tile('stairs',SV.stage>7?'∞':SV.stage,SV.stage>7?'Mở vực':'Mở tầng'),tile('beer','+1','Bia'));
-   Object.keys(CARDS).filter(k=>CARDS[k].u===SV.stage&&!CARDS[k].boss).forEach(k=>cs.push(thumb(k,'Gói mới',0,'new')))}
-  if(M.opp.boss&&!SV.boss){SV.boss=1;rw.push(tile('skull','Hạ','Boss'))}
+ /* Ô vật phẩm kiểu túi đồ: hình + số lượng ×N. */
+ const slot=(i,q,neg)=>`<div class="${neg?'neg':''}">${ic(i)}<b>${q}</b></div>`,cslot=(id,s,q='×1')=>`<div class="c">${cardHTML(inst(id,'p',s))}${q?`<b>${q}</b>`:''}</div>`;
+ if(p>e){let gold=bet;const loot=[],fresh=[];
+  if(SV.streak>1)gold+=Math.round(bet*Math.min(SV.streak-1,5)*.1);
+  if(SV.fwd!==today()){SV.fwd=today();gold+=100}
+  const back=SV.host.filter(h=>h.ix===M.ix);if(back.length){back.forEach(h=>{addCard(h.id,h.s);loot.push(cslot(h.id,h.s))});SV.host=SV.host.filter(h=>h.ix!==M.ix)}
+  if(M.opp.gift&&!SV.gifts.includes(M.ix)){SV.gifts.push(M.ix);const g=M.opp.gift;if(g.gold)gold+=g.gold;if(g.card){addCard(g.card);loot.unshift(cslot(g.card,0))}}
+  SV.gold+=M.bet+gold;loot.unshift(slot('coins','×'+gold));
+  if(M.opp.abyss){SV.abyss++;refreshAbyss();loot.push(slot('stairs','↓'+SV.abyss))}
+  else if(M.ix===SV.stage&&M.ix<OPPS.length-1){SV.stage++;SV.beer++;loot.push(slot('beer','×1'),slot('stairs',SV.stage>7?'↓∞':'↓'+SV.stage));
+   Object.keys(CARDS).filter(k=>CARDS[k].u===SV.stage&&!CARDS[k].boss).forEach(k=>fresh.push(cslot(k,0,'')))}
+  if(M.opp.boss&&!SV.boss){SV.boss=1;loot.push(slot('skull','×1'))}
   save();burst(innerWidth/2,innerHeight/3,'#ffd76a',80);
-  return modal(`<h2>Khải hoàn ${p} – ${e}</h2><div class="rw">${rw.join('')}</div>${cs.length?`<div class="rwc">${cs.join('')}</div>`:''}<p class="cap">Chọn một chiến lợi phẩm</p><div class="pick3">
-   <button data-k="steal">${ic('swords')}<b>Cướp bài</b><span>1 lá của địch</span></button>
-   <button data-k="gold">${ic('coins')}<b>+${bet}</b><span>vàng</span></button>
-   <button data-k="pack">${ic('ochest')}<b>Rương</b><span>gói 3 lá</span></button></div>`,()=>{
+  return modal(`<h2>Khải hoàn ${p} – ${e}</h2><div class="loot">${loot.join('')}</div>${fresh.length?`<p class="cap">Gói bài có thêm</p><div class="loot sm">${fresh.join('')}</div>`:''}<p class="cap">Chọn thêm một</p><div class="pick3">
+   <button data-k="steal">${ic('swords')}<b>×1</b><span>lá của địch</span></button>
+   <button data-k="gold">${ic('coins')}<b>×${bet}</b><span>vàng</span></button>
+   <button data-k="pack">${ic('ochest')}<b>×1</b><span>rương 3 lá</span></button></div>`,()=>{
    $$('.pick3 button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;
     if(k==='gold'){SV.gold+=bet;sfx('coin');goHome();floatTxt(innerWidth/2,innerHeight/3,'+'+bet+' vàng','#ffe9a8')}
     if(k==='pack')packModal([rollCard(),rollCard(),rollCard()],'Rương bí ẩn');
     if(k==='steal')modal(`<h2>Cướp bài</h2><p class="cap" style="margin:0">Chạm lá muốn lấy</p><div class="reveal">${M.eIds.map(id=>`<button class="gc" data-id="${id}">${cardHTML(inst(id,'e'))}<div class="nm2">${CARDS[id].n}</div></button>`).join('')}</div>`,()=>{
      $$('#mbox .gc').forEach(g=>g.onclick=()=>{addCard(g.dataset.id);packModal([g.dataset.id],'Đã cướp được',true)})})})})}
- if(SV.charm>0){SV.charm--;save();return modal(`<h2 class="lose">Bại trận ${p} – ${e}</h2><div class="rw">${tile('coins','−'+M.bet,'Mất cược',1)}${tile('charm','−1','Bùa đỡ hộp')}</div><button class="btn" style="width:100%" onclick="goHome()">Về sảnh</button>`)}
+ if(SV.charm>0){SV.charm--;save();return modal(`<h2 class="lose">Bại trận ${p} – ${e}</h2><div class="loot">${slot('coins','−'+M.bet,1)}${slot('charm','−1',1)}</div><button class="btn" style="width:100%;margin-top:12px" onclick="goHome()">Về sảnh</button>`)}
  pandora(p,e)}
 function pandora(p,e){const bet=M.opp.bet*M.mult,boxes=shuffle(PBOX.slice()).slice(0,3);save();
- modal(`<h2 class="lose">Bại trận ${p} – ${e}</h2><div class="rw"><div class="neg">${ic('coins')}<b>−${M.bet}</b><span>Mất cược</span></div></div><p class="cap">Chọn một hộp Pandora</p>
+ modal(`<h2 class="lose">Bại trận ${p} – ${e}</h2><div class="loot"><div class="neg">${ic('coins')}<b>−${M.bet}</b></div></div><p class="cap">Chọn một hộp Pandora</p>
   <div class="boxes">${boxes.map((b,i)=>`<button class="pbox" data-i="${i}" aria-label="Hộp ${i+1}">${ic('chest')}</button>`).join('')}</div><div id="pres"></div>`,()=>{
   $$('.pbox').forEach(b=>b.onclick=()=>{const ch=+b.dataset.i;$$('.pbox').forEach((x,i)=>{x.onclick=null;x.classList.add('open');if(i===ch)x.classList.add('mine');x.innerHTML=`<div>${ic(boxes[i].ic)}${boxes[i].n}</div>`});
    const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,'#c77dff',50);
