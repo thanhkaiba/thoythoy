@@ -8,7 +8,7 @@
   --bg:#0b0a08; --bg2:#15120d; --panel:#1a1711; --line:#3d3423;
   --fg:#d9d0bd; --dim:#8d846f;
   --gold:#c9a55a; --ember:#d9772b; --blood:#c2412f; --moon:#86b4d9; --good:#a9c98a; --bad:#d9624f;
-  --r0:#77705f; --r1:#6f93b0; --r2:#9368b5; --r3:#e3c46e;
+  --r0:#77705f; --r1:#6f93b0; --r2:#9368b5; --r3:#e3c46e;--r4:#ff5a6e;
   --display:'Cormorant Garamond','Georgia',serif;
   --body:'Alegreya Sans',system-ui,'Segoe UI',sans-serif;
 }
@@ -37,7 +37,7 @@ h1,h2{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance}
 /* ---------- card ---------- */
 .card{container-type:inline-size;position:relative;width:100%;aspect-ratio:5/6;--own:var(--moon);--rc:var(--r0);--ec:#888}
 .card.o-e{--own:var(--blood)}
-.card.r1{--rc:var(--r1)}.card.r2{--rc:var(--r2)}.card.r3{--rc:var(--r3)}
+.card.r1{--rc:var(--r1)}.card.r2{--rc:var(--r2)}.card.r3{--rc:var(--r3)}.card.r4{--rc:var(--r4)}
 .e-hoa{--ec:#e0702a}.e-thuy{--ec:#6fb6d9}.e-moc{--ec:#8fb564}.e-quang{--ec:#ead9a0}.e-am{--ec:#8f6ad0}
 .cf{position:absolute;inset:0;border-radius:5cqw;border:2.4cqw solid;border-color:color-mix(in srgb,var(--rc) 85%,#fff) color-mix(in srgb,var(--rc) 55%,#000) color-mix(in srgb,var(--rc) 35%,#000);
   background:linear-gradient(180deg,#26211a,#0d0b08);box-shadow:0 0 0 1cqw #000,0 0 0 3cqw var(--own),0 0 8cqw color-mix(in srgb,var(--rc) 45%,transparent);overflow:hidden}
@@ -127,7 +127,7 @@ h1,h2{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance}
 .info{min-height:90px;background:linear-gradient(180deg,#17140f,#0e0c09);border:1px solid var(--line);padding:8px 12px;font-size:14px;line-height:1.35}
 .info .nm{font-family:var(--display);font-weight:700;font-size:19px;color:var(--gold);margin-right:8px;letter-spacing:.04em}
 .tag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:0 6px;border:1px solid currentColor;margin-right:4px}
-.tag.r0{color:var(--r0)}.tag.r1{color:var(--r1)}.tag.r2{color:var(--r2)}.tag.r3{color:var(--r3)}
+.tag.r0{color:var(--r0)}.tag.r1{color:var(--r1)}.tag.r2{color:var(--r2)}.tag.r3{color:var(--r3)}.tag.r4{color:var(--r4)}
 .hand{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;min-height:70px}
 .hc{padding:0;transition:transform .15s}
 .hc.sel{transform:translateY(-10px) scale(1.08);filter:drop-shadow(0 0 8px var(--gold))}
@@ -506,10 +506,10 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 @keyframes bigt{0%{opacity:0;scale:.3}18%{opacity:1;scale:1.15}30%{scale:1}80%{opacity:1}100%{opacity:0;scale:1.04;margin-top:-22px}}
 .flash{position:fixed;inset:0;background:radial-gradient(circle,#fff6d0,#e3c46e88 40%,transparent 75%);z-index:55;pointer-events:none;animation:flashf .85s ease-out forwards}
 @keyframes flashf{from{opacity:1}to{opacity:0}}
-.card.back.charge{--cc:#77705f}.card.back.charge.c1{--cc:var(--r1)}.card.back.charge.c2{--cc:var(--r2)}.card.back.charge.c3{--cc:var(--r3)}
+.card.back.charge{--cc:#77705f}.card.back.charge.c1{--cc:var(--r1)}.card.back.charge.c2{--cc:var(--r2)}.card.back.charge.c3{--cc:var(--r3)}.card.back.charge.c4{--cc:var(--r4)}
 .card.back.charge .cf{animation:chg .22s ease-in-out infinite alternate}
 @keyframes chg{from{box-shadow:0 0 0 1cqw #000,0 0 6cqw var(--cc)}to{box-shadow:0 0 0 1cqw #000,0 0 24cqw var(--cc),0 0 60cqw var(--cc)}}
-.card.back.charge.c2,.card.back.charge.c3{animation:rattle .12s linear infinite}
+.card.back.charge.c2,.card.back.charge.c3,.card.back.charge.c4{animation:rattle .12s linear infinite}
 @keyframes rattle{25%{transform:translate(-2px,1px) rotate(-1.5deg)}75%{transform:translate(2px,-1px) rotate(1.5deg)}}
 /* ---------- thoại đối thủ ---------- */
 #taunt{position:absolute;left:8px;right:28%;top:50px;z-index:8;padding:8px 11px;background:linear-gradient(180deg,#241d14,#12100b);border:1px solid #6b5a33;font-family:var(--display);font-weight:600;font-size:16.5px;line-height:1.25;color:#efe5cb;box-shadow:0 6px 16px #000a;animation:tauntin .3s ease-out;pointer-events:none}
@@ -539,6 +539,11 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .aset.ready .arw .btn{animation:dglow 1s ease-in-out infinite alternate}
 .agot{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--good)}
 .loot>div.r3>.ic{color:var(--r3);filter:drop-shadow(0 0 6px #e3c46e)}.loot>div.r3>i{position:absolute;top:2px;left:0;right:0;text-align:center;font-style:normal;font-size:7.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--r3)}
+.r4 .cf{animation:mythic 1.8s ease-in-out infinite alternate}
+@keyframes mythic{from{box-shadow:0 0 0 1cqw #000,0 0 0 3cqw var(--own),0 0 10cqw #ff5a6e88}to{box-shadow:0 0 0 1cqw #000,0 0 0 3cqw var(--own),0 0 22cqw #ff5a6e,0 0 40cqw #ffd76a66}}
+.r4 .foil{background-image:linear-gradient(115deg,transparent 24%,#ff8a9a99 40%,#ffe9a8cc 48%,#9ad8ff99 56%,#c9a2ff88 62%,transparent 76%);animation-duration:2.2s}
+.r4 .art::before{animation:rays 14s linear infinite}
+.stars{letter-spacing:-1cqw}
 </style>
 
 <section class="screen" id="home">
@@ -602,7 +607,7 @@ const ICON={"boar":"<path d=\"m244.3 66.3l11.5 25.2l-36.4-13.9l3.4 21.5l-190.66 
 const ic=(n,c='')=>`<svg class="ic ${c}" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">${ICON[n]||''}</svg>`;
 const EL={hoa:{n:'Hỏa',c:'#e0702a',b:'Mộc'},thuy:{n:'Thủy',c:'#6fb6d9',b:'Hỏa'},moc:{n:'Mộc',c:'#8fb564',b:'Thủy'}};
 const BEATS={hoa:'moc',moc:'thuy',thuy:'hoa'};
-const RN=['Thường','Hiếm','Sử thi','Huyền thoại'],RATE=[.88,.09,.025,.005],RSTOCK=['Không giới hạn','Không giới hạn','còn 412 / 2.000 bản','còn 37 / 100 bản'];
+const RN=['Thường','Hiếm','Sử thi','Huyền thoại','Thần thoại'],RATE=[.9,.075,.02,.0045,.0005],RSTOCK=['Không giới hạn','Không giới hạn','còn 412 / 2.000 bản','còn 37 / 100 bản','còn 3 / 10 bản'];
 const V=(n,e,v,u=0)=>({n,e,r:0,v,u,s:'',d:''});
 /* u = tầng phải chạm tới thì lá mới xuất hiện trong gói và trong bộ bài của đối thủ. k = từ khóa kỹ năng. */
 const CARDS={
@@ -638,10 +643,10 @@ const CARDS={
  // Huyền thoại
  dragon:{n:'Cổ Long Tro Tàn',e:'hoa',r:3,u:6,k:'breath',v:[7,7,7,7],s:'Long tức',d:'Khi ra sân, mọi lá địch cùng hàng và cùng cột bị −1 mọi cạnh.'},
  deer:{n:'Cổ Thụ Thần',e:'moc',r:3,u:7,k:'guard',v:[6,6,6,6],s:'Thần hộ',d:'Đồng minh kề bên không thể bị lật.'},
- reaper:{n:'Tử Thần',e:'thuy',r:3,u:7,k:'combo',v:[7,7,6,7],s:'Combo',d:'Lá vừa bị nó lật sẽ tấn công tiếp các lá kề bên.'},
- lich:{n:'Hư Vô Chi Vương',e:'thuy',r:3,u:7,boss:1,k:'devour',v:[7,7,7,7],s:'Nuốt chửng',d:'Khi ra sân, xóa sổ lá địch mạnh nhất kề bên. Chỉ có thể cướp từ Boss.'},
+ reaper:{n:'Tử Thần',e:'thuy',r:4,u:7,k:'combo',v:[7,7,6,7],s:'Combo',d:'Lá vừa bị nó lật sẽ tấn công tiếp các lá kề bên.'},
+ lich:{n:'Hư Vô Chi Vương',e:'thuy',r:4,u:7,boss:1,k:'devour',v:[7,7,7,7],s:'Nuốt chửng',d:'Khi ra sân, xóa sổ lá địch mạnh nhất kề bên. Chỉ có thể cướp từ Boss.'},
  soul:{n:'Tàn Hồn',e:'moc',r:0,tok:1,v:[4,4,4,3],s:'',d:'Lá phụ cho người đi trước để bù thế bất lợi. Biến mất sau trận.'}};
-const COST=[1,2,3,4],BUDGET=12;
+const COST=[1,2,3,4,5],BUDGET=12;
 const OBST={tree:['Cây khô','Vật cản. Đặt lá hệ <b>Hỏa</b> cạnh nó để đốt cháy và nhận vàng.'],rock:['Đá tảng','Vật cản. Đặt lá hệ <b>Mộc</b> cạnh nó để làm nứt vỡ và nhận vàng.'],fire:['Lửa ma','Vật cản. Đặt lá hệ <b>Thủy</b> cạnh nó để dập tắt và nhận vàng.']};
 /* Chuỗi ải: mỗi ải chỉ thêm một ý mới. show = các lá kỹ năng được giới thiệu. */
 const OPPS=[
@@ -649,7 +654,7 @@ const OPPS=[
   intro:['Hai bên lần lượt đặt 1 lá vào ô trống. Cây và đá là chướng ngại vật.','Số ở cạnh lá bạn <b>lớn hơn</b> số ở cạnh đối diện của lá địch kề bên thì lá địch bị lật về phe bạn.','Chạm ô một lần để <b>xem trước</b> sẽ lật được lá nào, chạm lần nữa để đặt.','Bí nước thì bấm cốc <b>bia tiên tri</b>: nó chỉ lá nên đánh và ô nên đặt.','Kín bàn, ai giữ nhiều lá hơn thì thắng.']},
  {place:'Rừng Chết',say:["Rừng Chết không tha kẻ không biết khắc chế.", "Lửa của ngươi thiêu cả niềm tin của ta.", "Hệ của ngươi yếu thế, ngươi không thấy sao?"],n:'Tín Đồ Lạc Lối',av:'o2',style:'Đánh bừa',bet:40,noise:6,nerf:1,el:1,deck:{r:[6,0,0]},t:'Mở: Khắc hệ, phá vật cản',sig:{id:'ghoul',s:0},tri:1,gift:{card:'wolf'}},
  {place:'Hẻm Xương',say:["Ta săn thú trong hẻm này đã ba mươi năm.", "Con mồi biết cắn. Hay lắm.", "Thêm một tấm da treo tường."],n:'Thợ Săn Rừng Sâu',av:'o3',style:'Thủ góc',guard:.35,bet:60,noise:5,nerf:2,el:1,deck:{r:[4,0,0],ids:['wolf','turtle']},t:'Mở: Bài kỹ năng',sig:{id:'rscorp',s:0},show:['wolf','turtle'],gift:{card:'turtle'},
-  intro:['Bài bậc Hiếm trở lên có <b>một kỹ năng</b>. Chạm vào lá bất kỳ để đọc.','Lá thưởng mới tự vào bộ ra trận. Vào Bộ bài nếu muốn đổi.','Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4.']},
+  intro:['Bài bậc Hiếm trở lên có <b>một kỹ năng</b>. Chạm vào lá bất kỳ để đọc.','Lá thưởng mới tự vào bộ ra trận. Vào Bộ bài nếu muốn đổi.','Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4, Thần thoại 5.']},
  {place:'Lò Thiêu',say:["Lò Thiêu đã nuốt bao kẻ mạnh hơn ngươi.", "Tro tàn... lại về với tro tàn.", "Cháy đi."],n:'Kỵ Sĩ Tro Tàn',av:'o4',style:'Thủ góc',guard:.35,bet:80,noise:4,nerf:2,el:1,deck:{r:[3,0,0],ids:['fox','snake','scorp']},t:'Luật vùng: Đồng',rules:['same'],sig:{id:'naga',s:0},show:['fox','snake'],intro:['<b>Luật vùng: Đồng.</b> Lá vừa đặt có từ 2 cạnh <b>bằng đúng</b> cạnh đối diện của các lá kề bên thì lật hết lá địch trong số đó.','Lá bị lật theo luật này tấn công tiếp như combo.'],gift:{card:'fox'}},
  {place:'Hang Nhện',say:["Lũ con của ta đói lắm rồi.", "Tơ đứt rồi... không thể nào.", "Nằm yên trong lưới đi."],n:'Kẻ Nuôi Nhện',av:'o5',style:'Săn mồi',deep:.25,bet:100,noise:3,nerf:1,el:1,deck:{r:[3,0,0],ids:['spider','troll','gale']},t:'Mở: Lá hình dạng',sig:{id:'draug',s:0},show:['troll','gale'],gift:{card:'troll'}},
  {place:'Đầm Oán Hồn',say:["Đầm này giữ hồn những kẻ thua cuộc.", "Lời nguyền dội ngược về ta.", "Thêm một oan hồn cho đầm."],n:'Phù Thủy Đầm Lầy',av:'o6',style:'Tính trước',deep:.5,bet:130,noise:2,nerf:2,el:1,deck:{r:[3,0,0],ids:['bat','phoenix','fguard']},t:'Luật vùng: Tổng',rules:['plus'],sig:{id:'serpent',s:0},show:['bat','fguard'],intro:['<b>Luật vùng: Tổng.</b> Lá vừa đặt có từ 2 cặp cạnh chạm nhau <b>cùng tổng</b> thì lật hết lá địch trong các cặp đó.','Lá bị lật theo luật này tấn công tiếp như combo.'],gift:{card:'bat'}},
@@ -664,7 +669,7 @@ const byR=(r,st=99)=>Object.keys(CARDS).filter(k=>CARDS[k].r===r&&!CARDS[k].tok&
 function genDeck(spec,st=99){let ids=[...(spec.ids||[])];spec.r.forEach((n,r)=>ids.push(...shuffle(byR(r,st).filter(k=>!ids.includes(k))).slice(0,n)));return shuffle(ids)}
 
 /* ================= SAVE ================= */
-let SV={gold:300,uid:1,col:[],deck:[],curse:null,stage:0,seen:[],gifts:[],charm:0,daily:'',starter:0,beer:3,snd:1,vib:1,fast:0,win:0,loss:0,abyss:0,tut:0,tips:{},sigs:{},album:{},host:[],pity:0,streak:0,fwd:'',q:{d:'',play:0,win:0,flip:0,got:[]}};
+let SV={gold:300,uid:1,col:[],deck:[],curse:null,stage:0,seen:[],gifts:[],charm:0,daily:'',starter:0,beer:3,snd:1,vib:1,fast:0,win:0,loss:0,abyss:0,tut:0,tips:{},sigs:{},album:{},pity2:0,host:[],pity:0,streak:0,fwd:'',q:{d:'',play:0,win:0,flip:0,got:[]}};
 function save(){try{localStorage.setItem('huyenan.v8',JSON.stringify(SV))}catch(e){}}
 (function load(){try{const s=JSON.parse(localStorage.getItem('huyenan.v8'));if(s&&s.col&&s.col.length>=6)SV=Object.assign(SV,s)}catch(e){}
  if(!SV.col.length){['boar','scarab','bear','rat','seahorse','stoat','ant','falcon'].forEach(id=>addCard(id));SV.deck=SV.col.slice(0,6).map(c=>c.u)}})();
@@ -673,7 +678,7 @@ function addCard(id,s){const c={u:SV.uid++,id};if(s)c.s=1;SV.col.push(c);return 
 const byU=u=>SV.col.find(c=>c.u===u),cst=c=>COST[CARDS[c.id].r]+(c.s?1:0);
 const dcost=()=>sum(SV.deck.map(u=>cst(byU(u))));
 function fixDeck(){SV.deck=SV.deck.filter(u=>SV.col.some(c=>c.u===u));while(dcost()>BUDGET)SV.deck.pop();for(const c of SV.col.slice().sort((a,b)=>CARDS[a.id].r-CARDS[b.id].r)){if(SV.deck.length>=6)break;if(!SV.deck.includes(c.u)&&dcost()+cst(c)<=BUDGET)SV.deck.push(c.u)}}
-function rollCard(){let x=Math.random(),r=0;for(;r<3;r++){if(x<RATE[r])break;x-=RATE[r]}while(r>0&&!byR(r,SV.stage).length)r--;return pick(byR(r,SV.stage))}
+function rollCard(){let x=Math.random(),r=0;for(;r<4;r++){if(x<RATE[r])break;x-=RATE[r]}while(r>0&&!byR(r,SV.stage).length)r--;return pick(byR(r,SV.stage))}
 
 /* ================= CARD VIEW ================= */
 /* s = lá ★ (ghép từ 3 lá trùng): +1 mọi cạnh. fl = số lần đã bị lật; lật 2 lần thì hóa đá. */
@@ -717,7 +722,7 @@ function newState(pd,ed,o={el:1}){const cells=[];for(let i=0;i<16;i++)cells.push
 function breakObst(S,j,who,L,txt){const t=S.cells[j].t;S.cells[j].t='none';if(who==='p')S.coins++;
  ev(L,S,j,{txt:(txt||BRKTXT[t])+(who==='p'&&S.coinVal?' +'+S.coinVal:''),col:who==='p'?'#ffe9a8':'#cfc7b0',fx:t==='tree'?'#e0702a':t==='fire'?'#6fb6d9':'#8d877a',kind:t==='tree'?'ember':'spark',n:34,wait:380,coin:who==='p'})}
 function place(S,who,hi,i,L){const cell=S.cells[i],c=S.hands[who].splice(hi,1)[0];cell.card=c;const d=CARDS[c.id],foe=x=>x.o!==who;
- ev(L,S,i,{anim:'drop',fx:EL[d.e].c,n:d.r>=2?40:14,wait:400,txt:d.r===3?d.n:'',shake:d.boss});
+ ev(L,S,i,{anim:'drop',fx:EL[d.e].c,n:d.r>=2?40:14,wait:400,txt:d.r>=3?d.n:'',shake:d.boss});
  if(S.el)for(let k=0;k<4;k++){const j=nb(i,k);if(j>=0&&S.cells[j].t===BREAK[d.e])breakObst(S,j,who,L)}
  if(sk(c,'burn'))adj(S,i,foe).forEach(j=>bump(S,j,-1,L,{txt:'Thiêu đốt −1',fx:'#e0702a',kind:'ember'}));
  if(sk(c,'breath'))S.cells.forEach((x,j)=>{if(x.card&&foe(x.card)&&(j%N===i%N||(j/N|0)===(i/N|0)))bump(S,j,-1,L,{txt:'Long tức −1',fx:'#e0702a',kind:'ember'})});
@@ -789,7 +794,7 @@ let fr=0;(function loop(){requestAnimationFrame(loop);fr++;
   ctx.globalAlpha=p.l;ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x*dpr,p.y*dpr,p.s*dpr*p.l+.5,0,6.28);ctx.fill();return true});ctx.globalAlpha=1})();
 let AC=null;
 function tone(f,d,type='sine',v=.15,to=null,at=0){const t=AC.currentTime+at,o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.setValueAtTime(f,t);if(to)o.frequency.exponentialRampToValueAtTime(to,t+d);g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g).connect(AC.destination);o.start(t);o.stop(t+d+.02)}
-const SFX={tap:()=>tone(900,.04,'triangle',.05),place:()=>{tone(140,.16,'sine',.3,55);tone(700,.05,'triangle',.05)},flip:(n=0)=>{const m=Math.pow(1.12,Math.min(n,8));tone(420*m,.09,'triangle',.14,640*m);tone(640*m,.12,'triangle',.1,880*m,.07)},combo:()=>[0,.08,.16,.26].forEach((a,i)=>tone(523*Math.pow(1.26,i),.2,'triangle',.12,null,a)),charge:(r=0)=>tone(160,[.3,.65,1,1.5][r],'sine',.08,[300,520,820,1250][r]),hit:()=>tone(90,.25,'sawtooth',.2,40),
+const SFX={tap:()=>tone(900,.04,'triangle',.05),place:()=>{tone(140,.16,'sine',.3,55);tone(700,.05,'triangle',.05)},flip:(n=0)=>{const m=Math.pow(1.12,Math.min(n,8));tone(420*m,.09,'triangle',.14,640*m);tone(640*m,.12,'triangle',.1,880*m,.07)},combo:()=>[0,.08,.16,.26].forEach((a,i)=>tone(523*Math.pow(1.26,i),.2,'triangle',.12,null,a)),charge:(r=0)=>tone(160,[.3,.65,1,1.5,2.1][r],'sine',.08,[300,520,820,1250,1700][r]),hit:()=>tone(90,.25,'sawtooth',.2,40),
  err:()=>tone(160,.12,'square',.06,120),coin:()=>{tone(1200,.08,'triangle',.1);tone(1600,.14,'triangle',.1,null,.07)},beer:()=>[0,.14,.28].forEach((a,i)=>tone(220-i*30,.1,'sine',.2,120,a)),
  win:()=>[523,659,784,1047].forEach((f,i)=>tone(f,.28,'triangle',.14,null,i*.13)),lose:()=>[392,330,262,196].forEach((f,i)=>tone(f,.4,'sawtooth',.07,null,i*.2)),turn:()=>tone(660,.1,'sine',.08,880)};
 function sfx(k,a){if(!SV.snd)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();SFX[k](a)}catch(e){}}
@@ -933,7 +938,7 @@ function pandora(p,e){const bet=M.opp.bet*M.mult,boxes=shuffle(PBOX.slice()).sli
    save();$('#pres').innerHTML=`<p>${t}</p><button class="btn" style="width:100%" onclick="goHome()">Về sảnh</button>`})})}
 function packModal(ids,title,added){if(!added)ids.forEach(id=>addCard(id));save();const top=Math.max(...ids.map(i=>CARDS[i].r));
  modal(`<h2>${title}</h2><div class="reveal" style="grid-template-columns:repeat(${Math.max(ids.length,3)},1fr)">${ids.map(id=>`<div class="gc"><div class="rv">${backHTML}</div><div class="nm2"></div></div>`).join('')}</div><button class="btn" style="width:100%" id="pkOk" disabled>Nhận bài</button>`,async()=>{
-  const sl=$$('#mbox .gc');for(let i=0;i<ids.length;i++){await sleep(380);const d=CARDS[ids[i]],el=sl[i];if(!el.isConnected)return;const bk=el.querySelector('.rv .card');if(bk)bk.classList.add('charge','c'+d.r);sfx('charge',d.r);await sleep(calm?150:[280,650,1050,1600][d.r]);if(!el.isConnected)return;if(d.r===3){flash();sfx('win')}el.querySelector('.rv').innerHTML=cardHTML(inst(ids[i],'p'));if(d.r>=2)bigTxt(d.r===3?'Huyền thoại!':'Sử thi!',d.r===3?'#ffe08a':'#c9a2ff');
+  const sl=$$('#mbox .gc');for(let i=0;i<ids.length;i++){await sleep(380);const d=CARDS[ids[i]],el=sl[i];if(!el.isConnected)return;const bk=el.querySelector('.rv .card');if(bk)bk.classList.add('charge','c'+d.r);sfx('charge',d.r);await sleep(calm?150:[280,650,1050,1600,2300][d.r]);if(!el.isConnected)return;if(d.r>=3){flash();sfx('win')}el.querySelector('.rv').innerHTML=cardHTML(inst(ids[i],'p'));if(d.r>=2)bigTxt(['','','Sử thi!','Huyền thoại!','Thần thoại!'][d.r],['','','#c9a2ff','#ffe08a','#ff7a8a'][d.r]);
    el.querySelector('.card').classList.add('a-flip');el.querySelector('.nm2').innerHTML=`${d.n}<br><span class="tag r${d.r}">${RN[d.r]}</span>`;
    const r=el.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,getComputedStyle(document.documentElement).getPropertyValue('--r'+d.r).trim(),14+d.r*30)}
   const ok=$('#pkOk');ok.disabled=false;ok.onclick=()=>{if(M)goHome();else{closeModal();renderGacha();renderShop()}}})}
@@ -955,7 +960,7 @@ $('#tower').addEventListener('scroll',e=>{const tw=e.currentTarget;$('#depth').t
 $('#tower').addEventListener('click',e=>{const b=e.target.closest('.go');if(b){prepMult=1;const i=+b.dataset.i;if(i===0&&!SV.tut)return runTutorial();startMatch(OPPS[i])}});
 $$('[data-home]').forEach(b=>b.onclick=()=>show('home'));
 let dkFilter='all',dkSel=null,dkArm=false,dkMsg='';
-const PRICE=[15,60,200,600],FILTERS=[['all','Tất cả'],['hoa','Hỏa'],['thuy','Thủy'],['moc','Mộc'],['skill','Kỹ năng']];
+const PRICE=[15,60,200,600,2000],FILTERS=[['all','Tất cả'],['hoa','Hỏa'],['thuy','Thủy'],['moc','Mộc'],['skill','Kỹ năng']];
 /* Khóa nhóm: id, thêm * nếu là lá ★. */
 const keyOf=c=>c.id+(c.s?'*':''),kid=k=>k.replace('*',''),kst=k=>k.endsWith('*')?1:0,kcost=k=>COST[CARDS[kid(k)].r]+kst(k);
 const idOf=u=>byU(u).id,owned=k=>SV.col.filter(c=>keyOf(c)===k),inDeck=k=>SV.deck.filter(u=>keyOf(byU(u))===k).length;
@@ -982,13 +987,14 @@ $('#deckInfo').addEventListener('click',e=>{
  const c=owned(dkSel).find(c=>!SV.deck.includes(c.u));if(!c||SV.col.length<=6)return;SV.col=SV.col.filter(x=>x.u!==c.u);SV.gold+=PRICE[CARDS[c.id].r]*(c.s?3:1);dkArm=false;save();sfx('coin');renderDeck()});
 $('#bClear').onclick=()=>{SV.deck=[];dkMsg='';save();renderDeck()};
 $('#bAuto').onclick=()=>{const pw=c=>sum(CARDS[c.id].v)+CARDS[c.id].r*4+(c.s?4:0);SV.deck=[];for(const c of SV.col.slice().sort((a,b)=>pw(b)-pw(a))){if(SV.deck.length>=6)break;if(cst(c)<=BUDGET-dcost()-(5-SV.deck.length))SV.deck.push(c.u)}fixDeck();dkMsg='';save();sfx('place');renderDeck()};
-function renderGacha(){$('#pity').innerHTML=byR(1,SV.stage).length?`Bảo hiểm: còn ${10-SV.pity} gói nữa chắc chắn có lá Hiếm<div class="bar"><i style="width:${SV.pity*10}%"></i></div>`:'Bài Hiếm xuất hiện trong gói từ tầng 2.';
+function renderGacha(){$('#pity').innerHTML=byR(1,SV.stage).length?`Bảo hiểm: còn ${10-SV.pity} gói nữa chắc chắn có lá Hiếm<div class="bar"><i style="width:${SV.pity*10}%"></i></div>${byR(2,SV.stage).length?`<div style="margin-top:6px">Còn ${40-SV.pity2} gói nữa chắc chắn có lá Sử thi</div><div class="bar"><i style="width:${SV.pity2/40*100}%;background:var(--r2)"></i></div>`:''}`:'Bài Hiếm xuất hiện trong gói từ tầng 2.';
  renderAlbum();
  $('#gold2').textContent=SV.gold;$('#bOpen').disabled=SV.gold<100;$('#packPrev').innerHTML=`<div>${backHTML}</div>`.repeat(3);
  $('#rates').innerHTML=RN.map((n,r)=>`<tr><td><span class="tag r${r}">${n}</span></td><td class="dim">${RSTOCK[r]}</td><td>${(RATE[r]*100).toLocaleString('vi-VN')}%</td></tr>`).join('')}
 $('#bGacha').onclick=()=>{show('gacha');renderGacha()};
 $('#bOpen').onclick=()=>{if(SV.gold<100)return;SV.gold-=100;const ids=[rollCard(),rollCard(),rollCard()],rare=byR(1,SV.stage);
  if(ids.some(id=>CARDS[id].r>0))SV.pity=0;else if(rare.length&&++SV.pity>=10){ids[2]=pick(rare);SV.pity=0}
+ const epic=byR(2,SV.stage);if(ids.some(id=>CARDS[id].r>=2))SV.pity2=0;else if(epic.length&&++SV.pity2>=40){ids[1]=pick(epic);SV.pity2=0}
  packModal(ids,'Gói Huyền Ấn');renderGacha()};
 function showRules(){const st=SV.stage,L=['Hai bên lần lượt đặt 1 lá vào ô trống. Cây và đá là chướng ngại vật, chỉ lá có kỹ năng Phá vật cản mới đập nát được.',
  'Số ở cạnh lá bạn <b>lớn hơn</b> số ở cạnh đối diện của lá địch kề bên thì lá địch bị lật về phe bạn.',
@@ -1194,7 +1200,7 @@ function renderAlbum(){const tot=ALBUM.reduce((a,s)=>a+s.ids.length,0),have=ALBU
   <div class="arw"><span class="cap" style="margin:0">Thưởng</span><div class="loot sm">${rwHTML(s.rw)}</div>${done?'<span class="agot">Đã nhận</span>':`<button class="btn sm" data-set="${s.k}"${ready?'':' disabled'}>Nhận</button>`}</div></div>`}).join('')}
 $('#codex').addEventListener('click',e=>{const b=e.target.closest('[data-set]');if(!b||b.disabled)return;const s=ALBUM.find(x=>x.k===b.dataset.set);if(!setReady(s))return;
  SV.album[s.k]=1;const rw=s.rw;SV.gold+=rw.gold||0;SV.beer+=rw.beer||0;SV.charm+=rw.charm||0;let leg=null;
- if(rw.legend){const pool=['dragon','deer','reaper'],miss=pool.filter(id=>!ownsId(id));leg=pick(miss.length?miss:pool);autoSlot(addCard(leg))}
+ if(rw.legend){const pool=['dragon','deer'],miss=pool.filter(id=>!ownsId(id));leg=pick(miss.length?miss:pool);autoSlot(addCard(leg))}
  save();sfx('win');const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top,'#ffd76a',70);floatTxt(r.left+r.width/2,r.top,'Hoàn thành bộ '+s.n,'#ffe9a8');
  if(leg)packModal([leg],'Thưởng bộ '+s.n,true);renderGacha()});
 /* Nút Back của Android: đóng lớp trên cùng, về sảnh, hoặc thoát. */
