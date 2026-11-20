@@ -167,6 +167,7 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 #banner.win{color:var(--gold);text-shadow:0 0 24px #c9a55a88}
 @keyframes ban{from{opacity:0;letter-spacing:.16em}25%{opacity:1}80%{opacity:1}to{opacity:0;letter-spacing:.36em}}
 #pc,#fx{position:fixed;inset:0;pointer-events:none;z-index:40}
+#fx{z-index:70}
 #pc{width:100%;height:100%}
 .ft{position:absolute;transform:translate(-50%,-50%);font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:.04em;text-shadow:0 2px 0 #000,0 0 10px #000;animation:ft 1s ease-out forwards;white-space:nowrap}
 @keyframes ft{from{opacity:0;margin-top:10px;scale:.6}20%{opacity:1;scale:1.15}to{opacity:0;margin-top:-54px}}
@@ -481,6 +482,39 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .bonus{position:absolute;top:-1px;left:-1px;background:var(--blood);color:#fff;font-size:11px;font-weight:700;padding:2px 6px}
 .gtile.best{border-color:#c9a55a;box-shadow:inset 0 0 26px #c9a55a30}
 .shop-note{font-size:11.5px;color:var(--dim);text-align:center;margin:16px 0 4px}
+/* ---------- hướng dẫn ---------- */
+#coach{position:fixed;inset:0;z-index:45;pointer-events:none}
+#coach.full{background:#000000b0}
+#spot{position:fixed;border:2px solid #ffe9a8;border-radius:6px;box-shadow:0 0 0 9999px #000000a0,0 0 18px #ffe9a8;pointer-events:none;animation:spotp 1.1s ease-in-out infinite alternate}
+@keyframes spotp{to{box-shadow:0 0 0 9999px #000000a0,0 0 34px #ffe9a8}}
+#cbub{position:fixed;width:min(310px,calc(100vw - 24px));pointer-events:auto;background:linear-gradient(180deg,#2a2216,#13100b);border:1px solid #c9a55a;padding:11px 13px 10px;box-shadow:0 10px 30px #000;--ax:50%}
+#cbub::after{content:"";position:absolute;left:calc(var(--ax) - 7px);top:-8px;width:12px;height:12px;background:#2a2216;border-left:1px solid #c9a55a;border-top:1px solid #c9a55a;transform:rotate(45deg)}
+#cbub.up::after{top:auto;bottom:-8px;background:#13100b;transform:rotate(225deg)}
+#coach.full #cbub::after{display:none}
+#cbub p{margin:0;font-size:15px;line-height:1.42}
+#cbub p .who{display:block;font-family:var(--display);font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+#cbub .row{margin-top:10px;gap:8px}
+#cbub .row:has(#cNext[hidden]):has(#cSkip[hidden]){display:none}
+#cbub.nudge{animation:tshake .35s}
+/* ---------- kéo thả ---------- */
+#hand .hc{touch-action:none}
+#dragGhost{position:fixed;left:0;top:0;width:76px;z-index:44;pointer-events:none;filter:drop-shadow(0 14px 14px #000)}
+/* ---------- chữ lớn, chớp sáng, mở gói ---------- */
+.bigtxt{position:fixed;transform:translate(-50%,-50%);font-family:var(--display);font-weight:700;font-size:46px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;text-shadow:0 3px 0 #000,0 0 26px currentColor;animation:bigt 1.35s cubic-bezier(.2,1.4,.4,1) forwards;pointer-events:none;z-index:70}
+@keyframes bigt{0%{opacity:0;scale:.3}18%{opacity:1;scale:1.15}30%{scale:1}80%{opacity:1}100%{opacity:0;scale:1.04;margin-top:-22px}}
+.flash{position:fixed;inset:0;background:radial-gradient(circle,#fff6d0,#e3c46e88 40%,transparent 75%);z-index:55;pointer-events:none;animation:flashf .85s ease-out forwards}
+@keyframes flashf{from{opacity:1}to{opacity:0}}
+.card.back.charge{--cc:#77705f}.card.back.charge.c1{--cc:var(--r1)}.card.back.charge.c2{--cc:var(--r2)}.card.back.charge.c3{--cc:var(--r3)}
+.card.back.charge .cf{animation:chg .22s ease-in-out infinite alternate}
+@keyframes chg{from{box-shadow:0 0 0 1cqw #000,0 0 6cqw var(--cc)}to{box-shadow:0 0 0 1cqw #000,0 0 24cqw var(--cc),0 0 60cqw var(--cc)}}
+.card.back.charge.c2,.card.back.charge.c3{animation:rattle .12s linear infinite}
+@keyframes rattle{25%{transform:translate(-2px,1px) rotate(-1.5deg)}75%{transform:translate(2px,-1px) rotate(1.5deg)}}
+/* ---------- thoại đối thủ ---------- */
+#taunt{position:absolute;left:8px;right:28%;top:50px;z-index:8;padding:8px 11px;background:linear-gradient(180deg,#241d14,#12100b);border:1px solid #6b5a33;font-family:var(--display);font-weight:600;font-size:16.5px;line-height:1.25;color:#efe5cb;box-shadow:0 6px 16px #000a;animation:tauntin .3s ease-out;pointer-events:none}
+#taunt::before{content:"";position:absolute;left:16px;top:-7px;width:12px;height:12px;background:#241d14;border-left:1px solid #6b5a33;border-top:1px solid #6b5a33;transform:rotate(45deg)}
+@keyframes tauntin{from{opacity:0;transform:translateY(-6px)}}
+.quote{display:flex;gap:10px;align-items:center;margin:2px 0 6px;font-family:var(--display);font-weight:600;font-size:17px;line-height:1.25;color:#efe5cb}
+.quote img{width:42px;height:42px;object-fit:cover;object-position:50% 8%;border:1px solid #5c2a22;background:#1a0f0c;flex:none}
 </style>
 
 <section class="screen" id="home">
@@ -528,7 +562,7 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 </section>
 
 <div id="modal" hidden><div class="box" id="mbox"></div></div>
-<div id="banner" hidden></div><canvas id="pc"></canvas><div id="fx"></div>
+<div id="coach" hidden><div id="spot"></div><div id="cbub"><p></p><div class="row"><button class="btn ghost sm" id="cSkip">Bỏ qua</button><span class="sp"></span><button class="btn sm" id="cNext">Tiếp</button></div></div></div><div id="banner" hidden></div><canvas id="pc"></canvas><div id="fx"></div>
 
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -584,27 +618,26 @@ const COST=[1,2,3,4],BUDGET=12;
 const OBST={tree:['Cây khô','Chướng ngại vật. Không đặt bài được vào ô này, trừ khi bị lá Phá vật cản đập nát.'],rock:['Đá tảng','Chướng ngại vật. Không đặt bài được vào ô này, trừ khi bị lá Phá vật cản đập nát.']};
 /* Chuỗi ải: mỗi ải chỉ thêm một ý mới. show = các lá kỹ năng được giới thiệu. */
 const OPPS=[
- {place:'Cổng Tro',n:'Lữ Khách Vô Danh',av:'o1',style:'Đánh bừa',bet:30,noise:7,nerf:3,el:0,deck:{r:[6,0,0]},t:'Luật cơ bản',demo:1,gift:{gold:100},
+ {place:'Cổng Tro',say:["Cổng này ai qua cũng phải đánh một ván.", "Ngươi đi tiếp được. Đường xuống còn dài.", "Về mà luyện thêm, lữ khách."],n:'Lữ Khách Vô Danh',av:'o1',style:'Đánh bừa',bet:30,noise:7,nerf:3,el:0,deck:{r:[6,0,0]},t:'Luật cơ bản',demo:1,gift:{gold:100},
   intro:['Hai bên lần lượt đặt 1 lá vào ô trống. Cây và đá là chướng ngại vật.','Số ở cạnh lá bạn <b>lớn hơn</b> số ở cạnh đối diện của lá địch kề bên thì lá địch bị lật về phe bạn.','Chạm ô một lần để <b>xem trước</b> sẽ lật được lá nào, chạm lần nữa để đặt.','Bí nước thì bấm cốc <b>bia tiên tri</b>: nó chỉ lá nên đánh và ô nên đặt.','Kín bàn, ai giữ nhiều lá hơn thì thắng.']},
- {place:'Rừng Chết',n:'Tín Đồ Lạc Lối',av:'o2',style:'Đánh bừa',bet:40,noise:6,nerf:2,el:1,deck:{r:[6,0,0]},t:'Mở: Khắc hệ',tri:1,gift:{card:'wolf'},
-  intro:['Mỗi lá thuộc một hệ. Tấn công lá thuộc hệ bị khắc được <b>+1</b>.','Phần xem trước đã tính sẵn điểm cộng này cho bạn.']},
- {place:'Hẻm Xương',n:'Thợ Săn Rừng Sâu',av:'o3',style:'Thủ góc',guard:.35,bet:60,noise:5,nerf:2,el:1,deck:{r:[4,0,0],ids:['wolf','turtle']},t:'Mở: Bài kỹ năng',show:['wolf','turtle'],gift:{card:'turtle'},
-  intro:['Bài bậc Hiếm trở lên có <b>một kỹ năng</b>. Chạm vào lá bất kỳ để đọc.','Bạn vừa nhận Sói Non ở ải trước. Vào Bộ bài để đưa nó ra trận.','Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4.']},
- {place:'Lò Thiêu',n:'Kỵ Sĩ Tro Tàn',av:'o4',style:'Thủ góc',guard:.35,bet:80,noise:4,nerf:1,el:1,deck:{r:[3,0,0],ids:['fox','snake','scorp']},t:'3 kỹ năng mới',show:['fox','snake','scorp'],gift:{card:'fox'}},
- {place:'Hang Nhện',n:'Kẻ Nuôi Nhện',av:'o5',style:'Săn mồi',deep:.25,bet:100,noise:3,nerf:1,el:1,deck:{r:[3,1,0],ids:['spider','troll']},t:'Mở: Phá vật cản',show:['troll','spider'],gift:{card:'troll'}},
- {place:'Đầm Oán Hồn',n:'Phù Thủy Đầm Lầy',av:'o6',style:'Tính trước',deep:.5,bet:130,noise:2,nerf:0,el:1,deck:{r:[3,1,0],ids:['bat','phoenix']},t:'Bài Sử thi',show:['bat','phoenix'],gift:{card:'bat'}},
- {place:'Sào Huyệt Rồng',n:'Long Kỵ Sĩ',av:'o7',style:'Lão luyện',deep:.7,bet:170,noise:.5,nerf:0,el:1,deck:{r:[2,2,0],ids:['dragon','lion']},t:'Bài Huyền thoại',show:['lion','dragon'],gift:{card:'lion'}},
- {place:'Ngai Hư Vô',n:'Chúa Tể Hư Vô',av:'lich',style:'Nhìn thấu',deep:.75,bet:250,noise:.5,nerf:4,el:1,boss:1,deck:{r:[2,2,0],ids:['lich','deer']},t:'Boss',show:['lich','deer'],gift:{gold:1000},
+ {place:'Rừng Chết',say:["Rừng Chết không tha kẻ không biết khắc chế.", "Lửa của ngươi thiêu cả niềm tin của ta.", "Hệ của ngươi yếu thế, ngươi không thấy sao?"],n:'Tín Đồ Lạc Lối',av:'o2',style:'Đánh bừa',bet:40,noise:6,nerf:2,el:1,deck:{r:[6,0,0]},t:'Mở: Khắc hệ',tri:1,gift:{card:'wolf'}},
+ {place:'Hẻm Xương',say:["Ta săn thú trong hẻm này đã ba mươi năm.", "Con mồi biết cắn. Hay lắm.", "Thêm một tấm da treo tường."],n:'Thợ Săn Rừng Sâu',av:'o3',style:'Thủ góc',guard:.35,bet:60,noise:5,nerf:2,el:1,deck:{r:[4,0,0],ids:['wolf','turtle']},t:'Mở: Bài kỹ năng',show:['wolf','turtle'],gift:{card:'turtle'},
+  intro:['Bài bậc Hiếm trở lên có <b>một kỹ năng</b>. Chạm vào lá bất kỳ để đọc.','Lá thưởng mới tự vào bộ ra trận. Vào Bộ bài nếu muốn đổi.','Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4.']},
+ {place:'Lò Thiêu',say:["Lò Thiêu đã nuốt bao kẻ mạnh hơn ngươi.", "Tro tàn... lại về với tro tàn.", "Cháy đi."],n:'Kỵ Sĩ Tro Tàn',av:'o4',style:'Thủ góc',guard:.35,bet:80,noise:4,nerf:1,el:1,deck:{r:[3,0,0],ids:['fox','snake','scorp']},t:'3 kỹ năng mới',show:['fox','snake','scorp'],gift:{card:'fox'}},
+ {place:'Hang Nhện',say:["Lũ con của ta đói lắm rồi.", "Tơ đứt rồi... không thể nào.", "Nằm yên trong lưới đi."],n:'Kẻ Nuôi Nhện',av:'o5',style:'Săn mồi',deep:.25,bet:100,noise:3,nerf:1,el:1,deck:{r:[3,1,0],ids:['spider','troll']},t:'Mở: Phá vật cản',show:['troll','spider'],gift:{card:'troll'}},
+ {place:'Đầm Oán Hồn',say:["Đầm này giữ hồn những kẻ thua cuộc.", "Lời nguyền dội ngược về ta.", "Thêm một oan hồn cho đầm."],n:'Phù Thủy Đầm Lầy',av:'o6',style:'Tính trước',deep:.5,bet:130,noise:2,nerf:0,el:1,deck:{r:[3,1,0],ids:['bat','phoenix']},t:'Bài Sử thi',show:['bat','phoenix'],gift:{card:'bat'}},
+ {place:'Sào Huyệt Rồng',say:["Rồng của ta chưa từng cúi đầu.", "Ngươi xứng đáng cưỡi rồng.", "Quỳ xuống trước long uy."],n:'Long Kỵ Sĩ',av:'o7',style:'Lão luyện',deep:.7,bet:170,noise:.5,nerf:0,el:1,deck:{r:[2,2,0],ids:['dragon','lion']},t:'Bài Huyền thoại',show:['lion','dragon'],gift:{card:'lion'}},
+ {place:'Ngai Hư Vô',say:["Ngươi đã xuống tới đáy. Không còn đường lên.", "Hư vô... cũng có ngày tan biến.", "Mọi thứ rồi sẽ về với hư vô."],n:'Chúa Tể Hư Vô',av:'lich',style:'Nhìn thấu',deep:.75,bet:250,noise:.5,nerf:4,el:1,boss:1,deck:{r:[2,2,0],ids:['lich','deer']},t:'Boss',show:['lich','deer'],gift:{gold:1000},
   intro:['Đừng để lá mạnh nhất của bạn đứng cạnh ô trống. Nhện Giăng Tơ có thể vô hiệu hóa lá Boss.','Thắng Boss, bạn có thể cướp chính lá Hư Vô Chi Vương.']}];
 /* Sau Boss: Vực Vô Tận, mỗi lần thắng xuống sâu thêm và đối thủ mạnh thêm. */
-function abyssOpp(d){return{place:'Vực Vô Tận',n:'Vọng Linh '+(d+1),av:['reaper','draug','shadow','ghoul'][d%4],bet:200+d*50,noise:0,style:'Nhìn thấu',deep:1,nerf:-Math.min(7,d),el:1,abyss:1,
+function abyssOpp(d){return{place:'Vực Vô Tận',say:['Vực không có đáy, lữ khách.','Sâu thêm một bậc. Còn nữa.','Ở lại đây mãi mãi.'],n:'Vọng Linh '+(d+1),av:['reaper','draug','shadow','ghoul'][d%4],bet:200+d*50,noise:0,style:'Nhìn thấu',deep:1,nerf:-Math.min(7,d),el:1,abyss:1,
  deck:d>=3?{r:[0,2,2],ids:[['dragon','reaper','deer'][d%3],'lich']}:{r:[0,3,2],ids:[['dragon','reaper','deer'][d%3]]},t:'Độ sâu '+(d+1)}}
 const PBOX=[{k:'cut',n:'Hộp Kéo',ic:'scis'},{k:'steal',n:'Hộp Con Tin',ic:'robber'},{k:'tax',n:'Hộp Thuế Máu',ic:'blood'},{k:'hope',n:'Hộp Hy Vọng',ic:'dove'},{k:'curse',n:'Hộp Nguyền',ic:'curse'}];
 const byR=(r,st=99)=>Object.keys(CARDS).filter(k=>CARDS[k].r===r&&!CARDS[k].tok&&!CARDS[k].boss&&(CARDS[k].u||0)<=st);
 function genDeck(spec,st=99){let ids=[...(spec.ids||[])];spec.r.forEach((n,r)=>ids.push(...shuffle(byR(r,st).filter(k=>!ids.includes(k))).slice(0,n)));return shuffle(ids)}
 
 /* ================= SAVE ================= */
-let SV={gold:300,uid:1,col:[],deck:[],curse:null,stage:0,seen:[],gifts:[],charm:0,daily:'',starter:0,beer:3,snd:1,vib:1,fast:0,win:0,loss:0,abyss:0,host:[],pity:0,streak:0,fwd:'',q:{d:'',play:0,win:0,flip:0,got:[]}};
+let SV={gold:300,uid:1,col:[],deck:[],curse:null,stage:0,seen:[],gifts:[],charm:0,daily:'',starter:0,beer:3,snd:1,vib:1,fast:0,win:0,loss:0,abyss:0,tut:0,tips:{},host:[],pity:0,streak:0,fwd:'',q:{d:'',play:0,win:0,flip:0,got:[]}};
 function save(){try{localStorage.setItem('huyenan.v8',JSON.stringify(SV))}catch(e){}}
 (function load(){try{const s=JSON.parse(localStorage.getItem('huyenan.v8'));if(s&&s.col&&s.col.length>=6)SV=Object.assign(SV,s)}catch(e){}
  if(!SV.col.length){['boar','scarab','bear','rat','seahorse','stoat','ant','falcon'].forEach(id=>addCard(id));SV.deck=SV.col.slice(0,6).map(c=>c.u)}})();
@@ -704,22 +737,22 @@ let fr=0;(function loop(){requestAnimationFrame(loop);fr++;
   ctx.globalAlpha=p.l;ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x*dpr,p.y*dpr,p.s*dpr*p.l+.5,0,6.28);ctx.fill();return true});ctx.globalAlpha=1})();
 let AC=null;
 function tone(f,d,type='sine',v=.15,to=null,at=0){const t=AC.currentTime+at,o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.setValueAtTime(f,t);if(to)o.frequency.exponentialRampToValueAtTime(to,t+d);g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g).connect(AC.destination);o.start(t);o.stop(t+d+.02)}
-const SFX={tap:()=>tone(900,.04,'triangle',.05),place:()=>{tone(140,.16,'sine',.3,55);tone(700,.05,'triangle',.05)},flip:()=>{tone(420,.09,'triangle',.14,640);tone(640,.12,'triangle',.1,880,.07)},hit:()=>tone(90,.25,'sawtooth',.2,40),
+const SFX={tap:()=>tone(900,.04,'triangle',.05),place:()=>{tone(140,.16,'sine',.3,55);tone(700,.05,'triangle',.05)},flip:(n=0)=>{const m=Math.pow(1.12,Math.min(n,8));tone(420*m,.09,'triangle',.14,640*m);tone(640*m,.12,'triangle',.1,880*m,.07)},combo:()=>[0,.08,.16,.26].forEach((a,i)=>tone(523*Math.pow(1.26,i),.2,'triangle',.12,null,a)),charge:(r=0)=>tone(160,[.3,.65,1,1.5][r],'sine',.08,[300,520,820,1250][r]),hit:()=>tone(90,.25,'sawtooth',.2,40),
  err:()=>tone(160,.12,'square',.06,120),coin:()=>{tone(1200,.08,'triangle',.1);tone(1600,.14,'triangle',.1,null,.07)},beer:()=>[0,.14,.28].forEach((a,i)=>tone(220-i*30,.1,'sine',.2,120,a)),
  win:()=>[523,659,784,1047].forEach((f,i)=>tone(f,.28,'triangle',.14,null,i*.13)),lose:()=>[392,330,262,196].forEach((f,i)=>tone(f,.4,'sawtooth',.07,null,i*.2)),turn:()=>tone(660,.1,'sine',.08,880)};
-function sfx(k){if(!SV.snd)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();SFX[k]()}catch(e){}}
+function sfx(k,a){if(!SV.snd)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();SFX[k](a)}catch(e){}}
 function buzz(ms){if(SV.vib)try{navigator.vibrate&&navigator.vibrate(ms)}catch(e){}}
 document.addEventListener('click',e=>{if(e.target.closest('.btn,.item,.choice,.filters button,.tog'))sfx('tap')},true);
 function floatTxt(x,y,t,c){x=Math.max(Math.min(110,innerWidth/2),Math.min(innerWidth-110,x));const s=document.createElement('span');s.className='ft';s.textContent=t;s.style.cssText=`left:${x}px;top:${y}px;color:${c||'#fff'}`;$('#fx').append(s);setTimeout(()=>s.remove(),1000)}
 
 /* ================= MATCH UI ================= */
 let M=null,cellEls=[];
-function show(id){$$('.screen').forEach(s=>s.hidden=s.id!==id);if(id==='home')renderHome()}
+function show(id){coachOff();$$('.screen').forEach(s=>s.hidden=s.id!==id);if(id==='home')renderHome()}
 function renderCell(i,snap){const el=cellEls[i];el.className='cell t-'+snap.t+(M&&M.last===i?' last':'');delete el.dataset.fc;
  el.innerHTML=snap.t!=='none'?`<div class="obst ${snap.t}">${ic(snap.t)}</div>`:snap.card?`<div class="slot">${cardHTML(snap.card)}</div>`:''}
 function renderAll(){M.S.cells.forEach((c,i)=>renderCell(i,c));renderHand();
  updHud();renderEhand();
- const bb=$('#bBeer');bb.innerHTML=ic('beer')+'×'+SV.beer;bb.classList.toggle('empty',!SV.beer);
+ const bb=$('#bBeer');bb.innerHTML=ic('beer')+'×'+SV.beer;bb.classList.toggle('empty',!SV.beer);bb.hidden=SV.stage<2||!!M.tut;
  markOk()}
 function updHud(){const p=cnt(M.S,'p'),e=cnt(M.S,'e');$('#scP').textContent=p;$('#scE').textContent=e;$('#sbarP').style.width=(p+e?p/(p+e)*100:50)+'%';$('#ehandN').textContent='Còn '+M.S.hands.e.length+' lá trên tay';
  const w=$('#who');w.className='who '+M.turn;w.textContent=M.turn==='p'?'Lượt của bạn':'Đối thủ đang nghĩ';$('#hand').classList.toggle('wait',M.turn!=='p'||M.busy)}
@@ -737,22 +770,23 @@ $('#ehand').addEventListener('click',e=>{const b=e.target.closest('button');if(b
 function showPreview(i){M.S.cells.forEach((c,j)=>renderCell(j,c));M.prev=i;markOk();const p=simMove(M.sel,i),el=cellEls[i];
  el.innerHTML=`<div class="slot ghost">${cardHTML(p.card)}</div>`+p.cmps.map(c=>`<span class="cmp k${c.k} ${c.res}">${c.res==='shield'?'Khiên':c.res==='guard'?'Thần hộ':`${c.base}${c.bon?'+'+c.bon:''} ${c.res==='win'?'>':'≤'} ${c.df}`}</span>`).join('');
  el.classList.add('prev');M.S.cells.forEach((c,j)=>{if(c.t!=='none'&&p.T.cells[j].t==='none')cellEls[j].classList.add('willbreak')});p.flips.forEach(j=>{const t=cellEls[j].querySelector('.card');if(t)t.classList.add('willflip')});
- $('#info').innerHTML=`<div class="row"><div class="sp"><span class="nm">${p.flips.length?`Lật được ${p.flips.length} lá`:'Không lật được lá nào'}</span><div class="${p.risk?'risk':'safe'}">${p.risk?`Hở: đối thủ có thể lật lại tối đa ${p.risk} lá.`:'An toàn: đối thủ không lật lại được lá nào.'}</div></div><button class="btn" id="bPlace">Đặt bài</button></div>`}
-$('#info').addEventListener('click',e=>{if(e.target.closest('#bPlace')&&M&&M.prev!=null&&M.sel!=null&&!M.busy&&M.turn==='p')doTurn('p',M.sel,M.prev)});
-async function replay(L){for(const e of L){if(e.cmp)continue;renderCell(e.i,e.snap);const el=cellEls[e.i],r=el.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
+ $('#info').innerHTML=`<div class="row"><div class="sp"><span class="nm">${p.flips.length?`Lật được ${p.flips.length} lá`:'Không lật được lá nào'}</span><div class="${p.risk?'risk':'safe'}">${p.risk?`Hở: đối thủ có thể lật lại tối đa ${p.risk} lá.`:'An toàn: đối thủ không lật lại được lá nào.'}</div></div><button class="btn" id="bPlace">Đặt bài</button></div>`;T.emit('prev',i)}
+$('#info').addEventListener('click',e=>{if(e.target.closest('#bPlace')&&M&&M.prev!=null&&M.sel!=null&&!M.busy&&M.turn==='p'){if(T.on&&!T.place)return T.nudge();doTurn('p',M.sel,M.prev)}});
+async function replay(L){let nfl=0;for(const e of L){if(e.cmp)continue;renderCell(e.i,e.snap);const el=cellEls[e.i],r=el.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
  if(e.anim){const t=el.querySelector(e.anim==='drop'?'.slot':'.card');if(t)t.classList.add('a-'+e.anim)}
  if(e.fx)burst(x,y,e.fx,e.n||16,e.kind);if(e.txt)floatTxt(x,y-10,e.txt,e.col);
- if(e.anim==='drop'){sfx('place');buzz(12)}if(e.flip){sfx('flip');buzz(22)}
+ if(e.anim==='drop'){sfx('place');buzz(12)}if(e.flip){sfx('flip',nfl++);buzz(22)}
  if(e.shake){sfx('hit');const b=$('#board');b.classList.remove('shake');void b.offsetWidth;b.classList.add('shake')}
  const w=(e.wait??360)*(SV.fast?.45:1);if(w)await sleep(calm?Math.min(w,120):w)}}
-const HINT='Chọn một lá trên tay, rồi chạm ô trống để xem trước.';
-async function doTurn(who,hi,i){M.busy=true;M.sel=null;M.prev=null;const played=M.S.hands[who][hi],L=[];M.last=i;place(M.S,who,hi,i,L);endTurn(M.S,who,L);renderHand();if(who==='p'){qDay();SV.q.flip+=L.filter(e=>e.flip).length}
+const HINT='Kéo lá vào ô trống, hoặc chạm lá rồi chạm ô để xem trước.';
+async function doTurn(who,hi,i){if(who==='p')T.emit('placed');M.busy=true;M.sel=null;M.prev=null;const played=M.S.hands[who][hi],L=[];M.last=i;place(M.S,who,hi,i,L);endTurn(M.S,who,L);renderHand();if(who==='p'){qDay();SV.q.flip+=L.filter(e=>e.flip).length}
  $('#ehandN').textContent='Còn '+M.S.hands.e.length+' lá trên tay';renderEhand();$('#hand').classList.add('wait');markOk();
- await replay(L);M.turn=who==='p'?'e':'p';renderAll();
+ await replay(L);if(!M)return;const nf=new Set(L.filter(e=>e.flip).map(e=>e.i)).size;if(nf>=2){sfx('combo');bigTxt('Lật ×'+nf,who==='p'?'#9cc8ec':'#ff8f7a');await sleep(SV.fast?250:600);if(!M)return}
+ M.turn=who==='p'?'e':'p';renderAll();if(M.pause){await M.pause();if(!M)return}
  if(!M.S.hands.p.length&&!M.S.hands.e.length)return finish();
- if(M.turn==='e'){await sleep(650);if(!M)return;const mv=botMove(M.S,M.opp);if(mv)return doTurn('e',mv[0],mv[1])}
+ if(M.turn==='e'){await sleep(650);if(!M)return;const mv=nextBot();if(mv)return doTurn('e',mv[0],mv[1])}
  M.busy=false;updHud();markOk();sfx('turn');const pd=CARDS[played.id];
- $('#info').innerHTML=who==='e'?`<span class="nm">Đối thủ đánh ${pd.n}</span><div>${pd.s?`<b style="color:var(--gold)">${pd.s}.</b> ${pd.d} `:''}<span class="dim">Đến lượt bạn.</span></div>`:HINT}
+ $('#info').innerHTML=who==='e'?`<span class="nm">Đối thủ đánh ${pd.n}</span><div>${pd.s?`<b style="color:var(--gold)">${pd.s}.</b> ${pd.d} `:''}<span class="dim">Đến lượt bạn.</span></div>`:HINT;T.emit('myturn')}
 const kwHTML=id=>`<div class="kw"><div>${cardHTML(inst(id,'e'))}</div><p><b>${CARDS[id].n}</b><br><span style="color:var(--gold)">${CARDS[id].s}.</span> ${CARDS[id].d}</p></div>`;
 const triHTML=()=>`<div class="tri">${['hoa','moc','thuy','hoa'].map(e=>`<span style="color:${EL[e].c}">${ic(e)}${EL[e].n}</span>`).join('<i>›</i>')}</div>`;
 function demoHTML(){const a=inst('boar','p'),b=inst('scarab','e');return `<div class="demo"><div>${cardHTML(a)}</div><span class="cmp win">${a.v[1]} &gt; ${b.v[3]}</span><div>${cardHTML(b)}</div></div><p class="dim" style="text-align:center;font-size:13px">Cạnh phải ${a.v[1]} lớn hơn cạnh trái ${b.v[3]}: lá đỏ bị lật.</p>`}
@@ -762,7 +796,7 @@ function startMatch(opp,go){const ix=OPPS.indexOf(opp);if(ix<0||ix>SV.stage)retu
   return modal(`<h2${opp.boss?' class="lose"':''}>${opp.n}</h2><p class="dim" style="text-align:center;letter-spacing:.14em;text-transform:uppercase;font-size:12px">${depthName(ix)} · ${opp.place} · ${opp.t}</p>
    ${first?`${opp.demo?demoHTML():''}${opp.tri?triHTML():''}${(opp.show||[]).map(kwHTML).join('')}${opp.intro?`<ul>${opp.intro.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}`:''}
    <div class="sect">Bộ ra trận của bạn · ${dcost()}/${BUDGET} điểm</div><div class="prep">${SV.deck.map(u=>`<div>${cardHTML(inst(byU(u).id,'p',byU(u).s))}</div>`).join('')}</div>
-   <div class="sect">Mức cược</div><div class="mult">${[1,2,3].map(m=>`<button data-m="${m}" class="${m===prepMult?'on':''}"${m>1&&SV.gold<opp.bet*m?' disabled':''}>×${m}<small>${opp.bet*m} vàng</small></button>`).join('')}</div>
+   ${SV.stage>=3?`<div class="sect">Mức cược</div><div class="mult">${[1,2,3].map(m=>`<button data-m="${m}" class="${m===prepMult?'on':''}"${m>1&&SV.gold<opp.bet*m?' disabled':''}>×${m}<small>${opp.bet*m} vàng</small></button>`).join('')}</div>`:''}
    ${short?`<p style="color:var(--bad)">Bộ bài chưa đủ 6 lá. Hãy vào sửa bộ bài.</p>`:poor?`<p style="color:var(--bad)">Thiếu vàng: trận này cược ${stake}, bạn đang có ${SV.gold}. Nhận quà mỗi ngày ở Cửa hàng hoặc quay lại mặt đất, nơi cho đánh chịu.</p>`:''}
    <div class="row"><button class="btn ghost sm sp" id="goDeck">Sửa bộ bài</button><button class="btn sm sp" id="goIn"${short||poor?' disabled':''}>Vào trận · ${stake} vàng</button></div>`,()=>{
    $$('#mbox .mult button').forEach(b=>b.onclick=()=>{prepMult=+b.dataset.m;startMatch(opp)});
@@ -774,17 +808,15 @@ function startMatch(opp,go){const ix=OPPS.indexOf(opp);if(ix<0||ix>SV.stage)retu
  // Con tin: lá của bạn bị giữ ở tầng này ra trận trong tay đối thủ.
  SV.host.filter(h=>h.ix===ix).slice(0,2).forEach((h,k)=>{const w=ed.map((c,j)=>[sum(c.v),j]).filter(([,j])=>!CARDS[ed[j].id].boss).sort((a,b)=>a[0]-b[0])[k];if(w)ed[w[1]]=inst(h.id,'e',h.s)});
  M={S:newState(pd,ed,opp),opp,ix,bet:stake,mult:prepMult,last:null,eIds:ids,turn:Math.random()<.5?'p':'e',sel:null,prev:null,busy:false};M.S.hands[M.turn].push(inst('soul',M.turn));
- const b=$('#board');b.innerHTML='';cellEls=[];for(let i=0;i<16;i++){const d=document.createElement('div');d.className='cell';d.dataset.i=i;b.append(d);cellEls.push(d)}
- $('#mAv').src=ART[opp.av];$('#mName').textContent=opp.n;
- $('#legend').innerHTML=M.S.el?triHTML()+'<span class="dim">+1</span>':'';
- show('match');renderAll();fitBoard();$('#info').innerHTML=`<span class="nm">${opp.n}</span><div>${M.turn==='p'?'Bạn đi trước nên có thêm lá Tàn Hồn.':'Đối thủ đi trước nên có thêm lá Tàn Hồn.'} ${HINT}</div>`;
+ enterMatch(opp);$('#info').innerHTML=`<span class="nm">${opp.n}</span><div>${M.turn==='p'?'Bạn đi trước nên có thêm lá Tàn Hồn.':'Đối thủ đi trước nên có thêm lá Tàn Hồn.'} ${HINT}</div>`;
  if(opp.boss){const bn=$('#banner');bn.className='lose';bn.textContent='Boss';bn.hidden=false;setTimeout(()=>bn.hidden=true,2200)}
- if(M.turn==='e'){M.busy=true;setTimeout(()=>{if(!M)return;const mv=botMove(M.S,opp);doTurn('e',mv[0],mv[1])},900)}}
-$('#hand').addEventListener('click',e=>{const b=e.target.closest('.hc');if(!b||!M)return;const i=+b.dataset.i;M.sel=M.sel===i?null:i;M.prev=null;M.S.cells.forEach((c,j)=>renderCell(j,c));renderHand();markOk();$('#info').innerHTML=infoCard(M.S.hands.p[i],M.S.el)});
+ if(M.turn==='e'){M.busy=true;setTimeout(()=>{if(!M)return;const mv=nextBot();doTurn('e',mv[0],mv[1])},900)}
+ matchTips()}
+$('#hand').addEventListener('click',e=>{const b=e.target.closest('.hc');if(!b||!M||Date.now()-dragEnd<350)return;const i=+b.dataset.i;if(T.on&&!T.okHand(i))return T.nudge();M.sel=M.sel===i?null:i;M.prev=null;M.S.cells.forEach((c,j)=>renderCell(j,c));renderHand();markOk();$('#info').innerHTML=infoCard(M.S.hands.p[i],M.S.el);const tt=$('#taunt');if(tt)tt.remove();if(M.sel===i)T.emit('sel',i)});
 $('#board').addEventListener('click',e=>{const el=e.target.closest('.cell')||document.elementsFromPoint(e.clientX,e.clientY).find(x=>x.classList.contains('cell'));if(!el||!M)return;const i=+el.dataset.i,c=M.S.cells[i];
  if(c.card){$('#info').innerHTML=infoCard(c.card,M.S.el);return}
  if(c.t!=='none'){$('#info').innerHTML=`<span class="nm">${OBST[c.t][0]}</span><div>${OBST[c.t][1]}</div>`;return}
- if(M.sel!=null&&!M.busy&&M.turn==='p')return M.prev===i?doTurn('p',M.sel,i):showPreview(i);
+ if(M.sel!=null&&!M.busy&&M.turn==='p'){if(T.on&&(!T.okCell(i)||(M.prev===i&&!T.place)))return T.nudge();return M.prev===i?doTurn('p',M.sel,i):showPreview(i)}
  $('#info').innerHTML=HINT});
 /* Bia tiên tri: uống vào thấy lá nên đánh và ô nên đặt. */
 $('#bBeer').onclick=async()=>{if(!M||M.busy||M.turn!=='p')return;
@@ -795,13 +827,14 @@ $('#bBeer').onclick=async()=>{if(!M||M.busy||M.turn!=='p')return;
  M.busy=false;M.sel=mv[0];renderHand();showPreview(mv[1]);cellEls[mv[1]].classList.add('hintcell');const h=$('.hc.sel');if(h)h.classList.add('hint');
  const bb=$('#bBeer');bb.innerHTML=ic('beer')+'×'+SV.beer;bb.classList.toggle('empty',!SV.beer);
  $('#info').innerHTML=`<div class="row"><div class="sp"><span class="nm">Bia mách nước</span><div>Đánh <b>${CARDS[M.S.hands.p[mv[0]].id].n}</b> vào ô đang sáng. Nước này đã tính cả đòn đáp trả.</div></div><button class="btn" id="bPlace">Đặt bài</button></div>`};
-$('#bQuit').onclick=()=>modal(`<h2>Bỏ trận?</h2><p>Thoát lúc này tính là thua và bạn mất ${M.bet} vàng đã mang vào.</p><div class="row"><button class="btn ghost sp" onclick="closeModal()">Đánh tiếp</button><button class="btn sp" id="qy">Bỏ trận</button></div>`,()=>{$('#qy').onclick=()=>{SV.loss++;SV.streak=0;qDay();SV.q.play++;save();M=null;closeModal();show('home')}});
+$('#bQuit').onclick=()=>M&&M.tut?(endTut(),M=null,show('home')):modal(`<h2>Bỏ trận?</h2><p>Thoát lúc này tính là thua và bạn mất ${M.bet} vàng đã mang vào.</p><div class="row"><button class="btn ghost sp" onclick="closeModal()">Đánh tiếp</button><button class="btn sp" id="qy">Bỏ trận</button></div>`,()=>{$('#qy').onclick=()=>{SV.loss++;SV.streak=0;qDay();SV.q.play++;save();M=null;closeModal();show('home')}});
 
 /* ================= RESULT ================= */
 function modal(html,after){$('#mbox').innerHTML=html;$('#modal').hidden=false;after&&after()}
 function closeModal(){$('#modal').hidden=true}
 function goHome(){M=null;save();closeModal();show('home')}
 async function finish(){const p=cnt(M.S,'p'),e=cnt(M.S,'e'),bet=M.opp.bet*M.mult;qDay();SV.q.play++;if(p>e){SV.q.win++;SV.streak++}else SV.streak=0;const bn=$('#banner');bn.className=p>e?'win':'lose';bn.textContent=p>e?'Khải hoàn':p<e?'Bại trận':'Bất phân';bn.hidden=false;sfx(p>e?'win':'lose');if(p>e)SV.win++;else SV.loss++;await sleep(calm?600:2100);bn.hidden=true;if(!M)return;
+ if(M.tut){if(p<=e){SV.loss--;save();return modal(`<h2>Suýt nữa!</h2><p style="text-align:center">Trận hướng dẫn không mất gì. Đánh lại nhé?</p><div class="row"><button class="btn ghost sp" id="tSkip">Bỏ qua</button><button class="btn sp" id="tRetry">Đánh lại</button></div>`,()=>{$('#tRetry').onclick=()=>{closeModal();runTutorial()};$('#tSkip').onclick=()=>{SV.tut=1;goHome()}})}SV.tut=1;endTut()}
  if(p===e){SV.gold+=bet;save();return modal(`<h2>Hòa ${p} – ${e}</h2><p>Bạn nhận lại ${bet} vàng đã mang vào.</p><button class="btn" style="width:100%" onclick="goHome()">Về sảnh</button>`)}
  $('#info').innerHTML='';
  /* Ô vật phẩm kiểu túi đồ: hình + số lượng ×N. */
@@ -810,14 +843,14 @@ async function finish(){const p=cnt(M.S,'p'),e=cnt(M.S,'e'),bet=M.opp.bet*M.mult
   if(SV.streak>1)gold+=Math.round(bet*Math.min(SV.streak-1,5)*.1);
   if(SV.fwd!==today()){SV.fwd=today();gold+=100}
   const back=SV.host.filter(h=>h.ix===M.ix);if(back.length){back.forEach(h=>{addCard(h.id,h.s);loot.push(cslot(h.id,h.s))});SV.host=SV.host.filter(h=>h.ix!==M.ix)}
-  if(M.opp.gift&&!SV.gifts.includes(M.ix)){SV.gifts.push(M.ix);const g=M.opp.gift;if(g.gold)gold+=g.gold;if(g.card){addCard(g.card);loot.unshift(cslot(g.card,0))}}
+  if(M.opp.gift&&!SV.gifts.includes(M.ix)){SV.gifts.push(M.ix);const g=M.opp.gift;if(g.gold)gold+=g.gold;if(g.card){autoSlot(addCard(g.card));loot.unshift(cslot(g.card,0))}}
   SV.gold+=M.bet+gold;loot.unshift(slot('coins','×'+gold));
   if(M.opp.abyss){SV.abyss++;refreshAbyss();loot.push(slot('stairs','↓'+SV.abyss))}
   else if(M.ix===SV.stage&&M.ix<OPPS.length-1){SV.stage++;SV.beer++;loot.push(slot('beer','×1'),slot('stairs',SV.stage>7?'↓∞':'↓'+SV.stage));
    Object.keys(CARDS).filter(k=>CARDS[k].u===SV.stage&&!CARDS[k].boss).forEach(k=>fresh.push(cslot(k,0,'')))}
   if(M.opp.boss&&!SV.boss){SV.boss=1;loot.push(slot('skull','×1'))}
   save();burst(innerWidth/2,innerHeight/3,'#ffd76a',80);
-  return modal(`<h2>Khải hoàn ${p} – ${e}</h2><div class="loot">${loot.join('')}</div>${fresh.length?`<p class="cap">Gói bài có thêm</p><div class="loot sm">${fresh.join('')}</div>`:''}<p class="cap">Chọn thêm một</p><div class="pick3">
+  return modal(`<h2>Khải hoàn ${p} – ${e}</h2>${quote(M.opp,1)}<div class="loot">${loot.join('')}</div>${fresh.length?`<p class="cap">Gói bài có thêm</p><div class="loot sm">${fresh.join('')}</div>`:''}<p class="cap">Chọn thêm một</p><div class="pick3">
    <button data-k="steal">${ic('swords')}<b>×1</b><span>lá của địch</span></button>
    <button data-k="gold">${ic('coins')}<b>×${bet}</b><span>vàng</span></button>
    <button data-k="pack">${ic('ochest')}<b>×1</b><span>rương 3 lá</span></button></div>`,()=>{
@@ -826,10 +859,10 @@ async function finish(){const p=cnt(M.S,'p'),e=cnt(M.S,'e'),bet=M.opp.bet*M.mult
     if(k==='pack')packModal([rollCard(),rollCard(),rollCard()],'Rương bí ẩn');
     if(k==='steal')modal(`<h2>Cướp bài</h2><p class="cap" style="margin:0">Chạm lá muốn lấy</p><div class="reveal">${M.eIds.map(id=>`<button class="gc" data-id="${id}">${cardHTML(inst(id,'e'))}<div class="nm2">${CARDS[id].n}</div></button>`).join('')}</div>`,()=>{
      $$('#mbox .gc').forEach(g=>g.onclick=()=>{addCard(g.dataset.id);packModal([g.dataset.id],'Đã cướp được',true)})})})})}
- if(SV.charm>0){SV.charm--;save();return modal(`<h2 class="lose">Bại trận ${p} – ${e}</h2><div class="loot">${slot('coins','−'+M.bet,1)}${slot('charm','−1',1)}</div><button class="btn" style="width:100%;margin-top:12px" onclick="goHome()">Về sảnh</button>`)}
+ if(SV.charm>0){SV.charm--;save();return modal(`<h2 class="lose">Bại trận ${p} – ${e}</h2>${quote(M.opp,2)}<div class="loot">${slot('coins','−'+M.bet,1)}${slot('charm','−1',1)}</div><button class="btn" style="width:100%;margin-top:12px" onclick="goHome()">Về sảnh</button>`)}
  pandora(p,e)}
 function pandora(p,e){const bet=M.opp.bet*M.mult,boxes=shuffle(PBOX.slice()).slice(0,3);save();
- modal(`<h2 class="lose">Bại trận ${p} – ${e}</h2><div class="loot"><div class="neg">${ic('coins')}<b>−${M.bet}</b></div></div><p class="cap">Chọn một hộp Pandora</p>
+ modal(`<h2 class="lose">Bại trận ${p} – ${e}</h2>${quote(M.opp,2)}<div class="loot"><div class="neg">${ic('coins')}<b>−${M.bet}</b></div></div><p class="cap">Chọn một hộp Pandora</p>
   <div class="boxes">${boxes.map((b,i)=>`<button class="pbox" data-i="${i}" aria-label="Hộp ${i+1}">${ic('chest')}</button>`).join('')}</div><div id="pres"></div>`,()=>{
   $$('.pbox').forEach(b=>b.onclick=()=>{const ch=+b.dataset.i;$$('.pbox').forEach((x,i)=>{x.onclick=null;x.classList.add('open');if(i===ch)x.classList.add('mine');x.innerHTML=`<div>${ic(boxes[i].ic)}${boxes[i].n}</div>`});
    const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,'#c77dff',50);
@@ -844,7 +877,7 @@ function pandora(p,e){const bet=M.opp.bet*M.mult,boxes=shuffle(PBOX.slice()).sli
    save();$('#pres').innerHTML=`<p>${t}</p><button class="btn" style="width:100%" onclick="goHome()">Về sảnh</button>`})})}
 function packModal(ids,title,added){if(!added)ids.forEach(id=>addCard(id));save();const top=Math.max(...ids.map(i=>CARDS[i].r));
  modal(`<h2>${title}</h2><div class="reveal" style="grid-template-columns:repeat(${Math.max(ids.length,3)},1fr)">${ids.map(id=>`<div class="gc"><div class="rv">${backHTML}</div><div class="nm2"></div></div>`).join('')}</div><button class="btn" style="width:100%" id="pkOk" disabled>Nhận bài</button>`,async()=>{
-  const sl=$$('#mbox .gc');for(let i=0;i<ids.length;i++){await sleep(520);const d=CARDS[ids[i]],el=sl[i];if(!el.isConnected)return;el.querySelector('.rv').innerHTML=cardHTML(inst(ids[i],'p'));
+  const sl=$$('#mbox .gc');for(let i=0;i<ids.length;i++){await sleep(380);const d=CARDS[ids[i]],el=sl[i];if(!el.isConnected)return;const bk=el.querySelector('.rv .card');if(bk)bk.classList.add('charge','c'+d.r);sfx('charge',d.r);await sleep(calm?150:[280,650,1050,1600][d.r]);if(!el.isConnected)return;if(d.r===3){flash();sfx('win')}el.querySelector('.rv').innerHTML=cardHTML(inst(ids[i],'p'));if(d.r>=2)bigTxt(d.r===3?'Huyền thoại!':'Sử thi!',d.r===3?'#ffe08a':'#c9a2ff');
    el.querySelector('.card').classList.add('a-flip');el.querySelector('.nm2').innerHTML=`${d.n}<br><span class="tag r${d.r}">${RN[d.r]}</span>`;
    const r=el.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,getComputedStyle(document.documentElement).getPropertyValue('--r'+d.r).trim(),14+d.r*30)}
   const ok=$('#pkOk');ok.disabled=false;ok.onclick=()=>{if(M)goHome();else{closeModal();renderGacha();renderShop()}}})}
@@ -859,11 +892,11 @@ function renderHome(){$('#gold1').textContent=SV.gold;qDay();$('#bShop').innerHT
    <div class="fl-art"><img src="${ART[o.av]}" alt="" draggable="false"></div>
    <div class="fl-body"><b class="fl-name">${lock&&!o.boss?'? ? ?':o.n}</b><div class="dim">${o.t}${done?' · đã hạ':''}${o.abyss&&SV.abyss?' · kỷ lục '+SV.abyss:''}</div>${lock?'':`<div class="fl-style">Lối đánh: ${o.style}</div>`}${SV.host.some(h=>h.ix===i)?`<div class="fl-host">Đang giữ con tin: ${SV.host.filter(h=>h.ix===i).map(h=>CARDS[h.id].n).join(', ')}. Thắng để chuộc.</div>`:''}
     ${g&&!got&&!lock?`<div class="fl-gift">Thưởng lần đầu: ${g.card?'lá '+CARDS[g.card].n:g.gold+' vàng'}</div>`:''}
-    ${lock?`<button class="btn ghost" disabled>Hạ ${depthName(i-1).toLowerCase()} để mở</button>`:`<button class="btn go" data-i="${i}">Vào trận · cược ${o.bet} vàng</button>`}
+    ${lock?`<button class="btn ghost" disabled>Hạ ${depthName(i-1).toLowerCase()} để mở</button>`:`<button class="btn go" data-i="${i}">${i===0&&!SV.tut?'Vào trận đầu tiên':`Vào trận · cược ${o.bet} vàng`}</button>`}
     ${i<OPPS.length-1?`<div class="fl-hint">▾ Vuốt lên để xuống ${depthName(i+1).toLowerCase()}</div>`:'<div class="fl-hint" style="animation:none">Không có đáy</div>'}</div></div>`}).join('');
- requestAnimationFrame(()=>{tw.scrollTop=Math.min(SV.stage,OPPS.length-1)*tw.clientHeight;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)))})}
+ requestAnimationFrame(()=>{tw.scrollTop=Math.min(SV.stage,OPPS.length-1)*tw.clientHeight;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)))});$('#bDeck').hidden=SV.stage<2;$('#bGacha').hidden=SV.stage<2;$('#bShop').hidden=SV.stage<1;setTimeout(homeTips,450)}
 $('#tower').addEventListener('scroll',e=>{const tw=e.currentTarget;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)))},{passive:true});
-$('#tower').addEventListener('click',e=>{const b=e.target.closest('.go');if(b){prepMult=1;startMatch(OPPS[+b.dataset.i])}});
+$('#tower').addEventListener('click',e=>{const b=e.target.closest('.go');if(b){prepMult=1;const i=+b.dataset.i;if(i===0&&!SV.tut)return runTutorial();startMatch(OPPS[i])}});
 $$('[data-home]').forEach(b=>b.onclick=()=>show('home'));
 let dkFilter='all',dkSel=null,dkArm=false,dkMsg='';
 const PRICE=[15,60,200,600],FILTERS=[['all','Tất cả'],['hoa','Hỏa'],['thuy','Thủy'],['moc','Mộc'],['skill','Kỹ năng']];
@@ -905,7 +938,7 @@ $('#bOpen').onclick=()=>{if(SV.gold<100)return;SV.gold-=100;const ids=[rollCard(
  packModal(ids,'Gói Huyền Ấn');renderGacha()};
 function showRules(){const st=SV.stage,L=['Hai bên lần lượt đặt 1 lá vào ô trống. Cây và đá là chướng ngại vật, chỉ lá có kỹ năng Phá vật cản mới đập nát được.',
  'Số ở cạnh lá bạn <b>lớn hơn</b> số ở cạnh đối diện của lá địch kề bên thì lá địch bị lật về phe bạn.',
- 'Chạm ô một lần để xem trước, chạm lần nữa để đặt. Kín bàn, ai giữ nhiều lá hơn thì thắng.',
+ 'Kéo lá thả vào ô, hoặc chạm lá rồi chạm ô để xem trước. Kín bàn, ai giữ nhiều lá hơn thì thắng.',
  'Người đi trước có thêm lá Tàn Hồn để bù thế bất lợi. Bài trên tay hai bên đều lộ diện.',
  'Khi chọn lá, ô ghi <b>an toàn</b> là ô đối thủ không lật lại được gì, ô ghi <b>hở 2</b> trở lên là ô nguy hiểm. Phần xem trước ghi con số chính xác.',
  '<b>Thắng</b>: lấy vàng cược và chọn cướp bài, thêm vàng hoặc rương. Qua ải lần đầu có thưởng riêng. <b>Thua</b>: mất vàng cược và phải mở 1 trong 3 hộp Pandora, trừ khi có Bùa hộ mệnh. Lá bị bắt làm con tin sẽ được trả khi bạn thắng lại ở tầng đó.'];
@@ -968,6 +1001,113 @@ $('#shopBody').addEventListener('click',e=>{const b=e.target.closest('[data-act]
  if(a==='iap'){const loot=it.rare?`<div>${ic('coins')}<b>×${it.gold}</b></div><div class="r"><i>Hiếm</i>${ic('cpick')}<b>×1</b></div>`:`<div>${ic(it.ic)}<b>×${it.gold.toLocaleString('vi-VN')}</b></div>`;
   modal(`<h2>${it.n}</h2><div class="loot">${loot}</div><p style="text-align:center;font-family:var(--display);font-weight:700;font-size:28px;color:var(--gold);margin:10px 0 2px">${it.price}</p><p class="cap" style="margin:0 0 12px">Thanh toán giả lập</p><div class="row"><button class="btn ghost sp" onclick="closeModal()">Hủy</button><button class="btn sp" id="buyOk">Mua</button></div>`,()=>{$('#buyOk').onclick=()=>grant(it)})}});
 setInterval(()=>{if($('#shop').hidden)return;const el=$('#shopBody .cdv');if(!el)return;const ms=untilReset();el.textContent=hms(ms);if(ms<1500)setTimeout(renderShop,1600)},1000);
+/* ================= HƯỚNG DẪN, MỞ DẦN GIAO DIỆN, CẢM GIÁC ================= */
+if(SV.stage>0||SV.win>0)SV.tut=SV.tut||1;SV.tips=SV.tips||{};
+/* T: cổng chặn thao tác khi đang hướng dẫn, và hàng đợi sự kiện để kịch bản chờ người chơi làm đúng. */
+const T={on:false,tutorial:false,hand:null,cell:null,place:true,waits:[],
+ okHand(i){return this.hand==null||this.hand===i},okCell(i){return this.cell==null||this.cell===i},
+ emit(ev,v){this.waits=this.waits.filter(w=>{if(w.ev===ev&&(w.v==null||w.v===v)){w.res(v);return false}return true})},
+ wait(ev,v){return new Promise(res=>this.waits.push({ev,v,res}))},
+ nudge(){sfx('err');const b=$('#cbub');b.classList.remove('nudge');void b.offsetWidth;b.classList.add('nudge')}};
+let coachTgt=null;
+function coachEl(){const t=coachTgt;return!t?null:typeof t==='function'?t():typeof t==='string'?$(t):t}
+function coach(sel,html,btn){const c=$('#coach');c.hidden=false;coachTgt=sel;$('#cbub p').innerHTML=html;$('#cNext').hidden=!btn;if(btn)$('#cNext').textContent=btn;$('#cSkip').hidden=!T.tutorial;coachPos();return btn?T.wait('next'):Promise.resolve()}
+function coachOff(){const c=$('#coach');if(c)c.hidden=true;coachTgt=null}
+function coachPos(){const c=$('#coach');if(!c||c.hidden)return;const el=coachEl(),sp=$('#spot'),bub=$('#cbub'),bw=bub.offsetWidth,bh=bub.offsetHeight;
+ c.classList.toggle('full',!el);
+ if(!el){sp.style.display='none';bub.style.left=(innerWidth-bw)/2+'px';bub.style.top=Math.max(12,innerHeight*.42-bh/2)+'px';return}
+ const r=el.getBoundingClientRect(),pad=6;sp.style.display='block';Object.assign(sp.style,{left:r.left-pad+'px',top:r.top-pad+'px',width:r.width+pad*2+'px',height:r.height+pad*2+'px'});
+ const below=r.bottom+pad+14+bh<innerHeight-8&&!(r.top>innerHeight*.55);bub.classList.toggle('up',!below);
+ bub.style.top=(below?r.bottom+pad+14:Math.max(8,r.top-pad-14-bh))+'px';
+ const left=Math.min(Math.max(10,r.left+r.width/2-bw/2),innerWidth-bw-10);bub.style.left=left+'px';bub.style.setProperty('--ax',Math.max(14,Math.min(bw-14,r.left+r.width/2-left))+'px')}
+(function loop(){requestAnimationFrame(loop);coachPos()})();
+$('#cNext').onclick=()=>{sfx('tap');T.emit('next')};
+function endTut(){T.tutorial=false;T.on=false;T.hand=T.cell=null;T.place=true;coachOff();if(M)M.pause=null}
+$('#cSkip').onclick=()=>{SV.tut=1;save();endTut();const w=T.waits;T.waits=[];w.forEach(x=>x.res('skip'))};
+
+/* Đối thủ đi theo kịch bản khi có, không thì để máy tự nghĩ. */
+function nextBot(){if(M.script&&M.script.length){const[id,c]=M.script.shift();const hi=M.S.hands.e.findIndex(x=>x.id===id);if(hi>=0&&isFree(M.S.cells[c]))return[hi,c]}return botMove(M.S,M.opp)}
+
+function enterMatch(opp){const b=$('#board');b.innerHTML='';cellEls=[];for(let i=0;i<16;i++){const d=document.createElement('div');d.className='cell';d.dataset.i=i;b.append(d);cellEls.push(d)}
+ $('#mAv').src=ART[opp.av];$('#mName').textContent=opp.n;$('#legend').innerHTML=M.S.el?triHTML()+'<span class="dim">+1</span>':'';
+ show('match');renderAll();fitBoard();taunt(opp.say&&opp.say[0])}
+function taunt(t){const o=$('#taunt');if(o)o.remove();if(!t)return;const d=document.createElement('div');d.id='taunt';d.textContent='“'+t+'”';$('#match').append(d);setTimeout(()=>d.remove(),3600)}
+const quote=(o,k)=>o&&o.say?`<p class="quote"><img src="${ART[o.av]}" alt="">“${o.say[k]}”</p>`:'';
+
+/* Trận hướng dẫn: bàn và bài cố định, hai nước đầu của đối thủ theo kịch bản. */
+async function runTutorial(){
+ const eids=['scarab','croc','horse','rat','mud','ant'],pd=['boar','bear','falcon','ant','stoat','seahorse'].map(id=>inst(id,'p')),ed=eids.map(id=>inst(id,'e'));ed.push(inst('soul','e'));ed.forEach(c=>{if(c.id!=='scarab'&&c.id!=='croc'){c.v=c.v.map(x=>Math.max(1,x-1));c.b=[...c.v]}});
+ const S=newState(pd,ed,{el:0});S.cells.forEach(c=>c.t='none');S.cells[0].t='rock';S.cells[7].t='tree';S.cells[12].t='rock';
+ if(!SV.seen.includes(0))SV.seen.push(0);
+ M={S,opp:OPPS[0],ix:0,bet:0,mult:1,tut:1,last:null,eIds:eids,turn:'e',sel:null,prev:null,busy:true,script:[['scarab',5],['croc',13]]};
+ T.tutorial=true;T.on=true;T.hand=-1;T.cell=-1;T.place=false;T.waits=[];
+ enterMatch(OPPS[0]);$('#info').innerHTML='<span class="nm">Trận hướng dẫn</span><div>Trận này không mất vàng.</div>';
+ const alive=()=>T.tutorial&&M&&M.tut;
+ const pickThenPlace=async(hi,cell,cellText,placeText)=>{
+  T.hand=hi;T.cell=-1;T.place=false;coach(()=>$$('#hand .hc')[hi],`Chạm vào lá <b>${CARDS[M.S.hands.p[hi].id].n}</b> trên tay bạn.`);
+  if(M.sel!==hi)await T.wait('sel',hi);if(!alive())return;
+  T.cell=cell;coach(()=>cellEls[cell],cellText);
+  const r=await Promise.race([T.wait('prev',cell).then(()=>'prev'),T.wait('placed').then(()=>'placed')]);if(!alive()||r==='placed')return;
+  T.place=true;coach('#bPlace',placeText);await T.wait('placed')};
+ await coach(null,'<b class="who">Hướng dẫn</b>Chào lữ khách. Trận đầu này mình chỉ bạn cách chơi, mất khoảng một phút.','Bắt đầu');if(!alive())return;coachOff();
+ let wm=T.wait('myturn');await sleep(250);if(!alive())return;doTurn('e',M.S.hands.e.findIndex(c=>c.id==='scarab'),5);await wm;if(!alive())return;
+ await coach(()=>cellEls[5],'Đối thủ vừa đặt một lá, <b>viền đỏ</b> là bài địch. Mỗi lá có <b>4 số ở 4 cạnh</b>: trên, phải, dưới, trái.','Tiếp');if(!alive())return;
+ wm=T.wait('myturn');
+ M.pause=async()=>{M.pause=null;T.hand=T.cell=-1;T.place=false;await coach(()=>cellEls[5],'Lật được rồi! Lá này đổi sang <b>viền xanh</b>, giờ là của bạn.','Tiếp');coachOff()};
+ await pickThenPlace(M.S.hands.p.findIndex(c=>c.id==='boar'),9,'Đặt vào ô sáng này, ngay dưới lá địch. Chạm vào ô, hoặc kéo lá thả vào.',
+  'Hai cạnh chạm nhau: cạnh trên <b>5</b> của bạn lớn hơn cạnh dưới <b>4</b> của địch, nên lá địch sẽ bị lật. Bấm <b>Đặt bài</b>.');if(!alive())return;
+ await wm;if(!alive())return;
+ T.hand=T.cell=-1;T.place=false;
+ await coach(()=>cellEls[9],'Đối thủ đánh trả: cạnh trên <b>5</b> của Ngạc Ngư lớn hơn cạnh dưới <b>3</b> của Lợn Lòi, nên lá của bạn bị lật lại. <b>Cạnh yếu dễ bị lật.</b>','Tiếp');if(!alive())return;
+ let best=null,bs=-1e9;M.S.hands.p.forEach((c,hi)=>M.S.cells.forEach((x,i)=>{if(!isFree(x))return;const p=simMove(hi,i),sc=p.flips.length*10-p.risk*15;if(sc>bs){bs=sc;best={hi,i,p}}}));
+ const fl=best.p.flips.length,safe=!best.p.risk,lbl=(fl?`<b>Lật ${fl}</b> là số lá sẽ lật được`:'')+(safe?(fl?', ':'')+'<b>an toàn</b> là đối thủ không lật lại được':'');
+ M.pause=async()=>{M.pause=null;T.hand=T.cell=-1;T.place=false;
+  await coach(null,'<b class="who">Giờ bạn tự đánh</b>Mỗi lượt đặt 1 lá. Kín bàn, ai giữ nhiều lá hơn thì thắng. Nhớ nhìn nhãn <b>Lật</b> và <b>an toàn</b> trên từng ô.','Đánh thôi');endTut()};
+ await pickThenPlace(best.hi,best.i,lbl?`Khi đã chọn lá, mỗi ô ghi sẵn kết quả: ${lbl}. Đặt vào ô này.`:'Đặt vào ô này.','Bấm <b>Đặt bài</b>.')}
+
+/* Mẹo theo ngữ cảnh trong trận, mỗi mẹo chỉ hiện một lần. */
+async function matchTips(){if(!M||M.tut)return;
+ const run=async(k,sel,txt)=>{if(SV.tips[k]||!M)return;T.on=true;T.hand=T.cell=-1;T.place=false;await coach(sel,txt,'Đã hiểu');SV.tips[k]=1;save();T.on=false;T.hand=T.cell=null;T.place=true;coachOff()};
+ await sleep(600);
+ if(M&&M.S.el)await run('el','#legend','Từ tầng này hệ có tác dụng: <b>Hỏa thắng Mộc, Mộc thắng Thủy, Thủy thắng Hỏa</b>. Đánh vào lá thuộc hệ bị khắc được +1, phần xem trước sẽ ghi dạng "4+1".');
+ if(M&&M.S.hands.e.some(c=>CARDS[c.id].s))await run('skill','#ehand','Lá từ ★★ trở lên có <b>kỹ năng</b>. Chạm vào lá địch ở hàng này để đọc trước khi đánh.');
+ if(M&&!$('#bBeer').hidden)await run('beer','#bBeer','Bí nước? Uống <b>bia tiên tri</b>: nó chỉ lá nên đánh và ô nên đặt.')}
+
+/* Mẹo ở sảnh khi mở khóa tính năng mới. */
+let tipBusy=false;
+async function homeTips(){if(tipBusy||$('#home').hidden||!$('#modal').hidden)return;tipBusy=true;
+ try{if(!SV.tut){coach('.floor .go[data-i="0"]','<b class="who">Huyền Ấn</b>Chạm để vào trận đầu tiên. Mình sẽ chỉ bạn cách chơi.');return}
+  const a=SV.lastAuto,steps=[[SV.stage>=1,'shop','#bShop','<b>Cửa hàng</b> đã mở. Mỗi ngày có quà và nhiệm vụ nhận vàng.'],
+   [SV.stage>=2,'deck','#bDeck',a?`<b>${CARDS[a.i].n}</b> đã tự vào bộ ra trận${a.o?` thay cho ${CARDS[a.o].n}`:''}. Vào <b>Bộ bài</b> để đổi lá khi muốn.`:'Vào <b>Bộ bài</b> để chọn 6 lá ra trận.'],
+   [SV.stage>=2,'pack','#bGacha','<b>Mở gói</b> để có thêm lá. Lá hiếm có kỹ năng riêng.']];
+  for(const[ok,k,sel,txt]of steps){if(!ok||SV.tips[k])continue;await coach(sel,txt,'Đã hiểu');SV.tips[k]=1;save();if($('#home').hidden)return}
+  coachOff()}finally{tipBusy=false}}
+
+/* Lá thưởng tự vào bộ ra trận, thay lá yếu nhất nếu đủ điểm. */
+function autoSlot(c){fixDeck();if(SV.deck.includes(c.u))return;const need=cst(c);SV.lastAuto={i:c.id,o:null};
+ if(SV.deck.length<6&&dcost()+need<=BUDGET){SV.deck.push(c.u);return save()}
+ const out=SV.deck.map(byU).sort((a,b)=>cst(a)-cst(b)||sum(CARDS[a.id].v)-sum(CARDS[b.id].v)).find(x=>dcost()-cst(x)+need<=BUDGET&&cst(x)<need+1&&CARDS[x.id].r<=CARDS[c.id].r);
+ if(out){SV.deck[SV.deck.indexOf(out.u)]=c.u;SV.lastAuto.o=out.id}else SV.lastAuto=null;save()}
+
+/* Kéo thả lá từ tay vào ô. */
+let drag=null,dragEnd=0;
+$('#hand').addEventListener('pointerdown',e=>{const b=e.target.closest('.hc');if(!b||!M||M.busy||M.turn!=='p')return;drag={hi:+b.dataset.i,x:e.clientX,y:e.clientY,on:false,cell:null,id:e.pointerId}});
+function dragClear(){if(!drag)return;if(drag.g)drag.g.remove();drag=null}
+addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id||!M)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+ if(!drag.on){if(dx*dx+dy*dy<120)return;if(M.busy||M.turn!=='p'){drag=null;return}if(T.on&&!T.okHand(drag.hi)){drag=null;return T.nudge()}
+  drag.on=true;M.sel=drag.hi;M.prev=null;M.S.cells.forEach((c,j)=>renderCell(j,c));renderHand();markOk();$('#info').innerHTML=infoCard(M.S.hands.p[drag.hi],M.S.el);
+  const g=document.createElement('div');g.id='dragGhost';g.innerHTML=cardHTML(M.S.hands.p[drag.hi]);document.body.append(g);drag.g=g;T.emit('sel',drag.hi)}
+ drag.g.style.transform=`translate(${e.clientX}px,${e.clientY}px) translate(-50%,-75%) rotate(${Math.max(-12,Math.min(12,dx/14))}deg)`;
+ const el=document.elementsFromPoint(e.clientX,e.clientY).find(x=>x.classList&&x.classList.contains('cell')),i=el?+el.dataset.i:null,ok=i!=null&&isFree(M.S.cells[i])&&(!T.on||T.okCell(i));
+ if(ok&&i!==drag.cell){drag.cell=i;showPreview(i)}else if(!ok&&drag.cell!=null){drag.cell=null;M.prev=null;M.S.cells.forEach((c,j)=>renderCell(j,c));markOk()}});
+addEventListener('pointerup',e=>{if(!drag||e.pointerId!==drag.id)return;const d=drag;dragClear();if(!d.on)return;dragEnd=Date.now();
+ if(d.cell!=null&&M&&!M.busy&&M.turn==='p')doTurn('p',d.hi,d.cell)});
+addEventListener('pointercancel',()=>{if(drag&&drag.on)dragEnd=Date.now();dragClear()});
+
+/* Hiệu ứng chữ lớn và chớp sáng. */
+function bigTxt(t,c){const b=$('#board'),r=!$('#match').hidden&&b?b.getBoundingClientRect():{left:0,top:innerHeight*.3,width:innerWidth,height:0};const s=document.createElement('div');s.className='bigtxt';s.textContent=t;
+ s.style.cssText=`left:${r.left+r.width/2}px;top:${r.top+r.height/2}px;color:${c||'#ffe9a8'}`;$('#fx').append(s);setTimeout(()=>s.remove(),1350)}
+function flash(){const f=document.createElement('div');f.className='flash';document.body.append(f);setTimeout(()=>f.remove(),850)}
 /* Nút Back của Android: đóng lớp trên cùng, về sảnh, hoặc thoát. */
 window.hwBack=()=>{if(!$('#modal').hidden)return'stay';if(!$('#match').hidden){$('#bQuit').click();return'stay'}if($('#home').hidden){show('home');return'stay'}return'exit'};
 show('home');
