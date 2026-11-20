@@ -21,15 +21,10 @@ echo "sdk.dir=/duong/dan/Android/Sdk" > local.properties
 # → android/app/build/outputs/apk/debug/app-debug.apk
 ```
 
-## Thay tranh lá bài
+## Tranh lá bài
 
-Đặt ảnh vào `web/art/` rồi khai báo trong `game.html`:
-
-```js
-const ART={wolf:'art/wolf.jpg',dragon:'art/dragon.jpg'};
-```
-
-Lá nào không có ảnh sẽ dùng hình biểu tượng mặc định.
+Tranh nằm trong `web/art/` (webp 256px, nền trong suốt), khai báo trong `ART` ở `game.html`.
+Muốn thay tranh: ghi đè file cùng tên, hoặc thêm khóa mới vào `ART`. Lá không có ảnh dùng hình biểu tượng.
 
 ## Những phần còn là giả lập
 
@@ -37,7 +32,10 @@ Lá nào không có ảnh sẽ dùng hình biểu tượng mặc định.
 - "Số bản còn lại trên toàn server" của bài hiếm: số tĩnh, chưa có server.
 - Đối thủ là máy; tiến trình lưu bằng localStorage trên máy.
 
-## Ghi công
+## Ghi công và giấy phép tranh
 
-Hình linh thú và biểu tượng: [game-icons.net](https://game-icons.net) (Lorc, Delapouite, Skoll và cộng sự), giấy phép CC BY 3.0.
-Font: Cormorant Garamond, Alegreya Sans (SIL Open Font License).
+- Tranh linh thú và chân dung đối thủ: [The Battle for Wesnoth](https://www.wesnoth.org) và các họa sĩ đóng góp,
+  giấy phép GNU GPL v2+ (một số tranh CC BY-SA 4.0). Dùng cho demo thì ổn; nếu phát hành thương mại,
+  cần tuân thủ điều khoản chia sẻ tương tự của các giấy phép này hoặc thay bằng tranh riêng.
+- Biểu tượng giao diện: [game-icons.net](https://game-icons.net) (Lorc, Delapouite, Skoll và cộng sự), CC BY 3.0.
+- Font: Cormorant Garamond, Alegreya Sans (SIL Open Font License).

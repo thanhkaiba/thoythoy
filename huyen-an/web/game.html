@@ -95,7 +95,8 @@ h1,h2{font-family:var(--display);font-weight:600;margin:0;text-wrap:balance}
 .score .p{color:var(--moon)}.score .e{color:var(--bad)}
 .who{font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:3px 0;border-bottom:1px solid var(--line)}
 .who.p{border-color:var(--moon);color:var(--moon)}.who.e{border-color:var(--blood);color:var(--bad)}
-.ehand{display:flex;gap:3px}.ehand div{width:20px}
+.ehand{display:flex;gap:2px}.ehand div{width:15px}
+.who{white-space:nowrap}
 .stage{flex:1;min-height:0;display:grid;place-items:center;perspective:900px;perspective-origin:50% 10%}
 .board{width:min(100%,430px,calc((100dvh - 330px)*.82));aspect-ratio:1/1.2;display:grid;grid-template-columns:repeat(4,1fr);gap:1.6%;padding:2.6%;
   transform:rotateX(34deg);transform-style:preserve-3d;
@@ -233,17 +234,37 @@ table.rates td:last-child{text-align:right;font-variant-numeric:tabular-nums}
 .item .price{font-family:var(--display);font-weight:700;font-size:16px;color:var(--gold);border:1px solid #6b5a33;padding:4px 10px;white-space:nowrap}
 .item.done{opacity:.45}
 .item.hot{border-color:#6b5a33;box-shadow:inset 0 0 24px #c9a55a22}
+/* ---------- tháp địa ngục: mỗi lần vuốt xuống một tầng ---------- */
+.tower{flex:1;min-height:0;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none;border:1px solid var(--line);overscroll-behavior:contain}
+.tower::-webkit-scrollbar{display:none}
+.floor{height:100%;scroll-snap-align:start;scroll-snap-stop:always;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:14px 14px 10px;text-align:center;overflow:hidden;
+  background:radial-gradient(85% 55% at 50% 40%,color-mix(in srgb,var(--fc) 50%,#000),#0b0906 78%);border-bottom:1px solid #000}
+.floor::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,#0000 0 38px,#0002 38px 40px);pointer-events:none}
+.fl-top{position:relative;z-index:2}
+.fl-logo{font-family:var(--display);font-weight:500;font-size:30px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-shadow:0 0 24px #c9a55a55}
+.fl-depth{display:block;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:color-mix(in srgb,var(--fc) 50%,#d9d0bd)}
+.fl-top h2{font-size:26px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--fg)}
+.fl-art{position:absolute;inset:16% 0 34% 0;display:grid;place-items:center;z-index:1}
+.fl-art img{height:100%;width:auto;max-width:96%;object-fit:contain;filter:drop-shadow(0 0 22px color-mix(in srgb,var(--fc) 80%,#000)) drop-shadow(0 10px 8px #000);-webkit-mask:linear-gradient(#000 78%,transparent);mask:linear-gradient(#000 78%,transparent)}
+.floor.locked .fl-art img{filter:brightness(0) drop-shadow(0 0 16px color-mix(in srgb,var(--fc) 70%,#000));opacity:.8}
+.fl-body{position:relative;z-index:2;width:100%;display:grid;gap:6px;justify-items:center}
+.fl-name{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.05em}
+.floor.boss .fl-name{color:var(--bad);text-transform:uppercase;letter-spacing:.14em}
+.fl-gift{font-size:13px;color:var(--gold)}
+.fl-body .btn{width:100%}
+.fl-hint{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);animation:bob 1.2s ease-in-out infinite alternate}
+.cell.willbreak .obst{animation:blink .5s steps(2) infinite}
+@keyframes blink{50%{opacity:.35}}
+.pic{object-position:50% 10%;filter:drop-shadow(0 0 4cqw color-mix(in srgb,var(--ec) 60%,#000))}
+.art{inset:5% 5% 5% 5%}
+.kw>div{width:84px}
+.opp-pic{width:74px;height:74px;object-fit:cover;object-position:50% 10%;border:1px solid var(--line);background:radial-gradient(circle,#3a1712,#0b0906 75%);flex:none}
 </style>
 
 <section class="screen" id="home">
-  <div class="row"><span class="pill">Vàng <b id="gold1">0</b></span><span class="sp"></span><button class="btn ghost" id="bRules">Luật chơi</button></div>
-  <div class="hero"><h1>Huyền Ấn</h1><p>Chiến bài tro tàn</p></div>
-  <div class="fan" id="fan"></div>
-  <div class="scroll">
-    <div class="sect">Hành trình</div>
-    <div class="opps" id="opps" style="margin-top:8px"></div>
-  </div>
-  <div class="row"><button class="btn ghost sp" id="bDeck" style="padding-inline:6px">Bộ bài</button><button class="btn ghost sp" id="bGacha" style="padding-inline:6px">Mở gói</button><button class="btn sp" id="bShop" style="padding-inline:6px">Cửa hàng</button></div>
+  <div class="row"><span class="pill">Vàng <b id="gold1">0</b></span><span class="sp"></span><span class="pill" id="depth">Mặt đất</span><span class="sp"></span><button class="btn ghost" id="bRules" style="padding:6px 10px;font-size:13px">Luật chơi</button></div>
+  <div class="tower" id="tower"></div>
+  <div class="row"><button class="btn ghost sp" id="bDeck" style="padding-inline:4px;font-size:14px;letter-spacing:.08em">Bộ bài</button><button class="btn ghost sp" id="bGacha" style="padding-inline:4px;font-size:14px;letter-spacing:.08em">Mở gói</button><button class="btn sp" id="bShop" style="padding-inline:4px;font-size:14px;letter-spacing:.08em">Cửa hàng</button></div>
 </section>
 
 <section class="screen" id="deck" hidden>
@@ -305,49 +326,50 @@ const RN=['Thường','Hiếm','Sử thi','Huyền thoại'],RATE=[.88,.09,.025,
 const V=(n,e,v)=>({n,e,r:0,v,s:'',d:''});
 const CARDS={
  // Thường: chỉ có 4 con số và hệ
- boar:V('Lợn Lòi Than','hoa',[5,4,3,4]), cock:V('Kê Tro','hoa',[4,5,3,4]), ant:V('Kiến Lửa','hoa',[4,4,5,3]),
- crab:V('Cua Đầm Lầy','thuy',[3,5,4,4]), croc:V('Ngạc Ngư','thuy',[5,3,5,3]), swan:V('Thiên Nga Xám','thuy',[4,4,5,4]),
- bear:V('Gấu Rừng Già','moc',[5,4,4,3]), hare:V('Thỏ Rêu','moc',[3,4,4,5]), owl:V('Cú Rừng','moc',[4,5,3,4]), bee:V('Ong Hổ Phách','moc',[4,3,5,4]),
+ boar:V('Lợn Lòi Than','hoa',[5,4,3,4]), rat:V('Chuột Cống Lửa','hoa',[4,5,3,4]), ant:V('Kiến Lửa','hoa',[4,4,5,3]),
+ scarab:V('Bọ Hung Lam','thuy',[3,5,4,4]), croc:V('Ngạc Ngư','thuy',[5,3,5,3]), seahorse:V('Hải Mã','thuy',[4,4,5,4]),
+ bear:V('Gấu Rừng Già','moc',[5,4,4,3]), stoat:V('Chồn Tuyết','moc',[3,4,4,5]), falcon:V('Ưng Xám','moc',[4,5,3,4]), horse:V('Ngựa Hoang','moc',[4,3,5,4]),
  // Hiếm: đúng một kỹ năng
  wolf:{n:'Sói Non',e:'moc',r:1,v:[5,4,5,4],s:'Tiến hóa',d:'Trụ được 2 lượt trên bàn thì lớn thành Lang Vương: +2 mọi cạnh.'},
- snake:{n:'Huyết Xà',e:'thuy',r:1,v:[4,5,4,4],s:'Hút máu',d:'Mỗi lá lật được, +1 mọi cạnh.'},
- fox:{n:'Hồ Ly Tàn Lửa',e:'hoa',r:1,v:[5,4,3,4],s:'Thiêu đốt',d:'Khi ra sân, lá địch kề bên bị −1 mọi cạnh.'},
- turtle:{n:'Thạch Quy',e:'thuy',r:1,v:[4,5,5,3],s:'Khiên',d:'Chặn lần bị lật đầu tiên.'},
+ snake:{n:'Thủy Xà',e:'thuy',r:1,v:[4,5,4,4],s:'Hút máu',d:'Mỗi lá lật được, +1 mọi cạnh.'},
+ fox:{n:'Long Tử Phun Lửa',e:'hoa',r:1,v:[5,4,3,4],s:'Thiêu đốt',d:'Khi ra sân, lá địch kề bên bị −1 mọi cạnh.'},
+ turtle:{n:'Giáp Thú',e:'thuy',r:1,v:[4,5,5,3],s:'Khiên',d:'Chặn lần bị lật đầu tiên.'},
  scorp:{n:'Bọ Cạp Lửa',e:'hoa',r:1,v:[2,3,6,3],s:'Nọc đuôi',d:'Tấn công mọi hướng bằng cạnh cao nhất của mình.'},
  spider:{n:'Nhện Giăng Tơ',e:'moc',r:1,v:[5,5,4,4],s:'Tơ trói',d:'Khi ra sân, lá địch kề bên mất kỹ năng đến hết trận.'},
+ troll:{n:'Quỷ Đập Đá',e:'moc',r:1,v:[5,4,5,4],s:'Phá vật cản',d:'Khi ra sân, đập nát cây và đá kề bên. Mỗi vật cản bị phá cho +1 mọi cạnh.'},
  // Sử thi
  bat:{n:'Dạ Bức Vương',e:'thuy',r:2,v:[5,5,6,5],s:'Combo',d:'Lá vừa bị nó lật sẽ tấn công tiếp các lá kề bên.'},
- phoenix:{n:'Tro Phượng',e:'hoa',r:2,v:[5,5,5,5],s:'Tái sinh',d:'Lần đầu bị lật, sau lượt kế tiếp nó tự quay về chủ cũ.'},
- lion:{n:'Sư Vương',e:'moc',r:2,v:[6,5,5,5],s:'Vương uy',d:'+1 tấn công cho mỗi đồng minh kề bên.'},
+ phoenix:{n:'Hỏa Hồn',e:'hoa',r:2,v:[5,5,5,5],s:'Tái sinh',d:'Lần đầu bị lật, sau lượt kế tiếp nó tự quay về chủ cũ.'},
+ lion:{n:'Sư Thứu',e:'moc',r:2,v:[6,5,5,5],s:'Vương uy',d:'+1 tấn công cho mỗi đồng minh kề bên.'},
  // Huyền thoại
  dragon:{n:'Cổ Long Tro Tàn',e:'hoa',r:3,v:[8,7,7,7],s:'Long tức',d:'Khi ra sân, mọi lá địch cùng hàng và cùng cột bị −1 mọi cạnh.'},
- deer:{n:'Nguyệt Lộc Thần',e:'moc',r:3,v:[6,6,5,6],s:'Thần hộ',d:'Đồng minh kề bên không thể bị lật.'},
+ deer:{n:'Cổ Thụ Thần',e:'moc',r:3,v:[6,6,5,6],s:'Thần hộ',d:'Đồng minh kề bên không thể bị lật.'},
  lich:{n:'Hư Vô Chi Vương',e:'thuy',r:3,boss:1,v:[7,7,7,7],s:'Nuốt chửng',d:'Khi ra sân, xóa sổ lá địch mạnh nhất kề bên. Chỉ có thể cướp từ Boss.'},
  soul:{n:'Tàn Hồn',e:'moc',r:0,tok:1,v:[5,4,4,4],s:'',d:'Lá phụ cho người đi trước để bù thế bất lợi. Biến mất sau trận.'}};
 const COST=[1,2,3,4],BUDGET=12;
-const OBST={tree:['Cây khô','Chướng ngại vật. Không đặt bài được vào ô này.'],rock:['Đá tảng','Chướng ngại vật. Không đặt bài được vào ô này.']};
+const OBST={tree:['Cây khô','Chướng ngại vật. Không đặt bài được vào ô này, trừ khi bị lá Phá vật cản đập nát.'],rock:['Đá tảng','Chướng ngại vật. Không đặt bài được vào ô này, trừ khi bị lá Phá vật cản đập nát.']};
 /* Chuỗi ải: mỗi ải chỉ thêm một ý mới. show = các lá kỹ năng được giới thiệu. */
 const OPPS=[
- {n:'Lữ Khách Vô Danh',av:'o1',bet:30,noise:7,nerf:3,el:0,deck:{r:[6,0,0]},t:'Luật cơ bản',demo:1,gift:{gold:100},
+ {place:'Cổng Tro',n:'Lữ Khách Vô Danh',av:'o1',bet:30,noise:7,nerf:3,el:0,deck:{r:[6,0,0]},t:'Luật cơ bản',demo:1,gift:{gold:100},
   intro:['Hai bên lần lượt đặt 1 lá vào ô trống. Cây và đá là chướng ngại vật.','Số ở cạnh lá bạn <b>lớn hơn</b> số ở cạnh đối diện của lá địch kề bên thì lá địch bị lật về phe bạn.','Chạm ô một lần để <b>xem trước</b> sẽ lật được lá nào, chạm lần nữa để đặt.','Kín bàn, ai giữ nhiều lá hơn thì thắng.']},
- {n:'Tín Đồ Lạc Lối',av:'o2',bet:40,noise:6,nerf:2,el:1,deck:{r:[6,0,0]},t:'Mở: Khắc hệ',tri:1,gift:{card:'wolf'},
+ {place:'Rừng Chết',n:'Tín Đồ Lạc Lối',av:'o2',bet:40,noise:6,nerf:2,el:1,deck:{r:[6,0,0]},t:'Mở: Khắc hệ',tri:1,gift:{card:'wolf'},
   intro:['Mỗi lá thuộc một hệ. Tấn công lá thuộc hệ bị khắc được <b>+1</b>.','Phần xem trước đã tính sẵn điểm cộng này cho bạn.']},
- {n:'Thợ Săn Rừng Sâu',av:'o3',bet:60,noise:5,nerf:2,el:1,deck:{r:[4,0,0],ids:['wolf','turtle']},t:'Mở: Bài kỹ năng',show:['wolf','turtle'],gift:{card:'turtle'},
+ {place:'Hẻm Xương',n:'Thợ Săn Rừng Sâu',av:'o3',bet:60,noise:5,nerf:2,el:1,deck:{r:[4,0,0],ids:['wolf','turtle']},t:'Mở: Bài kỹ năng',show:['wolf','turtle'],gift:{card:'turtle'},
   intro:['Bài bậc Hiếm trở lên có <b>một kỹ năng</b>. Chạm vào lá bất kỳ để đọc.','Bạn vừa nhận Sói Non ở ải trước. Vào Bộ bài để đưa nó ra trận.','Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4.']},
- {n:'Kỵ Sĩ Tro Tàn',av:'o4',bet:80,noise:4,nerf:1,el:1,deck:{r:[4,0,0],ids:['fox','snake']},t:'2 kỹ năng mới',show:['fox','snake'],gift:{card:'fox'}},
- {n:'Kẻ Nuôi Nhện',av:'o7',bet:100,noise:3,nerf:1,el:1,deck:{r:[3,1,0],ids:['scorp','spider']},t:'2 kỹ năng mới',show:['scorp','spider'],gift:{card:'spider'}},
- {n:'Phù Thủy Đầm Lầy',av:'o5',bet:130,noise:3,nerf:2,el:1,deck:{r:[3,1,0],ids:['bat','phoenix']},t:'Bài Sử thi',show:['bat','phoenix'],gift:{card:'bat'}},
- {n:'Long Kỵ Sĩ',av:'o6',bet:170,noise:2,nerf:0,el:1,deck:{r:[3,1,0],ids:['dragon','lion']},t:'Bài Huyền thoại',show:['lion','dragon'],gift:{card:'lion'}},
- {n:'Chúa Tể Hư Vô',av:'lich',bet:250,noise:1,nerf:3,el:1,boss:1,deck:{r:[1,3,0],ids:['lich','deer']},t:'Boss',show:['lich','deer'],gift:{gold:1000},
+ {place:'Lò Thiêu',n:'Kỵ Sĩ Tro Tàn',av:'o4',bet:80,noise:4,nerf:1,el:1,deck:{r:[3,0,0],ids:['fox','snake','scorp']},t:'3 kỹ năng mới',show:['fox','snake','scorp'],gift:{card:'fox'}},
+ {place:'Hang Nhện',n:'Kẻ Nuôi Nhện',av:'o5',bet:100,noise:3,nerf:1,el:1,deck:{r:[3,1,0],ids:['spider','troll']},t:'Mở: Phá vật cản',show:['troll','spider'],gift:{card:'troll'}},
+ {place:'Đầm Oán Hồn',n:'Phù Thủy Đầm Lầy',av:'o6',bet:130,noise:2,nerf:1,el:1,deck:{r:[3,1,0],ids:['bat','phoenix']},t:'Bài Sử thi',show:['bat','phoenix'],gift:{card:'bat'}},
+ {place:'Sào Huyệt Rồng',n:'Long Kỵ Sĩ',av:'o7',bet:170,noise:.5,nerf:0,el:1,deck:{r:[1,3,0],ids:['dragon','lion']},t:'Bài Huyền thoại',show:['lion','dragon'],gift:{card:'lion'}},
+ {place:'Ngai Hư Vô',n:'Chúa Tể Hư Vô',av:'lich',bet:250,noise:.5,nerf:3,el:1,boss:1,deck:{r:[1,3,0],ids:['lich','deer']},t:'Boss',show:['lich','deer'],gift:{gold:1000},
   intro:['Đừng để lá mạnh nhất của bạn đứng cạnh ô trống. Nhện Giăng Tơ có thể vô hiệu hóa lá Boss.','Thắng Boss, bạn có thể cướp chính lá Hư Vô Chi Vương.']}];
 const PBOX=[{k:'cut',n:'Hộp Kéo',ic:'scis'},{k:'steal',n:'Hộp Cướp',ic:'robber'},{k:'tax',n:'Hộp Thuế Máu',ic:'blood'},{k:'hope',n:'Hộp Hy Vọng',ic:'dove'},{k:'curse',n:'Hộp Nguyền',ic:'curse'}];
 const byR=r=>Object.keys(CARDS).filter(k=>CARDS[k].r===r&&!CARDS[k].tok&&!CARDS[k].boss);
 
 /* ================= SAVE ================= */
 let SV={gold:300,uid:1,col:[],deck:[],curse:null,stage:0,seen:[],gifts:[],charm:0,daily:'',starter:0};
-function save(){try{localStorage.setItem('huyenan.v4',JSON.stringify(SV))}catch(e){}}
-(function load(){try{const s=JSON.parse(localStorage.getItem('huyenan.v4'));if(s&&s.col&&s.col.length>=6)SV=Object.assign(SV,s)}catch(e){}
- if(!SV.col.length){['boar','crab','bear','cock','swan','hare','ant','owl'].forEach(addCard);SV.deck=SV.col.slice(0,6).map(c=>c.u)}})();
+function save(){try{localStorage.setItem('huyenan.v5',JSON.stringify(SV))}catch(e){}}
+(function load(){try{const s=JSON.parse(localStorage.getItem('huyenan.v5'));if(s&&s.col&&s.col.length>=6)SV=Object.assign(SV,s)}catch(e){}
+ if(!SV.col.length){['boar','scarab','bear','rat','seahorse','stoat','ant','falcon'].forEach(addCard);SV.deck=SV.col.slice(0,6).map(c=>c.u)}})();
 function addCard(id){const c={u:SV.uid++,id};SV.col.push(c);return c}
 const dcost=()=>sum(SV.deck.map(u=>COST[CARDS[SV.col.find(c=>c.u===u).id].r]));
 function fixDeck(){SV.deck=SV.deck.filter(u=>SV.col.some(c=>c.u===u));while(dcost()>BUDGET)SV.deck.pop();for(const c of SV.col.slice().sort((a,b)=>CARDS[a.id].r-CARDS[b.id].r)){if(SV.deck.length>=6)break;if(!SV.deck.includes(c.u)&&dcost()+COST[CARDS[c.id].r]<=BUDGET)SV.deck.push(c.u)}}
@@ -358,9 +380,9 @@ function rollCard(){let x=Math.random(),r=0;for(;r<3;r++){if(x<RATE[r])break;x-=
 function inst(id,o){return{id,o,v:[...CARDS[id].v],b:[...CARDS[id].v],age:0,evo:0,sil:0,sh:id==='turtle'?1:0,reb:0,rebUsed:0,rebTo:o}}
 const disp=x=>x>=10?'A':x;
 /* Thay tranh: điền id lá → đường dẫn ảnh, ví dụ {wolf:'art/wolf.jpg'}. Lá không có ảnh dùng hình biểu tượng. */
-const ART={};
+const ART={};'boar rat ant scarab croc seahorse bear stoat falcon horse wolf wolf2 snake fox turtle scorp spider troll bat phoenix lion dragon deer lich soul o1 o2 o3 o4 o5 o6 o7'.split(' ').forEach(k=>ART[k]='art/'+k+'.webp');
 function cardHTML(c){const d=CARDS[c.id];
- return `<div class="card o-${c.o} r${d.r} e-${d.e}${c.sh?' shield':''}${c.evo?' evo':''}${c.sil?' sil':''}"><div class="cf"><div class="art">${ART[c.id]?`<img class="pic" src="${ART[c.id]}" alt="">`:ic(c.evo?'wolf2':c.id,'emo')}</div>${d.r>=2?'<div class="foil"></div>':''}</div>`+
+ return `<div class="card o-${c.o} r${d.r} e-${d.e}${c.sh?' shield':''}${c.evo?' evo':''}${c.sil?' sil':''}"><div class="cf"><div class="art">${ART[c.evo?'wolf2':c.id]?`<img class="pic" src="${ART[c.evo?'wolf2':c.id]}" alt="" draggable="false">`:ic(c.evo?'wolf2':c.id,'emo')}</div>${d.r>=2?'<div class="foil"></div>':''}</div>`+
  c.v.map((x,k)=>`<i class="v v${k}${x>c.b[k]?' up':x<c.b[k]?' dn':''}"><b>${disp(x)}</b></i>`).join('')+
  `<span class="nmr">${c.evo?'Lang Vương':d.n}</span>${ic(d.e,'gem')}<span class="stars">${'★'.repeat(d.r+1)}</span>${c.reb?ic('feather','st'):''}${c.sil?ic('web','st'):''}</div>`}
 const backHTML='<div class="card back"><div class="cf"></div></div>';
@@ -388,6 +410,7 @@ function place(S,who,hi,i,L){const cell=S.cells[i],c=S.hands[who].splice(hi,1)[0
  if(c.id==='dragon')S.cells.forEach((x,j)=>{if(x.card&&foe(x.card)&&(j%N===i%N||(j/N|0)===(i/N|0)))bump(S,j,-1,L,{txt:'Long tức −1',fx:'#e0702a',kind:'ember'})});
  if(c.id==='spider')adj(S,i,foe).forEach(j=>{const e=S.cells[j].card;if(CARDS[e.id].s&&!e.sil){e.sil=1;e.sh=0;ev(L,S,j,{txt:'Tơ trói',col:'#cfc7b0',fx:'#cfc7b0'})}});
  if(c.id==='lich'){const t=strongest(S,adj(S,i,foe));if(t!==undefined){S.cells[t].card=null;ev(L,S,t,{txt:'Nuốt chửng',col:'#b99cff',fx:'#7a4de0',n:60,shake:1,wait:600})}}
+ if(c.id==='troll'){let n=0;for(let k=0;k<4;k++){const j=nb(i,k);if(j>=0&&S.cells[j].t!=='none'){S.cells[j].t='none';n++;ev(L,S,j,{txt:'Đập nát',col:'#cfc7b0',fx:'#8d877a',n:34,shake:1,wait:340})}}if(n)bump(S,i,n,L,{fx:'#a9c98a'})}
  attack(S,i,L,0)}
 function attack(S,i,L,depth){const c=S.cells[i].card,d=CARDS[c.id];const allies=adj(S,i,x=>x.o===c.o).length;
  for(let k=0;k<4;k++){const j=nb(i,k);if(j<0)continue;const e=S.cells[j].card;if(!e||e.o===c.o)continue;
@@ -447,7 +470,7 @@ function markOk(){const on=M.sel!=null&&M.turn==='p'&&!M.busy;$('#board').classL
   if(ok&&M.prev!==i){const n=simMove(M.sel,i).flips.length;if(n)el.dataset.fc=n}})}
 function showPreview(i){M.S.cells.forEach((c,j)=>renderCell(j,c));M.prev=i;markOk();const p=simMove(M.sel,i),el=cellEls[i];
  el.innerHTML=`<div class="slot ghost">${cardHTML(p.card)}</div>`+p.cmps.map(c=>`<span class="cmp k${c.k} ${c.res}">${c.res==='shield'?'Khiên':c.res==='guard'?'Thần hộ':`${c.base}${c.bon?'+'+c.bon:''} ${c.res==='win'?'>':'≤'} ${c.df}`}</span>`).join('');
- el.classList.add('prev');p.flips.forEach(j=>{const t=cellEls[j].querySelector('.card');if(t)t.classList.add('willflip')});
+ el.classList.add('prev');M.S.cells.forEach((c,j)=>{if(c.t!=='none'&&p.T.cells[j].t==='none')cellEls[j].classList.add('willbreak')});p.flips.forEach(j=>{const t=cellEls[j].querySelector('.card');if(t)t.classList.add('willflip')});
  $('#info').innerHTML=`<span class="nm">${p.flips.length?`Lật được ${p.flips.length} lá`:'Không lật được lá nào'}</span><div>Chạm lại ô này để đặt, hoặc chạm ô khác để so sánh.</div>`+(p.cmps.some(c=>c.bon)?'<div class="dim">Số sau dấu + là điểm cộng từ khắc hệ hoặc kỹ năng.</div>':'')}
 async function replay(L){for(const e of L){if(e.cmp)continue;renderCell(e.i,e.snap);const el=cellEls[e.i],r=el.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
  if(e.anim){const t=el.querySelector(e.anim==='drop'?'.slot':'.card');if(t)t.classList.add('a-'+e.anim)}
@@ -463,9 +486,9 @@ async function doTurn(who,hi,i){M.busy=true;M.sel=null;M.prev=null;const L=[];pl
  M.busy=false;markOk();$('#info').innerHTML=HINT}
 const kwHTML=id=>`<div class="kw"><div>${cardHTML(inst(id,'e'))}</div><p><b>${CARDS[id].n}</b><br><span style="color:var(--gold)">${CARDS[id].s}.</span> ${CARDS[id].d}</p></div>`;
 const triHTML=()=>`<div class="tri">${['hoa','moc','thuy','hoa'].map(e=>`<span style="color:${EL[e].c}">${ic(e)}${EL[e].n}</span>`).join('<i>›</i>')}</div>`;
-function demoHTML(){const a=inst('boar','p'),b=inst('crab','e');return `<div class="demo"><div>${cardHTML(a)}</div><span class="cmp win">${a.v[1]} &gt; ${b.v[3]}</span><div>${cardHTML(b)}</div></div><p class="dim" style="text-align:center;font-size:13px">Cạnh phải ${a.v[1]} lớn hơn cạnh trái ${b.v[3]}: lá đỏ bị lật.</p>`}
+function demoHTML(){const a=inst('boar','p'),b=inst('scarab','e');return `<div class="demo"><div>${cardHTML(a)}</div><span class="cmp win">${a.v[1]} &gt; ${b.v[3]}</span><div>${cardHTML(b)}</div></div><p class="dim" style="text-align:center;font-size:13px">Cạnh phải ${a.v[1]} lớn hơn cạnh trái ${b.v[3]}: lá đỏ bị lật.</p>`}
 function startMatch(opp){const ix=OPPS.indexOf(opp);if(ix>SV.stage)return;
- if((opp.intro||opp.show)&&!SV.seen.includes(ix))return modal(`<h2${opp.boss?' class="lose"':''}>${opp.n}</h2><p class="dim" style="text-align:center;letter-spacing:.14em;text-transform:uppercase;font-size:12px">Ải ${ix+1} · ${opp.t}</p>${opp.demo?demoHTML():''}${opp.tri?triHTML():''}${(opp.show||[]).map(kwHTML).join('')}${opp.intro?`<ul>${opp.intro.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<button class="btn" style="width:100%" id="goIn">Vào trận · cược ${opp.bet} vàng</button>`,()=>{$('#goIn').onclick=()=>{SV.seen.push(ix);save();closeModal();startMatch(opp)}});
+ if((opp.intro||opp.show)&&!SV.seen.includes(ix))return modal(`<h2${opp.boss?' class="lose"':''}>${opp.n}</h2><p class="dim" style="text-align:center;letter-spacing:.14em;text-transform:uppercase;font-size:12px">${depthName(ix)} · ${opp.place} · ${opp.t}</p>${opp.demo?demoHTML():''}${opp.tri?triHTML():''}${(opp.show||[]).map(kwHTML).join('')}${opp.intro?`<ul>${opp.intro.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<button class="btn" style="width:100%" id="goIn">Vào trận · cược ${opp.bet} vàng</button>`,()=>{$('#goIn').onclick=()=>{SV.seen.push(ix);save();closeModal();startMatch(opp)}});
  if(SV.gold<opp.bet)return modal(`<h2>Thiếu vàng</h2><p>Trận này cần mang vào ${opp.bet} vàng. Bạn đang có ${SV.gold}.</p><button class="btn" style="width:100%" onclick="closeModal()">Đã hiểu</button>`);
  fixDeck();if(SV.deck.length<6)return modal(`<h2>Bộ bài chưa đủ</h2><p>Cần đúng 6 lá và không quá ${BUDGET} điểm để ra trận.</p><button class="btn" style="width:100%" onclick="closeModal()">Đã hiểu</button>`);SV.gold-=opp.bet;
  const pd=SV.deck.map(u=>{const c=inst(SV.col.find(x=>x.u===u).id,'p');if(SV.curse===u){c.v=c.v.map(x=>Math.max(1,x-1))}return c});SV.curse=null;save();
@@ -525,11 +548,20 @@ function packModal(ids,title,added){if(!added)ids.forEach(addCard);save();const 
   const ok=$('#pkOk');ok.disabled=false;ok.onclick=()=>{if(M)goHome();else{closeModal();renderGacha();renderShop()}}})}
 
 /* ================= HOME / DECK / GACHA ================= */
-function renderHome(){$('#gold1').textContent=SV.gold;
- $('#fan').innerHTML=['wolf','dragon','deer'].map(id=>`<div>${cardHTML(inst(id,'p'))}</div>`).join('');
- $('#opps').innerHTML=OPPS.map((o,i)=>{const lock=i>SV.stage,done=i<SV.stage||(o.boss&&SV.boss);return `<button class="opp${lock?' locked':''}${o.boss?' boss':''}" data-i="${i}"${lock?' disabled':''}><span class="av"><i>${ic(lock?'lock':o.av)}</i></span><div class="sp"><b>${lock&&!o.boss?'? ? ?':o.n}</b><div class="dim">Ải ${i+1} · ${lock?'Thắng ải trước để mở':o.t+(done?' · đã hạ':'')}</div></div><span class="pill">Cược <b>${o.bet}</b></span></button>`}).join('');
- const cur=$('#opps').children[SV.stage];if(cur&&cur.scrollIntoView)cur.scrollIntoView({block:'nearest'})}
-$('#opps').addEventListener('click',e=>{const b=e.target.closest('.opp');if(b&&!b.disabled)startMatch(OPPS[+b.dataset.i])});
+const FC=['#6f8ea8','#6f6a52','#4f6b3a','#9a4a1c','#5a3f73','#3c6b5f','#a8301a','#6a2a8f'];
+const depthName=i=>i?'Tầng '+i:'Mặt đất';
+function renderHome(){$('#gold1').textContent=SV.gold;const tw=$('#tower');
+ tw.innerHTML=OPPS.map((o,i)=>{const lock=i>SV.stage,done=i<SV.stage||(o.boss&&SV.boss),g=o.gift,got=SV.gifts.includes(i);
+  return `<div class="floor${lock?' locked':''}${o.boss?' boss':''}" style="--fc:${FC[i]}">
+   <div class="fl-top">${i?'':'<div class="fl-logo">Huyền Ấn</div>'}<span class="fl-depth">${depthName(i)}</span><h2>${o.place}</h2></div>
+   <div class="fl-art"><img src="${ART[o.av]}" alt="" draggable="false"></div>
+   <div class="fl-body"><b class="fl-name">${lock&&!o.boss?'? ? ?':o.n}</b><div class="dim">${o.t}${done?' · đã hạ':''}</div>
+    ${g&&!got&&!lock?`<div class="fl-gift">Thưởng lần đầu: ${g.card?'lá '+CARDS[g.card].n:g.gold+' vàng'}</div>`:''}
+    ${lock?`<button class="btn ghost" disabled>Hạ ${depthName(i-1).toLowerCase()} để mở</button>`:`<button class="btn go" data-i="${i}">Vào trận · cược ${o.bet} vàng</button>`}
+    ${i<OPPS.length-1?`<div class="fl-hint">▾ Vuốt lên để xuống tầng ${i+1}</div>`:'<div class="fl-hint" style="animation:none">Đáy vực</div>'}</div></div>`}).join('');
+ requestAnimationFrame(()=>{tw.scrollTop=Math.min(SV.stage,OPPS.length-1)*tw.clientHeight;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)))})}
+$('#tower').addEventListener('scroll',e=>{const tw=e.currentTarget;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)))},{passive:true});
+$('#tower').addEventListener('click',e=>{const b=e.target.closest('.go');if(b)startMatch(OPPS[+b.dataset.i])});
 $$('[data-home]').forEach(b=>b.onclick=()=>show('home'));
 let deckSel=null;
 function renderDeck(){$('#deckN').textContent=SV.deck.length+'/6 lá · '+dcost()+'/'+BUDGET+' điểm';
@@ -546,14 +578,14 @@ function renderGacha(){$('#gold2').textContent=SV.gold;$('#bOpen').disabled=SV.g
  $('#rates').innerHTML=RN.map((n,r)=>`<tr><td><span class="tag r${r}">${n}</span></td><td class="dim">${RSTOCK[r]}</td><td>${(RATE[r]*100).toLocaleString('vi-VN')}%</td></tr>`).join('')}
 $('#bGacha').onclick=()=>{show('gacha');renderGacha()};
 $('#bOpen').onclick=()=>{if(SV.gold<100)return;SV.gold-=100;packModal([rollCard(),rollCard(),rollCard()],'Gói Huyền Ấn');renderGacha()};
-$('#bRules').onclick=()=>{const st=SV.stage,L=['Hai bên lần lượt đặt 1 lá vào ô trống. Cây và đá là chướng ngại vật.',
+$('#bRules').onclick=()=>{const st=SV.stage,L=['Hai bên lần lượt đặt 1 lá vào ô trống. Cây và đá là chướng ngại vật, chỉ lá có kỹ năng Phá vật cản mới đập nát được.',
  'Số ở cạnh lá bạn <b>lớn hơn</b> số ở cạnh đối diện của lá địch kề bên thì lá địch bị lật về phe bạn.',
  'Chạm ô một lần để xem trước, chạm lần nữa để đặt. Kín bàn, ai giữ nhiều lá hơn thì thắng.',
  'Người đi trước có thêm lá Tàn Hồn để bù thế bất lợi.',
  '<b>Thắng</b>: lấy vàng cược và chọn cướp bài, thêm vàng hoặc rương. Qua ải lần đầu có thưởng riêng. <b>Thua</b>: mất vàng cược và phải mở 1 trong 3 hộp Pandora, trừ khi có Bùa hộ mệnh.'];
  if(st>=1)L.push('<b>Khắc hệ</b>: tấn công lá thuộc hệ bị khắc được +1. Hỏa › Mộc › Thủy › Hỏa.');
  if(st>=2)L.push('<b>Bài kỹ năng</b>: bậc Hiếm trở lên có đúng một kỹ năng. Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4.');
- modal(`<h2>Luật chơi</h2>${demoHTML()}<ul>${L.map(x=>`<li>${x}</li>`).join('')}</ul>${st<2?'<p class="dim">Luật mới sẽ mở dần khi bạn qua từng ải.</p>':''}<p class="credit">Hình linh thú: game-icons.net (Lorc, Delapouite, Skoll và cộng sự), giấy phép CC BY 3.0.</p><button class="btn" style="width:100%" onclick="closeModal()">Đóng</button>`)};
+ modal(`<h2>Luật chơi</h2>${demoHTML()}<ul>${L.map(x=>`<li>${x}</li>`).join('')}</ul>${st<2?'<p class="dim">Luật mới sẽ mở dần khi bạn qua từng ải.</p>':''}<p class="credit">Tranh linh thú: Battle for Wesnoth (GPL v2+ / CC BY-SA 4.0). Biểu tượng: game-icons.net (CC BY 3.0).</p><button class="btn" style="width:100%" onclick="closeModal()">Đóng</button>`)};
 /* ================= SHOP ================= */
 const today=()=>new Date().toISOString().slice(0,10);
 const SHOP=[
