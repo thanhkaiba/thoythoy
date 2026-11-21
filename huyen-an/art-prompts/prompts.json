@@ -2,358 +2,401 @@
  {
   "file": "boar.png",
   "name": "Lợn Lòi Than",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a hulking wild boar with coal-black hide, glowing ember cracks across its body, tusks of charred bone, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a wild boar whose back is a smoldering charcoal hill with three tiny chimneys venting smoke, glowing ember cracks in its hide, three tusks of charred bone, eyes like live coals, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "rat.png",
   "name": "Chuột Cống Lửa",
+  "mood": "whimsical",
   "size": "1024x1536",
-  "prompt": "a giant sewer rat wreathed in small flames, burning red eyes, scorched bristling fur, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a scrappy sewer rat wearing a cracked bronze lantern as a helmet, its long tail is a lit burning fuse, mischievous grin, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "ant.png",
   "name": "Kiến Lửa",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a giant fire ant with a molten orange carapace, mandibles dripping lava, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a fire ant whose abdomen is a glass bulb of swirling lava, legs like blackened iron nails, smoke rising from its jaws, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "cbat.png",
   "name": "Dơi Hang",
+  "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a cave bat with leathery wings glowing ember-red at the edges, fangs bared, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a round fluffy cave bat no bigger than a fist, oversized ears glowing ember-red at the tips, wings wrapped around itself like a cloak, hanging upside down, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "ogre.png",
   "name": "Chằn Tinh",
+  "mood": "grotesque",
   "size": "1024x1536",
-  "prompt": "a brutish fire ogre with scarred red skin and a spiked iron club, sparks drifting around it, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a hunched ogre with a furnace built into its belly, fire glowing through iron grates in its stomach, chains on its arms, a bell-shaped iron club, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "scarab.png",
   "name": "Bọ Hung Lam",
+  "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a large beetle with an iridescent deep-blue shell, glowing cyan markings, water droplets, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a small beetle whose shell is a polished sapphire dome holding a tiny moonlit pond on its back with lily pads, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "croc.png",
   "name": "Ngạc Ngư",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "an armored swamp crocodile emerging from black water, algae hanging from its scales, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a crocodile whose back is a sunken shipwreck covered in barnacles, lanterns hanging from a broken mast, rising from black water, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "seahorse.png",
   "name": "Hải Mã",
+  "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a giant warrior seahorse with blade-like fins and bioluminescent blue spots, underwater, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a tiny brave seahorse knight wearing a seashell helmet and holding a needle lance, bubbles, glowing blue freckles, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "mud.png",
   "name": "Bùn Quái",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a shambling swamp mud golem dripping black mud, eyes glowing teal, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a swamp mud blob with many mismatched eyes of drowned creatures floating inside it, reeds and a rusty sword sprouting from its head, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "cuttle.png",
   "name": "Mực Vực Sâu",
+  "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "an abyssal cuttlefish with glowing tentacles in the deep sea darkness, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "an abyssal cuttlefish with a cracked porcelain human mask for a face, tentacles trailing glowing runes in the deep sea, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "bear.png",
   "name": "Gấu Rừng Già",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "an ancient forest bear with moss and lichen growing on its fur, claws like gnarled bark, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "an ancient sleepy bear with a small mossy shrine and two stone lanterns growing on its back, mushrooms along its spine, wise old eyes, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "stoat.png",
   "name": "Chồn Tuyết",
+  "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a white snow stoat with frost-tipped fur, poised among pine roots, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a fluffy white snow stoat wearing a tiny red scarf, clutching an acorn, standing on twisted pine roots in snowfall, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "falcon.png",
   "name": "Ưng Xám",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a grey hunting falcon with slate feathers diving with talons extended, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a falcon with three glowing eyes and feathers made of sharp slate stone shards, a rune-carved beak, mid-dive, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "horse.png",
   "name": "Ngựa Hoang",
+  "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "a wild black stallion with a mane of leaves and vines, glowing green eyes, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a wild stallion woven from branches and vines, a hollow ribcage full of fireflies, glowing green eyes, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "skel.png",
   "name": "Bộ Xương",
+  "mood": "whimsical",
   "size": "1024x1536",
-  "prompt": "an animated skeleton warrior overgrown with roots and moss, holding a rusted sword, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a small cheerful skeleton warrior with a flowering vine growing through its ribs and a bird nest on its skull, holding a rusty sword, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "yeti.png",
   "name": "Tuyết Nhân",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a towering yeti with matted white fur and icy breath among frosted rocks, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a giant yeti with a frozen waterfall pouring from its shoulders, an icicle beard, a tiny red bird perched on its head, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "wolf.png",
   "name": "Sói Non",
+  "mood": "cute",
   "size": "1024x1536",
-  "prompt": "detailed, a young direwolf with silver-grey fur and fierce eyes under moonlight, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a fluffy direwolf pup with oversized paws and a glowing crescent-moon mark on its forehead, trying to howl, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "wolf2.png",
   "name": "Lang Vương (Sói Non tiến hóa)",
+  "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a massive adult moon wolf king with a silver mane and glowing pale runes on its fur, howling, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a massive moon wolf king with a mane of silver flame and a crescent moon floating behind its head, glowing runes on its fur, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "turtle.png",
   "name": "Giáp Thú",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "detailed, a giant armored turtle beast with a shell of blue crystal plates, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a giant turtle whose shell is a cluster of blue crystal spires like a tiny frozen castle with lit windows, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "fox.png",
   "name": "Long Tử Phun Lửa",
+  "mood": "cute",
   "size": "1024x1536",
-  "prompt": "detailed, a young fire drake breathing a jet of flame, small wings spread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a small young fire drake with stubby wings and a big round head, proudly puffing a little jet of flame, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "snake.png",
   "name": "Thủy Xà",
+  "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "detailed, a water serpent with luminous blue scales coiling through dark water, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a serpent made entirely of flowing translucent water with a glowing pearl visible in its throat, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "scorp.png",
   "name": "Bọ Cạp Lửa",
+  "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "detailed, a scorpion with an obsidian carapace and a glowing molten stinger raised high, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a scorpion with an obsidian carapace whose stinger is a glowing molten forge hammer, sparks flying, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "rscorp.png",
   "name": "Bọ Cạp Đá",
+  "mood": "weird",
   "size": "1024x1536",
-  "prompt": "detailed, a scorpion made of mossy stone plates and rock, cracks glowing green, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a scorpion formed from mossy temple ruins, a carved stone face on its back, cracks glowing green, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "spider.png",
   "name": "Nhện Giăng Tơ",
+  "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "detailed, a giant spider weaving glowing silk webs, a cluster of green eyes, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a giant spider whose abdomen is a cracked porcelain doll face, weaving glowing silk threads, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "troll.png",
   "name": "Quỷ Đập Đá",
+  "mood": "whimsical",
   "size": "1024x1536",
-  "prompt": "detailed, a hulking rock troll smashing a boulder apart with a stone club, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a hulking rock troll with a bird nest on its head, grinning with mossy teeth while smashing a boulder with a stone club, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "naga.png",
   "name": "Xà Nữ",
+  "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "detailed, a naga warrior with a serpent lower body and sea-green scales, wielding a trident, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a naga priestess with a serpent lower body and sea-green scales, a jellyfish crown, holding a coral trident, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "ghoul.png",
   "name": "Thực Thi Quỷ",
+  "mood": "grotesque",
   "size": "1024x1536",
-  "prompt": "detailed, a rotting ghoul exhaling poisonous green fumes, long hooked claws, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, an emaciated ghoul with an extra mouth on its stomach exhaling green poison fumes, long hooked claws, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "shadow.png",
   "name": "Bóng Ma",
+  "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "detailed, a hooded shadow wraith made of black mist with piercing blue eyes, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a tall hooded wraith with no face, only a single blue candle flame where its head should be, body of black mist, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "rider.png",
   "name": "Lang Kỵ",
+  "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "detailed, a goblin raider riding a flaming wolf, spear raised for a charge, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a goblin raider wearing a cooking pot as a helmet, riding a wolf made of flames, spear raised for a charge, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "gale.png",
   "name": "Phong Linh",
+  "mood": "whimsical",
   "size": "1024x1536",
-  "prompt": "detailed, a storm spirit of swirling wind and rain with lightning crackling in its core, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a storm spirit shaped like a giant floating paper kite with lightning tassels and a rain cloud for a tail, one big eye, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "fguard.png",
   "name": "Hỏa Vệ Binh",
+  "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "detailed, a fire guardian knight with a flaming halberd, armor glowing like a forge, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "detailed, a fire guardian knight whose helmet is an open furnace door with flames inside, molten seams in the armor, a flaming halberd, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "bat.png",
   "name": "Dạ Bức Vương",
+  "mood": "grotesque",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a colossal vampire bat lord with tattered wings and a bone crown before a blood moon, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a colossal vampire bat lord with wings made of torn cathedral banners and a crown of bone, before a blood moon, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "phoenix.png",
   "name": "Hỏa Hồn",
+  "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a fire spirit bird rising from ashes, wings made of roaring flame, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a fire spirit bird made of burning paper and embers rising from a pile of ash, long ribbon tail, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "lion.png",
   "name": "Sư Thứu",
+  "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a griffin with a lion body and eagle wings, golden-green plumage, wings spread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a griffin with a lion body and eagle wings, a mane of autumn leaves, golden-green plumage, wings spread, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "serpent.png",
   "name": "Hải Xà Vương",
+  "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a gigantic sea serpent king rising from a stormy sea, crown of coral and pearls, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a gigantic sea serpent king wearing a sunken temple as a crown, coral and pearls, rising from a stormy sea, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "draug.png",
   "name": "Tử Kỵ Sĩ",
+  "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a death knight in blackened armor with burning eyes, ember-wreathed greatsword and tower shield, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a death knight whose blackened armor is fused with the bones of his skeletal warhorse, burning eyes, ember-wreathed greatsword and tower shield, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "tentacle.png",
   "name": "Xúc Tu Vực Thẳm",
+  "mood": "grotesque",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, enormous abyssal tentacles rising from a dark rift, glowing runes along them, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, enormous abyssal tentacles emerging from a floating eye-shaped rift in the sky, glowing runes along them, a small boat caught in their grip, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "wose.png",
   "name": "Mộc Tinh Cổ Thụ",
+  "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, an ancient walking tree spirit with a face in its bark and glowing amber eyes, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, an ancient walking tree spirit with a giant face in its bark, an owl living in one eye socket, glowing amber sap, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "dragon.png",
   "name": "Cổ Long Tro Tàn",
+  "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "masterpiece, legendary, epic scale, an ancient ash dragon with scales of cooled magma, embers swirling, glowing throat, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "masterpiece, legendary, epic scale, an ancient ash dragon with scales of cooled magma and a ruined castle tower embedded in its back, embers swirling, glowing throat, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "deer.png",
   "name": "Cổ Thụ Thần",
+  "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "masterpiece, legendary, epic scale, a divine great stag made of ancient forest, antlers like a tree canopy with glowing leaves, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "masterpiece, legendary, epic scale, a divine great stag made of ancient forest, antlers like a tree canopy hung with tiny glowing lanterns, a cloak of moss, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "reaper.png",
   "name": "Tử Thần",
+  "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "masterpiece, mythic, awe-inspiring, epic scale, the grim reaper in tattered robes holding a huge scythe, cold blue soulfire, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "masterpiece, mythic, awe-inspiring, epic scale, the grim reaper as a towering figure in tattered robes with an hourglass inside its ribcage, a huge scythe of cold blue soulfire, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "lich.png",
   "name": "Hư Vô Chi Vương",
+  "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "masterpiece, mythic, awe-inspiring, epic scale, the void lich king on a bone throne, crowned skull, purple void energy swirling, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "masterpiece, mythic, awe-inspiring, epic scale, the void lich king on a throne of melted crowns, crowned skull, purple void energy and shattered floating stars, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "soul.png",
   "name": "Tàn Hồn",
+  "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a faint wandering ghost wisp, pale and translucent, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by cold grey torchlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "prompt": "a small round ghost wisp with big sad eyes holding a tiny candle, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by cold grey torchlight, high contrast, vertical composition, no text, no border, no frame, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o1.png",
   "name": "Lữ Khách Vô Danh (Cổng Tro)",
   "size": "1024x1536",
   "prompt": "a hooded nameless wanderer in grey rags holding a lantern, at a gate of ash, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o2.png",
   "name": "Tín Đồ Lạc Lối (Rừng Chết)",
   "size": "1024x1536",
   "prompt": "a lost cultist in tattered blue robes with a bone necklace and a ritual dagger, dead forest, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o3.png",
   "name": "Thợ Săn Rừng Sâu (Hẻm Xương)",
   "size": "1024x1536",
   "prompt": "a grim deep-forest hunter with a longbow and a bone mask, canyon of bones, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o4.png",
   "name": "Kỵ Sĩ Tro Tàn (Lò Thiêu)",
   "size": "1024x1536",
   "prompt": "an ash knight in charred armor holding a great axe, furnace glow, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o5.png",
   "name": "Kẻ Nuôi Nhện (Hang Nhện)",
   "size": "1024x1536",
   "prompt": "a spider-keeper sorcerer draped in webs with small spiders on his arms, cave, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o6.png",
   "name": "Phù Thủy Đầm Lầy (Đầm Oán Hồn)",
   "size": "1024x1536",
   "prompt": "a swamp witch with a crooked staff and will-o-wisps, haunted marsh, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o7.png",
   "name": "Long Kỵ Sĩ (Sào Huyệt Rồng)",
   "size": "1024x1536",
   "prompt": "a dragon knight in red armor holding a dragon-head lance, dragon lair, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "merchant.png",
   "name": "Lão Hắc Thị (chủ tiệm)",
   "size": "1024x1536",
   "prompt": "a sly hooded black-market merchant leaning on a mace, coins and potions on a table, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark",
-  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs"
+  "negative": "text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  }
 ]

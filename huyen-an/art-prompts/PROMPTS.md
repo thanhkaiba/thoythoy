@@ -5,349 +5,349 @@ Khổ tranh 2:3 dọc (1024×1536). Lưu đúng tên file rồi gửi lại đ�
 
 Mẹo giữ phong cách đồng bộ: dùng cùng một công cụ, cùng một model, và nếu công cụ có "seed" hoặc "style reference" thì giữ cố định cho cả bộ.
 
-## boar.png · Lợn Lòi Than
+## boar.png · Lợn Lòi Than · weird
 
 ```
-a hulking wild boar with coal-black hide, glowing ember cracks across its body, tusks of charred bone, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a wild boar whose back is a smoldering charcoal hill with three tiny chimneys venting smoke, glowing ember cracks in its hide, three tusks of charred bone, eyes like live coals, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## rat.png · Chuột Cống Lửa
+## rat.png · Chuột Cống Lửa · whimsical
 
 ```
-a giant sewer rat wreathed in small flames, burning red eyes, scorched bristling fur, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a scrappy sewer rat wearing a cracked bronze lantern as a helmet, its long tail is a lit burning fuse, mischievous grin, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## ant.png · Kiến Lửa
+## ant.png · Kiến Lửa · weird
 
 ```
-a giant fire ant with a molten orange carapace, mandibles dripping lava, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a fire ant whose abdomen is a glass bulb of swirling lava, legs like blackened iron nails, smoke rising from its jaws, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## cbat.png · Dơi Hang
+## cbat.png · Dơi Hang · cute
 
 ```
-a cave bat with leathery wings glowing ember-red at the edges, fangs bared, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a round fluffy cave bat no bigger than a fist, oversized ears glowing ember-red at the tips, wings wrapped around itself like a cloak, hanging upside down, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## ogre.png · Chằn Tinh
+## ogre.png · Chằn Tinh · grotesque
 
 ```
-a brutish fire ogre with scarred red skin and a spiked iron club, sparks drifting around it, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a hunched ogre with a furnace built into its belly, fire glowing through iron grates in its stomach, chains on its arms, a bell-shaped iron club, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## scarab.png · Bọ Hung Lam
+## scarab.png · Bọ Hung Lam · cute
 
 ```
-a large beetle with an iridescent deep-blue shell, glowing cyan markings, water droplets, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a small beetle whose shell is a polished sapphire dome holding a tiny moonlit pond on its back with lily pads, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## croc.png · Ngạc Ngư
+## croc.png · Ngạc Ngư · weird
 
 ```
-an armored swamp crocodile emerging from black water, algae hanging from its scales, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a crocodile whose back is a sunken shipwreck covered in barnacles, lanterns hanging from a broken mast, rising from black water, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## seahorse.png · Hải Mã
+## seahorse.png · Hải Mã · cute
 
 ```
-a giant warrior seahorse with blade-like fins and bioluminescent blue spots, underwater, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a tiny brave seahorse knight wearing a seashell helmet and holding a needle lance, bubbles, glowing blue freckles, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## mud.png · Bùn Quái
+## mud.png · Bùn Quái · weird
 
 ```
-a shambling swamp mud golem dripping black mud, eyes glowing teal, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a swamp mud blob with many mismatched eyes of drowned creatures floating inside it, reeds and a rusty sword sprouting from its head, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## cuttle.png · Mực Vực Sâu
+## cuttle.png · Mực Vực Sâu · eerie
 
 ```
-an abyssal cuttlefish with glowing tentacles in the deep sea darkness, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+an abyssal cuttlefish with a cracked porcelain human mask for a face, tentacles trailing glowing runes in the deep sea, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## bear.png · Gấu Rừng Già
+## bear.png · Gấu Rừng Già · weird
 
 ```
-an ancient forest bear with moss and lichen growing on its fur, claws like gnarled bark, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+an ancient sleepy bear with a small mossy shrine and two stone lanterns growing on its back, mushrooms along its spine, wise old eyes, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## stoat.png · Chồn Tuyết
+## stoat.png · Chồn Tuyết · cute
 
 ```
-a white snow stoat with frost-tipped fur, poised among pine roots, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a fluffy white snow stoat wearing a tiny red scarf, clutching an acorn, standing on twisted pine roots in snowfall, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## falcon.png · Ưng Xám
+## falcon.png · Ưng Xám · weird
 
 ```
-a grey hunting falcon with slate feathers diving with talons extended, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a falcon with three glowing eyes and feathers made of sharp slate stone shards, a rune-carved beak, mid-dive, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## horse.png · Ngựa Hoang
+## horse.png · Ngựa Hoang · eerie
 
 ```
-a wild black stallion with a mane of leaves and vines, glowing green eyes, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a wild stallion woven from branches and vines, a hollow ribcage full of fireflies, glowing green eyes, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## skel.png · Bộ Xương
+## skel.png · Bộ Xương · whimsical
 
 ```
-an animated skeleton warrior overgrown with roots and moss, holding a rusted sword, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a small cheerful skeleton warrior with a flowering vine growing through its ribs and a bird nest on its skull, holding a rusty sword, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## yeti.png · Tuyết Nhân
+## yeti.png · Tuyết Nhân · weird
 
 ```
-a towering yeti with matted white fur and icy breath among frosted rocks, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a giant yeti with a frozen waterfall pouring from its shoulders, an icicle beard, a tiny red bird perched on its head, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## wolf.png · Sói Non
+## wolf.png · Sói Non · cute
 
 ```
-detailed, a young direwolf with silver-grey fur and fierce eyes under moonlight, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a fluffy direwolf pup with oversized paws and a glowing crescent-moon mark on its forehead, trying to howl, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## wolf2.png · Lang Vương (Sói Non tiến hóa)
+## wolf2.png · Lang Vương (Sói Non tiến hóa) · majestic
 
 ```
-highly detailed, epic, a massive adult moon wolf king with a silver mane and glowing pale runes on its fur, howling, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a massive moon wolf king with a mane of silver flame and a crescent moon floating behind its head, glowing runes on its fur, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## turtle.png · Giáp Thú
+## turtle.png · Giáp Thú · weird
 
 ```
-detailed, a giant armored turtle beast with a shell of blue crystal plates, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a giant turtle whose shell is a cluster of blue crystal spires like a tiny frozen castle with lit windows, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## fox.png · Long Tử Phun Lửa
+## fox.png · Long Tử Phun Lửa · cute
 
 ```
-detailed, a young fire drake breathing a jet of flame, small wings spread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a small young fire drake with stubby wings and a big round head, proudly puffing a little jet of flame, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## snake.png · Thủy Xà
+## snake.png · Thủy Xà · eerie
 
 ```
-detailed, a water serpent with luminous blue scales coiling through dark water, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a serpent made entirely of flowing translucent water with a glowing pearl visible in its throat, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## scorp.png · Bọ Cạp Lửa
+## scorp.png · Bọ Cạp Lửa · menacing
 
 ```
-detailed, a scorpion with an obsidian carapace and a glowing molten stinger raised high, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a scorpion with an obsidian carapace whose stinger is a glowing molten forge hammer, sparks flying, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## rscorp.png · Bọ Cạp Đá
+## rscorp.png · Bọ Cạp Đá · weird
 
 ```
-detailed, a scorpion made of mossy stone plates and rock, cracks glowing green, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a scorpion formed from mossy temple ruins, a carved stone face on its back, cracks glowing green, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## spider.png · Nhện Giăng Tơ
+## spider.png · Nhện Giăng Tơ · eerie
 
 ```
-detailed, a giant spider weaving glowing silk webs, a cluster of green eyes, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a giant spider whose abdomen is a cracked porcelain doll face, weaving glowing silk threads, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## troll.png · Quỷ Đập Đá
+## troll.png · Quỷ Đập Đá · whimsical
 
 ```
-detailed, a hulking rock troll smashing a boulder apart with a stone club, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a hulking rock troll with a bird nest on its head, grinning with mossy teeth while smashing a boulder with a stone club, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## naga.png · Xà Nữ
+## naga.png · Xà Nữ · eerie
 
 ```
-detailed, a naga warrior with a serpent lower body and sea-green scales, wielding a trident, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a naga priestess with a serpent lower body and sea-green scales, a jellyfish crown, holding a coral trident, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## ghoul.png · Thực Thi Quỷ
+## ghoul.png · Thực Thi Quỷ · grotesque
 
 ```
-detailed, a rotting ghoul exhaling poisonous green fumes, long hooked claws, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, an emaciated ghoul with an extra mouth on its stomach exhaling green poison fumes, long hooked claws, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## shadow.png · Bóng Ma
+## shadow.png · Bóng Ma · eerie
 
 ```
-detailed, a hooded shadow wraith made of black mist with piercing blue eyes, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a tall hooded wraith with no face, only a single blue candle flame where its head should be, body of black mist, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## rider.png · Lang Kỵ
+## rider.png · Lang Kỵ · menacing
 
 ```
-detailed, a goblin raider riding a flaming wolf, spear raised for a charge, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a goblin raider wearing a cooking pot as a helmet, riding a wolf made of flames, spear raised for a charge, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## gale.png · Phong Linh
+## gale.png · Phong Linh · whimsical
 
 ```
-detailed, a storm spirit of swirling wind and rain with lightning crackling in its core, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a storm spirit shaped like a giant floating paper kite with lightning tassels and a rain cloud for a tail, one big eye, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## fguard.png · Hỏa Vệ Binh
+## fguard.png · Hỏa Vệ Binh · menacing
 
 ```
-detailed, a fire guardian knight with a flaming halberd, armor glowing like a forge, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a fire guardian knight whose helmet is an open furnace door with flames inside, molten seams in the armor, a flaming halberd, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## bat.png · Dạ Bức Vương
+## bat.png · Dạ Bức Vương · grotesque
 
 ```
-highly detailed, epic, a colossal vampire bat lord with tattered wings and a bone crown before a blood moon, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a colossal vampire bat lord with wings made of torn cathedral banners and a crown of bone, before a blood moon, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## phoenix.png · Hỏa Hồn
+## phoenix.png · Hỏa Hồn · majestic
 
 ```
-highly detailed, epic, a fire spirit bird rising from ashes, wings made of roaring flame, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a fire spirit bird made of burning paper and embers rising from a pile of ash, long ribbon tail, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## lion.png · Sư Thứu
+## lion.png · Sư Thứu · majestic
 
 ```
-highly detailed, epic, a griffin with a lion body and eagle wings, golden-green plumage, wings spread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a griffin with a lion body and eagle wings, a mane of autumn leaves, golden-green plumage, wings spread, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## serpent.png · Hải Xà Vương
+## serpent.png · Hải Xà Vương · majestic
 
 ```
-highly detailed, epic, a gigantic sea serpent king rising from a stormy sea, crown of coral and pearls, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a gigantic sea serpent king wearing a sunken temple as a crown, coral and pearls, rising from a stormy sea, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## draug.png · Tử Kỵ Sĩ
+## draug.png · Tử Kỵ Sĩ · menacing
 
 ```
-highly detailed, epic, a death knight in blackened armor with burning eyes, ember-wreathed greatsword and tower shield, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a death knight whose blackened armor is fused with the bones of his skeletal warhorse, burning eyes, ember-wreathed greatsword and tower shield, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## tentacle.png · Xúc Tu Vực Thẳm
+## tentacle.png · Xúc Tu Vực Thẳm · grotesque
 
 ```
-highly detailed, epic, enormous abyssal tentacles rising from a dark rift, glowing runes along them, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, enormous abyssal tentacles emerging from a floating eye-shaped rift in the sky, glowing runes along them, a small boat caught in their grip, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## wose.png · Mộc Tinh Cổ Thụ
+## wose.png · Mộc Tinh Cổ Thụ · eerie
 
 ```
-highly detailed, epic, an ancient walking tree spirit with a face in its bark and glowing amber eyes, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, an ancient walking tree spirit with a giant face in its bark, an owl living in one eye socket, glowing amber sap, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## dragon.png · Cổ Long Tro Tàn
+## dragon.png · Cổ Long Tro Tàn · majestic
 
 ```
-masterpiece, legendary, epic scale, an ancient ash dragon with scales of cooled magma, embers swirling, glowing throat, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+masterpiece, legendary, epic scale, an ancient ash dragon with scales of cooled magma and a ruined castle tower embedded in its back, embers swirling, glowing throat, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## deer.png · Cổ Thụ Thần
+## deer.png · Cổ Thụ Thần · majestic
 
 ```
-masterpiece, legendary, epic scale, a divine great stag made of ancient forest, antlers like a tree canopy with glowing leaves, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+masterpiece, legendary, epic scale, a divine great stag made of ancient forest, antlers like a tree canopy hung with tiny glowing lanterns, a cloak of moss, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## reaper.png · Tử Thần
+## reaper.png · Tử Thần · eerie
 
 ```
-masterpiece, mythic, awe-inspiring, epic scale, the grim reaper in tattered robes holding a huge scythe, cold blue soulfire, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+masterpiece, mythic, awe-inspiring, epic scale, the grim reaper as a towering figure in tattered robes with an hourglass inside its ribcage, a huge scythe of cold blue soulfire, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## lich.png · Hư Vô Chi Vương
+## lich.png · Hư Vô Chi Vương · majestic
 
 ```
-masterpiece, mythic, awe-inspiring, epic scale, the void lich king on a bone throne, crowned skull, purple void energy swirling, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+masterpiece, mythic, awe-inspiring, epic scale, the void lich king on a throne of melted crowns, crowned skull, purple void energy and shattered floating stars, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## soul.png · Tàn Hồn
+## soul.png · Tàn Hồn · cute
 
 ```
-a faint wandering ghost wisp, pale and translucent, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by cold grey torchlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a small round ghost wisp with big sad eyes holding a tiny candle, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by cold grey torchlight, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## o1.png · Lữ Khách Vô Danh (Cổng Tro)
 
@@ -355,7 +355,7 @@ Loại trừ: `text, letters, logo, watermark, signature, frame, border, card te
 a hooded nameless wanderer in grey rags holding a lantern, at a gate of ash, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## o2.png · Tín Đồ Lạc Lối (Rừng Chết)
 
@@ -363,7 +363,7 @@ Loại trừ: `text, letters, logo, watermark, signature, frame, border, card te
 a lost cultist in tattered blue robes with a bone necklace and a ritual dagger, dead forest, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## o3.png · Thợ Săn Rừng Sâu (Hẻm Xương)
 
@@ -371,7 +371,7 @@ Loại trừ: `text, letters, logo, watermark, signature, frame, border, card te
 a grim deep-forest hunter with a longbow and a bone mask, canyon of bones, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## o4.png · Kỵ Sĩ Tro Tàn (Lò Thiêu)
 
@@ -379,7 +379,7 @@ Loại trừ: `text, letters, logo, watermark, signature, frame, border, card te
 an ash knight in charred armor holding a great axe, furnace glow, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## o5.png · Kẻ Nuôi Nhện (Hang Nhện)
 
@@ -387,7 +387,7 @@ Loại trừ: `text, letters, logo, watermark, signature, frame, border, card te
 a spider-keeper sorcerer draped in webs with small spiders on his arms, cave, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## o6.png · Phù Thủy Đầm Lầy (Đầm Oán Hồn)
 
@@ -395,7 +395,7 @@ Loại trừ: `text, letters, logo, watermark, signature, frame, border, card te
 a swamp witch with a crooked staff and will-o-wisps, haunted marsh, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## o7.png · Long Kỵ Sĩ (Sào Huyệt Rồng)
 
@@ -403,7 +403,7 @@ Loại trừ: `text, letters, logo, watermark, signature, frame, border, card te
 a dragon knight in red armor holding a dragon-head lance, dragon lair, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## merchant.png · Lão Hắc Thị (chủ tiệm)
 
@@ -411,4 +411,4 @@ Loại trừ: `text, letters, logo, watermark, signature, frame, border, card te
 a sly hooded black-market merchant leaning on a mace, coins and potions on a table, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, cute, anime, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`

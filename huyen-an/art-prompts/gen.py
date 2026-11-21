@@ -27,11 +27,16 @@ def run(model_key, item, out_dir):
     if any(out_dir.glob(dest.name + '.*')):
         return item['file'], 'có sẵn'
     body = json.dumps({'input': make(item['prompt'])})
-    raw = curl(['-X', 'POST', '-H', 'Content-Type: application/json', '-H', 'Prefer: wait=60', '-d', body, f'{API}/models/{name}/predictions'])
-    try:
-        pred = json.loads(raw)
-    except ValueError:
-        return item['file'], 'lỗi: ' + raw[:200]
+    for attempt in range(8):
+        raw = curl(['-X', 'POST', '-H', 'Content-Type: application/json', '-H', 'Prefer: wait=60', '-d', body, f'{API}/models/{name}/predictions'])
+        try:
+            pred = json.loads(raw)
+        except ValueError:
+            return item['file'], 'lỗi: ' + raw[:200]
+        if pred.get('status') == 429:
+            time.sleep(int(pred.get('retry_after', 10)) + 1)
+            continue
+        break
     if 'id' not in pred:
         return item['file'], 'lỗi: ' + raw[:300]
     for _ in range(90):
