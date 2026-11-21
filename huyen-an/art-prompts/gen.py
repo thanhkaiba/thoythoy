@@ -8,7 +8,7 @@ import json, subprocess, sys, time, pathlib, zlib, concurrent.futures as cf
 
 HERE = pathlib.Path(__file__).parent
 MODELS = {
-    'flux2': ('black-forest-labs/flux-2-pro', lambda p, sd=7: {'prompt': p, 'aspect_ratio': '2:3', 'resolution': '1 MP', 'output_format': 'png', 'seed': sd, 'safety_tolerance': 5}),
+    'flux2': ('black-forest-labs/flux-2-pro', lambda p, sd=7, ar='2:3': {'prompt': p, 'aspect_ratio': ar, 'resolution': '1 MP', 'output_format': 'png', 'seed': sd, 'safety_tolerance': 5}),
     'imagen4': ('google/imagen-4', lambda p: {'prompt': p, 'aspect_ratio': '3:4', 'image_size': '1K', 'output_format': 'png', 'safety_filter_level': 'block_only_high'}),
     'seedream4': ('bytedance/seedream-4', lambda p: {'prompt': p, 'aspect_ratio': '2:3', 'size': '2K', 'enhance_prompt': False}),
     'ideogram3': ('ideogram-ai/ideogram-v3-quality', lambda p: {'prompt': p, 'aspect_ratio': '2:3', 'magic_prompt_option': 'Off', 'seed': 7}),
@@ -26,7 +26,7 @@ def run(model_key, item, out_dir):
     dest = out_dir / item['file'].replace('.png', '')
     if any(out_dir.glob(dest.name + '.*')):
         return item['file'], 'có sẵn'
-    body = json.dumps({'input': make(item['prompt'], zlib.crc32(item['file'].encode()) % 100000) if model_key == 'flux2' else make(item['prompt'])})
+    body = json.dumps({'input': make(item['prompt'], zlib.crc32(item['file'].encode()) % 100000, item.get('ar', '2:3')) if model_key == 'flux2' else make(item['prompt'])})
     for attempt in range(8):
         raw = curl(['-X', 'POST', '-H', 'Content-Type: application/json', '-H', 'Prefer: wait=60', '-d', body, f'{API}/models/{name}/predictions'])
         try:
@@ -56,7 +56,8 @@ def run(model_key, item, out_dir):
 if __name__ == '__main__':
     model_key, out = sys.argv[1], pathlib.Path(sys.argv[2])
     out.mkdir(parents=True, exist_ok=True)
-    items = json.loads((HERE / 'prompts.json').read_text(encoding='utf8'))
+    import os
+    items = json.loads((HERE / os.environ.get('PROMPTS', 'prompts.json')).read_text(encoding='utf8'))
     want = sys.argv[3:]
     if want:
         items = [i for i in items if i['file'].replace('.png', '') in want]

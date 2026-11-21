@@ -1,0 +1,93 @@
+[
+ {
+  "file": "board.png",
+  "name": "board",
+  "ar": "1:1",
+  "prompt": "top-down orthographic view of a square sci-fi metal battle arena floor, exactly a 4 by 4 grid of square dark steel panels separated by thin glowing cyan seams, worn and scratched metal with subtle hexagon engraving, evenly lit, flat, no perspective, game board texture, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "ob_tree.png",
+  "name": "ob_tree",
+  "ar": "1:1",
+  "prompt": "top-down view of a single square game tile: a jagged block of glowing blue ice crystals frozen onto a dark metal floor panel, frost spreading to the edges, centered, game asset tile, painterly, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "ob_fire.png",
+  "name": "ob_fire",
+  "ar": "1:1",
+  "prompt": "top-down view of a single square game tile: an overheating reactor vent set in a dark metal floor panel, glowing orange-hot grille with flames and heat haze, yellow-black warning stripes at the edges, centered, game asset tile, painterly, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "ob_rock.png",
+  "name": "ob_rock",
+  "ar": "1:1",
+  "prompt": "top-down view of a single square game tile: a heap of rusted scrap metal, gears, broken pipes and frayed cables piled on a dark metal floor panel, centered, game asset tile, painterly, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "cardback.png",
+  "name": "cardback",
+  "ar": "2:3",
+  "prompt": "ornate sci-fi trading card back design, perfectly symmetrical, dark navy brushed metal with glowing cyan circuit filigree and engraved borders, a central glowing emblem of a stylized eye inside a hexagon, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "bg0.png",
+  "name": "bg0",
+  "ar": "9:16",
+  "prompt": "vast red desert planet landscape, an endless graveyard of crashed spaceship wrecks half buried in red sand, a gigantic swollen red dwarf sun filling the sky, rust dust storm, cinematic matte painting, empty scene, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "bg1.png",
+  "name": "bg1",
+  "ar": "9:16",
+  "prompt": "a floating neon bazaar on a grey cratered moon surface, drifting lanterns in low gravity, a small intense blue star and a huge ringed gas giant in the black starry sky, cinematic matte painting, empty scene, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "bg2.png",
+  "name": "bg2",
+  "ar": "9:16",
+  "prompt": "a dense alien jungle where the vines are thick black hanging cables and glowing wires, two yellow suns shining through the canopy, mist, cinematic matte painting, empty scene, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "bg3.png",
+  "name": "bg3",
+  "ar": "9:16",
+  "prompt": "a forge planet with rivers of molten iron, giant crucibles and anvils carved into mountains, sparks in the air, a tiny piercing white dwarf star in a dark sky, cinematic matte painting, empty scene, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "bg4.png",
+  "name": "bg4",
+  "ar": "9:16",
+  "prompt": "a starless frozen rogue planet in eternal night, a vast hive tunnel carved into black ice, lit only by scattered glowing magenta eggs and bioluminescent cables, cinematic matte painting, empty scene, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "bg5.png",
+  "name": "bg5",
+  "ar": "9:16",
+  "prompt": "a boiling acid-green ocean with corroded shipwrecks and rising toxic steam, a green star in a yellow hazy sky, cinematic matte painting, empty scene, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "bg6.png",
+  "name": "bg6",
+  "ar": "9:16",
+  "prompt": "a volcanic planet with erupting volcanoes, rivers of lava and black basalt cliffs, a gigantic blue star blazing in the sky, cinematic matte painting, empty scene, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ },
+ {
+  "file": "bg7.png",
+  "name": "bg7",
+  "ar": "9:16",
+  "prompt": "deep space at the edge of a black hole, a glowing gold and orange accretion disk, warped starlight, floating debris of broken server towers and crowns, violet nebula, cinematic matte painting, empty scene, no text, no letters, no logos, no watermark",
+  "negative": "text, letters, logo, watermark, signature, frame, border, user interface, people, creatures, blurry, low detail, cartoon"
+ }
+]
