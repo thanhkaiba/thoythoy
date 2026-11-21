@@ -1,0 +1,44 @@
+{
+ "sam_atk": {
+  "file": "sam_atk.webp",
+  "n": 5,
+  "w": 232,
+  "h": 180
+ },
+ "sam_skill": {
+  "file": "sam_skill.webp",
+  "n": 4,
+  "w": 534,
+  "h": 149
+ },
+ "sam_front": {
+  "file": "sam_front.webp",
+  "n": 4,
+  "w": 246,
+  "h": 212
+ },
+ "gan_atk": {
+  "file": "gan_atk.webp",
+  "n": 4,
+  "w": 274,
+  "h": 201
+ },
+ "rai_atk": {
+  "file": "rai_atk.webp",
+  "n": 5,
+  "w": 220,
+  "h": 177
+ },
+ "rai_skill": {
+  "file": "rai_skill.webp",
+  "n": 5,
+  "w": 244,
+  "h": 169
+ },
+ "yae_atk": {
+  "file": "yae_atk.webp",
+  "n": 4,
+  "w": 224,
+  "h": 214
+ }
+}
