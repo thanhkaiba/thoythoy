@@ -619,7 +619,10 @@ body::after{box-shadow:inset 0 0 90px 6px #000c;background:repeating-linear-grad
 .fpad{position:absolute;left:0;top:0;width:min(calc(var(--fh)*.6),42vw);height:calc(var(--fh)*.16);translate:-50% -50%;border-radius:50%;border:2px solid var(--fc);background:radial-gradient(closest-side,color-mix(in srgb,var(--fc) 45%,transparent),transparent);box-shadow:0 0 18px var(--fc)}
 /* ---------- mặt bàn theo hành tinh ---------- */
 .board{background:linear-gradient(#05070d40,#05070d70),var(--bimg,none) center/cover,#0b1222;box-shadow:0 14px 0 #02040a,0 0 0 2px color-mix(in srgb,var(--bc,#29e6ff) 75%,#000),0 0 46px color-mix(in srgb,var(--bc,#29e6ff) 40%,transparent),0 26px 30px #000c}
-.board .cell,.board .cell.t-tree,.board .cell.t-fire,.board .cell.t-rock{background:#05070d2e;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--bc,#29e6ff) 55%,transparent),inset 0 0 14px #0009}
+.board .cell,.board .cell.t-tree,.board .cell.t-fire,.board .cell.t-rock{background:#05070d24;box-shadow:inset 0 0 12px #0008;border-radius:3px}
+.bgrid{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;transform:translateZ(.6px)}
+.bgrid.glow{animation:bgl 2.2s ease-in-out infinite alternate}
+@keyframes bgl{to{filter:brightness(1.3)}}
 .board .cell::before{display:none}
 /* ---------- vật cản 2.5D: hình vẽ từ góc cao, dựng song song màn hình, đáy hình là mép trước của chân đế ---------- */
 .prop{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;--pw:92%}
@@ -1101,6 +1104,46 @@ function pfxLoop(){const cs=document.querySelectorAll('#match:not([hidden]) .pfx
     for(let j=1;j<=5;j++)x.lineTo(q.x+(q.x2-q.x)*j/5+(j<5?(R()-.5)*8:0),q.y+(q.y2-q.y)*j/5+(j<5?(R()-.5)*8:0));x.stroke();x.shadowBlur=0}}
   x.globalAlpha=1;x.globalCompositeOperation='source-over'});
  requestAnimationFrame(pfxLoop)}
+/* Đường chia ô theo địa hình của từng hành tinh, vẽ một lần lên canvas phủ mặt bàn:
+   mối hàn đinh tán, rãnh ống neon, dây cáp bện, rãnh thép lỏng, tơ nhện, song lưới thép, khe nứt dung nham, mạch khắc. */
+const GRIDSTYLE=['seam','neon','cable','molten','web','grate','crack','rune'];
+function drawGrid(){const b=$('#board'),cv=b&&b.querySelector('.bgrid');if(!cv||cellEls.length<16)return;const W=b.clientWidth,H=b.clientHeight,r=Math.min(2,devicePixelRatio||1);if(!W)return;
+ cv.width=Math.round(W*r);cv.height=Math.round(H*r);const x=cv.getContext('2d');x.setTransform(r,0,0,r,0,0);x.clearRect(0,0,W,H);
+ const st=GRIDSTYLE[planetIx()];cv.className='bgrid'+(['neon','molten','grate','crack','rune'].includes(st)?' glow':'');
+ let sd=planetIx()*977+13;const R=()=>{sd=(Math.imul(sd,1664525)+1013904223)>>>0;return sd/4294967296};
+ const ox=e=>e.offsetParent===b?e.offsetLeft:e.offsetLeft-b.offsetLeft,oy=e=>e.offsetParent===b?e.offsetTop:e.offsetTop-b.offsetTop,c=i=>cellEls[i];
+ const gx=ox(c(1))-ox(c(0))-c(0).offsetWidth,gy=oy(c(4))-oy(c(0))-c(0).offsetHeight,xs=[],ys=[];
+ for(let k=0;k<=4;k++){xs.push(k<4?ox(c(k))-gx/2:ox(c(3))+c(3).offsetWidth+gx/2);ys.push(k<4?oy(c(k*4))-gy/2:oy(c(12))+c(12).offsetHeight+gy/2)}
+ const lines=[];for(let k=0;k<=4;k++){lines.push([xs[k],ys[0],xs[k],ys[4],1]);lines.push([xs[0],ys[k],xs[4],ys[k],0])}
+ // đường gấp khúc ngẫu nhiên quanh một đoạn thẳng
+ const pts=(l,amp,step)=>{const[x1,y1,x2,y2]=l,L=Math.hypot(x2-x1,y2-y1),n=Math.max(2,Math.round(L/step)),nx=-(y2-y1)/L,ny=(x2-x1)/L,P=[];
+  for(let i=0;i<=n;i++){const t=i/n,o=i&&i<n?(R()-.5)*2*amp:0;P.push([x1+(x2-x1)*t+nx*o,y1+(y2-y1)*t+ny*o])}return P};
+ const stroke=(P,w,col,blur,bc)=>{x.beginPath();P.forEach(([px,py],i)=>i?x.lineTo(px,py):x.moveTo(px,py));x.lineWidth=w;x.strokeStyle=col;x.shadowBlur=(blur||0)*r;x.shadowColor=bc||col;x.stroke();x.shadowBlur=0};
+ const dot=(px,py,rd,col,blur)=>{x.beginPath();x.arc(px,py,rd,0,6.3);x.fillStyle=col;x.shadowBlur=(blur||0)*r;x.shadowColor=col;x.fill();x.shadowBlur=0};
+ const along=(l,step,f)=>{const[x1,y1,x2,y2]=l,L=Math.hypot(x2-x1,y2-y1),nx=-(y2-y1)/L,ny=(x2-x1)/L;for(let d=step/2;d<L;d+=step)f(x1+(x2-x1)*d/L,y1+(y2-y1)*d/L,nx,ny,(x2-x1)/L,(y2-y1)/L)};
+ x.lineCap='round';x.lineJoin='round';
+ for(const l of lines){
+  if(st==='seam'){const P=pts(l,.5,12);stroke(P,4.6,'#080403f0');stroke(P.map(([a,d])=>[a+.9,d+.9]),1,'#d39a6a44');
+   along(l,13,(px,py,nx,ny)=>{for(const s of[-1,1]){dot(px+nx*5*s,py+ny*5*s,1.5,'#241812');dot(px+nx*5*s-.4,py+ny*5*s-.4,.6,'#e0a87a99')}});
+   along(l,29,(px,py,nx,ny)=>{if(R()<.6)dot(px+nx*(R()-.5)*4,py+ny*(R()-.5)*4,1.2+R()*1.6,'#b0492466')})}
+  else if(st==='neon'){const P=pts(l,0,40),col=l[4]?'#ff4fd8':'#29e6ff';stroke(P,5.5,'#03050af0');stroke(P,1.4,col,5);stroke(P,.5,'#ffffffaa')}
+  else if(st==='cable'){const A=pts(l,2.4,15),B=pts(l,2.4,13);stroke(A,4,'#040605f2');stroke(A.map(([a,d])=>[a-.7,d-.7]),.9,'#4c5e55aa');stroke(B,2.8,'#090c0bf2');stroke(B,.8,'#5cff8a77',4,'#5cff8a');
+   along(l,37,(px,py)=>{if(R()<.5)dot(px+(R()-.5)*4,py+(R()-.5)*4,1.1,'#9dffb5',5)})}
+  else if(st==='molten'){const P=pts(l,.7,13);stroke(P,6.5,'#080504f2');stroke(P,2.6,'#d8431a',5,'#ff6a2a');stroke(P,.9,'#ffc978cc');
+   along(l,15,(px,py)=>{if(R()<.6)dot(px+(R()-.5)*2,py+(R()-.5)*2,2+R()*2,'#1c0c06e6')})}
+  else if(st==='web'){stroke(pts(l,.5,24),3.4,'#04060bd0');for(let k=0;k<2;k++)stroke(pts(l,2,20+k*7),.6,'#eaf6ff80',2,'#bfe8ff');
+   along(l,19,(px,py,nx,ny,tx,ty)=>{if(R()<.7){const a=4+R()*5,s=R()<.5?1:-1;stroke([[px-nx*a,py-ny*a],[px+tx*3*s+nx*a,py+ty*3*s+ny*a]],.5,'#eaf6ff88')}})}
+  else if(st==='grate'){const P=pts(l,0,40);stroke(P,9,'#5cff8a2e',9,'#5cff8a');stroke(P,6.6,'#0a0d08f5');stroke(P,4.4,'#33382a');stroke(P.map(([a,d])=>[a-1.1,d-1.1]),.8,'#a0a66e66');
+   along(l,9,(px,py,nx,ny)=>{if(R()<.5)dot(px+nx*(R()-.5)*4,py+ny*(R()-.5)*4,.7+R()*.9,R()<.6?'#c9b53acc':'#7a3f1ccc')})}
+  else if(st==='crack'){const P=pts(l,3.2,9);stroke(P,5.4,'#040202f2');stroke(P,2.2,'#ff5a1f',9,'#ff7a2f');stroke(P,.8,'#ffe4a8');
+   P.forEach(([px,py],i)=>{if(i&&i<P.length-1&&R()<.22){const an=R()*6.28,ln=7+R()*11,Q=pts([px,py,px+Math.cos(an)*ln,py+Math.sin(an)*ln],1.6,5);stroke(Q,2.2,'#040202e6');stroke(Q,.9,'#ff6a2a',5,'#ff7a2f')}})}
+  else{const P=pts(l,0,40);stroke(P,3.8,'#04030af0');stroke(P,1,'#b26bff',6);
+   along(l,15,(px,py,nx,ny)=>{const s=R()<.5?1:-1;stroke([[px,py],[px+nx*4.5*s,py+ny*4.5*s]],.8,'#b26bffcc',3)});
+   along(l,47,(px,py)=>dot(px,py,1.5,'#ffd34d',6))}}
+ // nút giao: che chỗ các đường cắt nhau bằng một điểm nhấn
+ for(let i=0;i<=4;i++)for(let j=0;j<=4;j++){const px=xs[i],py=ys[j];
+  if(st==='seam')dot(px,py,3,'#1a100c'),dot(px-.6,py-.6,1.1,'#e0a87aaa');else if(st==='neon')dot(px,py,2.2,'#ffffff',8);else if(st==='molten'||st==='crack')dot(px,py,3,'#ffb04a',10);
+  else if(st==='grate')dot(px,py,3.6,'#22261c'),dot(px,py,1.3,'#8a8f5a');else if(st==='rune')dot(px,py,2.4,'#ffd34d',9);else if(st==='cable')dot(px,py,3.2,'#050706'),dot(px,py,1.2,'#5cff8a',6)}}
 /* Vật cản vỡ tung khi bị phá. */
 function shatter(img){const r=img.getBoundingClientRect(),c=img.cloneNode();c.className='shard';Object.assign(c.style,{left:r.left+'px',top:r.top+'px',width:r.width+'px',height:r.height+'px'});document.body.append(c);
  c.animate([{transform:'none',opacity:1,filter:'none'},{transform:'translateY(-6px) scale(1.12)',opacity:1,filter:'brightness(2.5)',offset:.25},{transform:'translateY(10px) scale(1.35)',opacity:0,filter:'brightness(1.5) blur(6px)'}],{duration:520*(SV.fast?.6:1),easing:'ease-out'}).onfinish=()=>c.remove();
@@ -1119,7 +1162,7 @@ function turnBanner(mine){const o=$('#tban');if(o)o.remove();const d=document.cr
 function updHud(){const p=cnt(M.S,'p'),e=cnt(M.S,'e');$('#scP').textContent=p;$('#scE').textContent=e;$('#sbarP').style.width=(p+e?p/(p+e)*100:50)+'%';$('#ehandN').textContent='Còn '+M.S.hands.e.length+' lá trên tay';
  const w=$('#who');w.className='who '+M.turn;w.textContent=M.turn==='p'?'Lượt của bạn':'Đối thủ đang nghĩ';$('#hand').classList.toggle('wait',M.turn!=='p'||M.busy)}
 /* Bàn chiếm hết chỗ trống còn lại giữa phần trên và tay bài. */
-function fitBoard(){const st=$('.stage');if(!st||$('#match').hidden)return;$('#board').style.width=Math.max(140,Math.min(st.clientWidth*.9,430,st.clientHeight*.8))+'px'}
+function fitBoard(){const st=$('.stage');if(!st||$('#match').hidden)return;$('#board').style.width=Math.max(140,Math.min(st.clientWidth*.9,430,st.clientHeight*.8))+'px';drawGrid()}
 if(window.ResizeObserver)new ResizeObserver(fitBoard).observe($('.stage'));addEventListener('resize',fitBoard);
 function renderHand(){const h=$('#hand'),n=Math.max(1,M.S.hands.p.length),W=h.clientWidth||360,cw=Math.min(74,Math.floor((W-4*(n-1))/n));h.style.setProperty('--cw',cw+'px');h.innerHTML=M.S.hands.p.map((c,i)=>`<button class="hc${M.sel===i?' sel':''}" data-i="${i}" aria-label="${CARDS[c.id].n}">${cardHTML(c)}</button>`).join('')}
 /* Xem trước: mô phỏng nước đi trên bản sao để biết sẽ lật lá nào. */
@@ -1416,6 +1459,7 @@ $('#cSkip').onclick=()=>{SV.tut=1;save();endTut();const w=T.waits;T.waits=[];w.f
 function nextBot(){if(M.script&&M.script.length){const[id,c]=M.script.shift();const hi=M.S.hands.e.findIndex(x=>x.id===id);if(hi>=0&&isFree(M.S.cells[c]))return[hi,c]}return botMove(M.S,M.opp)}
 
 function enterMatch(opp){const b=$('#board');b.innerHTML='';cellEls=[];for(let i=0;i<16;i++){const d=document.createElement('div');d.className='cell';d.dataset.i=i;b.append(d);cellEls.push(d)}
+ {const g=document.createElement('canvas');g.className='bgrid';b.append(g)}
  {const ix=OPPS.indexOf(opp),pl=ix<0?7:Math.min(ix,7);$('#match').style.setProperty('--mbg',`url(art/bg${pl}.webp)`);b.style.setProperty('--bimg',`url(art/board${pl}.webp)`);b.style.setProperty('--bc',FC[ix<0?8:ix])}
  $('#mAv').src=ART[opp.av];$('#mName').textContent=opp.n;$('#legend').innerHTML=(M.S.el?triHTML()+'<span class="dim">+1</span>':'')+M.S.rules.map(r=>`<button class="rchip" data-r="${r}">${RULE[r].n}</button>`).join('');
  show('match');{const keep=new Set([...M.S.hands.p,...M.S.hands.e].map(c=>c.id));for(const k in SHEET)if(!keep.has(k.slice(0,k.lastIndexOf('_'))))delete SHEET[k];keep.forEach(figLoad)}$('#board').classList.add('intro');$('#hand').classList.add('deal');setTimeout(()=>{$('#board').classList.remove('intro');$('#hand').classList.remove('deal')},1100);renderAll();fitBoard();taunt(opp.say&&opp.say[0])}
