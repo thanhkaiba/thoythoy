@@ -760,7 +760,7 @@ const OPPS=[
  {place:'Tổ Ngầm',say:["Lũ con của ta đói điện lắm rồi.", "Tổ vỡ rồi... không thể nào.", "Nằm yên trong lưới đi."],n:'Mẹ Nhện Máy',av:'o5',style:'Săn mồi',deep:.25,bet:100,noise:3,nerf:1,el:1,deck:{r:[3,0,0],ids:['spider','troll','gale']},t:'Mở: Lá hình dạng',sig:{id:'draug',s:0},show:['troll','gale'],gift:{card:'troll'}},
  {place:'Đại dương Axit',say:["Đại dương này giữ dữ liệu của những kẻ thua cuộc.", "Mã độc dội ngược về ta.", "Chìm xuống axit đi."],n:'Sứa Phù Thủy',av:'o6',style:'Tính trước',deep:.5,bet:130,noise:2,nerf:2,el:1,deck:{r:[3,0,0],ids:['bat','phoenix','fguard']},t:'Luật vùng: Tổng',rules:['plus'],sig:{id:'serpent',s:0},show:['bat','fguard'],intro:['<b>Luật vùng: Tổng.</b> Lá vừa đặt có từ 2 cặp cạnh chạm nhau <b>cùng tổng</b> thì lật hết lá địch trong các cặp đó.','Lá bị lật theo luật này tấn công tiếp như combo.'],gift:{card:'bat'}},
  {place:'Hành tinh Núi Lửa',say:["Lò phản ứng của ta chưa từng tắt.", "Ngươi xứng đáng cưỡi rồng.", "Quỳ xuống trước lửa của sao xanh."],n:'Long Mech',av:'o7',style:'Lão luyện',deep:.8,bet:170,noise:.5,nerf:0,el:1,deck:{r:[2,2,0],ids:['dragon','lion']},t:'Luật vùng: Bài úp',rules:['closed'],sig:{id:'dragon',s:0},show:['lion','dragon'],intro:['<b>Luật vùng: Bài úp.</b> Bạn không thấy bài trên tay đối thủ, phần xem trước không báo được ô hở.'],gift:{card:'lion'}},
- {place:'Lõi Hư Vô',say:["Ngươi đã tới lõi. Không còn đường về.", "Hư vô... cũng có lúc lỗi.", "Mọi dữ liệu rồi sẽ về với hư vô."],n:'Trí Tuệ Hư Vô',av:'lich',style:'Toàn tri',deep:.7,bet:250,noise:.5,nerf:4,el:1,boss:1,deck:{r:[2,2,0],ids:['lich','deer']},t:'Boss · Đồng + Tổng',rules:['same','plus'],sig:{id:'lich',s:0},show:['lich','deer'],gift:{gold:1000},
+ {place:'Lõi Hư Vô',say:["Ngươi đã tới lõi. Không còn đường về.", "Hư vô... cũng có lúc lỗi.", "Mọi dữ liệu rồi sẽ về với hư vô."],n:'Trí Tuệ Hư Vô',av:'o8',style:'Toàn tri',deep:.7,bet:250,noise:.5,nerf:4,el:1,boss:1,deck:{r:[2,2,0],ids:['lich','deer']},t:'Boss · Đồng + Tổng',rules:['same','plus'],sig:{id:'lich',s:0},show:['lich','deer'],gift:{gold:1000},
   intro:['Đừng để lá mạnh nhất của bạn đứng cạnh ô trống. Nhện Lưới Laser có thể vô hiệu hóa lá Boss.','Luật vùng ở đây là cả Đồng lẫn Tổng. Thắng cách từ 3 lá trở lên để đoạt chính lá Trí Tuệ Hư Vô.']}];
 /* Sau Boss: Khe Hư Không, mỗi lần thắng xuống sâu thêm và đối thủ mạnh thêm. */
 function abyssOpp(d){const rl=[['same'],['plus'],['closed'],['same','plus']][Math.floor(Date.now()/864e5)%4];return{place:'Khe Hư Không',rules:rl,say:['Khe này không có điểm cuối, lữ khách.','Xa thêm một bước. Còn nữa.','Ở lại đây mãi mãi.'],n:'Bóng Ma Mã '+(d+1),av:['reaper','draug','shadow','ghoul'][d%4],bet:200+d*50,noise:0,style:'Toàn tri',deep:1,nerf:-Math.min(7,d),el:1,abyss:1,
@@ -787,7 +787,7 @@ const RULES={pet:0};
 function inst(id,o,s){const v=CARDS[id].v.map(x=>x+(s?1:0));return{id,o,s:s?1:0,v:[...v],b:[...v],fl:0,lock:0,age:0,evo:0,sil:0,sh:CARDS[id].k==='shield'?1:0,reb:0,rebUsed:0,rebTo:o}}
 const disp=x=>x>=10?'A':x;
 /* Thay tranh: điền id lá → đường dẫn ảnh, ví dụ {wolf:'art/wolf.jpg'}. Lá không có ảnh dùng hình biểu tượng. */
-const ART={};'gale fguard wose boar rat ant scarab croc seahorse bear stoat falcon horse cbat mud skel cuttle ogre yeti wolf wolf2 snake fox turtle scorp rscorp spider troll naga ghoul shadow rider bat phoenix lion serpent draug tentacle dragon deer reaper lich soul o1 o2 o3 o4 o5 o6 o7'.split(' ').forEach(k=>ART[k]='art/'+k+'.webp');
+const ART={};'gale fguard wose boar rat ant scarab croc seahorse bear stoat falcon horse cbat mud skel cuttle ogre yeti wolf wolf2 snake fox turtle scorp rscorp spider troll naga ghoul shadow rider bat phoenix lion serpent draug tentacle dragon deer reaper lich soul o1 o2 o3 o4 o5 o6 o7 o8'.split(' ').forEach(k=>ART[k]='art/'+k+'.webp');
 function cardHTML(c){const d=CARDS[c.id];
  return `<div class="card o-${c.o} r${d.r} e-${d.e}${c.s?' s1':''}${c.sh?' shield':''}${c.evo?' evo':''}${c.sil?' sil':''}"><div class="cf"><div class="art">${ART[c.evo?'wolf2':c.id]?`<img class="pic paint" src="${ART[c.evo?'wolf2':c.id]}" alt="" draggable="false">`:ic(c.evo?'wolf2':c.id,'emo')}</div>${d.r>=2?'<div class="foil"></div>':''}</div>`+
  c.v.map((x,k)=>`<i class="v v${k}${x>c.b[k]?' up':x<c.b[k]?' dn':''}"><b>${disp(x)}</b></i>`).join('')+
@@ -1265,7 +1265,7 @@ function packModal(ids,title,added){if(!added)ids.forEach(id=>addCard(id));save(
 /* ================= HOME / DECK / GACHA ================= */
 const FC=['#ff4a3a','#3a8bff','#ffd34d','#e8f4ff','#8a5cff','#5cff8a','#29e6ff','#b26bff','#3a4bff'];
 const STARS=["Hệ Hồng Tinh", "Hệ Lam Tinh", "Hệ Song Tinh", "Hệ Bạch Tinh", "Hành tinh lang thang", "Hệ Lục Tinh", "Hệ Thanh Tinh", "Hố đen Hắc Tinh"],depthName=i=>i>7?'Ngoài rìa thiên hà':STARS[i];
-const BOSSVID=['o1','o2','o3','o4','o5','o6','o7','lich'];
+const BOSSVID=['o1','o2','o3','o4','o5','o6','o7','o8'];
 /* Chỉ phát hoạt ảnh của trùm ở tầng đang xem, các tầng khác dừng để nhẹ máy. */
 function homeVid(){const tw=$('#tower');if(!tw||calm)return;const cur=$('#home').hidden?-1:Math.round(tw.scrollTop/(tw.clientHeight||1));
  tw.querySelectorAll('.floor').forEach((f,i)=>{const v=f.querySelector('video');if(!v)return;

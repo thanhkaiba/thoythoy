@@ -7,8 +7,8 @@ android {
         applicationId 'com.thoythoy.huyenan'
         minSdk 26
         targetSdk 34
-        versionCode 18
-        versionName '2.9-cyber'
+        versionCode 19
+        versionName '3.0-cyber'
     }
     buildTypes { release { minifyEnabled false } }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }

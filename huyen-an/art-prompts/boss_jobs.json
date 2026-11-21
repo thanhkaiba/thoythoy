@@ -2,49 +2,49 @@
  {
   "name": "o1",
   "id": "o1",
-  "seed": 5,
-  "prompt": "The rusty scavenger robot It is alive and menacing: it breathes slowly, shifts its weight, tilts its head and stares at the viewer, its eyes and power core pulse with light, small sparks, steam and dust drift through the air and the background ambience moves subtly. Static locked-off camera, same framing and composition throughout, cinematic."
+  "seed": 9,
+  "prompt": "The scavenger machine breathes heavily, its red lantern eye flares and scans, its hook claws flex and the chains sway, the severed robot heads in its ribcage twitch, black oil drips, red dust blows past. Horror atmosphere. Static locked-off camera, same framing and composition throughout, the monster stays in place, cinematic, smooth motion."
  },
  {
   "name": "o2",
   "id": "o2",
-  "seed": 5,
-  "prompt": "The four-armed robot monk It is alive and menacing: it breathes slowly, shifts its weight, tilts its head and stares at the viewer, its eyes and power core pulse with light, small sparks, steam and dust drift through the air and the background ambience moves subtly. Static locked-off camera, same framing and composition throughout, cinematic."
+  "seed": 9,
+  "prompt": "The skull-faced machine monk floats and bobs slowly, its neon heart pulses, the halo of chips rotates, its fingers move, black oil drips from the severed head, the lanterns drift. Horror atmosphere. Static locked-off camera, same framing and composition throughout, the monster stays in place, cinematic, smooth motion."
  },
  {
   "name": "o3",
   "id": "o3",
-  "seed": 5,
-  "prompt": "The mantis hunter machine It is alive and menacing: it breathes slowly, shifts its weight, tilts its head and stares at the viewer, its eyes and power core pulse with light, small sparks, steam and dust drift through the air and the background ambience moves subtly. Static locked-off camera, same framing and composition throughout, cinematic."
+  "seed": 9,
+  "prompt": "The mantis hunter mech sways side to side ready to strike, its saw mandibles chatter, red eyes flicker, its serrated blades twitch and drip, the hanging cables and impaled corpses swing, mist drifts. Horror atmosphere. Static locked-off camera, same framing and composition throughout, the monster stays in place, cinematic, smooth motion."
  },
  {
   "name": "o4",
   "id": "o4",
-  "seed": 5,
-  "prompt": "The giant foundry titan robot It is alive and menacing: it breathes slowly, shifts its weight, tilts its head and stares at the viewer, its eyes and power core pulse with light, small sparks, steam and dust drift through the air and the background ambience moves subtly. Static locked-off camera, same framing and composition throughout, cinematic."
+  "seed": 9,
+  "prompt": "The furnace golem roars, the molten metal in its chest furnace churns and flares, molten steel pours from its shoulders, the hooked chains swing, sparks and embers rise, lava flows. Horror atmosphere. Static locked-off camera, same framing and composition throughout, the monster stays in place, cinematic, smooth motion."
  },
  {
   "name": "o5",
   "id": "o5",
-  "seed": 5,
-  "prompt": "The giant mechanical spider mother It is alive and menacing: it breathes slowly, shifts its weight, tilts its head and stares at the viewer, its eyes and power core pulse with light, small sparks, steam and dust drift through the air and the background ambience moves subtly. Static locked-off camera, same framing and composition throughout, cinematic."
+  "seed": 9,
+  "prompt": "The spider queen machine shifts on her needle legs, her fangs drip and her red eyes blink out of sync, the eggs in her abdomen pulse and the embryos writhe, small spider drones crawl across the ground, webs tremble. Horror atmosphere. Static locked-off camera, same framing and composition throughout, the monster stays in place, cinematic, smooth motion."
  },
  {
   "name": "o6",
   "id": "o6",
-  "seed": 5,
-  "prompt": "The jellyfish witch machine It is alive and menacing: it breathes slowly, shifts its weight, tilts its head and stares at the viewer, its eyes and power core pulse with light, small sparks, steam and dust drift through the air and the background ambience moves subtly. Static locked-off camera, same framing and composition throughout, cinematic."
+  "seed": 9,
+  "prompt": "The jellyfish witch bobs on the waves, the skull-faced hag inside screams silently and her wire hair floats, the cable tentacles writhe and coil, acid drips and the green sea boils and steams. Horror atmosphere. Static locked-off camera, same framing and composition throughout, the monster stays in place, cinematic, smooth motion."
  },
  {
   "name": "o7",
   "id": "o7",
-  "seed": 5,
-  "prompt": "The dragon mech It is alive and menacing: it breathes slowly, shifts its weight, tilts its head and stares at the viewer, its eyes and power core pulse with light, small sparks, steam and dust drift through the air and the background ambience moves subtly. Static locked-off camera, same framing and composition throughout, cinematic."
+  "seed": 9,
+  "prompt": "The dragon mech roars and breathes a burst of blue fire, its reactor heart pulses, its torn wings flex, magma glows in the cracks of its armour, embers rise and lava flows. Horror atmosphere. Static locked-off camera, same framing and composition throughout, the monster stays in place, cinematic, smooth motion."
  },
  {
-  "name": "lich",
-  "id": "lich",
-  "seed": 5,
-  "prompt": "The rogue AI king robot on its throne It is alive and menacing: it breathes slowly, shifts its weight, tilts its head and stares at the viewer, its eyes and power core pulse with light, small sparks, steam and dust drift through the air and the background ambience moves subtly. Static locked-off camera, same framing and composition throughout, cinematic."
+  "name": "o8",
+  "id": "o8",
+  "seed": 9,
+  "prompt": "The skeletal AI god-king slowly lifts its crowned skull and its hollow eyes blaze with golden light, the many skeletal arms behind the throne reach and curl their fingers, the cables pulse, the accretion disk rotates and debris drifts. Horror atmosphere. Static locked-off camera, same framing and composition throughout, the monster stays in place, cinematic, smooth motion."
  }
 ]
