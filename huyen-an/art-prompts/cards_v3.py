@@ -14,8 +14,8 @@ STYLE = ("cyberpunk trading card illustration, gritty neon-lit dystopian megacit
          "vertical composition, no text, no letters, no logos, no border, no frame, no watermark")
 GLOW = {'hoa': 'hot orange and magenta neon', 'thuy': 'icy cyan and blue neon',
         'moc': 'toxic acid-green neon', 'none': 'dim violet neon'}
-PSTYLE = ("cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, "
-          "cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, "
+PSTYLE = ("cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body, "
+          " dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, "
           "no text, no letters, no logos, no border, no frame, no watermark")
 NEGATIVE = ("text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, "
             "multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs")
@@ -67,12 +67,12 @@ CARDS = [
  ('soul','Tàn Ảnh','none',0,'cute','a small round ghost hologram with big sad eyes holding a tiny glowing candle'),
 ]
 PEOPLE = [
- ('o1','Kẻ Lang Thang (Mái Neon)','a hooded nameless street drifter in rain-soaked rags holding a glowing lantern, on a neon rooftop'),
- ('o2','Tín Đồ Máy (Chợ Đêm)','a machine cultist in tattered blue robes with cybernetic implants and a necklace of old chips, holding a ritual data blade, in a neon night market'),
- ('o3','Thợ Săn Tiền Thưởng (Hẻm Dây Cáp)','a grim bounty hunter with a long rail rifle and a bone-white mask with red optics, in a cable-choked alley'),
- ('o4','Lính Đánh Thuê Thép (Xưởng Đúc)','a heavy mercenary in charred powered armor holding a great hydraulic axe, in a glowing foundry'),
- ('o5','Kẻ Nuôi Drone (Lưới Ngầm)','a drone-keeper hacker draped in cables with small spider drones crawling on her arms, in an underground server tunnel'),
- ('o6','Phù Thủy Mạng (Cống Độc)','a netrunner witch with a crooked antenna staff and floating holographic wisps, in a toxic sewer'),
- ('o7','Kỵ Sĩ Mech (Lò Phản Ứng)','a mech dragon rider pilot in red armor holding a dragon-headed lance, in a glowing reactor chamber'),
+ ('o1','Máy Nhặt Rỉ (Hành tinh Rỉ Sét, hệ Hồng Tinh)','a hunchbacked scavenger robot monster made of rusted scrap with a single lantern eye and long grabbing claw arms, on a rust-red desert planet under a huge red dwarf sun'),
+ ('o2','Tu Sĩ Bốn Tay (Mặt trăng Neon, hệ Lam Tinh)','a four-armed machine monk monster with a halo of floating chips and prayer beads of glowing data, in a floating neon bazaar on a moon, a bright blue star in the sky'),
+ ('o3','Bọ Ngựa Săn Mồi (Rừng Cáp, hệ Song Tinh)','an insectoid hunter mech with mantis-blade arms and a long rail-gun tail, stalking through a jungle of hanging cables under two yellow suns'),
+ ('o4','Cự Thần Lò Đúc (Hành tinh Lò Rèn, hệ Bạch Tinh)','a colossal foundry golem mech with molten metal pouring from its shoulders and an open furnace chest, on a forge planet of lava rivers under a tiny white dwarf star'),
+ ('o5','Mẹ Nhện Máy (Tổ Ngầm, hành tinh lang thang)','a giant spider queen machine with a hive-like abdomen releasing small spider drones, in a dark underground hive lit by bioluminescent cables, a starless black sky'),
+ ('o6','Sứa Phù Thủy (Đại dương Axit, hệ Lục Tinh)','a gigantic jellyfish machine witch floating over an acid-green ocean, translucent bell full of circuitry, long cable tentacles crackling with code, a green star in the sky'),
+ ('o7','Long Mech (Hành tinh Núi Lửa, hệ Thanh Tinh)','a towering dragon mech with reactor cores in its chest and wings of glowing heat sinks, on a volcanic world, a huge blue giant star blazing in the sky'),
  ('merchant','Lão Hắc Thị (chủ tiệm)','a sly hooded black-market fixer leaning on a shock baton, credit chips and stimulant vials on a neon-lit table'),
 ]

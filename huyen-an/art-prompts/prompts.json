@@ -345,58 +345,58 @@
  },
  {
   "file": "o1.png",
-  "name": "Kẻ Lang Thang (Mái Neon)",
+  "name": "Máy Nhặt Rỉ (Hành tinh Rỉ Sét, hệ Hồng Tinh)",
   "size": "1024x1536",
-  "prompt": "a hooded nameless street drifter in rain-soaked rags holding a glowing lantern, on a neon rooftop, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "prompt": "a hunchbacked scavenger robot monster made of rusted scrap with a single lantern eye and long grabbing claw arms, on a rust-red desert planet under a huge red dwarf sun, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
   "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o2.png",
-  "name": "Tín Đồ Máy (Chợ Đêm)",
+  "name": "Tu Sĩ Bốn Tay (Mặt trăng Neon, hệ Lam Tinh)",
   "size": "1024x1536",
-  "prompt": "a machine cultist in tattered blue robes with cybernetic implants and a necklace of old chips, holding a ritual data blade, in a neon night market, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "prompt": "a four-armed machine monk monster with a halo of floating chips and prayer beads of glowing data, in a floating neon bazaar on a moon, a bright blue star in the sky, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
   "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o3.png",
-  "name": "Thợ Săn Tiền Thưởng (Hẻm Dây Cáp)",
+  "name": "Bọ Ngựa Săn Mồi (Rừng Cáp, hệ Song Tinh)",
   "size": "1024x1536",
-  "prompt": "a grim bounty hunter with a long rail rifle and a bone-white mask with red optics, in a cable-choked alley, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "prompt": "an insectoid hunter mech with mantis-blade arms and a long rail-gun tail, stalking through a jungle of hanging cables under two yellow suns, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
   "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o4.png",
-  "name": "Lính Đánh Thuê Thép (Xưởng Đúc)",
+  "name": "Cự Thần Lò Đúc (Hành tinh Lò Rèn, hệ Bạch Tinh)",
   "size": "1024x1536",
-  "prompt": "a heavy mercenary in charred powered armor holding a great hydraulic axe, in a glowing foundry, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "prompt": "a colossal foundry golem mech with molten metal pouring from its shoulders and an open furnace chest, on a forge planet of lava rivers under a tiny white dwarf star, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
   "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o5.png",
-  "name": "Kẻ Nuôi Drone (Lưới Ngầm)",
+  "name": "Mẹ Nhện Máy (Tổ Ngầm, hành tinh lang thang)",
   "size": "1024x1536",
-  "prompt": "a drone-keeper hacker draped in cables with small spider drones crawling on her arms, in an underground server tunnel, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "prompt": "a giant spider queen machine with a hive-like abdomen releasing small spider drones, in a dark underground hive lit by bioluminescent cables, a starless black sky, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
   "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o6.png",
-  "name": "Phù Thủy Mạng (Cống Độc)",
+  "name": "Sứa Phù Thủy (Đại dương Axit, hệ Lục Tinh)",
   "size": "1024x1536",
-  "prompt": "a netrunner witch with a crooked antenna staff and floating holographic wisps, in a toxic sewer, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "prompt": "a gigantic jellyfish machine witch floating over an acid-green ocean, translucent bell full of circuitry, long cable tentacles crackling with code, a green star in the sky, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
   "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "o7.png",
-  "name": "Kỵ Sĩ Mech (Lò Phản Ứng)",
+  "name": "Long Mech (Hành tinh Núi Lửa, hệ Thanh Tinh)",
   "size": "1024x1536",
-  "prompt": "a mech dragon rider pilot in red armor holding a dragon-headed lance, in a glowing reactor chamber, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "prompt": "a towering dragon mech with reactor cores in its chest and wings of glowing heat sinks, on a volcanic world, a huge blue giant star blazing in the sky, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
   "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  },
  {
   "file": "merchant.png",
   "name": "Lão Hắc Thị (chủ tiệm)",
   "size": "1024x1536",
-  "prompt": "a sly hooded black-market fixer leaning on a shock baton, credit chips and stimulant vials on a neon-lit table, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "prompt": "a sly hooded black-market fixer leaning on a shock baton, credit chips and stimulant vials on a neon-lit table, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
   "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
  }
 ]
