@@ -4,11 +4,11 @@ Dùng:  python3 gen.py <model> <thư mục ra> [id ...]
   model: flux2 | imagen4 | seedream4 | ideogram3
 Token Replicate do proxy của môi trường tự gắn vào yêu cầu, script không đọc khóa nào.
 """
-import json, subprocess, sys, time, pathlib, concurrent.futures as cf
+import json, subprocess, sys, time, pathlib, zlib, concurrent.futures as cf
 
 HERE = pathlib.Path(__file__).parent
 MODELS = {
-    'flux2': ('black-forest-labs/flux-2-pro', lambda p: {'prompt': p, 'aspect_ratio': '2:3', 'resolution': '1 MP', 'output_format': 'png', 'seed': 7, 'safety_tolerance': 5}),
+    'flux2': ('black-forest-labs/flux-2-pro', lambda p, sd=7: {'prompt': p, 'aspect_ratio': '2:3', 'resolution': '1 MP', 'output_format': 'png', 'seed': sd, 'safety_tolerance': 5}),
     'imagen4': ('google/imagen-4', lambda p: {'prompt': p, 'aspect_ratio': '3:4', 'image_size': '1K', 'output_format': 'png', 'safety_filter_level': 'block_only_high'}),
     'seedream4': ('bytedance/seedream-4', lambda p: {'prompt': p, 'aspect_ratio': '2:3', 'size': '2K', 'enhance_prompt': False}),
     'ideogram3': ('ideogram-ai/ideogram-v3-quality', lambda p: {'prompt': p, 'aspect_ratio': '2:3', 'magic_prompt_option': 'Off', 'seed': 7}),
@@ -26,7 +26,7 @@ def run(model_key, item, out_dir):
     dest = out_dir / item['file'].replace('.png', '')
     if any(out_dir.glob(dest.name + '.*')):
         return item['file'], 'có sẵn'
-    body = json.dumps({'input': make(item['prompt'])})
+    body = json.dumps({'input': make(item['prompt'], zlib.crc32(item['file'].encode()) % 100000) if model_key == 'flux2' else make(item['prompt'])})
     for attempt in range(8):
         raw = curl(['-X', 'POST', '-H', 'Content-Type: application/json', '-H', 'Prefer: wait=60', '-d', body, f'{API}/models/{name}/predictions'])
         try:

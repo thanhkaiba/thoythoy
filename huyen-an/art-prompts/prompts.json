@@ -2,401 +2,394 @@
  {
   "file": "boar.png",
   "name": "Lợn Lò Hơi",
-  "mood": "weird",
+  "mood": "rusty",
   "size": "1024x1536",
-  "prompt": "a robotic wild boar built from a scrapyard boiler, three smoking exhaust chimneys on its back, glowing orange heat vents along its plating, three hydraulic steel tusks, red optic eyes, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a robot wild boar with a dented boiler body, three cold rusty chimneys on its back, one hydraulic tusk snapped off, exposed pistons, flickering red optic eyes, old, rusted, dented and half-broken, peeling paint, leaking oil, patched with scrap, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle side view, setting: an abandoned desert scrapyard at dusk, color palette: dusty ochre, rust orange and pale dusk blue, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "rat.png",
   "name": "Chuột Cầu Chì",
   "mood": "whimsical",
   "size": "1024x1536",
-  "prompt": "a scrappy robot rat wearing a cracked bronze headlamp as a helmet, its long tail is a sparking power cable fuse, mischievous LED grin, whimsical yet eerie, playful and odd, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a robot rat built entirely of riveted steel plates and tiny pistons, round headlamp eyes, a long segmented tail ending in a sparking fuse, whimsical yet eerie, playful and odd, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, close-up from a low worm-eye view, setting: a cramped maintenance pipe tunnel full of steam, color palette: copper, steam white and warm yellow lamplight, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "ant.png",
   "name": "Kiến Plasma",
   "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a mechanical ant whose abdomen is a glass fuel cell of swirling orange plasma, needle-thin iron legs, welding sparks at its jaws, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a mechanical ant with a glass fuel-cell abdomen of swirling plasma and needle-thin iron legs, strange uncanny surreal machine design, memorable silhouette, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, macro shot at ground level, setting: a cracked white salt flat under a pale morning sky, color palette: bright salt white, sky blue and orange plasma, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "cbat.png",
   "name": "Dơi Ăng-ten",
   "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a round little bat drone wrapped in soft orange insulation foam, oversized satellite-dish ears glowing at the tips, big round camera eyes, hanging upside down from a cable, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a round little bat drone with a padded orange shell, oversized satellite-dish ears and big round camera eyes, hanging upside down, endearing and charming, big expressive camera eyes, small and lovable, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, upside-down close-up, setting: under the girders of a rusty bridge at sunset, color palette: sunset pink, purple and soft orange, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "ogre.png",
   "name": "Cự Hán Lò Đúc",
   "mood": "grotesque",
   "size": "1024x1536",
-  "prompt": "a hulking cyborg brute with an open furnace reactor in its belly glowing behind iron grates, chains and pistons on its arms, a bell-shaped hydraulic hammer, grotesque and horrifying, unsettling mechanical details, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a hulking cyborg brute with an open furnace reactor in its belly glowing behind iron grates, chains and pistons on its arms, a hydraulic hammer, grotesque and horrifying, unsettling mechanical details, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle full body shot, setting: a dim smelting factory with hanging chains, color palette: soot black, deep red and molten orange, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "scarab.png",
   "name": "Bọ Kính Lam",
   "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a small robot beetle with a polished sapphire glass dome on its back holding a tiny holographic pond with floating lily pads, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a small robot beetle with a polished sapphire glass dome on its back holding a tiny pond with lily pads, endearing and charming, big expressive camera eyes, small and lovable, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, macro side view, setting: a mossy rock beside a waterfall on a lush alien world, color palette: emerald green, turquoise water and soft daylight, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "croc.png",
   "name": "Cá Sấu Tàu Ngầm",
-  "mood": "weird",
+  "mood": "rusty",
   "size": "1024x1536",
-  "prompt": "a cyborg crocodile whose back is a wrecked mini submarine covered in barnacles and flickering neon signs, rising from black canal water, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a robot crocodile whose back is a wrecked barnacle-covered mini submarine, a jaw of corroded steel teeth, old, rusted, dented and half-broken, peeling paint, leaking oil, patched with scrap, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, high-angle view from above the water, setting: a flooded abandoned subway station, color palette: murky teal, rust brown and dim yellow work lights, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "seahorse.png",
   "name": "Hiệp Sĩ Hải Mã",
   "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a tiny brave robot seahorse knight with a scrap-metal helmet and a needle antenna lance, bubbles, cyan LED freckles, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a tiny brave robot seahorse knight with a scrap-metal helmet and a needle antenna lance, endearing and charming, big expressive camera eyes, small and lovable, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, front view at eye level, setting: a reef of sunken satellites on the sea floor, color palette: aqua blue, coral pink and sunbeams, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "mud.png",
   "name": "Quái Dầu Thải",
   "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a sludge blob of black machine oil and e-waste with many mismatched camera lenses floating inside it, antennas and a rusty blade sticking out, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a sludge machine of black oil and e-waste with many mismatched camera lenses floating inside it, antennas and a rusty blade sticking out, strange uncanny surreal machine design, memorable silhouette, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, wide shot, setting: a toxic landfill under a grey overcast sky, color palette: grey, sickly yellow and an oily rainbow sheen, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "cuttle.png",
   "name": "Mực Mặt Nạ",
   "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "a robotic cuttlefish with a cracked porcelain android mask for a face, fiber-optic tentacles trailing glowing code, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a robotic cuttlefish with a cracked chrome faceplate and fiber-optic tentacles trailing glowing code, eerie and haunting, quiet dread, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, dutch angle, setting: a deep ocean trench beside a hydrothermal vent, color palette: deep navy and bioluminescent violet, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "bear.png",
   "name": "Gấu Bảo Trì",
-  "mood": "weird",
+  "mood": "rusty",
   "size": "1024x1536",
-  "prompt": "an old sleepy maintenance robot bear with a small rusted shrine and paper lanterns on its back, moss and glowing mushrooms along its spine, gentle optic eyes, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "an old maintenance robot bear with a small rusted shrine and paper lanterns on its back, moss growing in its joints, gentle optic eyes, old, rusted, dented and half-broken, peeling paint, leaking oil, patched with scrap, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, three-quarter view, setting: an overgrown abandoned temple in a misty bamboo forest, color palette: misty green, warm lantern amber and weathered red paint, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "stoat.png",
   "name": "Chồn Bông",
   "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a fluffy white robot stoat with soft synthetic fur and a tiny red scarf, holding a glowing green battery like an acorn, perched on thick cables, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a slender white robot stoat with smooth porcelain-white armor plates and a red cloth scarf, holding a glowing green battery, endearing and charming, big expressive camera eyes, small and lovable, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, close-up at eye level, setting: a snowy pine forest at night under an aurora, color palette: snow white, aurora green and violet, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "falcon.png",
   "name": "Ưng Ba Mắt",
   "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a robotic falcon with three glowing optic eyes and feathers made of sharp carbon-fiber blades, diving, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a robotic falcon with three large glowing optic eyes in a row across its head and feathers made of carbon-fiber blades, strange uncanny surreal machine design, memorable silhouette, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, dynamic top-down dive view, setting: diving past a sandstone cliff above a deep canyon, color palette: sandstone orange and deep blue sky, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "horse.png",
   "name": "Ngựa Cáp Quang",
-  "mood": "eerie",
+  "mood": "rusty",
   "size": "1024x1536",
-  "prompt": "a wild robotic stallion made of bundled fiber-optic cables and vines, a hollow ribcage full of floating green LEDs, glowing eyes, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a broken robotic stallion of corroded steel and frayed fiber-optic cables, a hollow ribcage with flickering green LEDs, old, rusted, dented and half-broken, peeling paint, leaking oil, patched with scrap, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, side profile silhouette, setting: a foggy abandoned racetrack at dawn, color palette: cold grey fog, pale dawn gold and green lights, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "skel.png",
   "name": "Khung Xương Máy",
   "mood": "whimsical",
   "size": "1024x1536",
-  "prompt": "a small cheerful salvaged android skeleton with a flowering vine growing through its chassis and a bird nest on its head, holding a rusty pipe sword, whimsical yet eerie, playful and odd, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a small cheerful rusted android skeleton with a flowering vine growing through its chassis and a bird nest on its head, holding a pipe sword, whimsical yet eerie, playful and odd, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, slightly high angle, setting: a sunny overgrown junkyard meadow full of wildflowers, color palette: sunny yellow, flower pink and rust, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "yeti.png",
   "name": "Tuyết Nhân Làm Lạnh",
   "mood": "weird",
   "size": "1024x1536",
-  "prompt": "a giant cryo yeti mech with a frozen coolant waterfall pouring from its shoulder tanks, icicle beard, a tiny red robot bird on its head, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a giant cryo yeti mech with a frozen coolant waterfall pouring from its shoulder tanks, an icicle beard and a tiny red robot bird on its head, strange uncanny surreal machine design, memorable silhouette, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, towering low-angle view, setting: a blizzard on a glacier, color palette: white, ice blue and a single red accent, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "wolf.png",
   "name": "Sói Con Máy",
   "mood": "cute",
   "size": "1024x1536",
-  "prompt": "detailed, a fluffy robot wolf pup with oversized paws and a glowing crescent-moon LED on its forehead, trying to howl, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a robot wolf pup with oversized paws and a glowing crescent-moon light on its forehead, trying to howl, endearing and charming, big expressive camera eyes, small and lovable, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, eye level, setting: a rooftop garden at golden hour, color palette: golden-hour orange and soft green, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "wolf2.png",
-  "name": "Lang Vương Plasma (Sói Con Máy nâng cấp)",
+  "name": "Lang Vương Ba Đầu",
   "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a massive cyber wolf king with a mane of silver plasma and a holographic crescent moon behind its head, glowing circuit patterns on its plating, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a massive four-legged quadruped three-headed robot wolf king standing on all fours, each head with a mane of silver plasma, a holographic crescent moon behind its heads, majestic and awe-inspiring, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle hero shot, setting: a moonlit crater on a barren moon, color palette: silver, moonlight white and deep indigo, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "turtle.png",
   "name": "Rùa Máy Chủ",
   "mood": "weird",
   "size": "1024x1536",
-  "prompt": "detailed, a giant tank-like robot turtle whose shell is a cluster of blue crystal server towers like a tiny frozen city with lit windows, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a giant tank-like robot turtle whose shell is a cluster of blue crystal server towers like a tiny frozen city with lit windows, strange uncanny surreal machine design, memorable silhouette, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, high-angle three-quarter view, setting: a frozen lake under a starry sky, color palette: ice blue and starry navy, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "fox.png",
   "name": "Long Tử Plasma",
   "mood": "cute",
   "size": "1024x1536",
-  "prompt": "detailed, a small young mech drake with stubby wings and a big round head, proudly puffing a little jet of plasma from a nozzle, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a small young mech drake with stubby wings and a big round head, proudly puffing a little jet of plasma from a nozzle, endearing and charming, big expressive camera eyes, small and lovable, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, close-up, setting: a cozy workshop cluttered with tools, color palette: warm lamplight orange and brass, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "snake.png",
   "name": "Xà Chất Lỏng",
   "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "detailed, a serpent made of flowing translucent liquid coolant with a glowing data pearl visible in its throat, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a robot serpent with a chrome spine and translucent coolant-filled body, a glowing data pearl in its throat, eerie and haunting, quiet dread, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, top-down view of its coils, setting: a pristine white laboratory clean room, color palette: clinical white, chrome and cyan, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "scorp.png",
   "name": "Bọ Cạp Lò Rèn",
   "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "detailed, a mechanical scorpion with obsidian armor plates and a stinger that is a glowing molten forge hammer, sparks flying, menacing and intimidating, aggressive pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a mechanical scorpion with obsidian armor plates and a stinger shaped like a glowing molten forge hammer, sparks flying, menacing and intimidating, aggressive pose, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low frontal view, setting: a black volcanic sand desert, color palette: black, lava orange and ash grey, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "rscorp.png",
   "name": "Bọ Cạp Bê Tông",
-  "mood": "weird",
+  "mood": "rusty",
   "size": "1024x1536",
-  "prompt": "detailed, a mechanical scorpion assembled from concrete rubble and broken statues, a carved stone face on its back, green circuit cracks, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a mechanical scorpion assembled from concrete rubble and rusted rebar, a broken statue head mounted on its back, old, rusted, dented and half-broken, peeling paint, leaking oil, patched with scrap, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, three-quarter view, setting: ruins of a collapsed highway overpass overgrown with grass, color palette: concrete grey, green grass and blue sky, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "spider.png",
-  "name": "Nhện Búp Bê",
-  "mood": "eerie",
+  "name": "Nhện Lưới Laser",
+  "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "detailed, a spider drone whose body is a cracked porcelain doll head, weaving glowing fiber-optic webs, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a six-legged spider tank drone of matte black armor with a cluster of red sensor eyes, spinning webs of glowing laser wire, menacing and intimidating, aggressive pose, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, view from above looking down, setting: a dark server hall between blinking server racks, color palette: black, red sensor glow and cool white, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "troll.png",
   "name": "Robot Phá Dỡ",
-  "mood": "whimsical",
+  "mood": "rusty",
   "size": "1024x1536",
-  "prompt": "detailed, a hulking demolition robot with a bird nest on its head and a grinning grille mouth, smashing a concrete block with a wrecking hammer, whimsical yet eerie, playful and odd, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a hulking dented demolition robot with a bird nest on its head and a grinning grille mouth, smashing a concrete block with a wrecking hammer, old, rusted, dented and half-broken, peeling paint, leaking oil, patched with scrap, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle view, setting: a demolition site with yellow cranes in daylight, color palette: construction yellow, dust brown and blue sky, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "naga.png",
   "name": "Xà Nữ Chrome",
   "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "detailed, a cyborg naga priestess with a serpentine robotic lower body, sea-green chrome scales, a jellyfish-like holographic crown, holding a trident of coral wires, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a serpentine robot with a long segmented chrome tail, four mechanical arms and a crown of fiber-optic tendrils, holding a trident, eerie and haunting, quiet dread, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, looking up from the sea floor, setting: a sunken underwater temple with light rays, color palette: teal, gold and sunbeams, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "ghoul.png",
   "name": "Kẻ Nhặt Rác",
   "mood": "grotesque",
   "size": "1024x1536",
-  "prompt": "detailed, an emaciated scavenger cyborg with a mouth-shaped exhaust on its stomach venting toxic green gas, long hooked metal claws, grotesque and horrifying, unsettling mechanical details, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, an emaciated rusted scavenger robot venting toxic green gas from a mouth-shaped exhaust in its stomach, long hooked metal claws, grotesque and horrifying, unsettling mechanical details, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, close dutch angle, setting: a dark sewer junction, color palette: sickly green and black, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "shadow.png",
   "name": "Bóng Ma Tĩnh Điện",
   "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "detailed, a tall hooded ghost android with no face, only a single blue flame flickering inside an empty helmet, body of black smoke and static, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a tall hooded robot with no face, only a single blue flame inside an empty helmet, a body of black smoke and static, eerie and haunting, quiet dread, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, from behind and slightly to the side, setting: an empty train platform in heavy rain at night, color palette: wet grey, yellow platform lights and a blue flame, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "rider.png",
   "name": "Kỵ Sĩ Đường Phố",
   "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "detailed, a scrawny street punk wearing a cooking pot as a helmet, riding a robot wolf wreathed in plasma flames, spear raised for a charge, menacing and intimidating, aggressive pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a scrawny little robot in a cooking-pot helmet riding a three-headed robot hound wreathed in plasma flames, spear raised, menacing and intimidating, aggressive pose, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, dynamic side tracking shot, setting: a desert highway at sunset with dust clouds, color palette: sunset orange and purple sky, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "gale.png",
   "name": "Diều Bão",
   "mood": "whimsical",
   "size": "1024x1536",
-  "prompt": "detailed, a storm drone shaped like a giant floating paper kite with lightning tassels and a rain-cloud exhaust trail, one big camera eye, whimsical yet eerie, playful and odd, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a storm drone shaped like a giant floating kite with lightning tassels and one big camera eye, whimsical yet eerie, playful and odd, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, worm-eye view, setting: above stormy ocean cliffs, color palette: slate storm grey, white lightning and a yellow kite, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "fguard.png",
   "name": "Vệ Binh Lò Lửa",
   "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "detailed, a security mech whose helmet is an open furnace door with flames inside, molten seams in the armor, a plasma halberd, menacing and intimidating, aggressive pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "detailed, a security mech whose helmet is an open furnace door with flames inside, molten seams in its armor, a plasma halberd, menacing and intimidating, aggressive pose, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, symmetrical front view, setting: guarding a massive vault door in a steel corridor, color palette: steel blue and furnace orange, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "bat.png",
-  "name": "Dạ Bức Neon",
+  "name": "Dạ Bức Ba Đầu",
   "mood": "grotesque",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a colossal vampire bat war-drone with wings made of torn neon billboards and a crown of antennas, before a blood-red moon over the megacity, grotesque and horrifying, unsettling mechanical details, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a colossal three-headed bat war-drone with wings made of torn billboards and a crown of antennas on each head, grotesque and horrifying, unsettling mechanical details, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle view, setting: circling a ruined radio tower under a blood moon, color palette: crimson, black and a pale moon, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "phoenix.png",
   "name": "Phượng Mạch Điện",
   "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a phoenix made of burning circuit boards and ember sparks rising from a pile of e-waste ash, long ribbon-cable tail, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a phoenix made of burning circuit boards and ember sparks with a long ribbon-cable tail, majestic and awe-inspiring, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, wide shot, setting: rising above a desert of e-waste at sunrise, color palette: gold, sunrise pink and teal, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "lion.png",
   "name": "Sư Thứu Đồng",
   "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a mechanical griffin with a lion chassis and eagle wings of brass blades, a mane of autumn-colored cables, wings spread, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a mechanical griffin with a lion chassis and eagle wings of brass blades, a mane of cables, majestic and awe-inspiring, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle heroic view, setting: atop a cliff overlooking a green valley with waterfalls, color palette: brass gold, lush green and sky blue, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "serpent.png",
-  "name": "Hải Xà Máy Chủ",
+  "name": "Thủy Quái Ba Đầu",
   "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a gigantic sea serpent mech wearing a sunken data center as a crown, rising from a stormy toxic sea, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a gigantic three-headed sea serpent mech, each head crowned with an antenna array, majestic and awe-inspiring, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, wide shot from a small boat, setting: rising from a stormy sea beside a lighthouse, color palette: storm grey-green, white foam and lighthouse yellow, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "draug.png",
   "name": "Tử Kỵ Sĩ Thép",
   "mood": "menacing",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, a death-knight cyborg whose blackened armor is fused with the bones of a skeletal robot warhorse, burning red visor, glowing greatsword and tower shield, menacing and intimidating, aggressive pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, a death-knight robot fused with its skeletal robot warhorse into one centaur-like machine, burning red visor, glowing greatsword, menacing and intimidating, aggressive pose, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle view, setting: a battlefield of wrecked mechs in falling ash, color palette: ash grey and ember red, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "tentacle.png",
   "name": "Xúc Tu Cổng Lỗi",
   "mood": "grotesque",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, enormous cable tentacles emerging from a glitching eye-shaped portal in the sky above the megacity, glowing code along them, a small hover car caught in their grip, grotesque and horrifying, unsettling mechanical details, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, enormous mechanical cable tentacles emerging from a glitching eye-shaped portal in the sky, grotesque and horrifying, unsettling mechanical details, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, wide shot from street level, setting: above a small coastal fishing village at dusk, color palette: dusk purple and warm village lights, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "wose.png",
   "name": "Cây Máy Chủ Cổ",
-  "mood": "eerie",
+  "mood": "rusty",
   "size": "1024x1536",
-  "prompt": "highly detailed, epic, an ancient walking server-tree mech with a giant carved face in its rusted bark plating, an owl drone living in one eye socket, glowing amber coolant sap, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "highly detailed, epic, an ancient walking tree-shaped mech of rusted server plating with a giant carved face, an owl drone living in one eye socket, glowing amber coolant sap, old, rusted, dented and half-broken, peeling paint, leaking oil, patched with scrap, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle view, setting: a primeval forest of giant trees with sun rays, color palette: deep forest green, amber and sunbeams, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "dragon.png",
-  "name": "Long Cơ Giới",
+  "name": "Long Cơ Giới Ba Đầu",
   "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "masterpiece, legendary, epic scale, an ancient war dragon mech with scales of cooled slag metal and a ruined skyscraper embedded in its back, sparks swirling, glowing reactor throat, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "masterpiece, legendary, epic scale, an ancient three-headed war dragon mech with scales of cooled slag metal and a ruined skyscraper embedded in its back, majestic and awe-inspiring, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, worm-eye view, setting: a burning ruined city skyline, color palette: fire orange, smoke black and red sky, its power core glows hot orange, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "deer.png",
   "name": "Thần Lộc Ăng-ten",
   "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "masterpiece, legendary, epic scale, a divine great stag machine overgrown with moss, antlers like a canopy of antennas hung with tiny glowing lanterns, a cloak of moss and cables, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "masterpiece, legendary, epic scale, a divine great stag machine, antlers like a canopy of antennas hung with tiny glowing lanterns, moss on its plates, majestic and awe-inspiring, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, front view, setting: a quiet snowy shrine clearing at night with falling snow, color palette: snow white, lantern gold and deep blue, its power core glows acid green, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "reaper.png",
   "name": "Tử Thần Lượng Tử",
   "mood": "eerie",
   "size": "1024x1536",
-  "prompt": "masterpiece, mythic, awe-inspiring, epic scale, a towering grim reaper android in tattered black robes with an hourglass core inside its ribcage, a huge scythe of cold blue energy, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "masterpiece, mythic, awe-inspiring, epic scale, a towering reaper robot in tattered black cloth with an hourglass core inside its metal ribcage and a huge scythe of cold blue energy, eerie and haunting, quiet dread, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, low-angle view, setting: an endless field of decommissioned robots, color palette: pale grey and cold blue, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "lich.png",
   "name": "Trí Tuệ Hư Vô",
   "mood": "majestic",
   "size": "1024x1536",
-  "prompt": "masterpiece, mythic, awe-inspiring, epic scale, a rogue AI king with a chrome skull face and cables, on a throne of melted crowns and servers, purple void energy and shattered floating holograms, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "masterpiece, mythic, awe-inspiring, epic scale, a rogue AI king robot with a chrome skull face on a throne of melted crowns and servers, majestic and awe-inspiring, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, wide cinematic shot, setting: floating at the edge of a black hole, its glowing accretion disk behind, debris spiraling in, warped starlight, color palette: accretion-disk gold and orange against black space and violet, its power core glows icy cyan, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "soul.png",
   "name": "Tàn Ảnh",
   "mood": "cute",
   "size": "1024x1536",
-  "prompt": "a small round ghost hologram with big sad eyes holding a tiny glowing candle, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by dim violet neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a small round hologram robot ghost with big sad eyes holding a tiny glowing candle, endearing and charming, big expressive camera eyes, small and lovable, sci-fi mechanical creature, fully robotic, trading card illustration, painterly digital painting, cinematic lighting, rich detail, single subject, close-up, setting: an abandoned bedroom with an old CRT monitor, color palette: soft violet and dim warm light, its power core glows soft violet, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "o1.png",
   "name": "Máy Nhặt Rỉ (Hành tinh Rỉ Sét, hệ Hồng Tinh)",
   "size": "1024x1536",
-  "prompt": "a hunchbacked scavenger robot monster made of rusted scrap with a single lantern eye and long grabbing claw arms, on a rust-red desert planet under a huge red dwarf sun, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a hunchbacked scavenger robot made entirely of rust-crusted spaceship wrecks from this planet, red sand pouring from its joints, a single lantern eye, claw arms dragging scrap, sci-fi mechanical boss monster, fully robotic, epic scale, painterly digital painting, cinematic lighting, rich detail, full body, wide low-angle shot, setting: Rust Planet: an endless red desert graveyard of crashed spaceships under a gigantic swollen red dwarf sun filling the sky, a rust dust storm, color palette: rust red and dusty orange, the planet is clearly visible around it, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "o2.png",
   "name": "Tu Sĩ Bốn Tay (Mặt trăng Neon, hệ Lam Tinh)",
   "size": "1024x1536",
-  "prompt": "a four-armed machine monk monster with a halo of floating chips and prayer beads of glowing data, in a floating neon bazaar on a moon, a bright blue star in the sky, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a four-armed meditating machine monk levitating cross-legged, its body plated with glowing neon shop signs, a halo of floating chips, sci-fi mechanical boss monster, fully robotic, epic scale, painterly digital painting, cinematic lighting, rich detail, full body, symmetrical front view, setting: Neon Moon: a floating neon bazaar on a grey cratered moon, low gravity with drifting lanterns, a small intense blue star and a ringed gas giant in the black sky, color palette: neon pink and cyan against grey moon dust, the planet is clearly visible around it, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "o3.png",
   "name": "Bọ Ngựa Săn Mồi (Rừng Cáp, hệ Song Tinh)",
   "size": "1024x1536",
-  "prompt": "an insectoid hunter mech with mantis-blade arms and a long rail-gun tail, stalking through a jungle of hanging cables under two yellow suns, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "an insectoid hunter mech with mantis-blade arms and a rail-gun tail, its body woven from the planet hanging cables as camouflage, sci-fi mechanical boss monster, fully robotic, epic scale, painterly digital painting, cinematic lighting, rich detail, full body, high angle looking down from the canopy, setting: Cable Jungle: a dense jungle whose vines are thick hanging cables, two yellow suns shining through the canopy, color palette: jungle green, cable black and double-sun yellow, the planet is clearly visible around it, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "o4.png",
   "name": "Cự Thần Lò Đúc (Hành tinh Lò Rèn, hệ Bạch Tinh)",
   "size": "1024x1536",
-  "prompt": "a colossal foundry golem mech with molten metal pouring from its shoulders and an open furnace chest, on a forge planet of lava rivers under a tiny white dwarf star, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a colossal golem forged from the molten metal of this world, liquid steel pouring from its shoulders, an open furnace chest, sci-fi mechanical boss monster, fully robotic, epic scale, painterly digital painting, cinematic lighting, rich detail, full body, worm-eye view, setting: Forge Planet: rivers of molten iron, giant crucibles and anvils carved into mountains, a tiny piercing white dwarf star in the sky, color palette: white-hot, molten orange and black iron, the planet is clearly visible around it, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "o5.png",
   "name": "Mẹ Nhện Máy (Tổ Ngầm, hành tinh lang thang)",
   "size": "1024x1536",
-  "prompt": "a giant spider queen machine with a hive-like abdomen releasing small spider drones, in a dark underground hive lit by bioluminescent cables, a starless black sky, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a giant spider queen machine whose abdomen is a hive full of glowing eggs, small spider drones pouring out, sci-fi mechanical boss monster, fully robotic, epic scale, painterly digital painting, cinematic lighting, rich detail, full body, three-quarter view from above, setting: Rogue Planet: a starless frozen world in eternal night, a vast hive carved into black ice, lit only by the queen glowing eggs, color palette: black, icy blue and egg magenta, the planet is clearly visible around it, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "o6.png",
   "name": "Sứa Phù Thủy (Đại dương Axit, hệ Lục Tinh)",
   "size": "1024x1536",
-  "prompt": "a gigantic jellyfish machine witch floating over an acid-green ocean, translucent bell full of circuitry, long cable tentacles crackling with code, a green star in the sky, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a gigantic jellyfish machine witch, its translucent bell full of sloshing acid and circuitry, long cable tentacles dissolving the water, sci-fi mechanical boss monster, fully robotic, epic scale, painterly digital painting, cinematic lighting, rich detail, full body, wide shot from sea level, setting: Acid Ocean: a boiling acid-green sea with corroded shipwrecks, a green star in a yellow hazy sky, color palette: acid green and sulfur yellow, the planet is clearly visible around it, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  },
  {
   "file": "o7.png",
   "name": "Long Mech (Hành tinh Núi Lửa, hệ Thanh Tinh)",
   "size": "1024x1536",
-  "prompt": "a towering dragon mech with reactor cores in its chest and wings of glowing heat sinks, on a volcanic world, a huge blue giant star blazing in the sky, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
- },
- {
-  "file": "merchant.png",
-  "name": "Lão Hắc Thị (chủ tiệm)",
-  "size": "1024x1536",
-  "prompt": "a sly hooded black-market fixer leaning on a shock baton, credit chips and stimulant vials on a neon-lit table, cyberpunk sci-fi boss illustration, alien planet landscape behind, neon accents, painterly digital painting, full body,  dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
-  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs"
+  "prompt": "a towering dragon mech armored with plates of cooled lava rock, reactor cores in its chest, wings of glowing heat sinks, sci-fi mechanical boss monster, fully robotic, epic scale, painterly digital painting, cinematic lighting, rich detail, full body, dramatic low-angle view, setting: Volcano Planet: erupting volcanoes and lava fields, a giant blue star blazing in the sky, color palette: blue starlight against orange lava, the planet is clearly visible around it, vertical composition, no text, no letters, no logos, no border, no frame, no watermark",
+  "negative": "text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, human, human face, doll, flesh, fur, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, neon city background, deformed anatomy, extra limbs"
  }
 ]
