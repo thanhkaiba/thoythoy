@@ -623,7 +623,6 @@ body::after{box-shadow:inset 0 0 90px 6px #000c;background:repeating-linear-grad
 .board .cell::before{display:none}
 /* ---------- vật cản 2.5D: hình vẽ từ góc cao, dựng song song màn hình, đáy hình là mép trước của chân đế ---------- */
 .prop{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;--pw:92%}
-.prop.fire{--pw:76%}.prop.tree{--pw:104%}
 .prop .pdecal{position:absolute;left:2%;right:2%;top:16%;bottom:2%;border-radius:50%;transform:translateZ(1px)}
 .prop.fire .pdecal{background:radial-gradient(closest-side,#ffb04a90,#ff5a1f55 40%,#3a0d0044 72%,transparent);animation:pglow .45s ease-in-out infinite alternate}
 .prop.tree .pdecal{background:radial-gradient(closest-side,#f2fdffc0,#bff4ff90 32%,#7fdcff44 62%,transparent)}
@@ -632,6 +631,8 @@ body::after{box-shadow:inset 0 0 90px 6px #000c;background:repeating-linear-grad
 .prop .pshade{display:none}
 .prop .pbill{position:absolute;left:50%;bottom:calc(8% - 8px);width:var(--pw);translate:-50% 0;transform-origin:50% 100%;transform:translateZ(12px) rotateX(-34deg)}
 .prop .pimg{display:block;width:100%;height:auto;filter:brightness(.92) contrast(1.05)}
+.prop .pbadge{position:absolute;right:3%;bottom:3%;width:25%;aspect-ratio:1;display:grid;place-items:center;border-radius:50%;background:#05070de6;border:1px solid currentColor;box-shadow:0 0 6px currentColor;transform:translateZ(16px) rotateX(-34deg)}
+.prop .pbadge .ic{width:66%;height:66%}
 .prop .pfx{position:absolute;left:-70%;width:240%;bottom:-10%;height:230%;pointer-events:none}
 .prop.fire .pimg{animation:pfire .3s ease-in-out infinite alternate}
 @keyframes pfire{to{filter:brightness(1.08) contrast(1.05) saturate(1.15)}}
@@ -747,7 +748,7 @@ const CARDS={
  lich:{n:'Trí Tuệ Hư Vô',e:'thuy',r:4,u:7,boss:1,k:'devour',v:[7,7,7,7],s:'Xóa sổ',d:'Khi ra sân, xóa sổ lá địch mạnh nhất kề bên. Chỉ có thể cướp từ Boss.'},
  soul:{n:'Tàn Ảnh',e:'moc',r:0,tok:1,v:[4,4,4,3],s:'',d:'Lá phụ cho người đi trước để bù thế bất lợi. Biến mất sau trận.'}};
 const COST=[1,2,3,4,5],BUDGET=12;
-const OBST={tree:['Khối Băng','Vật cản. Đặt lá hệ <b>Nhiệt</b> cạnh nó để làm tan và nhận credit.'],rock:['Đống Phế Liệu','Vật cản. Đặt lá hệ <b>Sinh</b> cạnh nó để phân rã và nhận credit.'],fire:['Lò Quá Nhiệt','Vật cản. Đặt lá hệ <b>Lạnh</b> cạnh nó để làm nguội và nhận credit.']};
+const OBST={tree:['Vật cản lạnh','Vật cản lạnh. Đặt lá hệ <b>Nhiệt</b> cạnh nó để phá và nhận credit.'],rock:['Vật cản phế liệu','Vật cản phế liệu. Đặt lá hệ <b>Sinh</b> cạnh nó để phá và nhận credit.'],fire:['Vật cản nóng','Vật cản nóng. Đặt lá hệ <b>Lạnh</b> cạnh nó để phá và nhận credit.']},BRKBY={tree:'hoa',fire:'thuy',rock:'moc'};
 /* Chuỗi ải: mỗi ải chỉ thêm một ý mới. show = các lá kỹ năng được giới thiệu. */
 const OPPS=[
  {place:'Hành tinh Rỉ Sét',say:["Kim loại của ngươi... bán được giá đấy.", "Hỏng rồi... cho ngươi qua.", "Thêm một đống phế liệu cho ta."],n:'Máy Nhặt Rỉ',av:'o1',style:'Liều lĩnh',bet:30,noise:7,nerf:3,el:0,deck:{r:[6,0,0]},sig:{id:'skel',s:1},t:'Luật cơ bản',demo:1,gift:{gold:100},
@@ -1042,41 +1043,61 @@ async function duel(e,k){const f=(SV.fast?.55:1)*(k?.75:1),ms=x=>x*f;
  await sleep(ms(150));if(!M)return end();
  const back=(el,[x,y],[cx,cy])=>el.animate([{transform:'none',opacity:1},{transform:`translate(${cx-x}px,${cy-y+H*.12}px) scale(.18)`,opacity:0}],{duration:ms(240),easing:'ease-in',fill:'both'});
  back(A,pa,[ax,ay]);back(D,pd,[dx,dy]);ov.classList.remove('on');await sleep(ms(250));end()}
-/* Hiệu ứng sống của vật cản: lửa, khói, tàn lửa; tuyết rơi, khí lạnh, ánh băng; tia điện và khói ở đống phế liệu. */
+/* Vật cản theo hành tinh: mỗi hành tinh có ba vật cản riêng (lạnh, nóng, phế liệu) với tên, độ rộng và hiệu ứng riêng.
+   fx là danh sách nguồn hạt "loại:màu": f lửa, e tàn lửa, s khói hoặc hơi, n tuyết, m sương lạnh, g ánh lấp lánh, k tia lửa điện, u bong bóng, p đốm sáng trôi, h tro bụi rơi. fy là vị trí miệng lửa tính từ đỉnh hình. */
+const PSKIN=[
+ {tree:{n:'Bình Làm Mát Rò Rỉ',w:84,fx:['m:c','g:w','s:w']},fire:{n:'Thùng Dầu Cháy',w:54,fy:.14,fs:.8,fx:['f:o','e:o','s:d']},rock:{n:'Đống Phế Liệu',w:100,fx:['k:y','s:r']}},
+ {tree:{n:'Tinh Thể Băng Neon',w:96,fx:['n:w','g:c','m:c']},fire:{n:'Biến Áp Neon Quá Tải',w:92,fx:['k:m','p:m']},rock:{n:'Thiên Thạch',w:78,fx:['h:r','p:w']}},
+ {tree:{n:'Kén Đông Lạnh',w:98,fx:['m:c','g:w']},fire:{n:'Hộp Cầu Dao Cháy',w:96,fy:.12,fs:.45,fx:['f:o','e:o','k:y']},rock:{n:'Búi Cáp Rêu',w:100,fx:['p:g']}},
+ {tree:{n:'Thép Tôi Lạnh',w:100,fx:['s:w','m:c']},fire:{n:'Nồi Nấu Thép',w:96,fy:.2,fs:.55,fx:['f:o','e:o']},rock:{n:'Đe Vỡ',w:104,fx:['e:o','s:r']}},
+ {tree:{n:'Trụ Băng Đen',w:96,fx:['n:w','m:c','g:c']},fire:{n:'Kén Trứng Nóng',w:86,fx:['p:m','e:m']},rock:{n:'Kén Tơ Sắt',w:86,fx:['p:w']}},
+ {tree:{n:'Van Xả Lạnh',w:84,fx:['s:w','m:c']},fire:{n:'Miệng Phun Axit Sôi',w:96,fy:.25,fx:['u:g','s:v','p:g']},rock:{n:'Xác Tàu San Hô',w:100,fx:['u:g']}},
+ {tree:{n:'Lõi Làm Mát Rơi',w:104,fx:['m:c','g:c','n:w']},fire:{n:'Miệng Dung Nham',w:104,fy:.22,fs:.5,fx:['f:o','e:o','s:d']},rock:{n:'Trụ Bazan',w:94,fx:['h:r']}},
+ {tree:{n:'Tinh Thể Hư Không',w:96,fx:['p:v','g:v']},fire:{n:'Lõi Plasma Trong Lồng',w:84,fy:.5,fs:.42,fx:['f:y','k:y','p:y']},rock:{n:'Tháp Máy Chủ Đổ',w:96,fx:['k:c','p:c']}}];
+const planetIx=()=>M&&M.ix>=0?Math.min(M.ix,7):7,pskin=t=>PSKIN[planetIx()][t];
+const PFLAME={o:['255,214,120','255,135,40','240,58,22'],m:['255,200,240','255,80,200','170,30,150'],y:['255,250,210','255,205,90','235,140,30'],g:['225,255,170','120,255,80','40,170,40'],v:['235,215,255','170,110,255','90,40,200']};
+const PC={o:'255,170,70',m:'255,90,210',y:'255,225,130',g:'130,255,110',c:'130,232,255',v:'185,135,255',w:'238,248,255',d:'40,34,38',r:'112,116,126'};
 const PFX=new WeakMap();let pfxOn=false;
 function pfxStart(){if(pfxOn||calm)return;pfxOn=true;requestAnimationFrame(pfxLoop)}
 function pfxLoop(){const cs=document.querySelectorAll('#match:not([hidden]) .pfx');if(!cs.length){pfxOn=false;return}const t=now();
  cs.forEach(c=>{let S=PFX.get(c);const W=c.clientWidth,H=c.clientHeight;if(!W)return;
-  if(!S||S.W!==W){const r=Math.min(2,devicePixelRatio||1);c.width=Math.round(W*r);c.height=Math.round(H*r);S={P:[],last:t,nx:t+800,W,r};PFX.set(c,S)}
-  const dt=Math.min(3,(t-S.last)/16.7),ty=c.dataset.t,P=S.P,x=c.getContext('2d'),R=Math.random;S.last=t;
-  const o={x0:W*.2917,x1:W*.7083,cx:W/2,top:H*.522,base:H*.957,w:W/2.4,h:H/2.3},u=o.h/100;
+  if(!S||S.W!==W){const r=Math.min(2,devicePixelRatio||1);c.width=Math.round(W*r);c.height=Math.round(H*r);const sk=(PSKIN[+c.dataset.p]||PSKIN[0])[c.dataset.t]||{fx:[]};S={P:[],last:t,nx:t+600,W,r,em:sk.fx.map(e=>e.split(':')),fy:sk.fy??.15,fs:sk.fs||1};PFX.set(c,S)}
+  const dt=Math.min(3,(t-S.last)/16.7),P=S.P,x=c.getContext('2d'),R=Math.random;S.last=t;
+  const o={x0:W*.2917,x1:W*.7083,cx:W/2,top:H*.522,base:H*.957,w:W/2.4,h:H/2.3},u=o.h/100,fy=o.top+o.h*S.fy;
   const add=(n,f)=>{for(let k=R()<n*dt%1?Math.ceil(n*dt):Math.floor(n*dt);k>0;k--)P.push(f())};
-  if(ty==='fire'){add(4,()=>({k:'f',x:o.cx+(R()-.5)*o.w*.3,y:o.top+o.h*.17,vx:(R()-.5)*.25*u,vy:-(1+R()*1.1)*u,l:1,d:.035+R()*.03,s:o.w*(.12+R()*.08),ph:R()*6}));
-   add(.14,()=>({k:'e',x:o.cx+(R()-.5)*o.w*.25,y:o.top+o.h*.14,vx:(R()-.5)*.9*u,vy:-(1.1+R())*u,l:1,d:.012,s:1.3}));
-   add(.22,()=>({k:'s',x:o.cx+(R()-.5)*o.w*.12,y:o.top-o.h*.02,vx:(.05+R()*.15)*u,vy:-(.3+R()*.2)*u,l:1,d:.007,s:o.w*.1}))}
-  if(ty==='tree'){add(.5,()=>({k:'n',x:o.x0-o.w*.15+R()*o.w*1.3,y:o.top-o.h*(.1+R()*.35),vx:0,vy:(.5+R()*.5)*u,l:1,d:0,s:.6+R()*.9,ph:R()*6,a0:t}));
-   add(.16,()=>({k:'m',x:o.cx+(R()-.5)*o.w*.8,y:o.base-o.h*.06,vx:(R()-.5)*.5*u,vy:-.05*u,l:1,d:.009,s:o.w*.1}));
-   add(.06,()=>({k:'g',x:o.x0+o.w*(.2+R()*.6),y:o.top+o.h*(.05+R()*.55),vx:0,vy:0,l:1,d:.05,s:3+R()*3}))}
-  if(ty==='rock'){add(.12,()=>({k:'s',x:o.x0+o.w*(.2+R()*.6),y:o.top+o.h*.25,vx:(R()-.5)*.1*u,vy:-(.2+R()*.15)*u,l:1,d:.008,s:o.w*.07}));
-   if(t>S.nx){S.nx=t+1200+R()*1800;const sx=o.x0+o.w*(.55+R()*.25),sy=o.top+o.h*(.12+R()*.2);
-    for(let k=0;k<11;k++)P.push({k:'k',x:sx,y:sy,vx:(R()-.5)*3*u,vy:-(.6+R()*1.8)*u,l:1,d:.03+R()*.02,s:1,c:R()<.6?'#fff2a8':'#7de3ff'});
-    P.push({k:'a',x:sx,y:sy,x2:sx+(R()-.5)*o.w*.5,y2:sy+o.h*(.1+R()*.2),l:1,d:.12,s:1})}}
+  for(const[k,col]of S.em){
+   if(k==='f')add(4,()=>({k,c:col,x:o.cx+(R()-.5)*o.w*.3,y:fy,vx:(R()-.5)*.25*u,vy:-(1+R()*1.1)*u*(.5+S.fs*.5),l:1,d:.035+R()*.03,s:o.w*(.12+R()*.08)*S.fs,ph:R()*6}));
+   else if(k==='e')add(.14,()=>({k,c:col,x:o.cx+(R()-.5)*o.w*.3,y:fy,vx:(R()-.5)*.9*u,vy:-(1.1+R())*u,l:1,d:.012,s:1.3}));
+   else if(k==='s')add(col==='w'?.12:.2,()=>({k,c:col,x:o.cx+(R()-.5)*o.w*.25,y:fy-o.h*.05,vx:(.05+R()*.15)*u,vy:-(.3+R()*.25)*u,l:1,d:.007,s:o.w*.09}));
+   else if(k==='n')add(.32,()=>({k,c:col,x:o.x0-o.w*.15+R()*o.w*1.3,y:o.top-o.h*(.1+R()*.35),vx:0,vy:(.5+R()*.5)*u,l:1,d:0,s:.6+R()*.9,ph:R()*6,a0:t}));
+   else if(k==='h')add(.3,()=>({k,c:col,x:o.x0-o.w*.15+R()*o.w*1.3,y:o.top-o.h*(.1+R()*.3),vx:.1*u,vy:(.3+R()*.3)*u,l:1,d:0,s:.5+R()*.8,ph:R()*6,a0:t}));
+   else if(k==='m')add(.16,()=>({k,c:col,x:o.cx+(R()-.5)*o.w*.8,y:o.base-o.h*.06,vx:(R()-.5)*.5*u,vy:-.05*u,l:1,d:.009,s:o.w*.1}));
+   else if(k==='g')add(.06,()=>({k,c:col,x:o.x0+o.w*(.2+R()*.6),y:o.top+o.h*(.05+R()*.55),vx:0,vy:0,l:1,d:.05,s:3+R()*3}));
+   else if(k==='u')add(.22,()=>({k,c:col,x:o.cx+(R()-.5)*o.w*.5,y:fy+o.h*.04,vx:(R()-.5)*.15*u,vy:-(.25+R()*.35)*u,l:1,d:.016+R()*.012,s:1.5+R()*3,ph:R()*6}));
+   else if(k==='p')add(.1,()=>({k,c:col,x:o.x0+o.w*(.1+R()*.8),y:o.top+o.h*(.2+R()*.7),vx:0,vy:-(.12+R()*.2)*u,l:1,d:.007,s:1+R()*1.2,ph:R()*6}));
+   else if(k==='k'&&t>S.nx){S.nx=t+1100+R()*1900;const sx=o.x0+o.w*(.3+R()*.4),sy=o.top+o.h*(.12+R()*.3);
+    for(let j=0;j<11;j++)P.push({k,c:R()<.6?col:'w',x:sx,y:sy,vx:(R()-.5)*3*u,vy:-(.6+R()*1.8)*u,l:1,d:.03+R()*.02,s:1});
+    P.push({k:'a',c:col,x:sx,y:sy,x2:sx+(R()-.5)*o.w*.5,y2:sy+o.h*(.1+R()*.2),l:1,d:.12,s:1})}}
   x.setTransform(S.r,0,0,S.r,0,0);x.clearRect(0,0,W,H);
   for(let i=P.length-1;i>=0;i--){const q=P[i];q.x+=q.vx*dt;q.y+=q.vy*dt;q.l-=q.d*dt;
-   if(q.k==='k')q.vy+=.12*u*dt;if(q.k==='n'){q.x+=Math.sin(t/600+q.ph)*.25*dt;if(q.y>o.base+o.h*.04)q.l=0}if(q.k==='m'){q.s+=.06*dt;q.vx*=.99}if(q.k==='s')q.s+=.12*dt;if(q.k==='f')q.x+=Math.sin(t/90+q.ph)*.35*dt*u;
+   if(q.k==='k')q.vy+=.12*u*dt;else if(q.k==='n'||q.k==='h'){q.x+=Math.sin(t/600+q.ph)*.25*dt;if(q.y>o.base+o.h*.04)q.l=0}else if(q.k==='m'){q.s+=.06*dt;q.vx*=.99}else if(q.k==='s')q.s+=.12*dt;
+   else if(q.k==='f')q.x+=Math.sin(t/90+q.ph)*.35*dt*u;else if(q.k==='u'||q.k==='p')q.x+=Math.sin(t/300+q.ph)*.2*dt;
    if(q.l<=0)P.splice(i,1)}
   x.globalCompositeOperation='source-over';
-  for(const q of P)if(q.k==='s'){const g=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.s),c=ty==='fire'?'40,34,38':'110,114,124';g.addColorStop(0,`rgba(${c},${Math.min(1,q.l*1.4)*(1-q.l*.5)*.32})`);g.addColorStop(1,`rgba(${c},0)`);x.globalAlpha=1;x.fillStyle=g;x.beginPath();x.arc(q.x,q.y,q.s,0,6.3);x.fill()}
+  for(const q of P)if(q.k==='s'&&(q.c==='d'||q.c==='r')){const g=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.s);g.addColorStop(0,`rgba(${PC[q.c]},${Math.min(1,q.l*1.4)*(1-q.l*.5)*.32})`);g.addColorStop(1,`rgba(${PC[q.c]},0)`);x.fillStyle=g;x.beginPath();x.arc(q.x,q.y,q.s,0,6.3);x.fill()}
   x.globalCompositeOperation='lighter';
-  for(const q of P){if(q.k==='s')continue;const a=Math.max(0,q.l);
-   if(q.k==='f'){const r=q.s*(.3+.7*a),c=a>.8?'255,214,120':a>.5?'255,135,40':'240,58,22';x.save();x.translate(q.x,q.y);x.scale(.75,1.7);const g=x.createRadialGradient(0,0,0,0,0,r);
+  for(const q of P){const a=Math.max(0,q.l),rgb=PC[q.c]||PC.w;
+   if(q.k==='f'){const r=q.s*(.3+.7*a),F=PFLAME[q.c]||PFLAME.o,c=a>.8?F[0]:a>.5?F[1]:F[2];x.save();x.translate(q.x,q.y);x.scale(.75,1.7);const g=x.createRadialGradient(0,0,0,0,0,r);
     g.addColorStop(0,`rgba(${c},${a*.5})`);g.addColorStop(.55,`rgba(${c},${a*.22})`);g.addColorStop(1,`rgba(${c},0)`);x.globalAlpha=1;x.fillStyle=g;x.beginPath();x.arc(0,0,r,0,6.3);x.fill();x.restore()}
-   else if(q.k==='e'){x.globalAlpha=a;x.fillStyle='#ffcf6a';x.fillRect(q.x,q.y,q.s,q.s)}
-   else if(q.k==='n'){x.globalAlpha=Math.min(.85,(t-q.a0)/500);x.fillStyle='#eefbff';x.beginPath();x.arc(q.x,q.y,q.s,0,6.3);x.fill()}
-   else if(q.k==='m'){const g=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.s);g.addColorStop(0,`rgba(200,240,255,${a*(1-a)*.32})`);g.addColorStop(1,'rgba(200,240,255,0)');x.globalAlpha=1;x.fillStyle=g;x.beginPath();x.arc(q.x,q.y,q.s,0,6.3);x.fill()}
-   else if(q.k==='g'){const s=q.s*Math.sin(a*Math.PI);x.globalAlpha=1;x.strokeStyle='#ffffff';x.lineWidth=1;x.beginPath();x.moveTo(q.x-s,q.y);x.lineTo(q.x+s,q.y);x.moveTo(q.x,q.y-s);x.lineTo(q.x,q.y+s);x.stroke()}
-   else if(q.k==='k'){x.globalAlpha=a;x.strokeStyle=q.c;x.lineWidth=1.3;x.beginPath();x.moveTo(q.x,q.y);x.lineTo(q.x-q.vx*2,q.y-q.vy*2);x.stroke()}
-   else if(q.k==='a'){x.globalAlpha=a;x.strokeStyle='#9ff0ff';x.lineWidth=1.4;x.shadowColor='#29e6ff';x.shadowBlur=6;x.beginPath();x.moveTo(q.x,q.y);
+   else if(q.k==='s'){if(q.c==='d'||q.c==='r')continue;const g=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.s);g.addColorStop(0,`rgba(${rgb},${Math.min(1,q.l*1.4)*(1-q.l*.5)*.1})`);g.addColorStop(1,`rgba(${rgb},0)`);x.globalAlpha=1;x.fillStyle=g;x.beginPath();x.arc(q.x,q.y,q.s,0,6.3);x.fill()}
+   else if(q.k==='e'){x.globalAlpha=a;x.fillStyle=`rgb(${rgb})`;x.fillRect(q.x,q.y,q.s,q.s)}
+   else if(q.k==='n'||q.k==='h'){x.globalAlpha=Math.min(q.k==='n'?.85:.5,(t-q.a0)/500);x.fillStyle=`rgb(${rgb})`;x.beginPath();x.arc(q.x,q.y,q.s,0,6.3);x.fill()}
+   else if(q.k==='m'){const g=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.s);g.addColorStop(0,`rgba(${rgb},${a*(1-a)*.32})`);g.addColorStop(1,`rgba(${rgb},0)`);x.globalAlpha=1;x.fillStyle=g;x.beginPath();x.arc(q.x,q.y,q.s,0,6.3);x.fill()}
+   else if(q.k==='g'){const s=q.s*Math.sin(a*Math.PI);x.globalAlpha=1;x.strokeStyle=`rgb(${rgb})`;x.lineWidth=1;x.beginPath();x.moveTo(q.x-s,q.y);x.lineTo(q.x+s,q.y);x.moveTo(q.x,q.y-s);x.lineTo(q.x,q.y+s);x.stroke()}
+   else if(q.k==='u'){x.globalAlpha=Math.min(1,a*3)*.8;x.strokeStyle=`rgb(${rgb})`;x.lineWidth=1;x.beginPath();x.arc(q.x,q.y,q.s*(1.3-a*.5),0,6.3);x.stroke();x.globalAlpha*=.25;x.fillStyle=`rgb(${rgb})`;x.fill()}
+   else if(q.k==='p'){x.globalAlpha=Math.sin(a*Math.PI)*.9;x.shadowColor=`rgb(${rgb})`;x.shadowBlur=5;x.fillStyle=`rgb(${rgb})`;x.beginPath();x.arc(q.x,q.y,q.s,0,6.3);x.fill();x.shadowBlur=0}
+   else if(q.k==='k'){x.globalAlpha=a;x.strokeStyle=`rgb(${rgb})`;x.lineWidth=1.3;x.beginPath();x.moveTo(q.x,q.y);x.lineTo(q.x-q.vx*2,q.y-q.vy*2);x.stroke()}
+   else if(q.k==='a'){x.globalAlpha=a;x.strokeStyle=`rgb(${rgb})`;x.lineWidth=1.4;x.shadowColor=`rgb(${rgb})`;x.shadowBlur=6;x.beginPath();x.moveTo(q.x,q.y);
     for(let j=1;j<=5;j++)x.lineTo(q.x+(q.x2-q.x)*j/5+(j<5?(R()-.5)*8:0),q.y+(q.y2-q.y)*j/5+(j<5?(R()-.5)*8:0));x.stroke();x.shadowBlur=0}}
   x.globalAlpha=1;x.globalCompositeOperation='source-over'});
  requestAnimationFrame(pfxLoop)}
@@ -1089,7 +1110,7 @@ function shatter(img){const r=img.getBoundingClientRect(),c=img.cloneNode();c.cl
 let M=null,cellEls=[];
 function show(id){coachOff();$$('.screen').forEach(s=>s.hidden=s.id!==id);if(id==='home')renderHome();else homeVid()}
 function renderCell(i,snap){const el=cellEls[i];el.className='cell t-'+snap.t+(M&&M.last===i?' last':'');delete el.dataset.fc;
- el.innerHTML=snap.t!=='none'?`<div class="prop ${snap.t}"><i class="pdecal"></i><i class="pfoot"></i><div class="pbill"><img class="pimg" src="art/prop_${snap.t}.webp" alt="" draggable="false"><canvas class="pfx" data-t="${snap.t}"></canvas></div></div>`:snap.card?`<div class="slot">${cardHTML(snap.card)}</div>`:''}
+ el.innerHTML=snap.t!=='none'?`<div class="prop ${snap.t}" style="--pw:${pskin(snap.t).w}%"><i class="pdecal"></i><i class="pfoot"></i><div class="pbill"><img class="pimg" src="art/prop${planetIx()}_${snap.t}.webp" alt="" draggable="false"><canvas class="pfx" data-t="${snap.t}" data-p="${planetIx()}"></canvas></div>${M&&M.S.el?`<i class="pbadge" style="color:${EL[BRKBY[snap.t]].c}">${ic(BRKBY[snap.t])}</i>`:''}</div>`:snap.card?`<div class="slot">${cardHTML(snap.card)}</div>`:''}
 function renderAll(){M.S.cells.forEach((c,i)=>renderCell(i,c));if(M.S.cells.some(c=>c.t!=='none'))pfxStart();renderHand();
  updHud();renderEhand();
  beerBtn();
@@ -1174,7 +1195,7 @@ function startMatch(opp,go){const ix=OPPS.indexOf(opp);if(ix<0||ix>SV.stage)retu
 $('#hand').addEventListener('click',e=>{const b=e.target.closest('.hc');if(!b||!M||Date.now()-dragEnd<350)return;const i=+b.dataset.i;if(T.on&&!T.okHand(i))return T.nudge();M.sel=M.sel===i?null:i;M.prev=null;M.S.cells.forEach((c,j)=>renderCell(j,c));renderHand();markOk();$('#info').innerHTML=infoCard(M.S.hands.p[i],M.S.el);const tt=$('#taunt');if(tt)tt.remove();if(M.sel===i)T.emit('sel',i)});
 $('#board').addEventListener('click',e=>{const el=e.target.closest('.cell')||document.elementsFromPoint(e.clientX,e.clientY).find(x=>x.classList.contains('cell'));if(!el||!M)return;const i=+el.dataset.i,c=M.S.cells[i];
  if(c.card){$('#info').innerHTML=infoCard(c.card,M.S.el);return}
- if(c.t!=='none'){$('#info').innerHTML=`<span class="nm">${OBST[c.t][0]}</span><div>${OBST[c.t][1]}</div>`;return}
+ if(c.t!=='none'){$('#info').innerHTML=`<span class="nm">${pskin(c.t).n}</span><div>${OBST[c.t][1]}</div>`;return}
  if(M.sel!=null&&!M.busy&&M.turn==='p'){if(T.on&&(!T.okCell(i)||(M.prev===i&&!T.place)))return T.nudge();return M.prev===i?doTurn('p',M.sel,i):showPreview(i)}
  $('#info').innerHTML=HINT});
 /* Bia 2077: uống vào thấy viền gợi ý trên ô trong 3 lượt, kèm nước nên đánh. */
@@ -1306,7 +1327,7 @@ function showRules(){const st=SV.stage,L=['Hai bên lần lượt đặt 1 lá v
  'Khi chọn lá, mỗi ô hiện viền và biểu tượng: <b>viền xanh và kiếm</b> kèm số lá lật được, <b>viền và khiên xanh lá</b> là an toàn, <b>viền nét đứt đỏ và tam giác</b> là đối thủ có thể lật lại từ 2 lá trở lên.',
  '<b>Thắng</b>: lấy credit cược và chọn cướp bài, thêm credit hoặc rương. Qua ải lần đầu có thưởng riêng. <b>Thua</b>: mất credit cược và phải mở 1 trong 3 hộp Pandora, trừ khi có Mạch hộ mệnh. Lá bị bắt làm con tin sẽ được trả khi bạn thắng lại ở hành tinh đó.'];
  if(st>=1)L.push('<b>Khắc hệ</b>: tấn công lá thuộc hệ bị khắc được +1. Nhiệt › Sinh › Lạnh › Nhiệt.');
- if(st>=1)L.push('<b>Phá vật cản</b>: Nhiệt làm tan Khối Băng, Lạnh làm nguội Lò Quá Nhiệt, Sinh phân rã Đống Phế Liệu. Phá được thì có credit.','<b>Lá đặc trưng</b>: mỗi đối thủ giữ một lá riêng, thắng cách từ 3 lá thì đoạt được.');
+ if(st>=1)L.push('<b>Phá vật cản</b>: mỗi hành tinh có vật cản riêng, nhưng luôn thuộc 3 loại. Nhiệt phá vật cản lạnh (nền xanh băng), Lạnh phá vật cản nóng (nền cam), Sinh phá vật cản phế liệu (nền tối). Biểu tượng nhỏ trên vật cản là hệ phá được nó. Phá được thì có credit.','<b>Lá đặc trưng</b>: mỗi đối thủ giữ một lá riêng, thắng cách từ 3 lá thì đoạt được.');
  if(st>=3)L.push('<b>Luật vùng Đồng</b>: '+RULE.same.d);if(st>=5)L.push('<b>Luật vùng Tổng</b>: '+RULE.plus.d);if(st>=6)L.push('<b>Luật vùng Bài úp</b>: '+RULE.closed.d);
  if(st>=2)L.push('<b>Album</b>: gom đủ một bộ lá trong màn Mở gói để nhận thưởng một lần.');
  if(st>=2)L.push('<b>Bài kỹ năng</b>: bậc Hiếm trở lên có đúng một kỹ năng. Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4.');
@@ -1437,7 +1458,7 @@ async function matchTips(){if(!M||M.tut)return;
  const run=async(k,sel,txt)=>{if(SV.tips[k]||!M)return;T.on=true;T.hand=T.cell=-1;T.place=false;await coach(sel,txt,'Đã hiểu');SV.tips[k]=1;save();T.on=false;T.hand=T.cell=null;T.place=true;coachOff()};
  await sleep(600);
  if(M&&M.S.el)await run('el','#legend','Từ hành tinh này hệ có tác dụng: <b>Nhiệt thắng Sinh, Sinh thắng Lạnh, Lạnh thắng Nhiệt</b>. Đánh vào lá thuộc hệ bị khắc được +1, phần xem trước sẽ ghi dạng "4+1".');
- if(M&&M.S.el&&M.S.cells.some(c=>c.t!=='none'))await run('brk',()=>cellEls[M.S.cells.findIndex(c=>c.t!=='none')],'Mỗi hệ phá được một loại vật cản: <b>Nhiệt làm tan Khối Băng, Lạnh làm nguội Lò Quá Nhiệt, Sinh phân rã Đống Phế Liệu</b>. Đặt lá cạnh vật cản hợp hệ để phá, mỗi lần phá được credit.');
+ if(M&&M.S.el&&M.S.cells.some(c=>c.t!=='none'))await run('brk',()=>cellEls[M.S.cells.findIndex(c=>c.t!=='none')],'Mỗi hệ phá được một loại vật cản: <b>Nhiệt phá vật cản lạnh, Lạnh phá vật cản nóng, Sinh phá vật cản phế liệu</b>. Biểu tượng nhỏ trên vật cản cho biết hệ phá được nó. Đặt lá cạnh vật cản hợp hệ để phá, mỗi lần phá được credit.');
  for(const r of (M?M.S.rules:[]))if(M)await run('r_'+r,'#legend',`<b>Luật vùng: ${RULE[r].n}.</b> ${RULE[r].d}`);
  if(M&&M.S.hands.e.some(c=>CARDS[c.id].s))await run('skill','#ehand','Lá từ ★★ trở lên có <b>kỹ năng</b>. Chạm vào lá địch ở hàng này để đọc trước khi đánh.');
  if(M&&!$('#bBeer').hidden)await run('beer','#bBeer','Từ giờ viền gợi ý trên ô bị tắt. Uống <b>Bia 2077</b> để thấy lại trong 3 lượt: ô lật được, ô an toàn, ô dễ bị lật lại.')}
