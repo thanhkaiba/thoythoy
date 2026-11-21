@@ -1,10 +1,10 @@
-# Huyền Ấn — chiến bài dark fantasy (prototype)
+# Huyền Ấn — chiến bài cyberpunk (prototype)
 
 Game đặt bài so cạnh trên bàn 4×4, 8 ải khó dần, có Boss, cửa hàng và hộp Pandora.
 
 ## Có gì trong game
 
-- Hành trình 8 tầng địa ngục (vuốt dọc), Boss ở tầng 7, sau đó là Vực Vô Tận không đáy.
+- Hành trình 8 tầng thành phố ngầm (vuốt dọc), Boss ở tầng 7, sau đó là Vực Dữ Liệu không đáy.
 - 37 lá bài mở dần theo tầng, 14 từ khóa kỹ năng, bộ ra trận 6 lá / 12 điểm.
 - Bài trên tay hai bên đều lộ diện; xem trước nước đi kèm cảnh báo số lá bị lật lại; bia tiên tri tính cả đòn đáp trả.
 - Chọn mức cược ×1/×2/×3; thua thì mở hộp Pandora, lá bị bắt làm con tin chuộc lại được bằng cách thắng tầng đó.
@@ -45,8 +45,7 @@ Muốn thay tranh: ghi đè file cùng tên, hoặc thêm khóa mới vào `ART`
 
 ## Ghi công và giấy phép tranh
 
-- Tranh linh thú và chân dung đối thủ: [The Battle for Wesnoth](https://www.wesnoth.org) và các họa sĩ đóng góp,
-  giấy phép GNU GPL v2+ (một số tranh CC BY-SA 4.0). Dùng cho demo thì ổn; nếu phát hành thương mại,
-  cần tuân thủ điều khoản chia sẻ tương tự của các giấy phép này hoặc thay bằng tranh riêng.
+- Tranh linh thú, đối thủ và chủ tiệm: tạo bằng AI (Flux 2 Pro qua Replicate), câu lệnh trong `art-prompts/`.
+  Khi phát hành trên Steam cần khai báo có dùng nội dung tạo bằng AI.
 - Biểu tượng giao diện: [game-icons.net](https://game-icons.net) (Lorc, Delapouite, Skoll và cộng sự), CC BY 3.0.
-- Font: Cormorant Garamond, Alegreya Sans (SIL Open Font License).
+- Font: Chakra Petch, Be Vietnam Pro (SIL Open Font License).

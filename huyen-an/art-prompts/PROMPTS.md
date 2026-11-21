@@ -1,414 +1,412 @@
-# Câu lệnh tạo tranh cho Huyền Ấn
+# Câu lệnh tạo tranh cho Huyền Ấn (bản cyberpunk)
 
 Mỗi mục: tên file cần lưu, câu lệnh chính (prompt), câu lệnh loại trừ (negative prompt).
-Khổ tranh 2:3 dọc (1024×1536). Lưu đúng tên file rồi gửi lại để gắn vào game.
+Khổ tranh 2:3 dọc. Lưu đúng tên file rồi gửi lại để gắn vào game.
 
-Mẹo giữ phong cách đồng bộ: dùng cùng một công cụ, cùng một model, và nếu công cụ có "seed" hoặc "style reference" thì giữ cố định cho cả bộ.
+## boar.png · Lợn Lò Hơi · weird
 
-## boar.png · Lợn Lòi Than · weird
-
 ```
-a wild boar whose back is a smoldering charcoal hill with three tiny chimneys venting smoke, glowing ember cracks in its hide, three tusks of charred bone, eyes like live coals, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a robotic wild boar built from a scrapyard boiler, three smoking exhaust chimneys on its back, glowing orange heat vents along its plating, three hydraulic steel tusks, red optic eyes, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## rat.png · Chuột Cống Lửa · whimsical
+## rat.png · Chuột Cầu Chì · whimsical
 
 ```
-a scrappy sewer rat wearing a cracked bronze lantern as a helmet, its long tail is a lit burning fuse, mischievous grin, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a scrappy robot rat wearing a cracked bronze headlamp as a helmet, its long tail is a sparking power cable fuse, mischievous LED grin, whimsical yet eerie, playful and odd, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## ant.png · Kiến Lửa · weird
+## ant.png · Kiến Plasma · weird
 
 ```
-a fire ant whose abdomen is a glass bulb of swirling lava, legs like blackened iron nails, smoke rising from its jaws, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a mechanical ant whose abdomen is a glass fuel cell of swirling orange plasma, needle-thin iron legs, welding sparks at its jaws, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## cbat.png · Dơi Hang · cute
+## cbat.png · Dơi Ăng-ten · cute
 
 ```
-a round fluffy cave bat no bigger than a fist, oversized ears glowing ember-red at the tips, wings wrapped around itself like a cloak, hanging upside down, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a round little bat drone wrapped in soft orange insulation foam, oversized satellite-dish ears glowing at the tips, big round camera eyes, hanging upside down from a cable, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## ogre.png · Chằn Tinh · grotesque
+## ogre.png · Cự Hán Lò Đúc · grotesque
 
 ```
-a hunched ogre with a furnace built into its belly, fire glowing through iron grates in its stomach, chains on its arms, a bell-shaped iron club, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a hulking cyborg brute with an open furnace reactor in its belly glowing behind iron grates, chains and pistons on its arms, a bell-shaped hydraulic hammer, grotesque and horrifying, unsettling mechanical details, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## scarab.png · Bọ Hung Lam · cute
+## scarab.png · Bọ Kính Lam · cute
 
 ```
-a small beetle whose shell is a polished sapphire dome holding a tiny moonlit pond on its back with lily pads, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a small robot beetle with a polished sapphire glass dome on its back holding a tiny holographic pond with floating lily pads, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## croc.png · Ngạc Ngư · weird
+## croc.png · Cá Sấu Tàu Ngầm · weird
 
 ```
-a crocodile whose back is a sunken shipwreck covered in barnacles, lanterns hanging from a broken mast, rising from black water, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a cyborg crocodile whose back is a wrecked mini submarine covered in barnacles and flickering neon signs, rising from black canal water, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## seahorse.png · Hải Mã · cute
+## seahorse.png · Hiệp Sĩ Hải Mã · cute
 
 ```
-a tiny brave seahorse knight wearing a seashell helmet and holding a needle lance, bubbles, glowing blue freckles, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a tiny brave robot seahorse knight with a scrap-metal helmet and a needle antenna lance, bubbles, cyan LED freckles, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## mud.png · Bùn Quái · weird
+## mud.png · Quái Dầu Thải · weird
 
 ```
-a swamp mud blob with many mismatched eyes of drowned creatures floating inside it, reeds and a rusty sword sprouting from its head, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a sludge blob of black machine oil and e-waste with many mismatched camera lenses floating inside it, antennas and a rusty blade sticking out, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## cuttle.png · Mực Vực Sâu · eerie
+## cuttle.png · Mực Mặt Nạ · eerie
 
 ```
-an abyssal cuttlefish with a cracked porcelain human mask for a face, tentacles trailing glowing runes in the deep sea, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a robotic cuttlefish with a cracked porcelain android mask for a face, fiber-optic tentacles trailing glowing code, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## bear.png · Gấu Rừng Già · weird
+## bear.png · Gấu Bảo Trì · weird
 
 ```
-an ancient sleepy bear with a small mossy shrine and two stone lanterns growing on its back, mushrooms along its spine, wise old eyes, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+an old sleepy maintenance robot bear with a small rusted shrine and paper lanterns on its back, moss and glowing mushrooms along its spine, gentle optic eyes, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## stoat.png · Chồn Tuyết · cute
+## stoat.png · Chồn Bông · cute
 
 ```
-a fluffy white snow stoat wearing a tiny red scarf, clutching an acorn, standing on twisted pine roots in snowfall, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a fluffy white robot stoat with soft synthetic fur and a tiny red scarf, holding a glowing green battery like an acorn, perched on thick cables, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## falcon.png · Ưng Xám · weird
+## falcon.png · Ưng Ba Mắt · weird
 
 ```
-a falcon with three glowing eyes and feathers made of sharp slate stone shards, a rune-carved beak, mid-dive, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a robotic falcon with three glowing optic eyes and feathers made of sharp carbon-fiber blades, diving, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## horse.png · Ngựa Hoang · eerie
+## horse.png · Ngựa Cáp Quang · eerie
 
 ```
-a wild stallion woven from branches and vines, a hollow ribcage full of fireflies, glowing green eyes, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a wild robotic stallion made of bundled fiber-optic cables and vines, a hollow ribcage full of floating green LEDs, glowing eyes, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## skel.png · Bộ Xương · whimsical
+## skel.png · Khung Xương Máy · whimsical
 
 ```
-a small cheerful skeleton warrior with a flowering vine growing through its ribs and a bird nest on its skull, holding a rusty sword, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a small cheerful salvaged android skeleton with a flowering vine growing through its chassis and a bird nest on its head, holding a rusty pipe sword, whimsical yet eerie, playful and odd, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## yeti.png · Tuyết Nhân · weird
+## yeti.png · Tuyết Nhân Làm Lạnh · weird
 
 ```
-a giant yeti with a frozen waterfall pouring from its shoulders, an icicle beard, a tiny red bird perched on its head, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+a giant cryo yeti mech with a frozen coolant waterfall pouring from its shoulder tanks, icicle beard, a tiny red robot bird on its head, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## wolf.png · Sói Non · cute
+## wolf.png · Sói Con Máy · cute
 
 ```
-detailed, a fluffy direwolf pup with oversized paws and a glowing crescent-moon mark on its forehead, trying to howl, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a fluffy robot wolf pup with oversized paws and a glowing crescent-moon LED on its forehead, trying to howl, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## wolf2.png · Lang Vương (Sói Non tiến hóa) · majestic
+## wolf2.png · Lang Vương Plasma (Sói Con Máy nâng cấp) · majestic
 
 ```
-highly detailed, epic, a massive moon wolf king with a mane of silver flame and a crescent moon floating behind its head, glowing runes on its fur, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a massive cyber wolf king with a mane of silver plasma and a holographic crescent moon behind its head, glowing circuit patterns on its plating, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## turtle.png · Giáp Thú · weird
+## turtle.png · Rùa Máy Chủ · weird
 
 ```
-detailed, a giant turtle whose shell is a cluster of blue crystal spires like a tiny frozen castle with lit windows, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a giant tank-like robot turtle whose shell is a cluster of blue crystal server towers like a tiny frozen city with lit windows, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## fox.png · Long Tử Phun Lửa · cute
+## fox.png · Long Tử Plasma · cute
 
 ```
-detailed, a small young fire drake with stubby wings and a big round head, proudly puffing a little jet of flame, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a small young mech drake with stubby wings and a big round head, proudly puffing a little jet of plasma from a nozzle, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## snake.png · Thủy Xà · eerie
+## snake.png · Xà Chất Lỏng · eerie
 
 ```
-detailed, a serpent made entirely of flowing translucent water with a glowing pearl visible in its throat, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a serpent made of flowing translucent liquid coolant with a glowing data pearl visible in its throat, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## scorp.png · Bọ Cạp Lửa · menacing
+## scorp.png · Bọ Cạp Lò Rèn · menacing
 
 ```
-detailed, a scorpion with an obsidian carapace whose stinger is a glowing molten forge hammer, sparks flying, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a mechanical scorpion with obsidian armor plates and a stinger that is a glowing molten forge hammer, sparks flying, menacing and intimidating, aggressive pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## rscorp.png · Bọ Cạp Đá · weird
+## rscorp.png · Bọ Cạp Bê Tông · weird
 
 ```
-detailed, a scorpion formed from mossy temple ruins, a carved stone face on its back, cracks glowing green, strange uncanny surreal creature design, memorable silhouette, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a mechanical scorpion assembled from concrete rubble and broken statues, a carved stone face on its back, green circuit cracks, strange uncanny surreal machine design, memorable silhouette, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## spider.png · Nhện Giăng Tơ · eerie
+## spider.png · Nhện Búp Bê · eerie
 
 ```
-detailed, a giant spider whose abdomen is a cracked porcelain doll face, weaving glowing silk threads, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a spider drone whose body is a cracked porcelain doll head, weaving glowing fiber-optic webs, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## troll.png · Quỷ Đập Đá · whimsical
+## troll.png · Robot Phá Dỡ · whimsical
 
 ```
-detailed, a hulking rock troll with a bird nest on its head, grinning with mossy teeth while smashing a boulder with a stone club, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a hulking demolition robot with a bird nest on its head and a grinning grille mouth, smashing a concrete block with a wrecking hammer, whimsical yet eerie, playful and odd, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## naga.png · Xà Nữ · eerie
+## naga.png · Xà Nữ Chrome · eerie
 
 ```
-detailed, a naga priestess with a serpent lower body and sea-green scales, a jellyfish crown, holding a coral trident, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a cyborg naga priestess with a serpentine robotic lower body, sea-green chrome scales, a jellyfish-like holographic crown, holding a trident of coral wires, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## ghoul.png · Thực Thi Quỷ · grotesque
+## ghoul.png · Kẻ Nhặt Rác · grotesque
 
 ```
-detailed, an emaciated ghoul with an extra mouth on its stomach exhaling green poison fumes, long hooked claws, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, an emaciated scavenger cyborg with a mouth-shaped exhaust on its stomach venting toxic green gas, long hooked metal claws, grotesque and horrifying, unsettling mechanical details, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## shadow.png · Bóng Ma · eerie
+## shadow.png · Bóng Ma Tĩnh Điện · eerie
 
 ```
-detailed, a tall hooded wraith with no face, only a single blue candle flame where its head should be, body of black mist, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a tall hooded ghost android with no face, only a single blue flame flickering inside an empty helmet, body of black smoke and static, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## rider.png · Lang Kỵ · menacing
+## rider.png · Kỵ Sĩ Đường Phố · menacing
 
 ```
-detailed, a goblin raider wearing a cooking pot as a helmet, riding a wolf made of flames, spear raised for a charge, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a scrawny street punk wearing a cooking pot as a helmet, riding a robot wolf wreathed in plasma flames, spear raised for a charge, menacing and intimidating, aggressive pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## gale.png · Phong Linh · whimsical
+## gale.png · Diều Bão · whimsical
 
 ```
-detailed, a storm spirit shaped like a giant floating paper kite with lightning tassels and a rain cloud for a tail, one big eye, whimsical yet eerie, playful and odd, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a storm drone shaped like a giant floating paper kite with lightning tassels and a rain-cloud exhaust trail, one big camera eye, whimsical yet eerie, playful and odd, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## fguard.png · Hỏa Vệ Binh · menacing
+## fguard.png · Vệ Binh Lò Lửa · menacing
 
 ```
-detailed, a fire guardian knight whose helmet is an open furnace door with flames inside, molten seams in the armor, a flaming halberd, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+detailed, a security mech whose helmet is an open furnace door with flames inside, molten seams in the armor, a plasma halberd, menacing and intimidating, aggressive pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## bat.png · Dạ Bức Vương · grotesque
+## bat.png · Dạ Bức Neon · grotesque
 
 ```
-highly detailed, epic, a colossal vampire bat lord with wings made of torn cathedral banners and a crown of bone, before a blood moon, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a colossal vampire bat war-drone with wings made of torn neon billboards and a crown of antennas, before a blood-red moon over the megacity, grotesque and horrifying, unsettling mechanical details, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## phoenix.png · Hỏa Hồn · majestic
+## phoenix.png · Phượng Mạch Điện · majestic
 
 ```
-highly detailed, epic, a fire spirit bird made of burning paper and embers rising from a pile of ash, long ribbon tail, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a phoenix made of burning circuit boards and ember sparks rising from a pile of e-waste ash, long ribbon-cable tail, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## lion.png · Sư Thứu · majestic
+## lion.png · Sư Thứu Đồng · majestic
 
 ```
-highly detailed, epic, a griffin with a lion body and eagle wings, a mane of autumn leaves, golden-green plumage, wings spread, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a mechanical griffin with a lion chassis and eagle wings of brass blades, a mane of autumn-colored cables, wings spread, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## serpent.png · Hải Xà Vương · majestic
+## serpent.png · Hải Xà Máy Chủ · majestic
 
 ```
-highly detailed, epic, a gigantic sea serpent king wearing a sunken temple as a crown, coral and pearls, rising from a stormy sea, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a gigantic sea serpent mech wearing a sunken data center as a crown, rising from a stormy toxic sea, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## draug.png · Tử Kỵ Sĩ · menacing
+## draug.png · Tử Kỵ Sĩ Thép · menacing
 
 ```
-highly detailed, epic, a death knight whose blackened armor is fused with the bones of his skeletal warhorse, burning eyes, ember-wreathed greatsword and tower shield, menacing and intimidating, aggressive pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, a death-knight cyborg whose blackened armor is fused with the bones of a skeletal robot warhorse, burning red visor, glowing greatsword and tower shield, menacing and intimidating, aggressive pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## tentacle.png · Xúc Tu Vực Thẳm · grotesque
+## tentacle.png · Xúc Tu Cổng Lỗi · grotesque
 
 ```
-highly detailed, epic, enormous abyssal tentacles emerging from a floating eye-shaped rift in the sky, glowing runes along them, a small boat caught in their grip, grotesque and horrifying, unsettling details, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, enormous cable tentacles emerging from a glitching eye-shaped portal in the sky above the megacity, glowing code along them, a small hover car caught in their grip, grotesque and horrifying, unsettling mechanical details, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## wose.png · Mộc Tinh Cổ Thụ · eerie
+## wose.png · Cây Máy Chủ Cổ · eerie
 
 ```
-highly detailed, epic, an ancient walking tree spirit with a giant face in its bark, an owl living in one eye socket, glowing amber sap, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+highly detailed, epic, an ancient walking server-tree mech with a giant carved face in its rusted bark plating, an owl drone living in one eye socket, glowing amber coolant sap, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## dragon.png · Cổ Long Tro Tàn · majestic
+## dragon.png · Long Cơ Giới · majestic
 
 ```
-masterpiece, legendary, epic scale, an ancient ash dragon with scales of cooled magma and a ruined castle tower embedded in its back, embers swirling, glowing throat, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by ember orange and red firelight, high contrast, vertical composition, no text, no border, no frame, no watermark
+masterpiece, legendary, epic scale, an ancient war dragon mech with scales of cooled slag metal and a ruined skyscraper embedded in its back, sparks swirling, glowing reactor throat, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by hot orange and magenta neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## deer.png · Cổ Thụ Thần · majestic
+## deer.png · Thần Lộc Ăng-ten · majestic
 
 ```
-masterpiece, legendary, epic scale, a divine great stag made of ancient forest, antlers like a tree canopy hung with tiny glowing lanterns, a cloak of moss, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by moss green and amber forest light, high contrast, vertical composition, no text, no border, no frame, no watermark
+masterpiece, legendary, epic scale, a divine great stag machine overgrown with moss, antlers like a canopy of antennas hung with tiny glowing lanterns, a cloak of moss and cables, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by toxic acid-green neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## reaper.png · Tử Thần · eerie
+## reaper.png · Tử Thần Lượng Tử · eerie
 
 ```
-masterpiece, mythic, awe-inspiring, epic scale, the grim reaper as a towering figure in tattered robes with an hourglass inside its ribcage, a huge scythe of cold blue soulfire, eerie and haunting, quiet dread, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+masterpiece, mythic, awe-inspiring, epic scale, a towering grim reaper android in tattered black robes with an hourglass core inside its ribcage, a huge scythe of cold blue energy, eerie and haunting, quiet dread, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## lich.png · Hư Vô Chi Vương · majestic
+## lich.png · Trí Tuệ Hư Vô · majestic
 
 ```
-masterpiece, mythic, awe-inspiring, epic scale, the void lich king on a throne of melted crowns, crowned skull, purple void energy and shattered floating stars, majestic and awe-inspiring, heroic pose, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by deep blue and teal moonlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+masterpiece, mythic, awe-inspiring, epic scale, a rogue AI king with a chrome skull face and cables, on a throne of melted crowns and servers, purple void energy and shattered floating holograms, majestic and awe-inspiring, heroic pose, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by icy cyan and blue neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## soul.png · Tàn Hồn · cute
+## soul.png · Tàn Ảnh · cute
 
 ```
-a small round ghost wisp with big sad eyes holding a tiny candle, endearing and charming, big expressive eyes, small and lovable, still painted in the same dark fantasy painterly style, dark fantasy trading card illustration, painterly digital painting, dramatic rim lighting, rich detail, single creature centered, three-quarter view, dark atmospheric background lit by cold grey torchlight, high contrast, vertical composition, no text, no border, no frame, no watermark
+a small round ghost hologram with big sad eyes holding a tiny glowing candle, endearing and charming, big expressive camera eyes, small and lovable, still rendered in the same gritty painterly style, cyberpunk trading card illustration, gritty neon-lit dystopian megacity, painterly digital painting, chrome plating and exposed wiring, holographic glow, light rain, dramatic rim lighting, rich detail, single machine creature centered, three-quarter view, dark background lit by dim violet neon, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## o1.png · Lữ Khách Vô Danh (Cổng Tro)
+## o1.png · Kẻ Lang Thang (Mái Neon)
 
 ```
-a hooded nameless wanderer in grey rags holding a lantern, at a gate of ash, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
+a hooded nameless street drifter in rain-soaked rags holding a glowing lantern, on a neon rooftop, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## o2.png · Tín Đồ Lạc Lối (Rừng Chết)
+## o2.png · Tín Đồ Máy (Chợ Đêm)
 
 ```
-a lost cultist in tattered blue robes with a bone necklace and a ritual dagger, dead forest, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
+a machine cultist in tattered blue robes with cybernetic implants and a necklace of old chips, holding a ritual data blade, in a neon night market, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## o3.png · Thợ Săn Rừng Sâu (Hẻm Xương)
+## o3.png · Thợ Săn Tiền Thưởng (Hẻm Dây Cáp)
 
 ```
-a grim deep-forest hunter with a longbow and a bone mask, canyon of bones, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
+a grim bounty hunter with a long rail rifle and a bone-white mask with red optics, in a cable-choked alley, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## o4.png · Kỵ Sĩ Tro Tàn (Lò Thiêu)
+## o4.png · Lính Đánh Thuê Thép (Xưởng Đúc)
 
 ```
-an ash knight in charred armor holding a great axe, furnace glow, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
+a heavy mercenary in charred powered armor holding a great hydraulic axe, in a glowing foundry, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## o5.png · Kẻ Nuôi Nhện (Hang Nhện)
+## o5.png · Kẻ Nuôi Drone (Lưới Ngầm)
 
 ```
-a spider-keeper sorcerer draped in webs with small spiders on his arms, cave, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
+a drone-keeper hacker draped in cables with small spider drones crawling on her arms, in an underground server tunnel, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## o6.png · Phù Thủy Đầm Lầy (Đầm Oán Hồn)
+## o6.png · Phù Thủy Mạng (Cống Độc)
 
 ```
-a swamp witch with a crooked staff and will-o-wisps, haunted marsh, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
+a netrunner witch with a crooked antenna staff and floating holographic wisps, in a toxic sewer, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
-## o7.png · Long Kỵ Sĩ (Sào Huyệt Rồng)
+## o7.png · Kỵ Sĩ Mech (Lò Phản Ứng)
 
 ```
-a dragon knight in red armor holding a dragon-head lance, dragon lair, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
+a mech dragon rider pilot in red armor holding a dragon-headed lance, in a glowing reactor chamber, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
 
 ## merchant.png · Lão Hắc Thị (chủ tiệm)
 
 ```
-a sly hooded black-market merchant leaning on a mace, coins and potions on a table, dark fantasy character portrait, painterly digital painting, waist-up, dramatic rim lighting, rich detail, dark atmospheric background, high contrast, vertical composition, no text, no border, no frame, no watermark
+a sly hooded black-market fixer leaning on a shock baton, credit chips and stimulant vials on a neon-lit table, cyberpunk character portrait, gritty neon-lit dystopian megacity, painterly digital painting, waist-up, cybernetic implants, dramatic rim lighting, rich detail, dark background, high contrast, vertical composition, no text, no letters, no logos, no border, no frame, no watermark
 ```
 
-Loại trừ: `text, letters, logo, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
+Loại trừ: `text, letters, logo, brand name, watermark, signature, frame, border, card template, user interface, multiple creatures, blurry, low detail, cartoon, chibi, anime, flat colors, deformed anatomy, extra limbs`
