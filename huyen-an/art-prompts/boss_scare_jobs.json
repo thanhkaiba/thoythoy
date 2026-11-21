@@ -1,0 +1,50 @@
+[
+ {
+  "name": "o1_scare",
+  "id": "o1",
+  "seed": 21,
+  "prompt": "The scavenger machine suddenly lunges straight at the camera, its cracked helmet with the blazing red eye rushing forward to fill the frame while its hook claws slash at the viewer and chains whip. Then it slowly draws back to its exact original position and pose. Terrifying jump-scare horror moment, fast aggressive motion at the start. Static locked-off camera, same framing and background throughout."
+ },
+ {
+  "name": "o2_scare",
+  "id": "o2",
+  "seed": 21,
+  "prompt": "The skull-faced machine monk suddenly snaps its eyes open glowing and lunges straight at the camera, its flayed chrome skull rushing forward to fill the frame while the ritual blade stabs toward the viewer. Then it slowly draws back to its exact original position and pose. Terrifying jump-scare horror moment, fast aggressive motion at the start. Static locked-off camera, same framing and background throughout."
+ },
+ {
+  "name": "o3_scare",
+  "id": "o3",
+  "seed": 21,
+  "prompt": "The mantis hunter mech suddenly pounces straight at the camera, its red-eyed head and chattering saw mandibles rushing forward to fill the frame while both serrated blades slash at the viewer. Then it slowly draws back to its exact original position and pose. Terrifying jump-scare horror moment, fast aggressive motion at the start. Static locked-off camera, same framing and background throughout."
+ },
+ {
+  "name": "o4_scare",
+  "id": "o4",
+  "seed": 21,
+  "prompt": "The furnace golem suddenly leans down and lunges at the camera with a roar, its screaming furnace mouth of molten metal rushing forward to fill the frame, spraying sparks and molten steel. Then it slowly draws back to its exact original position and pose. Terrifying jump-scare horror moment, fast aggressive motion at the start. Static locked-off camera, same framing and background throughout."
+ },
+ {
+  "name": "o5_scare",
+  "id": "o5",
+  "seed": 21,
+  "prompt": "The spider queen machine suddenly lunges straight at the camera, her skull face with eight red eyes and dripping needle fangs rushing forward to fill the frame, her front legs stabbing at the viewer. Then it slowly draws back to its exact original position and pose. Terrifying jump-scare horror moment, fast aggressive motion at the start. Static locked-off camera, same framing and background throughout."
+ },
+ {
+  "name": "o6_scare",
+  "id": "o6",
+  "seed": 21,
+  "prompt": "The jellyfish witch suddenly surges straight at the camera, the screaming skull-faced hag inside pressing forward to fill the frame while her syringe tentacles lash at the viewer. Then it slowly draws back to its exact original position and pose. Terrifying jump-scare horror moment, fast aggressive motion at the start. Static locked-off camera, same framing and background throughout."
+ },
+ {
+  "name": "o7_scare",
+  "id": "o7",
+  "seed": 21,
+  "prompt": "The dragon mech suddenly lunges its horned skull head straight at the camera with a roar, jaws wide open full of jagged steel teeth and blue fire filling the frame. Then it slowly draws back to its exact original position and pose. Terrifying jump-scare horror moment, fast aggressive motion at the start. Static locked-off camera, same framing and background throughout."
+ },
+ {
+  "name": "o8_scare",
+  "id": "o8",
+  "seed": 21,
+  "prompt": "The skeletal AI god-king suddenly leans forward off its throne and lunges at the camera, its crowned skull with blazing golden eye sockets rushing forward to fill the frame while its many skeletal arms grab at the viewer. Then it slowly draws back to its exact original position and pose. Terrifying jump-scare horror moment, fast aggressive motion at the start. Static locked-off camera, same framing and background throughout."
+ }
+]

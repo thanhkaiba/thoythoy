@@ -643,6 +643,11 @@ body::after{box-shadow:inset 0 0 90px 6px #000c;background:repeating-linear-grad
 /* ---------- hoạt ảnh trùm ở màn hình chính ---------- */
 .fl-art video.paint{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;object-position:50% 20%;opacity:0;transition:opacity .5s;-webkit-mask:linear-gradient(transparent,#000 12%,#000 70%,transparent);mask:linear-gradient(transparent,#000 12%,#000 70%,transparent)}
 .fl-art video.paint.on{opacity:1}
+.fl-art video.vs{transition:none}
+.floor.scare .fl-art{animation:scarez .95s ease-out}
+@keyframes scarez{0%{transform:scale(1.4);filter:brightness(0)}7%{filter:brightness(2.4) contrast(1.4) saturate(1.6)}14%{filter:brightness(.15)}24%{transform:scale(1.26) translate(-7px,4px);filter:brightness(1.7) saturate(1.4)}38%{transform:scale(1.2) translate(7px,-4px)}52%{transform:scale(1.12) translate(-4px,2px);filter:none}70%{transform:scale(1.05) translate(2px,0)}100%{transform:none}}
+.floor.scare .fl-art::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(ellipse at 50% 40%,transparent 25%,#c00018aa);animation:scarev .95s ease-out forwards}
+@keyframes scarev{0%{opacity:0}10%{opacity:1}100%{opacity:0}}
 .shard{position:fixed;z-index:65;pointer-events:none}
 /* ---------- bia đang có tác dụng ---------- */
 .beer em{font-style:normal;font-family:var(--display);font-weight:700;font-size:12px;margin-left:3px;padding:0 5px;border-radius:8px;background:#ff4fd8;color:#14041a}
@@ -749,22 +754,30 @@ const CARDS={
  deer:{n:'Thần Lộc Ăng-ten',e:'moc',r:3,u:7,k:'guard',v:[6,6,6,6],s:'Trường bảo vệ',d:'Đồng minh kề bên không thể bị lật.'},
  reaper:{n:'Tử Thần Lượng Tử',e:'thuy',r:4,u:7,k:'combo',v:[7,7,6,7],s:'Combo',d:'Lá vừa bị nó lật sẽ tấn công tiếp các lá kề bên.'},
  lich:{n:'Trí Tuệ Hư Vô',e:'thuy',r:4,u:7,boss:1,k:'devour',v:[7,7,7,7],s:'Xóa sổ',d:'Khi ra sân, xóa sổ lá địch mạnh nhất kề bên. Chỉ có thể cướp từ Boss.'},
+ // Trùm hành tinh: chỉ thu phục được bằng cách thắng chính nó
+ b1:{n:'Máy Nhặt Rỉ',e:'hoa',r:0,u:0,boss:1,v:[5,5,4,3],s:'',d:'Trùm Hành tinh Rỉ Sét. Chỉ thu phục được khi thắng nó.'},
+ b2:{n:'Tu Sĩ Bốn Tay',e:'thuy',r:1,u:1,boss:1,k:'sting',v:[4,6,3,3],s:'Bốn tay',d:'Tấn công mọi hướng bằng cạnh cao nhất của mình.'},
+ b3:{n:'Bọ Ngựa Săn Mồi',e:'moc',r:1,u:2,boss:1,k:'diag',v:[5,5,4,3],s:'Lưỡi cưa',d:'Tấn công thêm 4 ô chéo. Ở góc chéo, mỗi bên dùng cạnh lớn hơn trong hai cạnh hướng vào nhau.'},
+ b4:{n:'Cự Thần Lò Đúc',e:'hoa',r:2,u:3,boss:1,k:'shield',v:[6,5,5,5],s:'Giáp lò',d:'Chặn lần bị lật đầu tiên.'},
+ b5:{n:'Mẹ Nhện Máy',e:'moc',r:2,u:4,boss:1,k:'web',v:[6,5,5,5],s:'Tơ độc',d:'Khi ra sân, lá địch kề bên mất kỹ năng đến hết trận.'},
+ b6:{n:'Sứa Phù Thủy',e:'thuy',r:2,u:5,boss:1,k:'drain',v:[5,6,5,5],s:'Hút năng lượng',d:'Mỗi lá lật được, +1 mọi cạnh.'},
+ b7:{n:'Long Mech',e:'hoa',r:3,u:6,boss:1,k:'breath',v:[7,6,7,7],s:'Lửa sao xanh',d:'Khi ra sân, mọi lá địch cùng hàng và cùng cột bị −1 mọi cạnh.'},
  soul:{n:'Tàn Ảnh',e:'moc',r:0,tok:1,v:[4,4,4,3],s:'',d:'Lá phụ cho người đi trước để bù thế bất lợi. Biến mất sau trận.'}};
 const COST=[1,2,3,4,5],BUDGET=12;
 const OBST={tree:['Vật cản lạnh','Vật cản lạnh. Đặt lá hệ <b>Nhiệt</b> cạnh nó để phá và nhận credit.'],rock:['Vật cản phế liệu','Vật cản phế liệu. Đặt lá hệ <b>Sinh</b> cạnh nó để phá và nhận credit.'],fire:['Vật cản nóng','Vật cản nóng. Đặt lá hệ <b>Lạnh</b> cạnh nó để phá và nhận credit.']},BRKBY={tree:'hoa',fire:'thuy',rock:'moc'};
 /* Chuỗi ải: mỗi ải chỉ thêm một ý mới. show = các lá kỹ năng được giới thiệu. */
 const OPPS=[
- {place:'Hành tinh Rỉ Sét',say:["Kim loại của ngươi... bán được giá đấy.", "Hỏng rồi... cho ngươi qua.", "Thêm một đống phế liệu cho ta."],n:'Máy Nhặt Rỉ',av:'o1',style:'Liều lĩnh',bet:30,noise:7,nerf:3,el:0,deck:{r:[6,0,0]},sig:{id:'skel',s:1},t:'Luật cơ bản',demo:1,gift:{gold:100},
+ {place:'Hành tinh Rỉ Sét',say:["Kim loại của ngươi... bán được giá đấy.", "Hỏng rồi... cho ngươi qua.", "Thêm một đống phế liệu cho ta."],n:'Máy Nhặt Rỉ',av:'o1',style:'Liều lĩnh',bet:30,noise:7,nerf:3,el:0,deck:{r:[6,0,0]},sig:{id:'b1',s:0},t:'Luật cơ bản',demo:1,gift:{gold:100},
   intro:['Hai bên lần lượt đặt 1 lá vào ô trống. Các khối trên bàn là vật cản.','Số ở cạnh lá bạn <b>lớn hơn</b> số ở cạnh đối diện của lá địch kề bên thì lá địch bị lật về phe bạn.','Chạm ô một lần để <b>xem trước</b> sẽ lật được lá nào, chạm lần nữa để đặt.','Viền và biểu tượng trên ô chỉ hiện khi uống <b>Bia 2077</b>: ⚔ là số lá lật được, khiên là ô an toàn, tam giác đỏ là ô dễ bị lật lại. Mỗi cốc có tác dụng 3 lượt và chỉ luôn nước nên đánh.','Kín bàn, ai giữ nhiều lá hơn thì thắng.']},
- {place:'Mặt trăng Neon',say:["Bốn tay ta cầu nguyện cho mã nguồn.", "Lời nguyện bị lỗi... ngươi thắng.", "Hệ của ngươi yếu thế, ngươi không thấy sao?"],n:'Tu Sĩ Bốn Tay',av:'o2',style:'Liều lĩnh',bet:40,noise:6,nerf:1,el:1,deck:{r:[6,0,0]},t:'Mở: Khắc hệ, phá vật cản',sig:{id:'ghoul',s:0},tri:1,gift:{card:'wolf'}},
- {place:'Rừng Cáp',say:["Ta đã ngắm ngươi từ lúc tàu hạ cánh.", "Con mồi biết cắn. Hay lắm.", "Thêm một chiến lợi phẩm treo trong rừng cáp."],n:'Bọ Ngựa Săn Mồi',av:'o3',style:'Thủ góc',guard:.35,bet:60,noise:5,nerf:2,el:1,deck:{r:[4,0,0],ids:['wolf','turtle']},t:'Mở: Bài kỹ năng',sig:{id:'rscorp',s:0},show:['wolf','turtle'],gift:{card:'turtle'},
+ {place:'Mặt trăng Neon',say:["Bốn tay ta cầu nguyện cho mã nguồn.", "Lời nguyện bị lỗi... ngươi thắng.", "Hệ của ngươi yếu thế, ngươi không thấy sao?"],n:'Tu Sĩ Bốn Tay',av:'o2',style:'Liều lĩnh',bet:40,noise:6,nerf:1,el:1,deck:{r:[6,0,0]},t:'Mở: Khắc hệ, phá vật cản',sig:{id:'b2',s:0},tri:1,gift:{card:'wolf'}},
+ {place:'Rừng Cáp',say:["Ta đã ngắm ngươi từ lúc tàu hạ cánh.", "Con mồi biết cắn. Hay lắm.", "Thêm một chiến lợi phẩm treo trong rừng cáp."],n:'Bọ Ngựa Săn Mồi',av:'o3',style:'Thủ góc',guard:.35,bet:60,noise:5,nerf:2,el:1,deck:{r:[4,0,0],ids:['wolf','turtle']},t:'Mở: Bài kỹ năng',sig:{id:'b3',s:0},show:['wolf','turtle'],gift:{card:'turtle'},
   intro:['Bài bậc Hiếm trở lên có <b>một kỹ năng</b>. Chạm vào lá bất kỳ để đọc.','Lá thưởng mới tự vào bộ ra trận. Vào Bộ bài nếu muốn đổi.','Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4, Thần thoại 5.']},
- {place:'Hành tinh Lò Rèn',say:["Lò này đã nung chảy bao kẻ mạnh hơn ngươi.", "Lò... nguội rồi.", "Vào lò đi."],n:'Cự Thần Lò Đúc',av:'o4',style:'Thủ góc',guard:.35,bet:80,noise:4,nerf:2,el:1,deck:{r:[3,0,0],ids:['fox','snake','scorp']},t:'Luật vùng: Đồng',rules:['same'],sig:{id:'naga',s:0},show:['fox','snake'],intro:['<b>Luật vùng: Đồng.</b> Lá vừa đặt có từ 2 cạnh <b>bằng đúng</b> cạnh đối diện của các lá kề bên thì lật hết lá địch trong số đó.','Lá bị lật theo luật này tấn công tiếp như combo.'],gift:{card:'fox'}},
- {place:'Tổ Ngầm',say:["Lũ con của ta đói điện lắm rồi.", "Tổ vỡ rồi... không thể nào.", "Nằm yên trong lưới đi."],n:'Mẹ Nhện Máy',av:'o5',style:'Săn mồi',deep:.25,bet:100,noise:3,nerf:1,el:1,deck:{r:[3,0,0],ids:['spider','troll','gale']},t:'Mở: Lá hình dạng',sig:{id:'draug',s:0},show:['troll','gale'],gift:{card:'troll'}},
- {place:'Đại dương Axit',say:["Đại dương này giữ dữ liệu của những kẻ thua cuộc.", "Mã độc dội ngược về ta.", "Chìm xuống axit đi."],n:'Sứa Phù Thủy',av:'o6',style:'Tính trước',deep:.5,bet:130,noise:2,nerf:2,el:1,deck:{r:[3,0,0],ids:['bat','phoenix','fguard']},t:'Luật vùng: Tổng',rules:['plus'],sig:{id:'serpent',s:0},show:['bat','fguard'],intro:['<b>Luật vùng: Tổng.</b> Lá vừa đặt có từ 2 cặp cạnh chạm nhau <b>cùng tổng</b> thì lật hết lá địch trong các cặp đó.','Lá bị lật theo luật này tấn công tiếp như combo.'],gift:{card:'bat'}},
- {place:'Hành tinh Núi Lửa',say:["Lò phản ứng của ta chưa từng tắt.", "Ngươi xứng đáng cưỡi rồng.", "Quỳ xuống trước lửa của sao xanh."],n:'Long Mech',av:'o7',style:'Lão luyện',deep:.8,bet:170,noise:.5,nerf:0,el:1,deck:{r:[2,2,0],ids:['dragon','lion']},t:'Luật vùng: Bài úp',rules:['closed'],sig:{id:'dragon',s:0},show:['lion','dragon'],intro:['<b>Luật vùng: Bài úp.</b> Bạn không thấy bài trên tay đối thủ, phần xem trước không báo được ô hở.'],gift:{card:'lion'}},
+ {place:'Hành tinh Lò Rèn',say:["Lò này đã nung chảy bao kẻ mạnh hơn ngươi.", "Lò... nguội rồi.", "Vào lò đi."],n:'Cự Thần Lò Đúc',av:'o4',style:'Thủ góc',guard:.35,bet:80,noise:4,nerf:2,el:1,deck:{r:[3,0,0],ids:['fox','snake','scorp']},t:'Luật vùng: Đồng',rules:['same'],sig:{id:'b4',s:0},show:['fox','snake'],intro:['<b>Luật vùng: Đồng.</b> Lá vừa đặt có từ 2 cạnh <b>bằng đúng</b> cạnh đối diện của các lá kề bên thì lật hết lá địch trong số đó.','Lá bị lật theo luật này tấn công tiếp như combo.'],gift:{card:'fox'}},
+ {place:'Tổ Ngầm',say:["Lũ con của ta đói điện lắm rồi.", "Tổ vỡ rồi... không thể nào.", "Nằm yên trong lưới đi."],n:'Mẹ Nhện Máy',av:'o5',style:'Săn mồi',deep:.25,bet:100,noise:3,nerf:1,el:1,deck:{r:[3,0,0],ids:['spider','troll','gale']},t:'Mở: Lá hình dạng',sig:{id:'b5',s:0},show:['troll','gale'],gift:{card:'troll'}},
+ {place:'Đại dương Axit',say:["Đại dương này giữ dữ liệu của những kẻ thua cuộc.", "Mã độc dội ngược về ta.", "Chìm xuống axit đi."],n:'Sứa Phù Thủy',av:'o6',style:'Tính trước',deep:.5,bet:130,noise:2,nerf:2,el:1,deck:{r:[3,0,0],ids:['bat','phoenix','fguard']},t:'Luật vùng: Tổng',rules:['plus'],sig:{id:'b6',s:0},show:['bat','fguard'],intro:['<b>Luật vùng: Tổng.</b> Lá vừa đặt có từ 2 cặp cạnh chạm nhau <b>cùng tổng</b> thì lật hết lá địch trong các cặp đó.','Lá bị lật theo luật này tấn công tiếp như combo.'],gift:{card:'bat'}},
+ {place:'Hành tinh Núi Lửa',say:["Lò phản ứng của ta chưa từng tắt.", "Ngươi xứng đáng cưỡi rồng.", "Quỳ xuống trước lửa của sao xanh."],n:'Long Mech',av:'o7',style:'Lão luyện',deep:.8,bet:170,noise:.5,nerf:0,el:1,deck:{r:[2,2,0],ids:['dragon','lion']},t:'Luật vùng: Bài úp',rules:['closed'],sig:{id:'b7',s:0},show:['lion','dragon'],intro:['<b>Luật vùng: Bài úp.</b> Bạn không thấy bài trên tay đối thủ, phần xem trước không báo được ô hở.'],gift:{card:'lion'}},
  {place:'Lõi Hư Vô',say:["Ngươi đã tới lõi. Không còn đường về.", "Hư vô... cũng có lúc lỗi.", "Mọi dữ liệu rồi sẽ về với hư vô."],n:'Trí Tuệ Hư Vô',av:'o8',style:'Toàn tri',deep:.7,bet:250,noise:.5,nerf:4,el:1,boss:1,deck:{r:[2,2,0],ids:['lich','deer']},t:'Boss · Đồng + Tổng',rules:['same','plus'],sig:{id:'lich',s:0},show:['lich','deer'],gift:{gold:1000},
-  intro:['Đừng để lá mạnh nhất của bạn đứng cạnh ô trống. Nhện Lưới Laser có thể vô hiệu hóa lá Boss.','Luật vùng ở đây là cả Đồng lẫn Tổng. Thắng cách từ 3 lá trở lên để đoạt chính lá Trí Tuệ Hư Vô.']}];
+  intro:['Đừng để lá mạnh nhất của bạn đứng cạnh ô trống. Nhện Lưới Laser có thể vô hiệu hóa lá Boss.','Luật vùng ở đây là cả Đồng lẫn Tổng. Thắng là thu phục được chính lá Trí Tuệ Hư Vô.']}];
 /* Sau Boss: Khe Hư Không, mỗi lần thắng xuống sâu thêm và đối thủ mạnh thêm. */
 function abyssOpp(d){const rl=[['same'],['plus'],['closed'],['same','plus']][Math.floor(Date.now()/864e5)%4];return{place:'Khe Hư Không',rules:rl,say:['Khe này không có điểm cuối, lữ khách.','Xa thêm một bước. Còn nữa.','Ở lại đây mãi mãi.'],n:'Bóng Ma Mã '+(d+1),av:['reaper','draug','shadow','ghoul'][d%4],bet:200+d*50,noise:0,style:'Toàn tri',deep:1,nerf:-Math.min(7,d),el:1,abyss:1,
  deck:d>=3?{r:[0,2,2],ids:[['dragon','reaper','deer'][d%3],'lich']}:{r:[0,3,2],ids:[['dragon','reaper','deer'][d%3]]},t:'Độ sâu '+(d+1)+' · luật hôm nay: '+rl.map(r=>({same:'Đồng',plus:'Tổng',closed:'Bài úp'})[r]).join(' + ')}}
@@ -790,7 +803,7 @@ const RULES={pet:0};
 function inst(id,o,s){const v=CARDS[id].v.map(x=>x+(s?1:0));return{id,o,s:s?1:0,v:[...v],b:[...v],fl:0,lock:0,age:0,evo:0,sil:0,sh:CARDS[id].k==='shield'?1:0,reb:0,rebUsed:0,rebTo:o}}
 const disp=x=>x>=10?'A':x;
 /* Thay tranh: điền id lá → đường dẫn ảnh, ví dụ {wolf:'art/wolf.jpg'}. Lá không có ảnh dùng hình biểu tượng. */
-const ART={};'gale fguard wose boar rat ant scarab croc seahorse bear stoat falcon horse cbat mud skel cuttle ogre yeti wolf wolf2 snake fox turtle scorp rscorp spider troll naga ghoul shadow rider bat phoenix lion serpent draug tentacle dragon deer reaper lich soul o1 o2 o3 o4 o5 o6 o7 o8'.split(' ').forEach(k=>ART[k]='art/'+k+'.webp');
+const ART={};'gale fguard wose boar rat ant scarab croc seahorse bear stoat falcon horse cbat mud skel cuttle ogre yeti wolf wolf2 snake fox turtle scorp rscorp spider troll naga ghoul shadow rider bat phoenix lion serpent draug tentacle dragon deer reaper lich soul o1 o2 o3 o4 o5 o6 o7 o8'.split(' ').forEach(k=>ART[k]='art/'+k+'.webp');for(let i=1;i<=7;i++)ART['b'+i]=ART['o'+i];
 function cardHTML(c){const d=CARDS[c.id];
  return `<div class="card o-${c.o} r${d.r} e-${d.e}${c.s?' s1':''}${c.sh?' shield':''}${c.evo?' evo':''}${c.sil?' sil':''}"><div class="cf"><div class="art">${ART[c.evo?'wolf2':c.id]?`<img class="pic paint" src="${ART[c.evo?'wolf2':c.id]}" alt="" draggable="false">`:ic(c.evo?'wolf2':c.id,'emo')}</div>${d.r>=2?'<div class="foil"></div>':''}</div>`+
  c.v.map((x,k)=>`<i class="v v${k}${x>c.b[k]?' up':x<c.b[k]?' dn':''}"><b>${disp(x)}</b></i>`).join('')+
@@ -902,7 +915,7 @@ let AC=null;
 function tone(f,d,type='sine',v=.15,to=null,at=0){const t=AC.currentTime+at,o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.setValueAtTime(f,t);if(to)o.frequency.exponentialRampToValueAtTime(to,t+d);g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g).connect(AC.destination);o.start(t);o.stop(t+d+.02)}
 const SFX={tap:()=>tone(900,.04,'triangle',.05),place:()=>{tone(140,.16,'sine',.3,55);tone(700,.05,'triangle',.05)},flip:(n=0)=>{const m=Math.pow(1.12,Math.min(n,8));tone(420*m,.09,'triangle',.14,640*m);tone(640*m,.12,'triangle',.1,880*m,.07)},combo:()=>[0,.08,.16,.26].forEach((a,i)=>tone(523*Math.pow(1.26,i),.2,'triangle',.12,null,a)),charge:(r=0)=>tone(160,[.3,.65,1,1.5,2.1][r],'sine',.08,[300,520,820,1250,1700][r]),hit:()=>tone(90,.25,'sawtooth',.2,40),
  err:()=>tone(160,.12,'square',.06,120),coin:()=>{tone(1200,.08,'triangle',.1);tone(1600,.14,'triangle',.1,null,.07)},beer:()=>[0,.14,.28].forEach((a,i)=>tone(220-i*30,.1,'sine',.2,120,a)),
- win:()=>[523,659,784,1047].forEach((f,i)=>tone(f,.28,'triangle',.14,null,i*.13)),lose:()=>[392,330,262,196].forEach((f,i)=>tone(f,.4,'sawtooth',.07,null,i*.2)),turn:()=>tone(660,.1,'sine',.08,880),zap:()=>{tone(1800,.12,'sawtooth',.05,300)},swing:()=>tone(500,.12,'triangle',.08,180),up:()=>tone(520,.12,'sine',.1,1040),down:()=>tone(520,.16,'sine',.1,200)};
+ win:()=>[523,659,784,1047].forEach((f,i)=>tone(f,.28,'triangle',.14,null,i*.13)),lose:()=>[392,330,262,196].forEach((f,i)=>tone(f,.4,'sawtooth',.07,null,i*.2)),turn:()=>tone(660,.1,'sine',.08,880),zap:()=>{tone(1800,.12,'sawtooth',.05,300)},swing:()=>tone(500,.12,'triangle',.08,180),up:()=>tone(520,.12,'sine',.1,1040),down:()=>tone(520,.16,'sine',.1,200),scare:()=>{tone(58,1.1,'sawtooth',.22,30);tone(900,.32,'square',.05,2200,.04);tone(150,.7,'sawtooth',.12,50,.12)}};
 function sfx(k,a){if(!SV.snd)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();SFX[k](a)}catch(e){}}
 function buzz(ms){if(SV.vib)try{navigator.vibrate&&navigator.vibrate(ms)}catch(e){}}
 document.addEventListener('click',e=>{if(e.target.closest('.btn,.item,.choice,.filters button,.tog'))sfx('tap')},true);
@@ -910,7 +923,7 @@ function floatTxt(x,y,t,c){x=Math.max(Math.min(110,innerWidth/2),Math.min(innerW
 
 /* ================= HIỆU ỨNG RA CHIÊU ================= */
 /* Vũ khí của từng lá: quyết định hiệu ứng khi tấn công. */
-const WEAPON={boar:'hammer',rat:'electric',ant:'plasma',cbat:'sonic',ogre:'hammer',scarab:'laser',croc:'bite',seahorse:'laser',mud:'toxic',cuttle:'electric',
+const WEAPON={b1:'claw',b2:'blade',b3:'blade',b4:'flame',b5:'toxic',b6:'electric',b7:'flame',boar:'hammer',rat:'electric',ant:'plasma',cbat:'sonic',ogre:'hammer',scarab:'laser',croc:'bite',seahorse:'laser',mud:'toxic',cuttle:'electric',
  bear:'claw',stoat:'claw',falcon:'blade',horse:'electric',skel:'blade',yeti:'cryo',wolf:'bite',turtle:'missile',fox:'flame',snake:'cryo',scorp:'plasma',
  rscorp:'blade',spider:'laser',troll:'hammer',naga:'electric',ghoul:'toxic',shadow:'sonic',rider:'blade',gale:'electric',fguard:'blade',bat:'sonic',
  phoenix:'flame',lion:'claw',serpent:'cryo',draug:'blade',tentacle:'electric',wose:'toxic',dragon:'flame',deer:'laser',reaper:'blade',lich:'laser',soul:'sonic'};
@@ -963,7 +976,7 @@ function cellCenter(i){const r=cellEls[i].getBoundingClientRect();return[r.left+
 /* Hướng mặt của hình nhân vật: 1 nhìn phải, -1 nhìn trái, không ghi là nhìn thẳng. */
 const FACE={ant:-1,boar:1,croc:1,falcon:1,fox:-1,horse:1,lion:-1,rat:1,rscorp:-1,scarab:-1,snake:1,turtle:-1};
 const FIGIMG={};
-function figImg(id){if(!FIGIMG[id]){const im=new Image();im.onerror=()=>{if(!im.dataset.fb){im.dataset.fb=1;im.src='art/'+id+'.webp'}};im.src='art/cut/'+id+'.webp';FIGIMG[id]=im}return FIGIMG[id]}
+function figImg(id){if(!FIGIMG[id]){const im=new Image();im.onerror=()=>{if(!im.dataset.fb){im.dataset.fb=1;im.src=ART[id]||'art/'+id+'.webp'}};im.src='art/cut/'+id+'.webp';FIGIMG[id]=im}return FIGIMG[id]}
 /* Hình rối: vẽ ảnh theo từng dải ngang. Chân giữ nguyên, phần trên ngả theo đường cong, thân co giãn khi thở và khi ra đòn. */
 class Puppet{constructor(id,mine,want,H){this.img=figImg(id);this.mir=!!(FACE[id]&&FACE[id]!==want);this.H=H;this.p={lean:0,sx:1,sy:1,ry:0,fl:0,sat:1};this.ph=Math.random()*6;
   const d=this.el=document.createElement('div');d.className='fig '+(mine?'mine':'foe');d.innerHTML='<i class="fpad"></i><canvas></canvas>';this.cv=d.querySelector('canvas');this.ctx=this.cv.getContext('2d');this.size()}
@@ -1215,7 +1228,7 @@ function demoHTML(){const a=inst('boar','p'),b=inst('scarab','e');return `<div c
 let prepMult=1;
 function startMatch(opp,go){const ix=OPPS.indexOf(opp);if(ix<0||ix>SV.stage)return;fixDeck();const full=opp.bet*prepMult,stake=ix===0?Math.min(full,SV.gold):full;
  if(!go){const first=(opp.intro||opp.show||opp.demo||opp.tri)&&!SV.seen.includes(ix),poor=SV.gold<stake,short=SV.deck.length<6;
-  return modal(`<h2${opp.boss?' class="lose"':''}>${opp.n}</h2><p class="dim" style="text-align:center;letter-spacing:.14em;text-transform:uppercase;font-size:12px">${depthName(ix)} · ${opp.place} · ${opp.t}</p>${opp.sig?`<div class="fl-sig" style="justify-content:center;margin:2px 0 8px"><div>${cardHTML(inst(opp.sig.id,'e',opp.sig.s))}</div><span>Lá đặc trưng<br><small>Thắng cách từ 3 lá để đoạt</small></span></div>`:''}
+  return modal(`<h2${opp.boss?' class="lose"':''}>${opp.n}</h2><p class="dim" style="text-align:center;letter-spacing:.14em;text-transform:uppercase;font-size:12px">${depthName(ix)} · ${opp.place} · ${opp.t}</p>${opp.sig?`<div class="fl-sig" style="justify-content:center;margin:2px 0 8px"><div>${cardHTML(inst(opp.sig.id,'e',opp.sig.s))}</div><span>Lá của trùm<br><small>${SV.col.some(c=>c.id===opp.sig.id)?'Đã thu phục · thắng cách 3 lá để thêm bản':'Thắng là thu phục được'}</small></span></div>`:''}
    ${first?`${opp.demo?demoHTML():''}${opp.tri?triHTML():''}${(opp.show||[]).map(kwHTML).join('')}${opp.intro?`<ul>${opp.intro.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}`:''}
    <div class="sect">Bộ ra trận của bạn · ${dcost()}/${BUDGET} điểm</div><div class="prep">${SV.deck.map(u=>`<div>${cardHTML(inst(byU(u).id,'p',byU(u).s))}</div>`).join('')}</div>
    ${SV.stage>=3?`<div class="sect">Mức cược</div><div class="mult">${[1,2,3].map(m=>`<button data-m="${m}" class="${m===prepMult?'on':''}"${m>1&&SV.gold<opp.bet*m?' disabled':''}>×${m}<small>${opp.bet*m} credit</small></button>`).join('')}</div>`:''}
@@ -1267,7 +1280,7 @@ async function finish(){const p=cnt(M.S,'p'),e=cnt(M.S,'e'),bet=M.opp.bet*M.mult
   const back=SV.host.filter(h=>h.ix===M.ix);if(back.length){back.forEach(h=>{addCard(h.id,h.s);loot.push(cslot(h.id,h.s))});SV.host=SV.host.filter(h=>h.ix!==M.ix)}
   if(M.opp.gift&&!SV.gifts.includes(M.ix)){SV.gifts.push(M.ix);const g=M.opp.gift;if(g.gold)gold+=g.gold;if(g.card){autoSlot(addCard(g.card));loot.unshift(cslot(g.card,0))}}
   SV.gold+=M.bet+gold;loot.unshift(slot('coins','×'+(gold+coins)));let sigTxt='';
-  if(M.opp.sig){const g=M.opp.sig;if(p-e>=3){addCard(g.id,g.s);SV.sigs[M.ix]=(SV.sigs[M.ix]||0)+1;loot.push(cslot(g.id,g.s));sigTxt='Thắng đậm: đoạt lá đặc trưng!'}else sigTxt=`Thắng cách từ 3 lá để đoạt ${CARDS[g.id].n}`}
+  if(M.opp.sig){const g=M.opp.sig,first=!SV.col.some(c=>c.id===g.id);if(first||p-e>=3){const nc=addCard(g.id,g.s);if(first)autoSlot(nc);SV.sigs[M.ix]=(SV.sigs[M.ix]||0)+1;loot.push(cslot(g.id,g.s));sigTxt=first?`Hạ gục ${CARDS[g.id].n}: bạn thu phục được chính nó!`:`Thắng đậm: thu thêm một bản ${CARDS[g.id].n}!`}else sigTxt=`Đã có ${CARDS[g.id].n}. Thắng cách từ 3 lá để thu thêm một bản`}
   if(M.opp.abyss){SV.abyss++;refreshAbyss();loot.push(slot('rocket','→'+SV.abyss))}
   else if(M.ix===SV.stage&&M.ix<OPPS.length-1){SV.stage++;SV.beer++;loot.push(slot('beer','×1'),slot('rocket',SV.stage>7?'∞':'→'+(SV.stage+1)));
    Object.keys(CARDS).filter(k=>CARDS[k].u===SV.stage&&!CARDS[k].boss).forEach(k=>fresh.push(cslot(k,0,'')))}
@@ -1309,16 +1322,23 @@ function packModal(ids,title,added){if(!added)ids.forEach(id=>addCard(id));save(
 const FC=['#ff4a3a','#3a8bff','#ffd34d','#e8f4ff','#8a5cff','#5cff8a','#29e6ff','#b26bff','#3a4bff'];
 const STARS=["Hệ Hồng Tinh", "Hệ Lam Tinh", "Hệ Song Tinh", "Hệ Bạch Tinh", "Hành tinh lang thang", "Hệ Lục Tinh", "Hệ Thanh Tinh", "Hố đen Hắc Tinh"],depthName=i=>i>7?'Ngoài rìa thiên hà':STARS[i];
 const BOSSVID=['o1','o2','o3','o4','o5','o6','o7','o8'];
-/* Chỉ phát hoạt ảnh của trùm ở tầng đang xem, các tầng khác dừng để nhẹ máy. */
+/* Trùm ở tầng đang xem: lần đầu vuốt tới thì chồm ra hù (chớp tối, rung, tiếng gầm), sau đó đứng thở; cứ ba vòng thở lại chồm một lần cho đỡ lặp. Các tầng khác dừng để nhẹ máy. */
+const SCARED={};
+function scareFx(f){f.classList.remove('scare');void f.offsetWidth;f.classList.add('scare');setTimeout(()=>f.classList.remove('scare'),950);sfx('scare');buzz(160)}
 function homeVid(){const tw=$('#tower');if(!tw||calm)return;const cur=$('#home').hidden?-1:Math.round(tw.scrollTop/(tw.clientHeight||1));
- tw.querySelectorAll('.floor').forEach((f,i)=>{const v=f.querySelector('video');if(!v)return;
-  if(i===cur){if(!v.src)v.src=v.dataset.src;const pl=v.play();if(pl)pl.then(()=>v.classList.add('on')).catch(()=>{})}else{v.pause();v.classList.remove('on')}})}
+ tw.querySelectorAll('.floor').forEach((f,i)=>{const vi=f.querySelector('video.vi'),vs=f.querySelector('video.vs');if(!vi)return;
+  if(i!==cur){vi.pause();vs.pause();vi.classList.remove('on');vs.classList.remove('on');f.dataset.live='';return}
+  if(f.dataset.live)return;f.dataset.live='1';let n=0;
+  const idle=()=>{if(!f.dataset.live)return;vs.classList.remove('on');vs.pause();vi.currentTime=0;const p=vi.play();if(p)p.then(()=>vi.classList.add('on')).catch(()=>{})};
+  const lunge=loud=>{if(!f.dataset.live)return;if(!vs.src)vs.src=vs.dataset.src;vs.currentTime=0;const p=vs.play();if(p)p.then(()=>{vs.classList.add('on');vi.pause();if(loud)setTimeout(()=>f.dataset.live&&vs.classList.contains('on')&&scareFx(f),900)}).catch(idle);else idle()};
+  vi.onended=()=>{n++;n%3===0?lunge(false):idle()};vs.onended=idle;vs.onerror=idle;if(!vi.src)vi.src=vi.dataset.src;
+  const t=Date.now();if(SV.tut&&$('#modal').hidden&&$('#coach').hidden&&t-(SCARED[i]||0)>30000){SCARED[i]=t;lunge(true)}else idle()})}
 function renderHome(){$('#gold1').textContent=SV.gold;qDay();$('#bGacha').innerHTML='Mở gói'+(albumReady()?'<i class="dot"></i>':'');$('#bShop').innerHTML='Cửa hàng'+(SV.daily!==today()||QUESTS.some(q=>SV.q[q.k]>=q.n&&!SV.q.got.includes(q.k))?'<i class="dot"></i>':'');const tw=$('#tower');
  tw.innerHTML=OPPS.map((o,i)=>{const lock=i>SV.stage,done=i<SV.stage||(o.boss&&SV.boss),g=o.gift,got=SV.gifts.includes(i);
   return `<div class="floor${lock?' locked':''}${o.boss?' boss':''}" style="--fc:${FC[i]}">
    <div class="fl-top">${i?'':'<div class="fl-logo">Huyền Ấn</div>'}<span class="fl-depth">${depthName(i)}</span><h2>${o.place}</h2></div>
-   <div class="fl-art"><img class="paint" src="${ART[o.av]}" alt="" draggable="false">${BOSSVID.includes(o.av)&&!lock?`<video class="paint" muted loop playsinline preload="none" data-src="art/boss/${o.av}.mp4"></video>`:''}</div>
-   <div class="fl-body"><b class="fl-name">${lock&&!o.boss?'? ? ?':o.n}</b><div class="dim">${o.t}${done?' · đã hạ':''}${o.abyss&&SV.abyss?' · kỷ lục '+SV.abyss:''}</div>${lock?'':`<div class="fl-style">Lối đánh: ${o.style}</div>`}${o.sig&&!lock?`<div class="fl-sig"><div>${cardHTML(inst(o.sig.id,'e',o.sig.s))}</div><span>Lá đặc trưng${SV.sigs[i]?` · đã đoạt ×${SV.sigs[i]}`:''}<br><small>Thắng cách từ 3 lá để đoạt</small></span></div>`:''}${SV.host.some(h=>h.ix===i)?`<div class="fl-host">Đang giữ con tin: ${SV.host.filter(h=>h.ix===i).map(h=>CARDS[h.id].n).join(', ')}. Thắng để chuộc.</div>`:''}
+   <div class="fl-art"><img class="paint" src="${ART[o.av]}" alt="" draggable="false">${BOSSVID.includes(o.av)&&!lock?`<video class="paint vi" muted playsinline preload="none" data-src="art/boss/${o.av}.mp4"></video><video class="paint vs" muted playsinline preload="none" data-src="art/boss/${o.av}_scare.mp4"></video>`:''}</div>
+   <div class="fl-body"><b class="fl-name">${lock&&!o.boss?'? ? ?':o.n}</b><div class="dim">${o.t}${done?' · đã hạ':''}${o.abyss&&SV.abyss?' · kỷ lục '+SV.abyss:''}</div>${lock?'':`<div class="fl-style">Lối đánh: ${o.style}</div>`}${o.sig&&!lock?`<div class="fl-sig"><div>${cardHTML(inst(o.sig.id,'e',o.sig.s))}</div><span>Lá của trùm${SV.col.some(c=>c.id===o.sig.id)?' · đã thu phục':''}<br><small>${SV.col.some(c=>c.id===o.sig.id)?'Thắng cách 3 lá để thêm bản':'Thắng là thu phục được'}</small></span></div>`:''}${SV.host.some(h=>h.ix===i)?`<div class="fl-host">Đang giữ con tin: ${SV.host.filter(h=>h.ix===i).map(h=>CARDS[h.id].n).join(', ')}. Thắng để chuộc.</div>`:''}
     ${g&&!got&&!lock?`<div class="fl-gift">Thưởng lần đầu: ${g.card?'lá '+CARDS[g.card].n:g.gold+' credit'}</div>`:''}
     ${lock?`<button class="btn ghost" disabled>Thắng ở ${OPPS[i-1].place} để mở</button>`:`<button class="btn go" data-i="${i}">${i===0&&!SV.tut?'Vào trận đầu tiên':`Vào trận · cược ${o.bet} credit`}</button>`}
     ${i<OPPS.length-1?`<div class="fl-hint">▾ Vuốt lên để bay tới ${OPPS[i+1].place}</div>`:'<div class="fl-hint" style="animation:none">Không có điểm cuối</div>'}</div></div>`}).join('');
@@ -1370,7 +1390,7 @@ function showRules(){const st=SV.stage,L=['Hai bên lần lượt đặt 1 lá v
  'Khi chọn lá, mỗi ô hiện viền và biểu tượng: <b>viền xanh và kiếm</b> kèm số lá lật được, <b>viền và khiên xanh lá</b> là an toàn, <b>viền nét đứt đỏ và tam giác</b> là đối thủ có thể lật lại từ 2 lá trở lên.',
  '<b>Thắng</b>: lấy credit cược và chọn cướp bài, thêm credit hoặc rương. Qua ải lần đầu có thưởng riêng. <b>Thua</b>: mất credit cược và phải mở 1 trong 3 hộp Pandora, trừ khi có Mạch hộ mệnh. Lá bị bắt làm con tin sẽ được trả khi bạn thắng lại ở hành tinh đó.'];
  if(st>=1)L.push('<b>Khắc hệ</b>: tấn công lá thuộc hệ bị khắc được +1. Nhiệt › Sinh › Lạnh › Nhiệt.');
- if(st>=1)L.push('<b>Phá vật cản</b>: mỗi hành tinh có vật cản riêng, nhưng luôn thuộc 3 loại. Nhiệt phá vật cản lạnh (nền xanh băng), Lạnh phá vật cản nóng (nền cam), Sinh phá vật cản phế liệu (nền tối). Biểu tượng nhỏ trên vật cản là hệ phá được nó. Phá được thì có credit.','<b>Lá đặc trưng</b>: mỗi đối thủ giữ một lá riêng, thắng cách từ 3 lá thì đoạt được.');
+ if(st>=1)L.push('<b>Phá vật cản</b>: mỗi hành tinh có vật cản riêng, nhưng luôn thuộc 3 loại. Nhiệt phá vật cản lạnh (nền xanh băng), Lạnh phá vật cản nóng (nền cam), Sinh phá vật cản phế liệu (nền tối). Biểu tượng nhỏ trên vật cản là hệ phá được nó. Phá được thì có credit.','<b>Thu phục trùm</b>: trùm của mỗi hành tinh tự ra trận như một lá bài. Thắng là thu phục được chính lá đó; đã có rồi thì thắng cách từ 3 lá để thu thêm bản.');
  if(st>=3)L.push('<b>Luật vùng Đồng</b>: '+RULE.same.d);if(st>=5)L.push('<b>Luật vùng Tổng</b>: '+RULE.plus.d);if(st>=6)L.push('<b>Luật vùng Bài úp</b>: '+RULE.closed.d);
  if(st>=2)L.push('<b>Album</b>: gom đủ một bộ lá trong màn Mở gói để nhận thưởng một lần.');
  if(st>=2)L.push('<b>Bài kỹ năng</b>: bậc Hiếm trở lên có đúng một kỹ năng. Bộ ra trận tối đa 12 điểm: Thường 1, Hiếm 2, Sử thi 3, Huyền thoại 4.');
@@ -1554,6 +1574,7 @@ const ALBUM=[
  {k:'hang',n:'Tổ Ngầm',ids:['spider','troll','naga','ghoul','shadow','rider'],rw:{gold:500,charm:1}},
  {k:'hinh',n:'Hình Dạng',ids:['gale','fguard','wose'],rw:{gold:600,beer:2}},
  {k:'vuc',n:'Khe Hư Không',ids:['bat','phoenix','lion','serpent','draug','tentacle'],rw:{gold:800,legend:1}},
+ {k:'trum',n:'Bảy Trùm',ids:['b1','b2','b3','b4','b5','b6','b7'],rw:{gold:1500,beer:3}},
  {k:'than',n:'Thần Thoại',ids:['dragon','deer','reaper','lich'],rw:{gold:3000,beer:5,charm:3}}];
 const ownsId=id=>SV.col.some(c=>c.id===id),setHave=s=>s.ids.filter(ownsId).length,setReady=s=>setHave(s)===s.ids.length&&!SV.album[s.k];
 const albumReady=()=>ALBUM.some(setReady);
