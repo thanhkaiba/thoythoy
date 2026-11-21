@@ -12,5 +12,5 @@ body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head><body>`;
 fs.writeFileSync(path.join(out,'index.html'),head+body+'</body></html>');
 for(const f of fs.readdirSync(path.join(__dirname,'fonts')))fs.copyFileSync(path.join(__dirname,'fonts',f),path.join(out,'fonts',f));
-if(fs.existsSync(path.join(__dirname,'art'))){fs.mkdirSync(path.join(out,'art'),{recursive:true});for(const f of fs.readdirSync(path.join(__dirname,'art')))fs.copyFileSync(path.join(__dirname,'art',f),path.join(out,'art',f))}
+if(fs.existsSync(path.join(__dirname,'art'))){fs.mkdirSync(path.join(out,'art'),{recursive:true});fs.cpSync(path.join(__dirname,'art'),path.join(out,'art'),{recursive:true})}
 console.log('assets →',out);
