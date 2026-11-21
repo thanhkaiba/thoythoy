@@ -594,14 +594,8 @@ body::after{box-shadow:inset 0 0 90px 6px #000c;background:repeating-linear-grad
 #match>*{max-width:448px;width:100%;margin-inline:auto}
 .board{background:linear-gradient(180deg,#1a2740,#0b1222);box-shadow:0 14px 0 #02040a,0 0 0 2px #29e6ff88,0 0 46px #29e6ff44,0 26px 30px #000c}
 .board .cell{background:#0b1222;overflow:visible}
-.board .cell::before{content:"";position:absolute;inset:0;background:var(--tile) center/cover;transform:translateZ(.5px) rotate(var(--rot,0deg));opacity:.85;filter:brightness(.62) contrast(1.15);pointer-events:none;border-radius:2px}
 .board .cell{box-shadow:inset 0 0 0 1px #29e6ff40,inset 0 0 12px #000c}
-.board .cell.t-none::before{background:var(--tile) center/cover}
 .board .cell::after{pointer-events:none}
-.obst-tile{position:absolute;inset:0;background:center/cover;box-shadow:inset 0 0 0 1px #000,inset 0 0 14px #000a;z-index:1}
-.obst-tile.fire{animation:obfire 1.2s ease-in-out infinite alternate}
-@keyframes obfire{to{filter:brightness(1.35) saturate(1.2);box-shadow:inset 0 0 0 1px #000,0 0 18px #ff7a2f88}}
-.obst-tile.tree{box-shadow:inset 0 0 0 1px #000,0 0 14px #9fe8ff55}
 .back .cf{background:url(art/cardback.webp) center/cover,#0b1424}
 .back .cf::after{display:none}
 .cmark{position:absolute;inset:3px;z-index:3;transform:translateZ(6px);border:2px solid transparent;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;pointer-events:none}
@@ -623,27 +617,29 @@ body::after{box-shadow:inset 0 0 90px 6px #000c;background:repeating-linear-grad
 .fig.mir img{scale:-1 1}
 .clash.big{font-size:30px;padding:4px 14px}
 .fpad{position:absolute;left:0;top:0;width:min(calc(var(--fh)*.6),42vw);height:calc(var(--fh)*.16);translate:-50% -50%;border-radius:50%;border:2px solid var(--fc);background:radial-gradient(closest-side,color-mix(in srgb,var(--fc) 45%,transparent),transparent);box-shadow:0 0 18px var(--fc)}
-.fname-unused{position:absolute;left:0;top:14px;translate:-50% 0;white-space:nowrap;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:2px 8px;background:#05070dd9;border:1px solid var(--fc);box-shadow:0 0 10px var(--fc)}
-/* ---------- vật cản 2.5D ---------- */
-.prop{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;--pw:80%}
-.prop.fire{--pw:70%}.prop.rock{--pw:98%}
-.prop .pdecal{position:absolute;left:3%;right:3%;top:22%;bottom:3%;border-radius:50%;transform:translateZ(1px)}
-.prop.fire .pdecal{background:radial-gradient(closest-side,#ffb04aa0,#ff5a1f66 38%,#3a0d0055 70%,transparent);animation:pglow .45s ease-in-out infinite alternate}
-.prop.tree .pdecal{background:radial-gradient(closest-side,#f2fdffd0,#bff4ffa0 30%,#7fdcff55 60%,transparent),repeating-conic-gradient(from 10deg,#ffffff22 0 6deg,transparent 6deg 22deg);-webkit-mask:radial-gradient(closest-side,#000 55%,transparent);mask:radial-gradient(closest-side,#000 55%,transparent)}
-.prop.rock .pdecal{background:radial-gradient(closest-side,#000000e0,#140c08b0 45%,#3a1a0a40 75%,transparent)}
-.prop .pshade{position:absolute;left:50%;bottom:20%;width:var(--pw);height:auto;translate:-50% 0;transform-origin:50% 100%;transform:translateZ(1.5px) skewX(-34deg) scaleY(.5);filter:brightness(0) blur(1.5px);opacity:.75;-webkit-mask:linear-gradient(to top,#000 25%,transparent 95%);mask:linear-gradient(to top,#000 25%,transparent 95%)}
-.prop .pfoot{position:absolute;left:50%;bottom:20%;width:calc(var(--pw) * 1.05);height:26%;translate:-50% 50%;border-radius:50%;transform:translateZ(1.8px);background:radial-gradient(closest-side,#000e,#000a 45%,transparent)}
-.prop .pbill{position:absolute;left:50%;bottom:calc(20% - 8px);width:var(--pw);translate:-50% 0;transform-origin:50% 100%;transform:translateZ(12px) rotateX(-34deg)}
-.prop .pimg{display:block;width:100%;height:auto;filter:brightness(.9) contrast(1.06)}
-.prop .pao{position:absolute;inset:0;-webkit-mask:var(--m) center/100% 100% no-repeat;mask:var(--m) center/100% 100% no-repeat;background:linear-gradient(to top,#000c,#0000 32%),linear-gradient(to bottom,#29e6ff2a,#0000 28%)}
-.prop.fire .pao{background:linear-gradient(to top,#000a,#0000 25%),linear-gradient(to top,#ff6a1f44,#0000 60%)}
-.prop.tree .pao{background:linear-gradient(to top,#2a6a8a99,#0000 35%),linear-gradient(to bottom,#ffffff33,#0000 40%)}
+/* ---------- mặt bàn theo hành tinh ---------- */
+.board{background:linear-gradient(#05070d40,#05070d70),var(--bimg,none) center/cover,#0b1222;box-shadow:0 14px 0 #02040a,0 0 0 2px color-mix(in srgb,var(--bc,#29e6ff) 75%,#000),0 0 46px color-mix(in srgb,var(--bc,#29e6ff) 40%,transparent),0 26px 30px #000c}
+.board .cell,.board .cell.t-tree,.board .cell.t-fire,.board .cell.t-rock{background:#05070d2e;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--bc,#29e6ff) 55%,transparent),inset 0 0 14px #0009}
+.board .cell::before{display:none}
+/* ---------- vật cản 2.5D: hình vẽ từ góc cao, dựng song song màn hình, đáy hình là mép trước của chân đế ---------- */
+.prop{position:absolute;inset:0;transform-style:preserve-3d;pointer-events:none;--pw:92%}
+.prop.fire{--pw:76%}.prop.tree{--pw:104%}
+.prop .pdecal{position:absolute;left:2%;right:2%;top:16%;bottom:2%;border-radius:50%;transform:translateZ(1px)}
+.prop.fire .pdecal{background:radial-gradient(closest-side,#ffb04a90,#ff5a1f55 40%,#3a0d0044 72%,transparent);animation:pglow .45s ease-in-out infinite alternate}
+.prop.tree .pdecal{background:radial-gradient(closest-side,#f2fdffc0,#bff4ff90 32%,#7fdcff44 62%,transparent)}
+.prop.rock .pdecal{background:radial-gradient(closest-side,#000000d0,#140c08a0 48%,#3a1a0a38 76%,transparent)}
+.prop .pfoot{position:absolute;left:50%;top:62%;width:calc(var(--pw) * .96);height:44%;translate:-50% -50%;border-radius:50%;transform:translateZ(1.6px);background:radial-gradient(closest-side,#000d,#0009 55%,transparent)}
+.prop .pshade{display:none}
+.prop .pbill{position:absolute;left:50%;bottom:calc(8% - 8px);width:var(--pw);translate:-50% 0;transform-origin:50% 100%;transform:translateZ(12px) rotateX(-34deg)}
+.prop .pimg{display:block;width:100%;height:auto;filter:brightness(.92) contrast(1.05)}
 .prop .pfx{position:absolute;left:-70%;width:240%;bottom:-10%;height:230%;pointer-events:none}
 .prop.fire .pimg{animation:pfire .3s ease-in-out infinite alternate}
-@keyframes pfire{to{filter:brightness(1.08) contrast(1.06) saturate(1.15)}}
+@keyframes pfire{to{filter:brightness(1.08) contrast(1.05) saturate(1.15)}}
 @keyframes pglow{to{opacity:.65}}
+/* ---------- hoạt ảnh trùm ở màn hình chính ---------- */
+.fl-art video.paint{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;object-position:50% 20%;opacity:0;transition:opacity .5s;-webkit-mask:linear-gradient(transparent,#000 12%,#000 70%,transparent);mask:linear-gradient(transparent,#000 12%,#000 70%,transparent)}
+.fl-art video.paint.on{opacity:1}
 .shard{position:fixed;z-index:65;pointer-events:none}
-.board .cell.t-tree,.board .cell.t-fire,.board .cell.t-rock{background:#0b1222}
 /* ---------- bia đang có tác dụng ---------- */
 .beer em{font-style:normal;font-family:var(--display);font-weight:700;font-size:12px;margin-left:3px;padding:0 5px;border-radius:8px;background:#ff4fd8;color:#14041a}
 .beer.on{border-color:#ff4fd8;box-shadow:0 0 12px #ff4fd888}
@@ -1004,7 +1000,7 @@ class SpriteFig{constructor(id,mine,want,H){const m=this.m=ANIM[id];this.id=id;t
 const makeFig=(id,mine,want,H)=>{const ok=ANIM[id]&&['atk','hit'].every(c=>{const im=sheet(id,c);return im.complete&&im.naturalWidth});return ok?new SpriteFig(id,mine,want,H):new Puppet(id,mine,want,H)};
 async function duel(e,k){const f=(SV.fast?.55:1)*(k?.75:1),ms=x=>x*f;
  const br=$('#board').getBoundingClientRect(),[ax,ay]=cellCenter(e.from),[dx,dy]=cellCenter(e.to);
- const aLeft=ax<dx||(ax===dx&&e.ao==='p'),H=Math.min(innerHeight*.36,innerWidth*.6,340),base=br.top+br.height*.7,cx=br.left+br.width/2,sp=Math.min(innerWidth*.24,H*.62);
+ const aLeft=e.ao==='p',H=Math.min(innerHeight*.36,innerWidth*.6,340),base=br.top+br.height*.7,cx=br.left+br.width/2,sp=Math.min(innerWidth*.24,H*.62);
  const pos={l:[cx-sp,base],r:[cx+sp,base]},pa=pos[aLeft?'l':'r'],pd=pos[aLeft?'r':'l'],dir=aLeft?1:-1;
  const ov=document.createElement('div');ov.id='duel';ov.style.setProperty('--fh',H+'px');
  const PA=makeFig(e.wid,e.ao==='p',dir,H),PD=makeFig(e.did,e.ao!=='p',-dir,H),A=PA.el,D=PD.el;
@@ -1055,10 +1051,10 @@ function pfxLoop(){const cs=document.querySelectorAll('#match:not([hidden]) .pfx
   const dt=Math.min(3,(t-S.last)/16.7),ty=c.dataset.t,P=S.P,x=c.getContext('2d'),R=Math.random;S.last=t;
   const o={x0:W*.2917,x1:W*.7083,cx:W/2,top:H*.522,base:H*.957,w:W/2.4,h:H/2.3},u=o.h/100;
   const add=(n,f)=>{for(let k=R()<n*dt%1?Math.ceil(n*dt):Math.floor(n*dt);k>0;k--)P.push(f())};
-  if(ty==='fire'){add(4,()=>({k:'f',x:o.cx+(R()-.5)*o.w*.26,y:o.top+o.h*.2,vx:(R()-.5)*.25*u,vy:-(1+R()*1.1)*u,l:1,d:.035+R()*.03,s:o.w*(.12+R()*.08),ph:R()*6}));
-   add(.14,()=>({k:'e',x:o.cx+(R()-.5)*o.w*.2,y:o.top+o.h*.15,vx:(R()-.5)*.9*u,vy:-(1.1+R())*u,l:1,d:.012,s:1.3}));
+  if(ty==='fire'){add(4,()=>({k:'f',x:o.cx+(R()-.5)*o.w*.3,y:o.top+o.h*.17,vx:(R()-.5)*.25*u,vy:-(1+R()*1.1)*u,l:1,d:.035+R()*.03,s:o.w*(.12+R()*.08),ph:R()*6}));
+   add(.14,()=>({k:'e',x:o.cx+(R()-.5)*o.w*.25,y:o.top+o.h*.14,vx:(R()-.5)*.9*u,vy:-(1.1+R())*u,l:1,d:.012,s:1.3}));
    add(.22,()=>({k:'s',x:o.cx+(R()-.5)*o.w*.12,y:o.top-o.h*.02,vx:(.05+R()*.15)*u,vy:-(.3+R()*.2)*u,l:1,d:.007,s:o.w*.1}))}
-  if(ty==='tree'){add(.45,()=>({k:'n',x:o.x0-o.w*.35+R()*o.w*1.7,y:o.top-o.h*(.35+R()*.3),vx:0,vy:(.22+R()*.3)*u,l:1,d:-.0,s:.9+R()*1.2,ph:R()*6,a0:t}));
+  if(ty==='tree'){add(.5,()=>({k:'n',x:o.x0-o.w*.15+R()*o.w*1.3,y:o.top-o.h*(.1+R()*.35),vx:0,vy:(.5+R()*.5)*u,l:1,d:0,s:.6+R()*.9,ph:R()*6,a0:t}));
    add(.16,()=>({k:'m',x:o.cx+(R()-.5)*o.w*.8,y:o.base-o.h*.06,vx:(R()-.5)*.5*u,vy:-.05*u,l:1,d:.009,s:o.w*.1}));
    add(.06,()=>({k:'g',x:o.x0+o.w*(.2+R()*.6),y:o.top+o.h*(.05+R()*.55),vx:0,vy:0,l:1,d:.05,s:3+R()*3}))}
   if(ty==='rock'){add(.12,()=>({k:'s',x:o.x0+o.w*(.2+R()*.6),y:o.top+o.h*.25,vx:(R()-.5)*.1*u,vy:-(.2+R()*.15)*u,l:1,d:.008,s:o.w*.07}));
@@ -1091,9 +1087,9 @@ function shatter(img){const r=img.getBoundingClientRect(),c=img.cloneNode();c.cl
 
 /* ================= MATCH UI ================= */
 let M=null,cellEls=[];
-function show(id){coachOff();$$('.screen').forEach(s=>s.hidden=s.id!==id);if(id==='home')renderHome()}
+function show(id){coachOff();$$('.screen').forEach(s=>s.hidden=s.id!==id);if(id==='home')renderHome();else homeVid()}
 function renderCell(i,snap){const el=cellEls[i];el.className='cell t-'+snap.t+(M&&M.last===i?' last':'');delete el.dataset.fc;
- el.innerHTML=snap.t!=='none'?`<div class="prop ${snap.t}"><i class="pdecal"></i><i class="pfoot"></i><img class="pshade" src="art/prop_${snap.t}.webp" alt=""><div class="pbill"><img class="pimg" src="art/prop_${snap.t}.webp" alt="" draggable="false"><canvas class="pfx" data-t="${snap.t}"></canvas></div></div>`:snap.card?`<div class="slot">${cardHTML(snap.card)}</div>`:''}
+ el.innerHTML=snap.t!=='none'?`<div class="prop ${snap.t}"><i class="pdecal"></i><i class="pfoot"></i><div class="pbill"><img class="pimg" src="art/prop_${snap.t}.webp" alt="" draggable="false"><canvas class="pfx" data-t="${snap.t}"></canvas></div></div>`:snap.card?`<div class="slot">${cardHTML(snap.card)}</div>`:''}
 function renderAll(){M.S.cells.forEach((c,i)=>renderCell(i,c));if(M.S.cells.some(c=>c.t!=='none'))pfxStart();renderHand();
  updHud();renderEhand();
  beerBtn();
@@ -1248,17 +1244,22 @@ function packModal(ids,title,added){if(!added)ids.forEach(id=>addCard(id));save(
 /* ================= HOME / DECK / GACHA ================= */
 const FC=['#ff4a3a','#3a8bff','#ffd34d','#e8f4ff','#8a5cff','#5cff8a','#29e6ff','#b26bff','#3a4bff'];
 const STARS=["Hệ Hồng Tinh", "Hệ Lam Tinh", "Hệ Song Tinh", "Hệ Bạch Tinh", "Hành tinh lang thang", "Hệ Lục Tinh", "Hệ Thanh Tinh", "Hố đen Hắc Tinh"],depthName=i=>i>7?'Ngoài rìa thiên hà':STARS[i];
+const BOSSVID=['o1','o2','o3','o4','o5','o6','o7','lich'];
+/* Chỉ phát hoạt ảnh của trùm ở tầng đang xem, các tầng khác dừng để nhẹ máy. */
+function homeVid(){const tw=$('#tower');if(!tw||calm)return;const cur=$('#home').hidden?-1:Math.round(tw.scrollTop/(tw.clientHeight||1));
+ tw.querySelectorAll('.floor').forEach((f,i)=>{const v=f.querySelector('video');if(!v)return;
+  if(i===cur){if(!v.src)v.src=v.dataset.src;const pl=v.play();if(pl)pl.then(()=>v.classList.add('on')).catch(()=>{})}else{v.pause();v.classList.remove('on')}})}
 function renderHome(){$('#gold1').textContent=SV.gold;qDay();$('#bGacha').innerHTML='Mở gói'+(albumReady()?'<i class="dot"></i>':'');$('#bShop').innerHTML='Cửa hàng'+(SV.daily!==today()||QUESTS.some(q=>SV.q[q.k]>=q.n&&!SV.q.got.includes(q.k))?'<i class="dot"></i>':'');const tw=$('#tower');
  tw.innerHTML=OPPS.map((o,i)=>{const lock=i>SV.stage,done=i<SV.stage||(o.boss&&SV.boss),g=o.gift,got=SV.gifts.includes(i);
   return `<div class="floor${lock?' locked':''}${o.boss?' boss':''}" style="--fc:${FC[i]}">
    <div class="fl-top">${i?'':'<div class="fl-logo">Huyền Ấn</div>'}<span class="fl-depth">${depthName(i)}</span><h2>${o.place}</h2></div>
-   <div class="fl-art"><img class="paint" src="${ART[o.av]}" alt="" draggable="false"></div>
+   <div class="fl-art"><img class="paint" src="${ART[o.av]}" alt="" draggable="false">${BOSSVID.includes(o.av)&&!lock?`<video class="paint" muted loop playsinline preload="none" data-src="art/boss/${o.av}.mp4"></video>`:''}</div>
    <div class="fl-body"><b class="fl-name">${lock&&!o.boss?'? ? ?':o.n}</b><div class="dim">${o.t}${done?' · đã hạ':''}${o.abyss&&SV.abyss?' · kỷ lục '+SV.abyss:''}</div>${lock?'':`<div class="fl-style">Lối đánh: ${o.style}</div>`}${o.sig&&!lock?`<div class="fl-sig"><div>${cardHTML(inst(o.sig.id,'e',o.sig.s))}</div><span>Lá đặc trưng${SV.sigs[i]?` · đã đoạt ×${SV.sigs[i]}`:''}<br><small>Thắng cách từ 3 lá để đoạt</small></span></div>`:''}${SV.host.some(h=>h.ix===i)?`<div class="fl-host">Đang giữ con tin: ${SV.host.filter(h=>h.ix===i).map(h=>CARDS[h.id].n).join(', ')}. Thắng để chuộc.</div>`:''}
     ${g&&!got&&!lock?`<div class="fl-gift">Thưởng lần đầu: ${g.card?'lá '+CARDS[g.card].n:g.gold+' credit'}</div>`:''}
     ${lock?`<button class="btn ghost" disabled>Thắng ở ${OPPS[i-1].place} để mở</button>`:`<button class="btn go" data-i="${i}">${i===0&&!SV.tut?'Vào trận đầu tiên':`Vào trận · cược ${o.bet} credit`}</button>`}
     ${i<OPPS.length-1?`<div class="fl-hint">▾ Vuốt lên để bay tới ${OPPS[i+1].place}</div>`:'<div class="fl-hint" style="animation:none">Không có điểm cuối</div>'}</div></div>`}).join('');
- requestAnimationFrame(()=>{tw.scrollTop=Math.min(SV.stage,OPPS.length-1)*tw.clientHeight;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)))});$('#bDeck').hidden=SV.stage<2;$('#bGacha').hidden=SV.stage<2;$('#bShop').hidden=SV.stage<1;setTimeout(homeTips,450)}
-$('#tower').addEventListener('scroll',e=>{const tw=e.currentTarget;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)))},{passive:true});
+ requestAnimationFrame(()=>{tw.scrollTop=Math.min(SV.stage,OPPS.length-1)*tw.clientHeight;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)))});$('#bDeck').hidden=SV.stage<2;$('#bGacha').hidden=SV.stage<2;$('#bShop').hidden=SV.stage<1;setTimeout(homeTips,450);setTimeout(homeVid,200)}
+let hvT=0;$('#tower').addEventListener('scroll',e=>{const tw=e.currentTarget;$('#depth').textContent=depthName(Math.round(tw.scrollTop/(tw.clientHeight||1)));clearTimeout(hvT);hvT=setTimeout(homeVid,180)},{passive:true});
 $('#tower').addEventListener('click',e=>{const b=e.target.closest('.go');if(b){prepMult=1;const i=+b.dataset.i;if(i===0&&!SV.tut)return runTutorial();startMatch(OPPS[i])}});
 $$('[data-home]').forEach(b=>b.onclick=()=>show('home'));
 let dkFilter='all',dkSel=null,dkArm=false,dkMsg='';
@@ -1393,10 +1394,10 @@ $('#cSkip').onclick=()=>{SV.tut=1;save();endTut();const w=T.waits;T.waits=[];w.f
 /* Đối thủ đi theo kịch bản khi có, không thì để máy tự nghĩ. */
 function nextBot(){if(M.script&&M.script.length){const[id,c]=M.script.shift();const hi=M.S.hands.e.findIndex(x=>x.id===id);if(hi>=0&&isFree(M.S.cells[c]))return[hi,c]}return botMove(M.S,M.opp)}
 
-function enterMatch(opp){const b=$('#board');b.innerHTML='';cellEls=[];for(let i=0;i<16;i++){const d=document.createElement('div');d.className='cell';d.dataset.i=i;d.style.setProperty('--tile',`url(art/tile${Math.random()*4|0}.webp)`);d.style.setProperty('--rot',(Math.random()*4|0)*90+'deg');b.append(d);cellEls.push(d)}
- $('#match').style.setProperty('--mbg',`url(art/bg${Math.max(0,Math.min(OPPS.indexOf(opp),7))}.webp)`);
+function enterMatch(opp){const b=$('#board');b.innerHTML='';cellEls=[];for(let i=0;i<16;i++){const d=document.createElement('div');d.className='cell';d.dataset.i=i;b.append(d);cellEls.push(d)}
+ {const ix=OPPS.indexOf(opp),pl=ix<0?7:Math.min(ix,7);$('#match').style.setProperty('--mbg',`url(art/bg${pl}.webp)`);b.style.setProperty('--bimg',`url(art/board${pl}.webp)`);b.style.setProperty('--bc',FC[ix<0?8:ix])}
  $('#mAv').src=ART[opp.av];$('#mName').textContent=opp.n;$('#legend').innerHTML=(M.S.el?triHTML()+'<span class="dim">+1</span>':'')+M.S.rules.map(r=>`<button class="rchip" data-r="${r}">${RULE[r].n}</button>`).join('');
- show('match');[...M.S.hands.p,...M.S.hands.e].forEach(c=>{figLoad(c.id)});$('#board').classList.add('intro');$('#hand').classList.add('deal');setTimeout(()=>{$('#board').classList.remove('intro');$('#hand').classList.remove('deal')},1100);renderAll();fitBoard();taunt(opp.say&&opp.say[0])}
+ show('match');{const keep=new Set([...M.S.hands.p,...M.S.hands.e].map(c=>c.id));for(const k in SHEET)if(!keep.has(k.slice(0,k.lastIndexOf('_'))))delete SHEET[k];keep.forEach(figLoad)}$('#board').classList.add('intro');$('#hand').classList.add('deal');setTimeout(()=>{$('#board').classList.remove('intro');$('#hand').classList.remove('deal')},1100);renderAll();fitBoard();taunt(opp.say&&opp.say[0])}
 function taunt(t){const o=$('#taunt');if(o)o.remove();if(!t)return;const d=document.createElement('div');d.id='taunt';d.textContent='“'+t+'”';$('#match').append(d);setTimeout(()=>d.remove(),3600)}
 const quote=(o,k)=>o&&o.say?`<p class="quote"><img src="${ART[o.av]}" alt="">“${o.say[k]}”</p>`:'';
 

@@ -2,9 +2,9 @@
 // Dùng: node bake_props.js <thư mục webp nguồn> <thư mục ra>
 const { chromium } = require('playwright'); const fs = require('fs'), path = require('path');
 const [src, dst] = process.argv.slice(2);
-const LOOK = { tree: [['to top', '#2a6a8aa0', 0, '#0000', .35], ['to bottom', '#ffffff30', 0, '#0000', .4]],
-  fire: [['to top', '#000a', 0, '#0000', .25], ['to top', '#ff6a1f40', 0, '#0000', .6]],
-  rock: [['to top', '#000c', 0, '#0000', .32], ['to bottom', '#29e6ff26', 0, '#0000', .28]] };
+const LOOK = { tree: [['to top', '#1f5f8490', 0, '#0000', .3], ['to bottom', '#ffffff26', 0, '#0000', .35]],
+  fire: [['to top', '#0009', 0, '#0000', .22], ['to top', '#ff6a1f30', 0, '#0000', .55]],
+  rock: [['to top', '#000b', 0, '#0000', .28], ['to bottom', '#29e6ff1c', 0, '#0000', .25]] };
 (async () => { const b = await chromium.launch(); const p = await b.newPage();
   for (const t of Object.keys(LOOK)) {
     const d = 'data:image/webp;base64,' + fs.readFileSync(path.join(src, `prop_${t}.webp`)).toString('base64');

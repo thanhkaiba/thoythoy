@@ -1,0 +1,57 @@
+[
+ {
+  "file": "board0.png",
+  "ar": "4:5",
+  "prompt": "top-down orthographic view looking straight down at a flat rectangular game board playing surface, rusted riveted steel hull plates of a crashed spaceship half buried in red desert sand, oil stains, scattered bolts and rust flakes, red-orange dust, evenly lit, completely flat ground, no perspective, no horizon, no sky, no characters, no tall objects, the ground texture fills the entire frame edge to edge, dark moody painterly sci-fi game art, rich detail, slightly darker toward the edges, no text, no letters, no logos, no watermark, no grid"
+ },
+ {
+  "file": "board1.png",
+  "ar": "4:5",
+  "prompt": "top-down orthographic view looking straight down at a flat rectangular game board playing surface, grey lunar regolith with small craters, embedded glowing neon magenta and cyan light strips and circuit lines running through the moon dust, evenly lit, completely flat ground, no perspective, no horizon, no sky, no characters, no tall objects, the ground texture fills the entire frame edge to edge, dark moody painterly sci-fi game art, rich detail, slightly darker toward the edges, no text, no letters, no logos, no watermark, no grid"
+ },
+ {
+  "file": "board2.png",
+  "ar": "4:5",
+  "prompt": "top-down orthographic view looking straight down at a flat rectangular game board playing surface, a jungle floor made of thick tangled black cables and roots, patches of dark green moss, thin glowing green fibre optic strands, damp mist, evenly lit, completely flat ground, no perspective, no horizon, no sky, no characters, no tall objects, the ground texture fills the entire frame edge to edge, dark moody painterly sci-fi game art, rich detail, slightly darker toward the edges, no text, no letters, no logos, no watermark, no grid"
+ },
+ {
+  "file": "board3.png",
+  "ar": "4:5",
+  "prompt": "top-down orthographic view looking straight down at a flat rectangular game board playing surface, a blackened iron foundry floor of heavy cast plates with narrow channels of glowing orange molten metal running between them, soot and sparks, evenly lit, completely flat ground, no perspective, no horizon, no sky, no characters, no tall objects, the ground texture fills the entire frame edge to edge, dark moody painterly sci-fi game art, rich detail, slightly darker toward the edges, no text, no letters, no logos, no watermark, no grid"
+ },
+ {
+  "file": "board4.png",
+  "ar": "4:5",
+  "prompt": "top-down orthographic view looking straight down at a flat rectangular game board playing surface, the floor of an underground hive tunnel in black ice, silver web strands stretched across it, small glowing magenta egg pods half buried, frozen cables, evenly lit, completely flat ground, no perspective, no horizon, no sky, no characters, no tall objects, the ground texture fills the entire frame edge to edge, dark moody painterly sci-fi game art, rich detail, slightly darker toward the edges, no text, no letters, no logos, no watermark, no grid"
+ },
+ {
+  "file": "board5.png",
+  "ar": "4:5",
+  "prompt": "top-down orthographic view looking straight down at a flat rectangular game board playing surface, a corroded metal grating deck over glowing acid-green toxic water, yellow corrosion stains, bubbles and green steam seeping through the gaps, evenly lit, completely flat ground, no perspective, no horizon, no sky, no characters, no tall objects, the ground texture fills the entire frame edge to edge, dark moody painterly sci-fi game art, rich detail, slightly darker toward the edges, no text, no letters, no logos, no watermark, no grid"
+ },
+ {
+  "file": "board6.png",
+  "ar": "4:5",
+  "prompt": "top-down orthographic view looking straight down at a flat rectangular game board playing surface, cracked black volcanic basalt with glowing orange lava veins in the cracks, ash, faint blue starlight glinting on obsidian shards, evenly lit, completely flat ground, no perspective, no horizon, no sky, no characters, no tall objects, the ground texture fills the entire frame edge to edge, dark moody painterly sci-fi game art, rich detail, slightly darker toward the edges, no text, no letters, no logos, no watermark, no grid"
+ },
+ {
+  "file": "board7.png",
+  "ar": "4:5",
+  "prompt": "top-down orthographic view looking straight down at a flat rectangular game board playing surface, a black glass floor floating in deep space, glowing violet and gold circuit runes etched into it, reflections of stars and a golden accretion ring, evenly lit, completely flat ground, no perspective, no horizon, no sky, no characters, no tall objects, the ground texture fills the entire frame edge to edge, dark moody painterly sci-fi game art, rich detail, slightly darker toward the edges, no text, no letters, no logos, no watermark, no grid"
+ },
+ {
+  "file": "prop2_tree.png",
+  "ar": "1:1",
+  "prompt": "a single jagged cluster of glowing pale cyan ice crystals frozen around a broken robot arm, frost on the ground around its base, isometric video game prop, viewed from a high camera angle looking down at about 55 degrees so its top surface is clearly visible, compact and squat, isolated and centered on a plain flat medium grey background, nothing else in frame, no cast shadow, dark gritty cyberpunk painterly style, highly detailed, no text, no letters, no logos, no watermark"
+ },
+ {
+  "file": "prop2_fire.png",
+  "ar": "1:1",
+  "prompt": "a single squat overheating reactor furnace, a wide riveted dark steel drum with orange-hot glowing grille vents around its side and an open glowing exhaust port on its flat top, yellow and black hazard stripes around its base, no flames, isometric video game prop, viewed from a high camera angle looking down at about 55 degrees so its top surface is clearly visible, compact and squat, isolated and centered on a plain flat medium grey background, nothing else in frame, no cast shadow, dark gritty cyberpunk painterly style, highly detailed, no text, no letters, no logos, no watermark"
+ },
+ {
+  "file": "prop2_rock.png",
+  "ar": "1:1",
+  "prompt": "a single compact heap of rusted scrap metal with gears, bent pipes, cracked armour plates, frayed cables and a broken robot head with a dim red eye on top, isometric video game prop, viewed from a high camera angle looking down at about 55 degrees so its top surface is clearly visible, compact and squat, isolated and centered on a plain flat medium grey background, nothing else in frame, no cast shadow, dark gritty cyberpunk painterly style, highly detailed, no text, no letters, no logos, no watermark"
+ }
+]

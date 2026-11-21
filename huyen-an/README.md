@@ -48,6 +48,7 @@ Muốn thay tranh: ghi đè file cùng tên, hoặc thêm khóa mới vào `ART`
 - Tranh linh thú, đối thủ và chủ tiệm: tạo bằng AI (Flux 2 Pro qua Replicate), câu lệnh trong `art-prompts/`.
 - Hình nhân vật trong cảnh đấu (`web/art/cut/`) tách nền từ tranh lá bài bằng `art-prompts/cutout.py`; vật cản 2.5D (`web/art/prop_*.webp`) tạo từ `art-prompts/props_prompts.json`, tách nền cùng cách, cắt sát bằng `crop_webp.js` rồi vẽ sẵn bóng chân bằng `bake_props.js`.
 - Hoạt ảnh đánh và trúng đòn (`web/art/anim/`): tạo video từ hình tách nền bằng `art-prompts/vid_compose.js` + `vid_gen.py` (Wan 2.2 i2v, nền xanh, khung đầu và cuối trùng nhau; câu lệnh sinh bằng `vid_jobs.py`, đòn đánh có đạn theo vũ khí), tách nền từng khung bằng `vid_frames.sh` (ffmpeg chromakey), ghép sprite bằng `vid_pack.js` (mô tả khung ghi trong `anim_meta.json`).
+- Mặt bàn theo hành tinh (`web/art/board0-7.webp`) và vật cản góc nhìn từ trên cao tạo từ `art-prompts/board_prompts.json`; hoạt ảnh trùm ở màn hình chính (`web/art/boss/*.mp4`) tạo từ tranh trùm bằng `vid_gen.py` với `boss_jobs.json`.
   Khi phát hành trên Steam cần khai báo có dùng nội dung tạo bằng AI.
 - Biểu tượng giao diện: [game-icons.net](https://game-icons.net) (Lorc, Delapouite, Skoll và cộng sự), CC BY 3.0.
 - Font: Chakra Petch, Be Vietnam Pro (SIL Open Font License).
