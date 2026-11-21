@@ -46,7 +46,7 @@ Muốn thay tranh: ghi đè file cùng tên, hoặc thêm khóa mới vào `ART`
 ## Ghi công và giấy phép tranh
 
 - Tranh linh thú, đối thủ và chủ tiệm: tạo bằng AI (Flux 2 Pro qua Replicate), câu lệnh trong `art-prompts/`.
-- Hình nhân vật trong cảnh đấu (`web/art/cut/`) tách nền từ tranh lá bài bằng `art-prompts/cutout.py`; vật cản 2.5D (`web/art/prop_*.webp`) tạo từ `art-prompts/props_prompts.json` rồi tách nền cùng cách.
+- Hình nhân vật trong cảnh đấu (`web/art/cut/`) tách nền từ tranh lá bài bằng `art-prompts/cutout.py`; vật cản 2.5D (`web/art/prop_*.webp`) tạo từ `art-prompts/props_prompts.json`, tách nền cùng cách, cắt sát bằng `crop_webp.js` rồi vẽ sẵn bóng chân bằng `bake_props.js`.
   Khi phát hành trên Steam cần khai báo có dùng nội dung tạo bằng AI.
 - Biểu tượng giao diện: [game-icons.net](https://game-icons.net) (Lorc, Delapouite, Skoll và cộng sự), CC BY 3.0.
 - Font: Chakra Petch, Be Vietnam Pro (SIL Open Font License).
