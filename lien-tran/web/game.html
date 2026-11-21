@@ -43,7 +43,7 @@ h1,h2,h3,.serif{font-family:'Cormorant Garamond','Be Vietnam Pro',serif;font-wei
 #info .hint{color:var(--ink2);line-height:1.45}
 #info .hint b{color:var(--ink)}
 .pt{width:62px;height:62px;border-radius:8px;border:2px solid var(--ink);object-fit:cover;flex:none;background:var(--paper)}
-.foe .pt,.pt.foe{filter:grayscale(1) sepia(1) hue-rotate(215deg) saturate(2.6) brightness(.72);border-color:var(--violet)}
+.foe .pt,.pt.foe{border-color:var(--violet);image-rendering:pixelated}
 .ustat{min-width:0;flex:1;line-height:1.35}
 .ustat .nm{font-weight:700;font-size:15px}
 .ustat .nm small{font-weight:400;color:var(--ink2);font-size:12px;margin-left:4px}
@@ -81,10 +81,11 @@ h1,h2,h3,.serif{font-family:'Cormorant Garamond','Be Vietnam Pro',serif;font-wei
 @media(max-width:430px){#hand{grid-template-columns:repeat(3,1fr)}}
 .card{position:relative;aspect-ratio:5/7;border:2px solid var(--ink);border-radius:8px;background:var(--paper) linear-gradient(180deg,#f8efd9,var(--paper2));padding:6px 5px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:space-between;box-shadow:0 3px 0 rgba(0,0,0,.45);transition:transform .12s}
 .card.sel{transform:translateY(-6px);outline:3px solid var(--gold);box-shadow:0 9px 14px rgba(0,0,0,.5)}
-.card .cn{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.05}
-.card .ace{width:38px;height:38px;border-radius:50%;border:2px solid var(--red);display:grid;place-items:center;background:#fbf4e2}
-.card .ace img{width:24px;height:24px}
-.card .ace.any{border-style:dashed;color:var(--red);font-weight:700;font-size:11px}
+.card .cn{font-family:'Cormorant Garamond',serif;font-size:16px;line-height:1.05;white-space:nowrap}
+.card .art{position:relative;width:100%;flex:1;min-height:0;margin:3px 0;border:1.5px solid var(--ink);border-radius:5px;background:#cdbb92 center/cover}
+.card .ace{position:absolute;right:-5px;bottom:-5px;width:28px;height:28px;border-radius:50%;border:2px solid var(--red);display:grid;place-items:center;background:#fbf4e2}
+.card .ace img{width:17px;height:17px}
+.card .ace.any{color:var(--red);font-weight:700;font-size:8.5px}
 .card .nums{display:flex;gap:4px;width:100%;justify-content:center}
 .card .nums div{flex:1;border-top:1.5px solid var(--ink);padding-top:2px;font-size:10px;color:var(--ink2);line-height:1.1}
 .card .nums b{display:block;font-family:'Cormorant Garamond',serif;font-size:21px;color:var(--ink)}
@@ -268,22 +269,27 @@ const ENEMY_DECK=[{pow:2,move:5},{pow:2,move:6},{pow:2,move:5},{pow:2,move:7},{p
 /* Atlas khung hình (sinh bởi tools/build_art.py) */
 const ATLAS={sam_atk:{n:5,w:232,h:180},sam_skill:{n:4,w:534,h:149},sam_front:{n:4,w:246,h:212},gan_atk:{n:4,w:274,h:201},
   rai_atk:{n:5,w:220,h:177},rai_skill:{n:5,w:244,h:169},yae_atk:{n:4,w:224,h:214}};
+// Sprite tạm vẽ bằng code (tools/gen_placeholder_art.py): lính phe ta, ảnh binh, đội trưởng, Ảnh Tướng
+const GEN=['boss'];for(const w of ['kiem','thuong','cung','truong'])GEN.push('sol_'+w,'sh_'+w,'cap_'+w);
+for(const k of GEN)ATLAS[k]={n:4,w:288,h:240};
 const SPR={
   sam:{map:['sam_front',0,205],idle:['sam_atk',4],atk:['sam_atk',[0,1,2,3,4]],skill:['sam_skill',[0,1,2,2,3]],body:150,pt:'p_sam.jpg'},
   rai:{map:['rai_atk',0,160],idle:['rai_atk',0],atk:['rai_atk',[1,2,3,3,4]],skill:['rai_skill',[0,1,2,3,4,4]],body:160,pt:'p_rai.jpg'},
   gan:{map:['gan_atk',0,192],idle:['gan_atk',0],atk:['gan_atk',[1,1,2,2,3]],skill:null,body:192,pt:'p_gan.jpg'},
   yae:{map:['yae_atk',0,200],idle:['yae_atk',0],atk:['yae_atk',[1,1,2,2,3]],skill:null,body:200,pt:'p_yae.jpg'}};
+for(const k of GEN){const b=k==='boss'?150:k.startsWith('sol_')?164:152;SPR[k]={map:[k,0,b+14],idle:[k,0],atk:[k,[1,1,2,2,3]],skill:null,body:b,pt:k==='boss'?'p_boss.jpg':'p_shadow.jpg'}}
+const solOf=u=>SPR[(u.side?'sh_':'sol_')+u.weapon]; // lính trong đội: phe ta mặc màu áo theo tướng, phe địch là ảnh binh
 
 function mkUnits(){return [
   {id:'hoa',name:'Xích Hoa',role:'Kiếm khách',side:0,weapon:'kiem',form:'cross',atk:4,def:4,tec:3,max:2600,spr:'sam',x:3,y:7,leader:true},
   {id:'loi',name:'Tử Lôi',role:'Thương thủ',side:0,weapon:'thuong',form:'diag',atk:5,def:3,tec:2,max:2200,spr:'rai',x:2,y:8},
   {id:'vu',name:'Băng Vũ',role:'Cung thủ',side:0,weapon:'cung',form:'cross',atk:3,def:2,tec:5,max:1800,spr:'gan',x:4,y:8},
   {id:'linh',name:'Đào Linh',role:'Thuật sĩ',side:0,weapon:'truong',form:'diag',atk:4,def:2,tec:4,max:1800,spr:'yae',x:3,y:8},
-  {id:'e1',name:'Ảnh Kiếm',role:'Ảnh binh',side:1,weapon:'kiem',form:'cross',atk:3,def:2,tec:2,max:850,spr:'sam',x:2,y:4},
-  {id:'e2',name:'Ảnh Cung',role:'Ảnh binh',side:1,weapon:'cung',form:'cross',atk:3,def:2,tec:2,max:750,spr:'gan',x:5,y:2,guard:3},
-  {id:'e3',name:'Ảnh Thuật',role:'Ảnh binh',side:1,weapon:'truong',form:'diag',atk:3,def:2,tec:2,max:750,spr:'yae',x:3,y:2,guard:3},
-  {id:'e4',name:'Ảnh Thương',role:'Ảnh binh',side:1,weapon:'thuong',form:'cross',atk:3,def:3,tec:2,max:900,spr:'rai',x:2,y:1,guard:3},
-  {id:'boss',name:'Ảnh Tướng',role:'Chủ thành',side:1,weapon:'thuong',form:'cross',atk:4,def:3,tec:3,max:1900,spr:'rai',x:3,y:0,boss:true,hold:true}
+  {id:'e1',name:'Ảnh Kiếm',role:'Ảnh binh',side:1,weapon:'kiem',form:'cross',atk:3,def:2,tec:2,max:850,spr:'cap_kiem',x:2,y:4},
+  {id:'e2',name:'Ảnh Cung',role:'Ảnh binh',side:1,weapon:'cung',form:'cross',atk:3,def:2,tec:2,max:750,spr:'cap_cung',x:5,y:2,guard:3},
+  {id:'e3',name:'Ảnh Thuật',role:'Ảnh binh',side:1,weapon:'truong',form:'diag',atk:3,def:2,tec:2,max:750,spr:'cap_truong',x:3,y:2,guard:3},
+  {id:'e4',name:'Ảnh Thương',role:'Ảnh binh',side:1,weapon:'thuong',form:'cross',atk:3,def:3,tec:2,max:900,spr:'cap_thuong',x:2,y:1,guard:3},
+  {id:'boss',name:'Ảnh Tướng',role:'Chủ thành',side:1,weapon:'thuong',form:'cross',atk:4,def:3,tec:3,max:1900,spr:'boss',x:3,y:0,boss:true,hold:true}
 ].map(u=>({...u,morale:u.max,px:u.x,py:u.y,done:false,alive:true,fade:1}))}
 
 const G={units:[],turn:0,phase:'title',card:null,pool:0,attacked:false,hand:[],sel:null,reach:null,targets:[],busy:false,
@@ -292,12 +298,6 @@ const G={units:[],turn:0,phase:'title',card:null,pool:0,attacked:false,hand:[],s
 /* ================= Tải hình ================= */
 const IMG={},ICON={};
 function loadImg(k,src){return new Promise((res,rej)=>{const i=new Image();i.onload=()=>{IMG[k]=i;res()};i.onerror=()=>rej(new Error('Không tải được '+src));i.src=src})}
-function tint(img){ // bản "ảnh binh": nhuộm tím, giữ nguyên độ sáng tối của sprite
-  const c=document.createElement('canvas');c.width=img.width;c.height=img.height;const x=c.getContext('2d');
-  x.drawImage(img,0,0);x.globalCompositeOperation='saturation';x.fillStyle='hsl(265,22%,50%)';x.fillRect(0,0,c.width,c.height);
-  x.globalCompositeOperation='source-atop';x.fillStyle='rgba(112,58,205,.36)';x.fillRect(0,0,c.width,c.height);
-  x.globalCompositeOperation='multiply';x.fillStyle='#b5a2e6';x.fillRect(0,0,c.width,c.height);
-  x.globalCompositeOperation='destination-in';x.drawImage(img,0,0);return c}
 function wIcon(c,t,x,y,r,col){c.save();c.translate(x,y);c.strokeStyle=col;c.fillStyle=col;c.lineWidth=Math.max(1.4,r*.2);c.lineCap='round';c.lineJoin='round';
   if(t==='kiem'){c.beginPath();c.moveTo(-r*.62,r*.62);c.lineTo(r*.68,-r*.68);c.stroke();c.beginPath();c.moveTo(-r*.6,0);c.lineTo(0,r*.6);c.stroke()}
   else if(t==='thuong'){c.beginPath();c.moveTo(-r*.68,r*.68);c.lineTo(r*.25,-r*.25);c.stroke();c.beginPath();c.moveTo(r*.75,-r*.75);c.lineTo(r*.5,.02*r);c.lineTo(-.02*r,-r*.5);c.closePath();c.fill()}
@@ -305,14 +305,13 @@ function wIcon(c,t,x,y,r,col){c.save();c.translate(x,y);c.strokeStyle=col;c.fill
   else{c.beginPath();c.moveTo(-r*.55,r*.72);c.lineTo(r*.15,-r*.12);c.stroke();c.beginPath();c.arc(r*.38,-r*.42,r*.32,0,7);c.fill()}
   c.restore()}
 async function loadAll(){
-  const jobs=Object.keys(ATLAS).map(k=>loadImg(k,'art/'+k+'.webp'));
+  const jobs=Object.keys(ATLAS).map(k=>loadImg(k,'art/'+k+'.webp')).concat(CARDS.map(k=>loadImg('card_'+k.id,'art/card_'+k.id+'.webp')));
   await Promise.all(jobs);
-  for(const k of Object.keys(ATLAS))IMG[k+'_sh']=tint(IMG[k]);
   for(const t of Object.keys(WEAPONS)){const c=document.createElement('canvas');c.width=c.height=48;wIcon(c.getContext('2d'),t,24,24,19,'#2b1d14');ICON[t]=c.toDataURL()}
 }
 function sprite(c,key,frame,x,y,scale,flip,shadow,alpha){
-  const a=ATLAS[key],img=IMG[key+(shadow?'_sh':'')];const w=a.w*scale,h=a.h*scale;
-  c.save();c.translate(x,y);if(flip)c.scale(-1,1);if(alpha!=null)c.globalAlpha*=alpha;if(shadow){c.shadowColor='rgba(150,70,255,.95)';c.shadowBlur=Math.max(6,h*.07)}
+  const a=ATLAS[key],img=IMG[key];const w=a.w*scale,h=a.h*scale;
+  c.save();c.translate(x,y);if(flip)c.scale(-1,1);if(alpha!=null)c.globalAlpha*=alpha;if(shadow){c.shadowColor='rgba(170,110,255,.9)';c.shadowBlur=Math.max(5,h*.06)}
   c.drawImage(img,frame*a.w,0,a.w,a.h,-w/2,-h,w,h);c.restore()}
 
 /* ================= Vẽ địa hình (thủ công bằng canvas, kiểu tranh giấy) ================= */
@@ -481,7 +480,7 @@ function sfx(k){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)(
 let pick=null;
 function openCards(){pick=null;const h=$('#hand');h.innerHTML='';
   for(const k of G.hand){const b=document.createElement('button');b.className='card';b.dataset.id=k.id;
-    b.innerHTML=`<div class="cn">${k.name}</div>${k.ace?`<div class="ace"><img src="${ICON[k.ace]}" alt="${WEAPONS[k.ace].name}"></div>`:`<div class="ace any">${k.ace===false?'—':'MỌI HỆ'}</div>`}
+    b.innerHTML=`<div class="cn">${k.name}</div><div class="art" style="background-image:url(art/card_${k.id}.webp)">${k.ace?`<div class="ace"><img src="${ICON[k.ace]}" alt="${WEAPONS[k.ace].name}"></div>`:k.ace===false?'':`<div class="ace any">MỌI</div>`}</div>
     <div class="nums"><div class="pw"><b>${k.pow}</b>Lực</div><div class="mv"><b>${k.move}</b>Bước</div></div>`;
     b.onclick=()=>{pick=k;sfx('tick');h.querySelectorAll('.card').forEach(x=>x.classList.toggle('sel',x===b));
       $('#cardDesc').innerHTML=`<b>${k.name}</b> · Lực ${k.pow} · ${k.move} bước<div class="d">${k.ace===false?'':'Tuyệt kỹ ('+(k.ace?'tướng hệ '+WEAPONS[k.ace].name:'mọi tướng')+'): '}${k.skill}</div>`;$('#btnPlay').disabled=false};
@@ -629,7 +628,7 @@ function clashUpdate(dt){
   for(const f of C.fx)f.t+=dt;C.fx=C.fx.filter(f=>f.t<f.d);if(C.shake>0)C.shake-=dt;
   const g=$('#gauge');g.firstElementChild.style.width=G.gauge+'%';g.lastElementChild.textContent=`Khí ${Math.floor(G.gauge)}%`;g.classList.toggle('full',G.gauge>=100)}
 function drawActor(c,S,a,isLead){
-  const u=S.u,sp=SPR[u.spr],flip=!S.left,sh=u.side===1;
+  const u=S.u,sp=isLead?SPR[u.spr]:solOf(u),flip=!S.left,sh=u.side===1;
   let key=sp.idle[0],fr=sp.idle[1];
   if(isLead&&a.skill>=0&&a.skill<.9){const seq=sp.skill||sp.atk;key=seq[0];fr=seq[1][Math.min(seq[1].length-1,Math.floor(a.skill*seq[1].length/.9))]}
   else if(a.at>=0){const seq=sp.atk[1];fr=seq[Math.min(seq.length-1,Math.floor(a.at*seq.length/.45))];key=sp.atk[0]}
@@ -668,7 +667,8 @@ function drawClash(){
   if(C.phase==='intro'){const k=clamp(C.pt/.35,0,1);c.globalAlpha=k;c.fillStyle='rgba(43,29,20,.75)';c.fillRect(0,150,CW,84);c.fillStyle='#f6ecd4';c.textAlign='center';c.font="700 44px 'Cormorant Garamond'";c.fillText(`${C.p.u.name}  ✕  ${C.e.u.name}`,CW/2,205);
     if(C.adv){c.font="700 18px 'Be Vietnam Pro'";c.fillStyle=C.adv>0?'#b8ffb0':'#ffb0a0';c.fillText(C.adv>0?'▲ Lợi thế vũ khí':'▼ Bất lợi vũ khí',CW/2,258)}c.globalAlpha=1}
   // tuyệt kỹ
-  if(C.cut>0){const k=1-C.cut/1.15;c.fillStyle='rgba(20,10,30,.6)';c.fillRect(0,0,CW,CH);c.fillStyle='#a8322a';c.fillRect(0,150,CW*clamp(k*4,0,1),80);c.fillStyle='#fff5e0';c.textAlign='center';c.font="700 54px 'Cormorant Garamond'";c.fillText(C.cutName,CW/2+(1-clamp(k*3,0,1))*-300,208)}
+  if(C.cut>0){const k=1-C.cut/1.15;c.fillStyle='rgba(20,10,30,.6)';c.fillRect(0,0,CW,CH);c.fillStyle='#a8322a';c.fillRect(0,150,CW*clamp(k*4,0,1),80);c.fillStyle='#fff5e0';c.textAlign='center';c.font="700 54px 'Cormorant Garamond'";c.fillText(C.cutName,CW/2+60+(1-clamp(k*3,0,1))*-300,208);
+    const im=IMG['card_'+G.card.id],ix=40+(1-clamp(k*3,0,1))*-260;c.fillStyle='#2b1d14';c.fillRect(ix-4,116,168,128);c.drawImage(im,ix,120,160,120)}
   // kết quả
   if(C.phase==='outro'||C.phase==='done'){const k=clamp(C.pt/.3,0,1),r=C.res;c.globalAlpha=k;c.textAlign='center';c.font="700 86px 'Cormorant Garamond'";c.lineWidth=10;c.strokeStyle='#2b1d14';c.fillStyle=r.win==='P'?'#ffd75a':r.win==='E'?'#c9c0d6':'#f6ecd4';
     c.strokeText(r.txt,CW/2,170);c.fillText(r.txt,CW/2,170);c.font="700 30px 'Be Vietnam Pro'";c.lineWidth=6;c.fillStyle='#ff8b7a';
@@ -723,7 +723,7 @@ async function newGame(intro){
   Object.assign(G,{units:mkUnits(),turn:0,phase:'intro',card:null,pool:0,attacked:false,hand:CARDS.slice(),sel:null,reach:null,targets:[],busy:false,enemyCard:ENEMY_DECK[0],gauge:25,preview:null,floats:[],stats:{win:0,lose:0}});
   updateHud();setInfo('');
   if(intro)await say([
-    ['Quân sư Thạch Lão','p_sage.jpg','Phía trước là <b>Đèo Hoa Rơi</b>. Một toán <b>ảnh binh</b>, bóng ma mang hình dáng chính các ngươi, đang giữ thành bên kia sông.'],
+    ['Quân sư Thạch Lão','p_sage.jpg','Phía trước là <b>Đèo Hoa Rơi</b>. Một toán <b>ảnh binh</b>, lũ bóng ma trùm áo không mặt, đang giữ thành bên kia sông.'],
     ['Quân sư Thạch Lão','p_sage.jpg','Mỗi lượt hãy xuất <b>một thẻ chiến thuật</b>. Số <b>Bước</b> trên thẻ là của cả đội dùng chung, còn <b>Lực</b> là sức sát thương khi thắng trận.'],
     ['Xích Hoa','p_sam.jpg','Mỗi lượt chỉ đánh được một lần, nên phải đánh cho đáng. Ai đứng đúng <b>trận hình</b> của người dẫn đầu thì cùng xông lên.'],
     ['Quân sư Thạch Lão','p_sage.jpg','Nhớ lấy vòng khắc chế: <b>Kiếm ▸ Cung ▸ Trượng ▸ Thương ▸ Kiếm</b>. Ảnh Tướng dùng thương, đừng để Xích Hoa một mình đối đầu hắn. Hạ được hắn là thắng.']]);
@@ -731,11 +731,11 @@ async function newGame(intro){
 
 /* ================= Khởi động ================= */
 function drawTitle(){const c=$('#titleCv').getContext('2d');c.clearRect(0,0,880,360);c.imageSmoothingQuality='high';
-  c.fillStyle='rgba(168,50,42,.8)';c.beginPath();c.arc(440,150,120,0,7);c.fill();
+  c.fillStyle='rgba(168,50,42,.8)';c.beginPath();c.arc(380,150,120,0,7);c.fill();
   c.strokeStyle='#2b1d14';c.lineWidth=3;c.beginPath();c.moveTo(30,330);c.lineTo(850,330);c.stroke();
-  const L=[['rai','rai_atk',0,160,150,1.25],['gan','gan_atk',0,192,290,1.3],['sam','sam_front',0,205,440,1.45],['yae','yae_atk',0,200,590,1.3]];
+  const L=[['rai','rai_atk',0,160,110,1.25],['gan','gan_atk',0,192,240,1.3],['sam','sam_front',0,205,380,1.45],['yae','yae_atk',0,200,520,1.3]];
   for(const [,k,f,b,x,s] of L){c.fillStyle='rgba(43,29,20,.25)';c.beginPath();c.ellipse(x,330,60,12,0,0,7);c.fill();sprite(c,k,f,x,332,200*s/b*.95,false,false)}
-  sprite(c,'rai_atk',0,760,332,1.5,true,true)}
+  c.fillStyle='rgba(43,29,20,.25)';c.beginPath();c.ellipse(770,330,60,12,0,0,7);c.fill();sprite(c,'boss',0,770,332,1.3,true,true)}
 let last=0;
 function frame(ts){const dt=Math.min(.05,(ts-last)/1000||0);last=ts;G.time+=dt;
   for(const f of G.floats)f.t+=dt;G.floats=G.floats.filter(f=>f.t<1.2);

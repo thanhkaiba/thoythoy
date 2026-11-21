@@ -13,7 +13,7 @@ Chơi được bằng chuột lẫn cảm ứng, bố cục dọc cho điện th
 ## Có gì trong màn chơi thử "Đèo Hoa Rơi"
 
 - Bản đồ 7×9: đồng cỏ, rừng, núi, sông, hai cây cầu, làng (hồi sĩ khí), thành địch.
-- 4 tướng phe ta (Kiếm, Thương, Cung, Trượng) đấu 5 ảnh binh, trong đó Ảnh Tướng giữ thành.
+- 4 tướng phe ta (Kiếm, Thương, Cung, Trượng), mỗi tướng dẫn một đội lính, đấu 5 toán ảnh binh; Ảnh Tướng giữ thành.
 - 9 thẻ chiến thuật, mỗi thẻ có Lực, Bước và một tuyệt kỹ gắn với hệ vũ khí.
 - Vòng khắc chế Kiếm ▸ Cung ▸ Trượng ▸ Thương ▸ Kiếm; trận hình Thập (+) và Chéo (×).
 - Màn giao chiến góc ngang: mỗi đội 6 người, Tích khí / Cường công / Tuyệt kỹ, tua nhanh và bỏ qua.
@@ -23,15 +23,26 @@ Chơi được bằng chuột lẫn cảm ứng, bố cục dọc cho điện th
 ## Cấu trúc
 
 - `web/game.html` — toàn bộ game (HTML/CSS/JS một file). Địa hình và nền chiến trường vẽ bằng canvas.
-- `web/art/` — atlas sprite nền trong suốt và chân dung, sinh từ bộ ảnh mẫu.
+- `web/art/` — atlas sprite và chân dung tướng (tách từ bộ ảnh mẫu), cùng hình tạm vẽ bằng code.
 - `web/fonts/`, `web/fonts.css` — font đóng gói sẵn, chạy không cần mạng.
 - `tools/build_art.py` — tách khung hình từ sprite sheet nền đen thành atlas:
   `python3 tools/build_art.py "<thư mục ảnh gốc>/" web/art/` (cần Pillow, numpy).
 
+## Hình tạm vẽ bằng code
+
+`tools/gen_placeholder_art.py` vẽ (không dùng AI) rồi ghi vào `web/art/`:
+
+- `sh_*`, `cap_*`, `boss` — lính ảnh binh, đội trưởng có ngù đỏ, Ảnh Tướng (4 khung: đứng, lấy đà, ra đòn, thu đòn).
+- `sol_*` — lính phe ta đội nón, màu áo theo từng tướng.
+- `p_shadow.jpg`, `p_boss.jpg` — chân dung phe địch.
+- `card_*.webp` — tranh minh họa 9 thẻ chiến thuật.
+
+Chạy lại: `python3 tools/gen_placeholder_art.py web/art/`. Muốn thay bằng tranh thật thì ghi đè file
+cùng tên; sprite giữ khung 288×240, 4 khung xếp ngang, nhân vật quay mặt sang phải, chân ở giữa đáy khung.
+
 ## Phần còn tạm
 
-- Phe địch dùng lại sprite phe ta, nhuộm tím lúc chạy ("ảnh binh"). Có sprite địch riêng thì khai báo
-  thêm trong `ATLAS`/`SPR` ở `game.html`.
-- Lính trong đội dùng sprite của tướng thu nhỏ; chưa có sprite lính riêng.
-- Sprite mẫu vẽ theo nhân vật của một game có bản quyền. Dùng nội bộ để thử thì được, còn phát hành
+- Sprite địch, lính và tranh thẻ là hình tạm vẽ bằng code, chưa phải tranh hoàn chỉnh.
+- Địa hình bản đồ và nền chiến trường cũng vẽ bằng canvas lúc chạy.
+- Sprite bốn tướng vẽ theo nhân vật của một game có bản quyền. Dùng nội bộ để thử thì được, còn phát hành
   công khai cần thay bằng thiết kế nhân vật riêng.
