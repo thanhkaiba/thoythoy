@@ -1,22 +1,464 @@
 [
  {
-  "name": "boar_atk",
-  "id": "boar",
-  "prompt": "The mechanical robot boar lowers its head, paws the ground and charges forward to the right, ramming hard with its steel tusks, steam bursting from its exhaust pipes, then trots back to its original pose. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other objects, the whole character stays inside the frame, smooth natural animal motion."
+  "name": "lich_atk",
+  "id": "lich",
+  "seed": 11,
+  "prompt": "The rogue AI king robot with a chrome skull face on a throne of melted crowns and servers charges a blinding glow and fires a rapid barrage of bright laser bolts to the right with muzzle flashes and recoil, the glowing bolts streak out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
  },
  {
-  "name": "boar_hit",
-  "id": "boar",
-  "prompt": "The mechanical robot boar is struck hard from the right, recoils backward and staggers, its legs buckle, sparks fly from its armour plates, then it shakes it off and returns to its original pose. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other objects, the whole character stays inside the frame, smooth natural animal motion."
+  "name": "lich_hit",
+  "id": "lich",
+  "prompt": "The rogue AI king robot with a chrome skull face on a throne of melted crowns and servers is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "reaper_atk",
+  "id": "reaper",
+  "seed": 11,
+  "prompt": "The towering reaper robot in tattered black cloth with an hourglass core inside its metal ribcage and a huge scythe of cold blue energy swings its blade in a powerful arc, releasing a glowing crescent energy slash that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "reaper_hit",
+  "id": "reaper",
+  "prompt": "The towering reaper robot in tattered black cloth with an hourglass core inside its metal ribcage and a huge scythe of cold blue energy is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "deer_atk",
+  "id": "deer",
+  "seed": 11,
+  "prompt": "The divine great stag machine charges a blinding glow and fires a rapid barrage of bright laser bolts to the right with muzzle flashes and recoil, the glowing bolts streak out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "deer_hit",
+  "id": "deer",
+  "prompt": "The divine great stag machine is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "dragon_atk",
+  "id": "dragon",
+  "seed": 11,
+  "prompt": "The ancient three-headed war dragon mech with scales of cooled slag metal and a ruined skyscraper embedded in its back rears back and unleashes a roaring stream of fire and blazing fireballs to the right, the fireballs fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "dragon_hit",
+  "id": "dragon",
+  "prompt": "The ancient three-headed war dragon mech with scales of cooled slag metal and a ruined skyscraper embedded in its back is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "bat_atk",
+  "id": "bat",
+  "seed": 11,
+  "prompt": "The colossal three-headed bat war-drone with wings made of torn billboards and a crown of antennas on each head rears back and blasts powerful glowing sonic shockwave rings to the right, the rings expand and fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "bat_hit",
+  "id": "bat",
+  "prompt": "The colossal three-headed bat war-drone with wings made of torn billboards and a crown of antennas on each head is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "draug_atk",
+  "id": "draug",
+  "seed": 11,
+  "prompt": "The death-knight robot fused with its skeletal robot warhorse into one centaur-like machine swings its blade in a powerful arc, releasing a glowing crescent energy slash that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "draug_hit",
+  "id": "draug",
+  "prompt": "The death-knight robot fused with its skeletal robot warhorse into one centaur-like machine is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "lion_atk",
+  "id": "lion",
+  "seed": 11,
+  "prompt": "The mechanical griffin with a lion chassis and eagle wings of brass blades lunges and slashes the air with its claws, releasing three glowing claw-shaped energy slashes that fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "lion_hit",
+  "id": "lion",
+  "prompt": "The mechanical griffin with a lion chassis and eagle wings of brass blades is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "phoenix_atk",
+  "id": "phoenix",
+  "seed": 11,
+  "prompt": "The phoenix made of burning circuit boards and ember sparks with a long ribbon-cable tail rears back and unleashes a roaring stream of fire and blazing fireballs to the right, the fireballs fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "phoenix_hit",
+  "id": "phoenix",
+  "prompt": "The phoenix made of burning circuit boards and ember sparks with a long ribbon-cable tail is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "serpent_atk",
+  "id": "serpent",
+  "seed": 11,
+  "prompt": "The gigantic three-headed sea serpent mech fires a freezing frost blast and sharp ice shards to the right, the shards fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "serpent_hit",
+  "id": "serpent",
+  "prompt": "The gigantic three-headed sea serpent mech is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "tentacle_atk",
+  "id": "tentacle",
+  "seed": 11,
+  "prompt": "The enormous mechanical cable tentacles emerging from a glitching eye-shaped portal in the sky crackles with electricity, gathers a ball of lightning and hurls it to the right together with forked arcs of chain lightning that shoot out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "tentacle_hit",
+  "id": "tentacle",
+  "prompt": "The enormous mechanical cable tentacles emerging from a glitching eye-shaped portal in the sky is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "wose_atk",
+  "id": "wose",
+  "seed": 11,
+  "prompt": "The ancient walking tree-shaped mech of rusted server plating with a giant carved face spits several glowing globs of toxic acid sludge to the right, the globs arc out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "wose_hit",
+  "id": "wose",
+  "prompt": "The ancient walking tree-shaped mech of rusted server plating with a giant carved face is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "fguard_atk",
+  "id": "fguard",
+  "seed": 11,
+  "prompt": "The security mech whose helmet is an open furnace door with flames inside swings its blade in a powerful arc, releasing a glowing crescent energy slash that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "fguard_hit",
+  "id": "fguard",
+  "prompt": "The security mech whose helmet is an open furnace door with flames inside is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "fox_atk",
+  "id": "fox",
+  "seed": 11,
+  "prompt": "The small young mech drake with stubby wings and a big round head rears back and unleashes a roaring stream of fire and blazing fireballs to the right, the fireballs fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "fox_hit",
+  "id": "fox",
+  "prompt": "The small young mech drake with stubby wings and a big round head is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "gale_atk",
+  "id": "gale",
+  "seed": 11,
+  "prompt": "The storm drone shaped like a giant floating kite with lightning tassels and one big camera eye crackles with electricity, gathers a ball of lightning and hurls it to the right together with forked arcs of chain lightning that shoot out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "gale_hit",
+  "id": "gale",
+  "prompt": "The storm drone shaped like a giant floating kite with lightning tassels and one big camera eye is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "ghoul_atk",
+  "id": "ghoul",
+  "seed": 11,
+  "prompt": "The emaciated rusted scavenger robot venting toxic green gas from a mouth-shaped exhaust in its stomach spits several glowing globs of toxic acid sludge to the right, the globs arc out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "ghoul_hit",
+  "id": "ghoul",
+  "prompt": "The emaciated rusted scavenger robot venting toxic green gas from a mouth-shaped exhaust in its stomach is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "naga_atk",
+  "id": "naga",
+  "seed": 11,
+  "prompt": "The serpentine robot with a long segmented chrome tail crackles with electricity, gathers a ball of lightning and hurls it to the right together with forked arcs of chain lightning that shoot out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "naga_hit",
+  "id": "naga",
+  "prompt": "The serpentine robot with a long segmented chrome tail is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "rider_atk",
+  "id": "rider",
+  "seed": 11,
+  "prompt": "The scrawny little robot in a cooking-pot helmet riding a three-headed robot hound wreathed in plasma flames swings its blade in a powerful arc, releasing a glowing crescent energy slash that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "rider_hit",
+  "id": "rider",
+  "prompt": "The scrawny little robot in a cooking-pot helmet riding a three-headed robot hound wreathed in plasma flames is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "rscorp_atk",
+  "id": "rscorp",
+  "seed": 11,
+  "prompt": "The mechanical scorpion assembled from concrete rubble and rusted rebar swings its blade in a powerful arc, releasing a glowing crescent energy slash that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "rscorp_hit",
+  "id": "rscorp",
+  "prompt": "The mechanical scorpion assembled from concrete rubble and rusted rebar is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "scorp_atk",
+  "id": "scorp",
+  "seed": 11,
+  "prompt": "The mechanical scorpion with obsidian armor plates and a stinger shaped like a glowing molten forge hammer charges its core and fires glowing plasma orbs to the right with a bright recoil flash, the orbs fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "scorp_hit",
+  "id": "scorp",
+  "prompt": "The mechanical scorpion with obsidian armor plates and a stinger shaped like a glowing molten forge hammer is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "shadow_atk",
+  "id": "shadow",
+  "seed": 11,
+  "prompt": "The tall hooded robot with no face rears back and blasts powerful glowing sonic shockwave rings to the right, the rings expand and fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "shadow_hit",
+  "id": "shadow",
+  "prompt": "The tall hooded robot with no face is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "snake_atk",
+  "id": "snake",
+  "seed": 11,
+  "prompt": "The robot serpent with a chrome spine and translucent coolant-filled body fires a freezing frost blast and sharp ice shards to the right, the shards fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "snake_hit",
+  "id": "snake",
+  "prompt": "The robot serpent with a chrome spine and translucent coolant-filled body is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "spider_atk",
+  "id": "spider",
+  "seed": 11,
+  "prompt": "The six-legged spider tank drone of matte black armor with a cluster of red sensor eyes charges a blinding glow and fires a rapid barrage of bright laser bolts to the right with muzzle flashes and recoil, the glowing bolts streak out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "spider_hit",
+  "id": "spider",
+  "prompt": "The six-legged spider tank drone of matte black armor with a cluster of red sensor eyes is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "troll_atk",
+  "id": "troll",
+  "seed": 11,
+  "prompt": "The hulking dented demolition robot with a bird nest on its head and a grinning grille mouth charges forward and slams with full force, sending a glowing energy shockwave and flying debris blasting out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "troll_hit",
+  "id": "troll",
+  "prompt": "The hulking dented demolition robot with a bird nest on its head and a grinning grille mouth is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "turtle_atk",
+  "id": "turtle",
+  "seed": 11,
+  "prompt": "The giant tank-like robot turtle whose shell is a cluster of blue crystal server towers like a tiny frozen city with lit windows opens hidden hatches and launches a salvo of small missiles with smoke trails that fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "turtle_hit",
+  "id": "turtle",
+  "prompt": "The giant tank-like robot turtle whose shell is a cluster of blue crystal server towers like a tiny frozen city with lit windows is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "wolf_atk",
+  "id": "wolf",
+  "seed": 11,
+  "prompt": "The robot wolf pup with oversized paws and a glowing crescent-moon light on its forehead lunges and snaps its jaws, launching a glowing crescent energy shockwave that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "wolf_hit",
+  "id": "wolf",
+  "prompt": "The robot wolf pup with oversized paws and a glowing crescent-moon light on its forehead is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "ant_atk",
+  "id": "ant",
+  "seed": 11,
+  "prompt": "The mechanical ant with a glass fuel-cell abdomen of swirling plasma and needle-thin iron legs charges its core and fires glowing plasma orbs to the right with a bright recoil flash, the orbs fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "ant_hit",
+  "id": "ant",
+  "prompt": "The mechanical ant with a glass fuel-cell abdomen of swirling plasma and needle-thin iron legs is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
  },
  {
   "name": "bear_atk",
   "id": "bear",
-  "prompt": "The armoured robot bear rears up, then lunges forward to the right and swipes powerfully with its huge metal claws, then steps back to its original pose. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other objects, the whole character stays inside the frame, smooth natural animal motion."
+  "seed": 11,
+  "prompt": "The old maintenance robot bear with a small rusted shrine and paper lanterns on its back lunges and slashes the air with its claws, releasing three glowing claw-shaped energy slashes that fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
  },
  {
   "name": "bear_hit",
   "id": "bear",
-  "prompt": "The armoured robot bear is struck hard from the right, recoils backward and staggers, sparks fly from its chest armour, then it regains its balance and returns to its original pose. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other objects, the whole character stays inside the frame, smooth natural animal motion."
+  "prompt": "The old maintenance robot bear with a small rusted shrine and paper lanterns on its back is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "boar_atk",
+  "id": "boar",
+  "seed": 11,
+  "prompt": "The robot wild boar with a dented boiler body charges forward and slams with full force, sending a glowing energy shockwave and flying debris blasting out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "boar_hit",
+  "id": "boar",
+  "prompt": "The robot wild boar with a dented boiler body is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "cbat_atk",
+  "id": "cbat",
+  "seed": 11,
+  "prompt": "The round little bat drone with a padded orange shell rears back and blasts powerful glowing sonic shockwave rings to the right, the rings expand and fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "cbat_hit",
+  "id": "cbat",
+  "prompt": "The round little bat drone with a padded orange shell is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "croc_atk",
+  "id": "croc",
+  "seed": 11,
+  "prompt": "The robot crocodile whose back is a wrecked barnacle-covered mini submarine lunges and snaps its jaws, launching a glowing crescent energy shockwave that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "croc_hit",
+  "id": "croc",
+  "prompt": "The robot crocodile whose back is a wrecked barnacle-covered mini submarine is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "cuttle_atk",
+  "id": "cuttle",
+  "seed": 11,
+  "prompt": "The robotic cuttlefish with a cracked chrome faceplate and fiber-optic tentacles trailing glowing code crackles with electricity, gathers a ball of lightning and hurls it to the right together with forked arcs of chain lightning that shoot out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "cuttle_hit",
+  "id": "cuttle",
+  "prompt": "The robotic cuttlefish with a cracked chrome faceplate and fiber-optic tentacles trailing glowing code is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "falcon_atk",
+  "id": "falcon",
+  "seed": 11,
+  "prompt": "The robotic falcon with three large glowing optic eyes in a row across its head and feathers made of carbon-fiber blades swings its blade in a powerful arc, releasing a glowing crescent energy slash that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "falcon_hit",
+  "id": "falcon",
+  "prompt": "The robotic falcon with three large glowing optic eyes in a row across its head and feathers made of carbon-fiber blades is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "horse_atk",
+  "id": "horse",
+  "seed": 11,
+  "prompt": "The broken robotic stallion of corroded steel and frayed fiber-optic cables crackles with electricity, gathers a ball of lightning and hurls it to the right together with forked arcs of chain lightning that shoot out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "horse_hit",
+  "id": "horse",
+  "prompt": "The broken robotic stallion of corroded steel and frayed fiber-optic cables is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "mud_atk",
+  "id": "mud",
+  "seed": 11,
+  "prompt": "The sludge machine of black oil and e-waste with many mismatched camera lenses floating inside it spits several glowing globs of toxic acid sludge to the right, the globs arc out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "mud_hit",
+  "id": "mud",
+  "prompt": "The sludge machine of black oil and e-waste with many mismatched camera lenses floating inside it is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "ogre_atk",
+  "id": "ogre",
+  "seed": 11,
+  "prompt": "The hulking cyborg brute with an open furnace reactor in its belly glowing behind iron grates charges forward and slams with full force, sending a glowing energy shockwave and flying debris blasting out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "ogre_hit",
+  "id": "ogre",
+  "prompt": "The hulking cyborg brute with an open furnace reactor in its belly glowing behind iron grates is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "rat_atk",
+  "id": "rat",
+  "seed": 11,
+  "prompt": "The robot rat built entirely of riveted steel plates and tiny pistons crackles with electricity, gathers a ball of lightning and hurls it to the right together with forked arcs of chain lightning that shoot out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "rat_hit",
+  "id": "rat",
+  "prompt": "The robot rat built entirely of riveted steel plates and tiny pistons is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "scarab_atk",
+  "id": "scarab",
+  "seed": 11,
+  "prompt": "The small robot beetle with a polished sapphire glass dome on its back holding a tiny pond with lily pads charges a blinding glow and fires a rapid barrage of bright laser bolts to the right with muzzle flashes and recoil, the glowing bolts streak out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "scarab_hit",
+  "id": "scarab",
+  "prompt": "The small robot beetle with a polished sapphire glass dome on its back holding a tiny pond with lily pads is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "seahorse_atk",
+  "id": "seahorse",
+  "seed": 11,
+  "prompt": "The tiny brave robot seahorse knight with a scrap-metal helmet and a needle antenna lance charges a blinding glow and fires a rapid barrage of bright laser bolts to the right with muzzle flashes and recoil, the glowing bolts streak out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "seahorse_hit",
+  "id": "seahorse",
+  "prompt": "The tiny brave robot seahorse knight with a scrap-metal helmet and a needle antenna lance is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "skel_atk",
+  "id": "skel",
+  "seed": 11,
+  "prompt": "The small cheerful rusted android skeleton with a flowering vine growing through its chassis and a bird nest on its head swings its blade in a powerful arc, releasing a glowing crescent energy slash that flies out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "skel_hit",
+  "id": "skel",
+  "prompt": "The small cheerful rusted android skeleton with a flowering vine growing through its chassis and a bird nest on its head is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "soul_atk",
+  "id": "soul",
+  "seed": 11,
+  "prompt": "The small round hologram robot ghost with big sad eyes holding a tiny glowing candle rears back and blasts powerful glowing sonic shockwave rings to the right, the rings expand and fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "soul_hit",
+  "id": "soul",
+  "prompt": "The small round hologram robot ghost with big sad eyes holding a tiny glowing candle is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "stoat_atk",
+  "id": "stoat",
+  "seed": 11,
+  "prompt": "The slender white robot stoat with smooth porcelain-white armor plates and a red cloth scarf lunges and slashes the air with its claws, releasing three glowing claw-shaped energy slashes that fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "stoat_hit",
+  "id": "stoat",
+  "prompt": "The slender white robot stoat with smooth porcelain-white armor plates and a red cloth scarf is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "yeti_atk",
+  "id": "yeti",
+  "seed": 11,
+  "prompt": "The giant cryo yeti mech with a frozen coolant waterfall pouring from its shoulder tanks fires a freezing frost blast and sharp ice shards to the right, the shards fly out of the frame to the right. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
+ },
+ {
+  "name": "yeti_hit",
+  "id": "yeti",
+  "prompt": "The giant cryo yeti mech with a frozen coolant waterfall pouring from its shoulder tanks is struck hard from the right by an energy blast, recoils backward and staggers, sparks and debris fly from its armour, then it regains its balance. Then it returns to its exact original pose. Dynamic, powerful, dramatic action with bright glowing effects. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other creatures, the whole character stays inside the frame."
  }
 ]
