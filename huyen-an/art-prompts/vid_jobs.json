@@ -1,0 +1,22 @@
+[
+ {
+  "name": "boar_atk",
+  "id": "boar",
+  "prompt": "The mechanical robot boar lowers its head, paws the ground and charges forward to the right, ramming hard with its steel tusks, steam bursting from its exhaust pipes, then trots back to its original pose. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other objects, the whole character stays inside the frame, smooth natural animal motion."
+ },
+ {
+  "name": "boar_hit",
+  "id": "boar",
+  "prompt": "The mechanical robot boar is struck hard from the right, recoils backward and staggers, its legs buckle, sparks fly from its armour plates, then it shakes it off and returns to its original pose. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other objects, the whole character stays inside the frame, smooth natural animal motion."
+ },
+ {
+  "name": "bear_atk",
+  "id": "bear",
+  "prompt": "The armoured robot bear rears up, then lunges forward to the right and swipes powerfully with its huge metal claws, then steps back to its original pose. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other objects, the whole character stays inside the frame, smooth natural animal motion."
+ },
+ {
+  "name": "bear_hit",
+  "id": "bear",
+  "prompt": "The armoured robot bear is struck hard from the right, recoils backward and staggers, sparks fly from its chest armour, then it regains its balance and returns to its original pose. Static locked-off camera, the solid flat green background stays completely unchanged, no ground, no shadows, no other objects, the whole character stays inside the frame, smooth natural animal motion."
+ }
+]

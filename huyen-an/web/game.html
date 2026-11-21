@@ -981,40 +981,66 @@ class Puppet{constructor(id,mine,want,H){this.img=figImg(id);this.mir=!!(FACE[id
 function tw(P,to,dur,ez=t=>1-Math.pow(1-t,3)){const fr={},t0=now();for(const k in to)fr[k]=P.p[k];
  return new Promise(res=>{const st=()=>{const q=dur>0?Math.min(1,(now()-t0)/dur):1,v=ez(q);for(const k in to)P.p[k]=fr[k]+(to[k]-fr[k])*v;q<1?requestAnimationFrame(st):res()};st()})}
 const elastic=t=>t>=1?1:1-Math.pow(2,-9*t)*Math.cos(t*10.5);
+/* Hoạt ảnh thật của nhân vật: dải khung hình tách từ video, quay mặt sang phải. atk là đòn đánh, hit là trúng đòn; imp là lúc đòn chạm (tỉ lệ đoạn). */
+const ANIM={"boar":{"fw":306,"fh":319,"gx":110,"gy":297,"rh":220,"atk":{"n":27,"cols":6},"hit":{"n":27,"cols":6}},"bear":{"fw":318,"fh":254,"gx":134,"gy":243,"rh":220,"atk":{"n":27,"cols":5},"hit":{"n":27,"cols":5}}};
+const SHEET={};
+function sheet(id,c){const k=id+'_'+c;if(!SHEET[k]){const im=new Image();im.src=`art/anim/${k}.webp`;SHEET[k]=im}return SHEET[k]}
+function figLoad(id){if(ANIM[id]){sheet(id,'atk');sheet(id,'hit')}else figImg(id)}
+class SpriteFig{constructor(id,mine,want,H){const m=this.m=ANIM[id];this.id=id;this.mir=want===-1;this.H=H;this.p={lean:0,sx:1,sy:1,ry:0,fl:0,sat:1};this.ph=Math.random()*6;this.clip=null;
+  const d=this.el=document.createElement('div');d.className='fig '+(mine?'mine':'foe');d.innerHTML='<i class="fpad"></i><canvas></canvas>';this.cv=d.querySelector('canvas');this.ctx=this.cv.getContext('2d');
+  const k=this.k=Math.min(H/m.rh,innerWidth*.62/m.fw),r=this.r=Math.min(2,devicePixelRatio||1);this.cw=m.fw*k;this.ch=m.fh*k;this.cv.width=Math.round(this.cw*r);this.cv.height=Math.round(this.ch*r);
+  Object.assign(this.cv.style,{width:this.cw+'px',height:this.ch+'px',left:-(this.mir?m.fw-m.gx:m.gx)*k+'px',top:-m.gy*k+'px',bottom:'auto',transformOrigin:`${(this.mir?m.fw-m.gx:m.gx)/m.fw*100}% ${m.gy/m.fh*100}%`});
+  this.sh={atk:sheet(id,'atk'),hit:sheet(id,'hit')}}
+ play(c,from=0,fps=24){this.clip=c;this.fps=fps;this.t0=now()-from/fps*1000;return new Promise(r=>this.done=r)}
+ dur(c,fps){return this.m[c].n/fps*1000}
+ draw(t){const m=this.m,p=this.p;let c=this.clip||'atk',f=0;
+  if(this.clip){f=Math.floor((now()-this.t0)/1000*this.fps);if(f>=m[c].n){this.clip=null;c='atk';f=0;const d=this.done;this.done=null;d&&d()}}
+  const im=this.sh[c];if(!im.complete||!im.naturalWidth)return;
+  const{ctx,k,r}=this,cols=m[c].cols,sx=(f%cols)*m.fw,sy=Math.floor(f/cols)*m.fh,idle=!this.clip,br=idle?Math.sin(t*2.6+this.ph)*.014:0;
+  ctx.setTransform(r,0,0,r,0,0);ctx.clearRect(0,0,this.cw,this.ch);if(this.mir){ctx.translate(this.cw,0);ctx.scale(-1,1)}
+  const gx=m.gx*k,gy=m.gy*k,lean=p.lean*(this.mir?-1:1);ctx.translate(gx,gy);ctx.transform(p.sx*(1-br*.5),0,-lean*.9,p.sy*(1+br),0,0);ctx.translate(-gx,-gy);
+  ctx.drawImage(im,sx,sy,m.fw,m.fh,0,0,this.cw,this.ch);
+  this.cv.style.transform=`rotateY(${p.ry}deg)`;this.cv.style.filter='drop-shadow(0 0 8px var(--fc))'+(p.fl>.01||p.sat<.99?` brightness(${1+p.fl*2.4}) saturate(${p.sat*(1-p.fl*.7)})`:'')}}
+const makeFig=(id,mine,want,H)=>ANIM[id]?new SpriteFig(id,mine,want,H):new Puppet(id,mine,want,H);
 async function duel(e,k){const f=(SV.fast?.55:1)*(k?.75:1),ms=x=>x*f;
  const br=$('#board').getBoundingClientRect(),[ax,ay]=cellCenter(e.from),[dx,dy]=cellCenter(e.to);
  const aLeft=ax<dx||(ax===dx&&e.ao==='p'),H=Math.min(innerHeight*.36,innerWidth*.6,340),base=br.top+br.height*.7,cx=br.left+br.width/2,sp=Math.min(innerWidth*.24,H*.62);
  const pos={l:[cx-sp,base],r:[cx+sp,base]},pa=pos[aLeft?'l':'r'],pd=pos[aLeft?'r':'l'],dir=aLeft?1:-1;
  const ov=document.createElement('div');ov.id='duel';ov.style.setProperty('--fh',H+'px');
- const PA=new Puppet(e.wid,e.ao==='p',dir,H),PD=new Puppet(e.did,e.ao!=='p',-dir,H),A=PA.el,D=PD.el;
+ const PA=makeFig(e.wid,e.ao==='p',dir,H),PD=makeFig(e.did,e.ao!=='p',-dir,H),A=PA.el,D=PD.el;
  [[A,pa],[D,pd]].forEach(([el,[x,y]])=>{el.style.left=x+'px';el.style.top=y+'px'});
  document.querySelectorAll('#fx .dtag,#fx .clash').forEach(x=>x.remove());ov.append(A,D);document.body.append(ov);void ov.offsetWidth;ov.classList.add('on');
  let live=true;const loop=()=>{if(!live)return;const t=now()/1000;PA.draw(t);PD.draw(t);requestAnimationFrame(loop)};loop();
  const end=()=>{live=false;ov.remove()};
- // bật ra khỏi lá: bay từ ô lên, thân nén rồi bung ra
+ // bật ra khỏi lá
  const from=(el,[x,y],[cx,cy])=>el.animate([{transform:`translate(${cx-x}px,${cy-y+H*.12}px) scale(.18)`,opacity:0},{transform:'none',opacity:1}],{duration:ms(300),easing:'cubic-bezier(.2,1.35,.4,1)',fill:'both'});
  from(A,pa,[ax,ay]);from(D,pd,[dx,dy]);PA.p.sy=PD.p.sy=.5;PA.p.fl=PD.p.fl=.8;
  tw(PA,{sy:1,fl:0},ms(560),elastic);tw(PD,{sy:1,fl:0},ms(560),elastic);sfx('swing');
  await sleep(ms(420));if(!M)return end();
- const w=WEAPON[e.wid]||'hammer',melee=['claw','bite','blade','hammer'].includes(w);
- // lấy đà: ngả về sau, nén người, xoay nửa người; bên kia thủ thế
- tw(PD,{lean:-.06*dir,sy:.96,ry:dir*10},ms(260));
- await tw(PA,{lean:-.13*dir,sy:.88,sx:1.07,ry:-dir*24},ms(260));if(!M)return end();
- // ra đòn: bung người về phía trước
- tw(PA,{lean:.22*dir,sy:1.09,sx:.94,ry:dir*14},ms(130));
- A.animate([{transform:'none'},{transform:`translateX(${dir*(melee?br.width*.24:16)}px)`,offset:.4},{transform:'none'}],{duration:ms(melee?560:420),easing:'ease-out'});
+ const w=WEAPON[e.wid]||'hammer',melee=['claw','bite','blade','hammer'].includes(w),fps=24/f;
+ let aDone=Promise.resolve();
+ if(PA.play){// hoạt ảnh thật: chạy đòn đánh, tung hiệu ứng vũ khí đúng lúc chạm
+  const d=PA.dur('atk',fps),imp=(PA.m.atk.imp||.45)*d;aDone=PA.play('atk',0,fps);tw(PD,{lean:-.04*dir,ry:dir*8},ms(260));
+  await sleep(Math.max(0,imp-(melee?260:340)*f));if(!M)return end();
+  if(melee)A.animate([{transform:'none'},{transform:`translateX(${dir*br.width*.2}px)`,offset:.4},{transform:'none'}],{duration:ms(560),easing:'ease-out'});
+ }else{// hình rối: lấy đà rồi bung người
+  tw(PD,{lean:-.06*dir,sy:.96,ry:dir*10},ms(260));
+  await tw(PA,{lean:-.13*dir,sy:.88,sx:1.07,ry:-dir*24},ms(260));if(!M)return end();
+  tw(PA,{lean:.22*dir,sy:1.09,sx:.94,ry:dir*14},ms(130));
+  A.animate([{transform:'none'},{transform:`translateX(${dir*(melee?br.width*.24:16)}px)`,offset:.4},{transform:'none'}],{duration:ms(melee?560:420),easing:'ease-out'});
+  if(melee)await sleep(ms(150));if(!melee)tw(PA,{lean:-.06*dir,sy:.97},ms(200))}
  sfx(w==='laser'||w==='electric'?'zap':w==='hammer'||w==='missile'?'hit':'swing');
- if(melee)await sleep(ms(150));
  const x1=pa[0]+dir*(melee?br.width*.2:H*.24),y1=pa[1]-H*.58,x2=pd[0],y2=pd[1]-H*.5;
- if(!melee)tw(PA,{lean:-.06*dir,sy:.97},ms(200));
  await weaponFx(w,x1,y1,x2,y2,e.res);if(!M)return end();
- // trúng đòn: lóe sáng, bị hất ngả ra sau, nảy lại
- PD.p.fl=1;PD.p.lean=.28*dir;PD.p.sy=.84;PD.p.sx=1.1;PD.p.ry=dir*28;
- tw(PD,{fl:0},ms(420));tw(PD,{lean:0,sy:1,sx:1,ry:0},ms(950),elastic);tw(PA,{lean:0,sy:1,sx:1,ry:0},ms(700),elastic);
+ // trúng đòn
+ let dDone=Promise.resolve();PD.p.fl=1;tw(PD,{fl:0},ms(420));
+ if(PD.play){dDone=PD.play('hit',Math.floor(PD.m.hit.n*.14),fps);PD.p.lean=.12*dir;tw(PD,{lean:0,ry:0},ms(700),elastic)}
+ else{PD.p.lean=.28*dir;PD.p.sy=.84;PD.p.sx=1.1;PD.p.ry=dir*28;tw(PD,{lean:0,sy:1,sx:1,ry:0},ms(950),elastic)}
+ if(!PA.play)tw(PA,{lean:0,sy:1,sx:1,ry:0},ms(700),elastic);
  D.animate([{transform:'none'},{transform:`translateX(${dir*30}px)`,offset:.25},{transform:`translateX(${dir*-6}px)`,offset:.6},{transform:'none'}],{duration:ms(520)});
  burst(x2,y2,WCOL[w]||'#fff',34,'spark');burst(x2,y2,'#ffffff',12,'spark');sfx('hit');buzz(30);
- clashTag((pa[0]+pd[0])/2,pa[1]-H*.62,e.a,e.df,e.res,1);
- await sleep(ms(620));if(!M)return end();
+ clashTag((pa[0]+pd[0])/2,Math.max(br.top+20,pa[1]-H*1.12),e.a,e.df,e.res,1);
+ await Promise.race([Promise.all([aDone,dDone,sleep(ms(620))]),sleep(2600)]);if(!M)return end();
  // bên thua gục xuống, mất màu; bên thắng nhún người
  tw(PD,{sy:.88,lean:.08*dir,sat:.35},ms(260));await tw(PA,{sy:1.06},ms(130));tw(PA,{sy:1},ms(300),elastic);
  await sleep(ms(150));if(!M)return end();
@@ -1370,7 +1396,7 @@ function nextBot(){if(M.script&&M.script.length){const[id,c]=M.script.shift();co
 function enterMatch(opp){const b=$('#board');b.innerHTML='';cellEls=[];for(let i=0;i<16;i++){const d=document.createElement('div');d.className='cell';d.dataset.i=i;d.style.setProperty('--tile',`url(art/tile${Math.random()*4|0}.webp)`);d.style.setProperty('--rot',(Math.random()*4|0)*90+'deg');b.append(d);cellEls.push(d)}
  $('#match').style.setProperty('--mbg',`url(art/bg${Math.max(0,Math.min(OPPS.indexOf(opp),7))}.webp)`);
  $('#mAv').src=ART[opp.av];$('#mName').textContent=opp.n;$('#legend').innerHTML=(M.S.el?triHTML()+'<span class="dim">+1</span>':'')+M.S.rules.map(r=>`<button class="rchip" data-r="${r}">${RULE[r].n}</button>`).join('');
- show('match');[...M.S.hands.p,...M.S.hands.e].forEach(c=>{figImg(c.id)});$('#board').classList.add('intro');$('#hand').classList.add('deal');setTimeout(()=>{$('#board').classList.remove('intro');$('#hand').classList.remove('deal')},1100);renderAll();fitBoard();taunt(opp.say&&opp.say[0])}
+ show('match');[...M.S.hands.p,...M.S.hands.e].forEach(c=>{figLoad(c.id)});$('#board').classList.add('intro');$('#hand').classList.add('deal');setTimeout(()=>{$('#board').classList.remove('intro');$('#hand').classList.remove('deal')},1100);renderAll();fitBoard();taunt(opp.say&&opp.say[0])}
 function taunt(t){const o=$('#taunt');if(o)o.remove();if(!t)return;const d=document.createElement('div');d.id='taunt';d.textContent='“'+t+'”';$('#match').append(d);setTimeout(()=>d.remove(),3600)}
 const quote=(o,k)=>o&&o.say?`<p class="quote"><img src="${ART[o.av]}" alt="">“${o.say[k]}”</p>`:'';
 
